@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel</title>
+
+    <style>
+        * { margin: 0; padding: 0; }
+
+        .slider{
+            overflow: hidden;
+            margin-left: 27%;
+        }
+        .slider > .slider-content{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            transition: all 500ms ease;
+        }
+        
+        .slider > .slider-content > .slider-item {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+        
+        .slider > input:nth-child(1):checked ~ .slider-content{
+            transform: translateX(0%);
+        }
+        
+        .slider > input:nth-child(2):checked ~ .slider-content{
+            transform: translateX(-100%);
+        }
+        .slider > input:nth-child(3):checked ~ .slider-content{
+            transform: translateX(-200%);
+        }
+        
+        .slider > input:nth-child(4):checked ~ .slider-content{
+            transform: translateX(-300%);
+        }
+
+        .radio{
+            cursor: pointer;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border: 3px solid black;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+          }
+          
+          .radio:before {
+            content: '';
+            width: 17px;
+            height: 17px;   
+            background: black;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 450ms ease-in-out;
+            position: absolute; 
+            margin-left: 14.5%;
+            margin-right: 10%;
+            margin-top: 14%;
+            margin-bottom: 10%;
+          }
+          
+          .radio:checked:before{
+            opacity: 1;
+          }
+          
+          .radio:focus{
+            box-shadow: 0 0 5px black;
+          }
+
+    </style>
+</head>
+<body>
+    <section class="slider">
+            <input class = "radio" name='slide' type="radio" >
+            <input class = "radio" name='slide' type="radio" checked>
+            <input class = "radio" name='slide' type="radio">
+    
+        <div class="slider-content">
+            <div class="slider-item"><img src="../media/carrossel1.jpg"></div>
+            <div class="slider-item"><img src="../media/carrossel2.jpg"></div>
+            <div class="slider-item"><img src="../media/carrossel3.jpeg"></div>
+        </div>
+    </section>
+</body>
+</html>
