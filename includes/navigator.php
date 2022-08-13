@@ -7,23 +7,18 @@
     $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $home = $_SERVER['HTTP_HOST'] . "/cuprom/";
     $elt = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/eletronicos/";
+    $mrc = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/mercado/";
+    $mec = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/moda_casa/";
+    $pet = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/petshop/";
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuprom</title>
-</head>
 <body>
-    <header class="cabecalho">
-        <form action="busca" method="GET" class="justify-content-end">
-        
-        <div class="menu <?php if($url == $elt) echo "eletronicos" ?>">
+    <header class="cabecalho" id="nav-top">
+        <form action="busca" method="GET">
+        <div class="menu <?php if($url == $elt) echo "eletronicos"; if($url == $mrc) echo "mercado"; if($url == $mec) echo "modaecasa"; if($url == $pet) echo "petshop"?> ">
             <div class="logo">
-                <a href="<?php if($url != $home) echo "../../" ?>"><img src="<?php if($url != $home) echo "../../" ?>media/logo.png" alt="Logo Cuprom" width="64px" height="64px"></a>
+                <a href="<?php if($url != $home) echo "../../" ?>"><img src="<?php if($url != $home) echo "../../" ?>media/logo.png" alt="Logo Cuprom"></a>
             </div>
             
             <div class="container_categoria">
@@ -47,7 +42,10 @@
             </div>
 
             <div class="container_search justify-content-end">
-                <div class="inputs"><input type="text" placeholder="Pesquisar..." name="query"><img src="<?php if($url != $home) echo "../../" ?>media/search_icon.png" alt="Pesquisar"></div>
+                <div class="inputs">
+                    <div class="input-search"><input type="text" placeholder="Pesquisar..." name="query"></div>
+                    <div class="submit-search"><img src="<?php if($url != $home) echo "../../" ?>media/search_icon.png" alt="Pesquisar"></div>
+                </div>
             </div>
         </div>
     </form>
