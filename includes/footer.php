@@ -16,10 +16,11 @@
                 <div class="footerLinkCol">
                     <div class="footerHeadCol">Setores</div>
                     <ul>
-                        <li class="nav-first"><a href="<?php if($url != $home) echo "../../" ?>categoria/eletronicos/" class="nav_a">Eletrônicos</a></li>
-                        <li><a href="<?php if($url != $home) echo "../../" ?>categoria/mercado/" class="nav_a">Mercado</a></li>
-                        <li><a href="<?php if($url != $home) echo "../../" ?>categoria/moda_casa/" class="nav_a">Moda & Casa</a></li>
-                        <li><a href="<?php if($url != $home) echo "../../" ?>categoria/petshop/" class="nav_a">Petshop</a></li>
+                        <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>categoria/eletronicos/" class="nav_a">Eletrônicos</a></li>
+                        <li><a href="<?php echo url($url, $com, $home) ?>categoria/mercado/" class="nav_a">Mercado</a></li>
+                        <li><a href="<?php echo url($url, $com, $home) ?>categoria/moda_casa/" class="nav_a">Moda & Casa</a></li>
+                        <li><a href="<?php echo url($url, $com, $home) ?>categoria/petshop/" class="nav_a">Petshop</a></li>
+                        <li><a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav_a">Comunidade</a></li>
                     </ul>
                 </div>
                 <div class="footerSpaceCol"></div>
