@@ -228,11 +228,11 @@
 
 /*CATEGORIAS - categoria*/
 .eletronicos {
-    background-color: #1C8699;
+    background-color: #1c2d3f; /*1b5468*/
 }
 
 .mercado {
-    background-color: #BF082C;
+    background-color: #BD2D81;
 }
 
 .modaecasa {
@@ -240,10 +240,10 @@
 }
 
 .petshop {
-    background-color: #6e4912;
+    background-color: #34323d;
 }
 
 .comunidade {
-    background-color: #108758;
+    background-color: #1d3f3e;
     /*background: linear-gradient(135deg, rgba(255,0,0,1) 0%, rgba(255,128,0,1) 17%, rgba(255,240,0,1) 34%, rgba(0,255,8,1) 50%, rgba(0,255,240,1) 66%, rgba(0,0,255,1) 83%, rgba(255,0,255,1) 100%);*/
 }

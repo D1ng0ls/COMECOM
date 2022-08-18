@@ -1,9 +1,4 @@
 <?php
-    //include('conexao.php');
-    header("Expires: Sun, 25 Jul 1997 06:02:34 GMT");
-    header("Cache-Control: no-cache");
-    header("Pragma: no-cache");
-
     $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $home = $_SERVER['HTTP_HOST'] . "/cuprom/";
     $elt = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/eletronicos/";
@@ -17,23 +12,27 @@
             return "../";
         } else if($url != $home) {
             return "../../";
+        } else {
+            return "";
         }
     }
 
-    function cor($url, $elt, $mrc, $mec, $pet, $com) : string {
+    function cor($url, $elt, $mrc, $mec, $pet, $com, $home) : string {
         if($url == $elt) return "eletronicos";
         if($url == $mrc) return "mercado";
         if($url == $mec) return "modaecasa";
         if($url == $pet) return "petshop";
         if($url == $com) return "comunidade";
+        if($url == $home) return "home";
     }
 ?>
 
 <!DOCTYPE html>
+<html>
 <body>
     <header class="cabecalho" id="nav-top">
         <form action="busca" method="GET">
-        <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com)?> ">
+        <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com, $home) ?> ">
             <div class="logo">
                 <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/logo.png" alt="Logo Cuprom"></a>
             </div>
