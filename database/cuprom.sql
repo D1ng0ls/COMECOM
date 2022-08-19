@@ -12,12 +12,16 @@ create table pessoa (
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
     qnt_lojas int,
+    foto_blob_pessoa blob,
+    foto_nome_pessoa varchar(100),
     primary key (id_pessoa)
 );
 
 create table produto (
 	id_produto int not null auto_increment,
     nome varchar(100),
+    foto_blob_prod blob,
+    foto_nome_prod varchar(100),
     primary key (id_produto)
 );
 
@@ -30,6 +34,8 @@ create table publicacao (
     desconto double,
     preco_original double,
     preco_atual double,
+    foto_blob_publi blob,
+    foto_nome_publi varchar(100),
     fk_pessoa_id_pessoa int,
     fk_produto_id_produto int,
 	constraint fk_publicacao_pessoa
