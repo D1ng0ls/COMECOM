@@ -46,7 +46,7 @@
             </div>
             <ul>
                 <li class="nav-first">
-                © Copyright 2022-2024 Cuprom. Todos os direitos reservados
+                © Copyright 2022-2024 Cuprom. Todos os direitos reservados.
                 </li>
             </ul>
         </div>
