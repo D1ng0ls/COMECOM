@@ -227,20 +227,20 @@
 
 
 /*CATEGORIAS - categoria*/
-/*.eletronicos {
-    background-color: #1C8699;
+.eletronicos {            /*1*/       /*2*/      /*3*/      /*4*/       /*5*/     /*6*/
+    background-color: /*#af162a*/ /*#07f9a2*/ #582770 /*#295264*/ /*#30261c*/ /*#1C8699*/;
 }
 .mercado {
-    background-color: #BF082C;
+    background-color: /*#95003a*/ /*#09c184*/ #773d94 /*#eeae4f*/ /*#403831*/ /*#BF082C*/;
 }
 
 .modaecasa {
-    background-color: #BD2D81;
+    background-color: /*#830024*/ /*#0a8967*/ #943d8a /*#bd2f28*/ /*#365440*/ /*#BD2D81*/;
 }
 
 .petshop {
-    background-color: #6e4912;
-}*/
+    background-color: /*#5a0e3d*/ /*#0c5149*/ #c22760 /*#89373d*/ /*#1f5f61*/ /*#6e4912*/;
+}
 .comunidade {
-    background-color: #04AA6D;
+    background-color: /*#44021e*/ /*#0d192b*/ #e81764 /*#142433*/ /*#0b8185*/ /*#04AA6D*/;
 }
