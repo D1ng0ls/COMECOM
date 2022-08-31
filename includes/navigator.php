@@ -1,11 +1,11 @@
 <?php
     $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    $home = $_SERVER['HTTP_HOST'] . "/cuprom/";
-    $elt = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/eletronicos/";
-    $mrc = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/mercado/";
-    $mec = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/moda_casa/";
-    $pet = $_SERVER['HTTP_HOST'] . "/cuprom/categoria/petshop/";
-    $com = $_SERVER['HTTP_HOST'] . "/cuprom/comunidade/";
+    $home = $_SERVER['HTTP_HOST'] . "/COMECOM/";
+    $elt = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/eletronicos/";
+    $mrc = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/mercado/";
+    $mec = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/moda_casa/";
+    $pet = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/petshop/";
+    $com = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/";
 
     function url($url, $com, $home) : string {
         if($url == $com) {
