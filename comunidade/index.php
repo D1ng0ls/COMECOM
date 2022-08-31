@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="../style/style_navegador.css">
     <link rel="stylesheet" href="../style/style_comunidade.css">
     <title>COMECOM | Comunidade</title>
+    
 </head>
 
 <body>
     <?php include('../includes/navigator.php'); ?>
+
     <div align="center">
         <img src="comunidade-img\comecom-comunidade-logo2.png" id="comecom-logo">
     </div>
