@@ -1,7 +1,3 @@
-<?php
-    include('../../includes/navigator.php');
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../../style/style_navegador.css">
+    <?php include('../../includes/settings.php'); ?>
     <title>Cuprom</title>
 </head>
 
 <body>
+<?php include('../../includes/navigator.php'); ?>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
@@ -75,10 +73,6 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
     
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
+<?php include('../../includes/footer.php'); ?>
 </body>
-
-<?php
-    include('../../includes/footer.php');
-?>
-
 </html>

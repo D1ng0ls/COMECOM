@@ -1,8 +1,3 @@
-<?php
-    include('includes/navigator.php');
-    // teste
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style_navegador.css">
+    <?php include('includes/settings.php') ?>
     <title>COMECOM</title>
 </head>
 
 <body>
-    <?php
-        include('includes/inicio.php')
-    ?>
+    <?php include 'includes/navigator.php' ?>
+    <?php include 'includes/inicio.php' ?>
+    <?php include 'includes/footer.php' ?>
 </body>
 
-<?php
-    include('includes/footer.php');
-?>
+
 
 </html>
