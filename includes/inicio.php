@@ -12,7 +12,8 @@
             <title>COMECOM</title>
         </head>
         <body>
-            <div class="promocoes">
+            <!-- Dentro das divs ficarão os carroséis-->
+            <div class="promocoes"> 
             <h2>Melhores Ofertas:</h2>
                 <p>Olá, afroamericano feliz
                 Olá catapimbas, afroamericano feliz
