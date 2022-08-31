@@ -1,7 +1,4 @@
-<?php
-    include('includes/navigator.php');
-    // teste
-?>
+<?php include('includes/settings.php') ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -15,13 +12,11 @@
 </head>
 
 <body>
-    <?php
-        include('includes/inicio.php')
-    ?>
+    <?php include 'includes/navigator.php' ?>
+    <?php include 'includes/inicio.php' ?>
+    <?php include 'includes/footer.php' ?>
 </body>
 
-<?php
-    include('includes/footer.php');
-?>
+
 
 </html>

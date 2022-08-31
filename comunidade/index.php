@@ -1,6 +1,4 @@
-<?php
-    include('../includes/navigator.php');
-?>
+<?php include('../includes/settings.php'); ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -15,7 +13,7 @@
 </head>
 
 <body>
-
+    <?php include('../includes/navigator.php'); ?>
     <div align="center">
         <img src="comunidade-img\comecom-comunidade-logo2.png" id="comecom-logo">
     </div>
@@ -32,10 +30,7 @@
             <p>Acesse as <a href="comunidade-pages/rules.html">regras</a> do fórum e evite probelmas. Saiba mais sobre a gente no <a href="/">FAQ</a> caso você desejar! :)</p>
         </div>
     </div>
+    <?php include('../includes/footer.php'); ?>
 </body>
-
-<?php
-    include('../includes/footer.php');
-?>
 
 </html>

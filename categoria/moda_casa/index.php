@@ -1,7 +1,4 @@
-<?php
-    include('../../includes/navigator.php');
-?>
-
+<?php include('../../includes/settings.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,6 +11,7 @@
 </head>
 
 <body>
+<?php include('../../includes/navigator.php'); ?>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
@@ -75,10 +73,6 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
     
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
+<?php include('../../includes/footer.php'); ?>
 </body>
-
-<?php
-    include('../../includes/footer.php');
-?>
-
 </html>
