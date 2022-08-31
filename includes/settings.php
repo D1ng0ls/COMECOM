@@ -26,3 +26,5 @@
         if($url == $home) return "home";
     }
 ?>
+
+<link rel="shortcut icon" type="x-icon" href="<?php echo url($url, $com, $home) ?>media/shortcut.png">
