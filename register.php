@@ -78,10 +78,6 @@
                                 <input type="number" name="qnt_lojas">
                             </div>
                         </div>
-                        <div class="input-content-pic-perfil">
-                            <span>Imagem perfil</span><br>
-                            <input type="file" id="foto" name="foto" accept="image/*" />
-                        </div> 
                         <div class="remember">
                             <label>
                                 <input type="checkbox"> Lembre-me
