@@ -15,27 +15,27 @@
         <!-- Dentro das divs ficarão os carroséis-->
         <div class="promocoes"> 
         <h2>Melhores Ofertas:</h2>
-            <p>Olá, afroamericano feliz
-            Olá catapimbas, afroamericano feliz
-            Olá catapimbas, afroamericano feliz
+            <p>Slider slider slider slider slider slider slider slider
+            Slider slider slider slider slider slider slider slider
+            Slider slider slider slider slider slider slider slider
             </p>
         <hr class="separador">
         </div>
 
         <div class="promocoes">
             <h2>Tempo limitado:</h2>
-        <p>Olá catapimbas, afroamericano feliz
-            Olá catapimbas, afroamericano feliz
-            Olá catapimbas, afroamericano feliz
+        <p>>Slider slider slider slider slider slider slider slider
+            Slider slider slider slider slider slider slider slider
+            Slider slider slider slider slider slider slider slider
             </p>
         <hr class="separador">
         </div>
 
         <div class="promocoes">
         <h2>Nas proximidades:</h2>
-        <p>Olá catapimbas, afroamericano feliz
-            Olá catapimbas, afroamericano feliz
-            Olá catapimbas, afroamericano feliz
+        <p>>Slider slider slider slider slider slider slider slider
+            Slider slider slider slider slider slider slider slider
+            Slider slider slider slider slider slider slider slider
             </p>  
         <hr class="separador">
         </div>
