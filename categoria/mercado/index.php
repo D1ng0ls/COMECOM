@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../../style/style_navegador.css">
     <?php include('../../includes/settings.php'); ?>
-    <title>Cuprom</title>
+    <title>COMECOM | Mercado</title>
 </head>
 
 <body>

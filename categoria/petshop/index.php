@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../../style/style_navegador.css">
     <?php include('../../includes/settings.php'); ?>
-    <title>COMECOM</title>
+    <title>COMECOM | Petshop</title>
 </head>
 
 <body>
