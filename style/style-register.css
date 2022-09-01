@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .register-content
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .register-content .form-content
+{
+    width: 60%;
+}
+
+section .register-content .form-content .form-content-text
+{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+section .register-content .form-content .register-redes-socias
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section .register-content .form-content .register-redes-socias i
+{
+    margin: 0px 15px 10px;
+    cursor: pointer;
+}
+
+section .register-content .form-content h2
+{
+    color: #773d94;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #773d94    ;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+section .register-content .form-content .input-content
+{
+    margin-bottom: 15px;
+}
+
+section .register-content .form-content .input-content span 
+{
+    display: inline-block;
+    letter-spacing: 0.2px;
+}
+
+section .register-content .form-content .input-content input 
+{
+    width: 100%;
+    padding: 5px 17px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid black;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: black;
+    background: transparent;
+    border-radius: 30px;
+}
+
+section .register-content .form-content .input-content input[type="submit"] 
+{
+    background-color: #773d94;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section .register-content .form-content .input-content input[type="submit"]:hover
+{
+    background-color: #773d94f5;
+}
+
+section .register-content .form-content .input-content select
+{
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 5px 10px 5px 15px;
+    outline: none;
+}
+
+section .register-content .form-content .remember 
+{
+    margin-bottom: 10px;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+}
+
+section .register-content .form-content .input-content p
+{
+   display: flex;
+   justify-content: center;
+}
+
+section .register-content .form-content .input-content p a
+{
+   color: #773d94;
+   font-weight: 600;
+   text-decoration: none;
+   margin-left: 5px;
+}
+
+@media (max-width: 900px)
+{
+    section .register-content
+    {
+        width: 100%;
+    }
+
+    section .register-content .form-content 
+    {
+        width: 100%;
+        padding: 40px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 375px)
+{
+    section .register-content
+    {
+        width: 100%;
+    }
+
+    section .register-content .form-content 
+    {
+        width: 100%;
+    }
+}
