@@ -1,6 +1,7 @@
 /*HEADER - include*/
 :root {
     --color-purple: #773d94;
+    --color-dark: #111111;
 }
 
 .menu {
@@ -147,7 +148,7 @@
 
 /*FOOTER - include*/
 .navFooter {
-    background-color: #333333;
+    background-color: var(--color-dark);
     margin-bottom: 0;
     padding-bottom: 0;
     position: relative;
@@ -156,11 +157,12 @@
 
 .footerBackToTop {
     margin-bottom: 40px;
-    background-color: #474747;
+    background-color: var(--color-dark);
+    border-bottom: 1px solid rgb(25, 25, 25);
 }
 
 .footerBackToTop:hover {
-    background-color: #535353;
+    background-color: #222222;
 }
 
 .footerBackToTopText {
@@ -188,7 +190,7 @@
 }
 
 .footerHeadCol {
-    font-weight: 700;
+    font-weight: 900;
     color: #FFF;
     margin: 6px 0 14px 0;
     white-space: nowrap;
@@ -219,15 +221,15 @@
 }
 
 .nav_a {
-    color: #DDD;
+    color: #fff;
 }
 
 .nav_a:hover {
-    text-decoration: underline;
+    color: rgb(130, 10, 209);
 }
 
 .footerLine {
-    border-top: 1px solid #808080;
+    border-top: 1px solid rgb(25, 25, 25);
     margin-top: 40px;
 }
 
@@ -251,7 +253,7 @@
     padding: 10px 0 30px;
     text-align: center;
     color: #999;
-    background-color: #252525;
+    background-color: var(--color-dark);
 }
 .footerCopyrightLine ul {
     margin: 0;
