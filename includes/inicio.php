@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/style_navegador.css">
+        <link rel="stylesheet" href="style/style_inicio.css">
         <title>COMECOM</title>
     </head>
     <body>
@@ -24,7 +25,7 @@
 
         <div class="promocoes">
             <h2>Tempo limitado:</h2>
-        <p>>Slider slider slider slider slider slider slider slider
+        <p>Slider slider slider slider slider slider slider slider
             Slider slider slider slider slider slider slider slider
             Slider slider slider slider slider slider slider slider
             </p>
@@ -33,7 +34,7 @@
 
         <div class="promocoes">
         <h2>Nas proximidades:</h2>
-        <p>>Slider slider slider slider slider slider slider slider
+        <p>Slider slider slider slider slider slider slider slider
             Slider slider slider slider slider slider slider slider
             Slider slider slider slider slider slider slider slider
             </p>  
