@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style-register.css">
+        <link rel="stylesheet" href="style/style-register.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Register</title>
     </head>
@@ -78,6 +78,10 @@
                                 <input type="number" name="qnt_lojas">
                             </div>
                         </div>
+                        <div class="input-content-pic-perfil">
+                            <span>Imagem perfil</span><br>
+                            <input type="file" id="foto" name="foto" accept="image/*" />
+                        </div> 
                         <div class="remember">
                             <label>
                                 <input type="checkbox"> Lembre-me

@@ -114,6 +114,17 @@ section .register-content .form-content .input-content select
     outline: none;
 }
 
+section .register-content .form-content .input-content-pic-perfil input
+{
+    width: 100%;
+    height: 100%;
+}
+
+section .register-content .form-content .input-content-pic-perfil 
+{
+    padding: 0px 10px 20px 0px; /*top - right - bottom - left*/
+}
+
 section .register-content .form-content .remember 
 {
     margin-bottom: 10px;
