@@ -26,11 +26,10 @@
             </div>
             <div class="footerSpaceCol"></div>
             <div class="footerLinkCol">
-                <div class="footerHeadCol">Comunidade</div>
+                <div class="footerHeadCol">Conheça-nos</div>
                 <ul>
-                    <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav_a">Entrar</a></li>
-                    <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">Regras</a></li>
-                    <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">FAQ</a></li>
+                    <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav_a">Sobre-nós</a></li>
+                    <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">Contato</a></li>
                 </ul>
             </div>
         </div>
