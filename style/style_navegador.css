@@ -1,9 +1,13 @@
 /*HEADER - include*/
+:root {
+    --color-purple: #773d94;
+}
+
 .menu {
     width: 100%;
     display: flex;
-    background-color: #333333;
-    height: 64px;
+    background-color: var(--color-purple);
+    height: 48px;
     font-size: 18px;
 }
 
@@ -17,13 +21,18 @@
     margin: auto;
 }
 
+.logo img {
+    width: 180px;
+}
+
 .container_categoria {
-    width: 50%;
+    width: 100%;
     display: flex;
+    height: 38px;
 }
 
 .container_search {
-    width: 25%;
+    width: 50%;
     display: flex;
 }
 
@@ -32,24 +41,64 @@
     margin: auto;
 }
 
+.container_user {
+    width: 25%;
+    display: flex;
+}
+
+.user {
+    vertical-align: middle;
+    align-items: center;
+    margin: auto;
+    margin-right: 50px;
+    float: right;
+}
+
+.user-text {
+    color: white;
+    display: block;
+    float: right;
+    padding: 3.5px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.user-text:hover {
+    text-decoration: underline;
+}
+
+.user-img {
+    width: 28px;
+    filter: invert(100);
+    float: left;
+}
+
 .inputs {
-    background-color: #dddddd;
-    border-radius: 3px;
+    background-color: #ffffff00;
+    border-radius: 20px;
+    border: 1px solid white;
 }
 
 .inputs input{
-    width: 250px;
-    height: 24px;
+    width: 500px;
+    height: 32px;
     border: none;
     background-color: transparent;
-    padding-left:5px;
+    color: #FFF;
+    padding-left: 15px;
     font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputs input::placeholder{
+    color: white;
 }
 
 .inputs img {
     display: inline-block;
     vertical-align: middle;
+    filter: invert(100);
 }
 
 .input-search {
@@ -60,17 +109,10 @@
 .submit-search {
     display: block;
     float: right;
-    height: 26px;
-    padding-left: 5px;
-    padding-right:5px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: #ccc;
+    height: 32px;
+    padding-left: 7px;
+    padding-right: 15px;
     cursor: pointer;
-}
-
-.submit-search:hover {
-    background-color: #b4b4b4;
 }
 
 .container_categoria ul {
@@ -88,17 +130,18 @@
 
 .container_categoria li a {
     display: block;
-    color: #FFF;
+    color: var(--color-purple);
     text-align: center;
-    padding: 16px;
+    padding: 8.5px;
+    padding-left: 50px;
+    padding-right: 50px;
     text-decoration: none;
+    font-weight: 500;
 }
 
-.container_categoria li a:hover {
-    text-decoration: underline;
+.nav-item:hover {
+    background-color: #00000015;
 }
-
-
 
 
 
@@ -228,19 +271,19 @@
 
 /*CATEGORIAS - categoria*/
 .eletronicos {            /*1*/       /*2*/      /*3*/      /*4*/       /*5*/     /*6*/
-    background-color: /*#af162a*/ /*#07f9a2*/ #582770 /*#295264*/ /*#30261c*/ /*#1C8699*/;
+    background-color: #773d94 /*#af162a*/ /*#07f9a2*/ /*#582770*/ /*#295264*/ /*#30261c*/ /*#1C8699*/;
 }
 .mercado {
-    background-color: /*#95003a*/ /*#09c184*/ #773d94 /*#eeae4f*/ /*#403831*/ /*#BF082C*/;
+    background-color: #773d94 /*#95003a*/ /*#09c184*/ /*#773d94*/ /*#eeae4f*/ /*#403831*/ /*#BF082C*/;
 }
 
 .modaecasa {
-    background-color: /*#830024*/ /*#0a8967*/ #943d8a /*#bd2f28*/ /*#365440*/ /*#BD2D81*/;
+    background-color: #773d94 /*#830024*/ /*#0a8967*/ /*#943d8a*/ /*#bd2f28*/ /*#365440*/ /*#BD2D81*/;
 }
 
 .petshop {
-    background-color: /*#5a0e3d*/ /*#0c5149*/ #c22760 /*#89373d*/ /*#1f5f61*/ /*#6e4912*/;
+    background-color: #773d94 /*#5a0e3d*/ /*#0c5149*/ /*#c22760*/ /*#89373d*/ /*#1f5f61*/ /*#6e4912*/;
 }
 .comunidade {
-    background-color: /*#44021e*/ /*#0d192b*/ #773d94 /*#142433*/ /*#0b8185*/ /*#04AA6D*/;
+    background-color: #773d94 /*#44021e*/ /*#0d192b*/ /*#773d94*/ /*#142433*/ /*#0b8185*/ /*#04AA6D*/;
 }
