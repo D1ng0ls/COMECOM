@@ -63,3 +63,50 @@
     margin-top: 25px;
     color: #773d94;
 }
+
+
+
+/* sobre nozes */
+.title-logo-abt {
+    text-align: center;
+    margin: 50px;
+}
+
+.conteudo {
+    text-align: justify;
+}
+
+.title1, .texto1, .title2 ,.texto2{
+    margin: auto;
+    margin-left: 10%;
+    width: 40%;
+    line-height: 1.5;
+}
+
+.title2, .texto2 {
+    margin: auto;
+    margin-right: 10%;
+}
+
+.texto2 ul li.jose {
+    margin-bottom: 10px;
+}
+
+.title1 {
+    border-bottom: 1px solid black;
+}
+
+.title2 {
+    border-bottom: 1px solid white;
+}
+
+.introducao-abt {
+    background-color: white;
+    padding-bottom: 25px;
+}
+
+.objetivos-abt {
+    color: white;
+    background-color: var(--color-purple);
+    padding: 25px 0 25px 0;
+}

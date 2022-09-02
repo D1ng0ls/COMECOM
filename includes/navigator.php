@@ -2,7 +2,7 @@
     <form action="busca" method="GET">
     <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com, $home) ?> ">
         <div class="logo">
-            <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/logo.png" alt="Logo Cuprom"></a>
+            <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho.png" alt="Logo Cuprom"></a>
         </div>
 
         <div class="container_search justify-content-end">

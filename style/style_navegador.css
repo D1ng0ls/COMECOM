@@ -15,6 +15,7 @@
 .logo {
     width: 25%;
     display: flex;
+    overflow: hidden;
 }
 
 .logo a {
@@ -23,7 +24,8 @@
 }
 
 .logo img {
-    width: 180px;
+    height: 96px;
+    transform: translateY(-22.5px);
 }
 
 .container_categoria {
@@ -102,6 +104,13 @@
     filter: invert(100);
 }
 
+.comunidade .inputs img {
+    display: inline-block;
+    vertical-align: middle;
+    filter: invert(100);
+    transform: translateY(7px);
+}
+
 .input-search {
     display: block;
     float: left;
@@ -112,7 +121,8 @@
     float: right;
     height: 32px;
     padding-left: 7px;
-    padding-right: 15px;
+    padding-right: 7px;
+    margin-right: 8px;
     cursor: pointer;
 }
 
@@ -240,11 +250,12 @@
 }
 
 .logoSprite {
-    width: 80px;
-    height: 24px;
+    width: 280px;
+    height: 80px;
     margin: 0 auto;
-    background-image: url(../media/logo-mini.png);
-    background-repeat: repeat-x;
+    background: url(../media/COMECOM-rodape.png) center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .footerCopyrightLine {
