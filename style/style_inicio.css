@@ -9,6 +9,12 @@
 .promocoes h2 {
     text-align: center;
 }
+
+.promocoes img {
+    margin: auto;
+    display: block;
+}
+
 .separador {
     color: black;
     border: solid 1px black; 

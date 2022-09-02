@@ -28,7 +28,7 @@
             <div class="footerLinkCol">
                 <div class="footerHeadCol">Conheça-nos</div>
                 <ul>
-                    <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav_a">Sobre-nós</a></li>
+                    <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/comunidade-pages/aboutus.php" class="nav_a">Sobre nós</a></li>
                     <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">Contato</a></li>
                 </ul>
             </div>
