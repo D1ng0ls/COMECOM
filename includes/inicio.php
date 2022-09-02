@@ -16,28 +16,19 @@
         <!-- Dentro das divs ficarão os carroséis-->
         <div class="promocoes"> 
         <h2>Melhores Ofertas:</h2>
-            <p>Slider slider slider slider slider slider slider slider
-            Slider slider slider slider slider slider slider slider
-            Slider slider slider slider slider slider slider slider
-            </p>
+            <img src="media/slider.png">
         <hr class="separador">
         </div>
 
         <div class="promocoes">
             <h2>Tempo limitado:</h2>
-        <p>Slider slider slider slider slider slider slider slider
-            Slider slider slider slider slider slider slider slider
-            Slider slider slider slider slider slider slider slider
-            </p>
+        <img src="media/slider.png">
         <hr class="separador">
         </div>
 
         <div class="promocoes">
         <h2>Nas proximidades:</h2>
-        <p>Slider slider slider slider slider slider slider slider
-            Slider slider slider slider slider slider slider slider
-            Slider slider slider slider slider slider slider slider
-            </p>  
+        <img src="media/slider.png">  
         <hr class="separador">
         </div>
     </body>
