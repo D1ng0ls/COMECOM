@@ -1,5 +1,5 @@
 <header class="cabecalho" id="nav-top">
-    <form action="busca" method="GET">
+    <form action="<?php echo url($url, $com, $home) ?>busca" method="GET">
     <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com, $home) ?> ">
         <div class="logo">
             <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/logo.png" alt="Logo Cuprom"></a>

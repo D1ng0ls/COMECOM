@@ -81,7 +81,8 @@
     border: 1px solid white;
 }
 
-.inputs input{
+.inputs input {
+    border-radius: 20px;
     width: 500px;
     height: 32px;
     border: none;
@@ -92,7 +93,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.inputs input::placeholder{
+.inputs input::placeholder {
     color: white;
 }
 
