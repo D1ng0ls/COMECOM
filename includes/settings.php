@@ -6,11 +6,11 @@
     $mec = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/moda_casa/";
     $pet = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/petshop/";
     $com = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/";
-    $abt = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/comunidade-pages/aboutus.php";
+    $abt = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/aboutus.php";
 
     function url($url, $com, $home) : string {
         if($url == $GLOBALS['abt']){
-            return "../../";
+            return "../";
         } else if($url == $com) {
             return "../";
         } else if($url != $home) {

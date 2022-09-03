@@ -28,8 +28,8 @@
             <div class="footerLinkCol">
                 <div class="footerHeadCol">Conheça-nos</div>
                 <ul>
-                    <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/comunidade-pages/aboutus.php" class="nav_a">Sobre nós</a></li>
-                    <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">Contato</a></li>
+                    <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/aboutus.php" class="nav_a">Sobre nós</a></li>
+                    <li><a href="<?php echo url($url, $com, $home) ?>comunidade/aboutus.php#contato" class="nav_a">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -39,7 +39,7 @@
 
     <div class="footerCopyrightLine">
         <div class="footerLogoLine">
-            <a href="">
+            <a href="<?php echo url($url, $com, $home) ?>">
                 <div class="logoSprite"></div>
             </a>
         </div>

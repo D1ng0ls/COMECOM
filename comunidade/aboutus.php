@@ -1,4 +1,4 @@
-<?php include('../../includes/settings.php'); ?>
+<?php include('../includes/settings.php'); ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/style.css">
-    <link rel="stylesheet" href="../../style/style_navegador.css">
-    <link rel="stylesheet" href="../../style/style_comunidade.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style_navegador.css">
+    <link rel="stylesheet" href="../style/style_comunidade.css">
     <title>COMECOM | Comunidade</title>
 </head>
 
-<script src="../../includes/githubapi.js"></script>
+<script src="../includes/githubapi.js"></script>
 <script>github();github2();github3();github4();github5();</script>
 
 <body>
-    <?php include('../../includes/navigator.php'); ?>
+    <?php include('../includes/navigator.php'); ?>
 
     <div class="conteudo">
         <div class="logo-abt">
@@ -52,10 +52,9 @@
                 </ul>
             </div>
         </div>
-        <div class="programadores-abt container-abt">
+        <div class="programadores-abt container-abt" id="contato">
             <h2 class="title3">Programadores</h2>
             <div class="texto3 textos">
-                
                 <div class="texto30">
                     <div class="programmer programmer1">
                         <div class="programmer-images img-programmer1" id="img1">
@@ -65,13 +64,13 @@
                             </div>
                             <div class="programmer-disc disc-programmer1" id="bio1"></div>
                             <div class="social-media social-media-programmer1">
-                                <a href="https://github.com/d1ng0ls" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
-                                <a href="https://instagram.com/d1ng0ls" target="_blank"><img src="../../media/instagram.png" alt="instagram" title="instagram"></a>
-                                <a href="https://twitter.com/d1ng0ls" target="_blank"><img src="../../media/twitter.png" alt="twitter" title="twitter"></a>
-                                <a href="https://youtube.com/channel/UC0QHlFhQwxf-ZhrMa28wPiw" target="_blank"><img src="../../media/youtube.png" alt="youtube" title="youtube"></a>
-                                <a href="https://twitch.com/d1ng0ls" target="_blank"><img src="../../media/twitch.png" alt="twitch" title="twitch"></a>
-                                <a href="https://steamcommunity.com/id/d1ng0ls" target="_blank"><img src="../../media/steam.png" alt="steam" title="steam"></a>
-                                <a href="https://reddit.com/user/d1ng0ls" target="_blank"><img src="../../media/reddit.png" alt="reddit" title="reddit"></a>
+                                <a href="https://github.com/d1ng0ls" target="_blank"><img src="../media/github.png" alt="github" title="github"></a>
+                                <a href="https://instagram.com/d1ng0ls" target="_blank"><img src="../media/instagram.png" alt="instagram" title="instagram"></a>
+                                <a href="https://twitter.com/d1ng0ls" target="_blank"><img src="../media/twitter.png" alt="twitter" title="twitter"></a>
+                                <a href="https://youtube.com/channel/UC0QHlFhQwxf-ZhrMa28wPiw" target="_blank"><img src="../media/youtube.png" alt="youtube" title="youtube"></a>
+                                <a href="https://twitch.com/d1ng0ls" target="_blank"><img src="../media/twitch.png" alt="twitch" title="twitch"></a>
+                                <a href="https://steamcommunity.com/id/d1ng0ls" target="_blank"><img src="../media/steam.png" alt="steam" title="steam"></a>
+                                <a href="https://reddit.com/user/d1ng0ls" target="_blank"><img src="../media/reddit.png" alt="reddit" title="reddit"></a>
                             </div>
                         </div>
                     </div>
@@ -83,13 +82,13 @@
                             </div>
                             <div class="programmer-disc disc-programmer2" id="bio2"></div>
                             <div class="social-media social-media-programmer2">
-                                <a href="https://github.com/carlosXSU" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
-                                <a href="https://www.instagram.com/computer_video_002/" target="_blank"><img src="../../media/instagram.png" alt="instagram" title="instagram"></a>
-                                <a href="https://twitter.com/N4XSU" target="_blank"><img src="../../media/twitter.png" alt="twitter" title="twitter"></a>
-                                <a href="https://www.youtube.com/channel/UCkI_1_BFp3I8QeYUyiQRPWg" target="_blank"><img src="../../media/youtube.png" alt="youtube" title="youtube"></a>
-                                <a href="https://www.twitch.tv/andrenashii" target="_blank"><img src="../../media/twitch.png" alt="twitch" title="twitch"></a>
-                                <a href="https://steamcommunity.com/id/canabarra" target="_blank"><img src="../../media/steam.png" alt="steam" title="steam"></a>
-                                <a href="https://soundcloud.com/n4xsu" target="_blank"><img src="../../media/soundcloud.png" alt="soundcloud" title="soundcloud"></a>
+                                <a href="https://github.com/carlosXSU" target="_blank"><img src="../media/github.png" alt="github" title="github"></a>
+                                <a href="https://www.instagram.com/computer_video_002/" target="_blank"><img src="../media/instagram.png" alt="instagram" title="instagram"></a>
+                                <a href="https://twitter.com/N4XSU" target="_blank"><img src="../media/twitter.png" alt="twitter" title="twitter"></a>
+                                <a href="https://www.youtube.com/channel/UCkI_1_BFp3I8QeYUyiQRPWg" target="_blank"><img src="../media/youtube.png" alt="youtube" title="youtube"></a>
+                                <a href="https://www.twitch.tv/andrenashii" target="_blank"><img src="../media/twitch.png" alt="twitch" title="twitch"></a>
+                                <a href="https://steamcommunity.com/id/canabarra" target="_blank"><img src="../media/steam.png" alt="steam" title="steam"></a>
+                                <a href="https://soundcloud.com/n4xsu" target="_blank"><img src="../media/soundcloud.png" alt="soundcloud" title="soundcloud"></a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +100,7 @@
                             </div>
                             <div class="programmer-disc disc-programmer3" id="bio3"></div>
                             <div class="social-media social-media-programmer3">
-                                <a href="https://github.com/boninii" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
+                                <a href="https://github.com/boninii" target="_blank"><img src="../media/github.png" alt="github" title="github"></a>
                             </div>
                         </div>
                     </div>
@@ -113,7 +112,7 @@
                             </div>
                             <div class="programmer-disc disc-programmer4" id="bio4"></div>
                             <div class="social-media social-media-programmer4">
-                                <a href="https://github.com/Larbos-Naul" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
+                                <a href="https://github.com/Larbos-Naul" target="_blank"><img src="../media/github.png" alt="github" title="github"></a>
                             </div>
                         </div>
                     </div>
@@ -125,7 +124,7 @@
                             </div>
                             <div class="programmer-disc disc-programmer5" id="bio5"></div>
                             <div class="social-media social-media-programmer5">
-                                <a href="https://github.com/RenanCastrov" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
+                                <a href="https://github.com/RenanCastrov" target="_blank"><img src="../media/github.png" alt="github" title="github"></a>
                             </div>
                         </div>
                     </div>
@@ -137,7 +136,7 @@
         </div>
     </div>
 
-    <?php include('../../includes/footer.php'); ?>
+    <?php include('../includes/footer.php'); ?>
 </body>
 
 </html>
