@@ -201,6 +201,7 @@
 }
 
 .programmer-text p{
+    min-height: 24px;
     margin: 0;
     margin-bottom: 20px;
 }

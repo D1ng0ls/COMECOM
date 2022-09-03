@@ -11,7 +11,7 @@ function github() {
         var img = data.avatar_url;
 
         if (!bio) {
-            document.getElementById('bio1').innerHTML = '""';
+            document.getElementById('bio1').innerHTML = '<p></p>';
         } else {
             document.getElementById('bio1').innerHTML = '<p>"' + bio + '"</p>';
         }
@@ -36,7 +36,7 @@ function github2() {
         var img = data.avatar_url;
 
         if (!bio) {
-            document.getElementById('bio2').innerHTML = '""';
+            document.getElementById('bio2').innerHTML = '<p></p>';
         } else {
             document.getElementById('bio2').innerHTML = '<p>"' + bio + '"</p>';
         }
@@ -61,7 +61,7 @@ function github3() {
         var img = data.avatar_url;
 
         if (!bio) {
-            document.getElementById('bio3').innerHTML = '""';
+            document.getElementById('bio3').innerHTML = '<p></p>';
         } else {
             document.getElementById('bio3').innerHTML = '<p>"' + bio + '"</p>';
         }
@@ -86,7 +86,7 @@ function github4() {
         var img = data.avatar_url;
 
         if (!bio) {
-            document.getElementById('bio4').innerHTML = '""';
+            document.getElementById('bio4').innerHTML = '<p></p>';
         } else {
             document.getElementById('bio4').innerHTML = '<p>"' + bio + '"</p>';
         }
@@ -111,7 +111,7 @@ function github5() {
         var img = data.avatar_url;
 
         if (!bio) {
-            document.getElementById('bio5').innerHTML = '""';
+            document.getElementById('bio5').innerHTML = '<p></p>';
         } else {
             document.getElementById('bio5').innerHTML = '<p>"' + bio + '"</p>';
         }
