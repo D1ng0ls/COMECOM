@@ -10,8 +10,13 @@ function github() {
         var bio = data.bio;
         var img = data.avatar_url;
 
+        if (!bio) {
+            document.getElementById('bio1').innerHTML = '""';
+        } else {
+            document.getElementById('bio1').innerHTML = '<p>"' + bio + '"</p>';
+        }
+
         document.getElementById('name1').innerHTML = '<h2>' + name + '</h2>';
-        document.getElementById('bio1').innerHTML = '<p>"' + bio + '"</p>';
         document.getElementById('img1').innerHTML = '<img src="'+img+'">'
     }
 
@@ -30,8 +35,13 @@ function github2() {
         var bio = data.bio;
         var img = data.avatar_url;
 
+        if (!bio) {
+            document.getElementById('bio2').innerHTML = '""';
+        } else {
+            document.getElementById('bio2').innerHTML = '<p>"' + bio + '"</p>';
+        }
+
         document.getElementById('name2').innerHTML = '<h2>' + name + '</h2>';
-        document.getElementById('bio2').innerHTML = '<p>"' + bio + '"</p>';
         document.getElementById('img2').innerHTML = '<img src="'+img+'">'
     }
 
@@ -50,8 +60,13 @@ function github3() {
         var bio = data.bio;
         var img = data.avatar_url;
 
+        if (!bio) {
+            document.getElementById('bio3').innerHTML = '""';
+        } else {
+            document.getElementById('bio3').innerHTML = '<p>"' + bio + '"</p>';
+        }
+
         document.getElementById('name3').innerHTML = '<h2>' + name + '</h2>';
-        document.getElementById('bio3').innerHTML = '<p>"' + bio + '"</p>';
         document.getElementById('img3').innerHTML = '<img src="'+img+'">'
     }
 
@@ -70,8 +85,13 @@ function github4() {
         var bio = data.bio;
         var img = data.avatar_url;
 
+        if (!bio) {
+            document.getElementById('bio4').innerHTML = '""';
+        } else {
+            document.getElementById('bio4').innerHTML = '<p>"' + bio + '"</p>';
+        }
+
         document.getElementById('name4').innerHTML = '<h2>' + name + '</h2>';
-        document.getElementById('bio4').innerHTML = '<p>"' + bio + '"</p>';
         document.getElementById('img4').innerHTML = '<img src="'+img+'">'
     }
 
@@ -90,8 +110,13 @@ function github5() {
         var bio = data.bio;
         var img = data.avatar_url;
 
+        if (!bio) {
+            document.getElementById('bio5').innerHTML = '""';
+        } else {
+            document.getElementById('bio5').innerHTML = '<p>"' + bio + '"</p>';
+        }
+
         document.getElementById('name5').innerHTML = '<h2>' + name + '</h2>';
-        document.getElementById('bio5').innerHTML = '<p>"' + bio + '"</p>';
         document.getElementById('img5').innerHTML = '<img src="'+img+'">'
     }
 

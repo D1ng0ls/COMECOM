@@ -101,7 +101,7 @@
                             </div>
                             <div class="programmer-disc disc-programmer3" id="bio3"></div>
                             <div class="social-media social-media-programmer3">
-                                <img src="../../media/instagram.png" alt="instagram">
+                                <a href="https://github.com/boninii" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="programmer-disc disc-programmer4" id="bio4"></div>
                             <div class="social-media social-media-programmer4">
-                                <img src="../../media/instagram.png" alt="instagram">
+                                <a href="https://github.com/Larbos-Naul" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                             </div>
                             <div class="programmer-disc disc-programmer5" id="bio5"></div>
                             <div class="social-media social-media-programmer5">
-                                <img src="../../media/instagram.png" alt="instagram">
+                                <a href="https://github.com/RenanCastrov" target="_blank"><img src="../../media/github.png" alt="github" title="github"></a>
                             </div>
                         </div>
                     </div>
