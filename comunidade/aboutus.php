@@ -12,7 +12,7 @@
     <title>COMECOM | Comunidade</title>
 </head>
 
-<script src="../includes/githubapi.js"></script>
+<script src="../scripts/githubapi.js"></script>
 <script>github();github2();github3();github4();github5();</script>
 
 <body>
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="programadores-abt container-abt" id="contato">
-            <h2 class="title3">Programadores</h2>
+            <h2 class="title3">Desenvolvedores</h2>
             <div class="texto3 textos">
                 <div class="texto30">
                     <div class="programmer programmer1">
