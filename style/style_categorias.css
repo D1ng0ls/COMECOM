@@ -1,13 +1,116 @@
+.cabecao {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: var(--color-purple);
+    color: #fff;
+}
+
+.cabecao h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .container-anuncios {
     display: flex;
     margin: auto;
     width: 90%;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .container-left {
     width: 20%;
+}
+
+.container-right {
+    width: 80%;
+}
+
+.main {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr)
+}
+
+.pages {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.pages a {
+    font-weight: 500;
+    margin: 10px;
+}
+
+.pages .selected {
+    color: var(--color-purple);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.055);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: rgb(40 41 61 / 8%) 0px 0px 1px, rgb(96 97 112 / 16%) 0px 0.5px 2px;
+}
+
+.item:hover {
+    box-shadow: rgb(40 41 61 / 4%) 0px 4px 8px, rgb(96 97 112 / 16%) 0px 8px 16px;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item-info, .item-expire {
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.item-expire {
+    background-color: var(--color-purple);
+    border-radius: 7px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.item-info h4 {
+    margin: 0;
+    margin-top: 5px;
+    height: 54px;
+}
+
+.item-price {
+    display: grid;
+}
+
+.item-oldPrice {
+    text-decoration: line-through;
+    color: rgb(146, 146, 146);
+    font-size: 12px;
+}
+
+.item-newPrice {
+    font-weight: 600;
+    color: var(--color-purple);
+    font-size: 18px;
 }
 
 .filter {
@@ -19,10 +122,12 @@
 }
 
 .filter input[type=text] {
-    width: 75px;
+    width: 80px;
     border-radius: 3px;
-    height: 20px;
     margin-left: 5px;
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .filter input[type=text]:focus {
@@ -66,7 +171,21 @@
     border: 1px solid var(--color-purple);
 }
 
-.check, .text {
+.select {
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.select:focus {
+    border: 1px solid var(--color-purple);
+}
+
+.check, .text, .select {
     border: 1px solid var(--color-purple);
     position: relative;
     font-size: 14px;
@@ -76,9 +195,30 @@
 
 .filter label {
     display: flex;
-    cursor: pointer;
     align-items: center;
+}
+
+.ordenador {
+    border-bottom: 1px solid var(--color-purple);
+}
+
+.filter-order, .filter-pages {
+    margin-bottom: 20px;
+}
+
+.ordenador2 {
+    display: flex;
+}
+
+.containerPrice {
     margin-left: 10px;
+}
+
+.container2 {
+    display: block;
+    align-items: center;
+    cursor: default;
+    font-weight: bold;
 }
 
 .container {
@@ -86,19 +226,18 @@
     position: relative;
     padding-left: 22px;
     cursor: pointer;
-  }
+    margin-left: 10px;
+}
   
-  /* Esconder o checkbox padrão */
-  .container input {
+.container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Criar o checkbox customizado */
-  .checkmark {
+}
+
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,20 +246,17 @@
     background-color: transparent;
     border-radius: 2px;
     border: 1px solid var(--color-purple);
-  }
-  
-  /* Adicionar uma cor de fundo cinza ao passar o mouse */
-  .container:hover input ~ .checkmark {
-    background-color: #eee;
-  }
-  
-  /* Quando o checkbox é clicado, adicionar um fundo rosa */
-  .container input:checked ~ .checkmark {
+}
+
+.container:hover input ~ .checkmark {
+    background-color: rgb(230, 230, 230);
+}
+
+.container input:checked ~ .checkmark {
     background-color: var(--color-purple);
-  }
-  
-  /* Criar o ícone de check, escondido quando não estiver selecionado */
-  .container .checkmark:after {
+}
+
+.container .checkmark:after {
     content: "";
     position: absolute;
     display: none;
@@ -133,9 +269,8 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
-  
-  /* Exibir o ícone quando selecionado */
-  .container input:checked ~ .checkmark:after {
+}
+
+.container input:checked ~ .checkmark:after {
     display: block;
-  }
+}
