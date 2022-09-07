@@ -53,26 +53,28 @@
 
 .pages .selected {
     color: var(--color-purple);
+    text-decoration: underline;
 }
 
 .item {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.055);
-    padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 10px;
-    box-shadow: rgb(40 41 61 / 8%) 0px 0px 1px, rgb(96 97 112 / 16%) 0px 0.5px 2px;
 }
 
 .item:hover {
-    box-shadow: rgb(40 41 61 / 4%) 0px 4px 8px, rgb(96 97 112 / 16%) 0px 8px 16px;
+    box-shadow: rgb(150, 150, 150) 0px 1px 6px;
+    transition: all 0.1s;
 }
 
 .item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
 }
 
@@ -135,15 +137,15 @@
 }
 
 .filter input[type=submit] {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     margin-top: 5px;
     background: transparent;
     color: var(--color-purple);
     border: 1px solid var(--color-purple);
     border-radius: 3px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
     margin-left: 10px;
 }
 
