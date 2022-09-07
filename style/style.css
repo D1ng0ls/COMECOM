@@ -5,6 +5,11 @@
     font-style: normal;
 }
 
+:root {
+    --color-purple: #773d94;
+    --color-dark: #111111;
+}
+
 html {
     scroll-behavior: smooth;
 }

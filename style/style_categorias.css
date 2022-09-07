@@ -1,0 +1,141 @@
+.container-anuncios {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.container-left {
+    width: 20%;
+}
+
+.filter {
+    margin-bottom: 30px;
+}
+
+.filter h4 {
+    margin-bottom: 5px;
+}
+
+.filter input[type=text] {
+    width: 75px;
+    border-radius: 3px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.filter input[type=text]:focus {
+    border: 1px solid var(--color-purple);
+}
+
+.filter input[type=submit] {
+    width: 28px;
+    height: 28px;
+    margin-top: 5px;
+    background: transparent;
+    color: var(--color-purple);
+    border: 1px solid var(--color-purple);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 10px;
+}
+
+.filter input[type=submit]:hover {
+    background-color: var(--color-purple);
+    border: none;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.check {
+    all: unset;
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+.check:checked {
+    background-color: var(--color-purple);
+    border: 1px solid transparent;
+}
+
+.check:focus {
+    border: 1px solid var(--color-purple);
+}
+
+.check, .text {
+    border: 1px solid var(--color-purple);
+    position: relative;
+    font-size: 14px;
+    min-width: 15px;
+    min-height: 15px;
+}
+
+.filter label {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+  }
+  
+  /* Esconder o checkbox padrão */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Criar o checkbox customizado */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid var(--color-purple);
+  }
+  
+  /* Adicionar uma cor de fundo cinza ao passar o mouse */
+  .container:hover input ~ .checkmark {
+    background-color: #eee;
+  }
+  
+  /* Quando o checkbox é clicado, adicionar um fundo rosa */
+  .container input:checked ~ .checkmark {
+    background-color: var(--color-purple);
+  }
+  
+  /* Criar o ícone de check, escondido quando não estiver selecionado */
+  .container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4.5px;
+    top: 1px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /* Exibir o ícone quando selecionado */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
