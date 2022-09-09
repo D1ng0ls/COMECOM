@@ -123,6 +123,11 @@
     margin-bottom: 5px;
 }
 
+.filtros img, .ordenador img {
+    width: 14px;
+    margin-right: 10px;
+}
+
 .filter input[type=text] {
     width: 80px;
     border-radius: 3px;

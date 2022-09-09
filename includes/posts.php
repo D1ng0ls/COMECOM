@@ -1,7 +1,7 @@
 <div class="main">
     <?php 
         $i=0;
-        while($i<20) {
+        while($i<18) {
             $i++;
             echo "
                 <div class='item'>

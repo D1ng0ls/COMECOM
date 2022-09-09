@@ -20,7 +20,7 @@
                 <div class="footerHeadCol">Comunidade</div>
                 <ul>
                     <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav_a">Entrar</a></li>
-                    <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">Regras</a></li>
+                    <li><a href="<?php echo url($url, $com, $home) ?>comunidade/rules.html" class="nav_a">Regras</a></li>
                     <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">FAQ</a></li>
                 </ul>
             </div>
@@ -45,7 +45,7 @@
         </div>
         <ul>
             <li class="nav-first">
-            © Copyright 2022-2024 COMECOM<br> Todos os direitos reservados
+            © Copyright 2022 COMECOM<br> Todos os direitos reservados
             </li>
         </ul>
     </div>

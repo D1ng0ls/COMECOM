@@ -1,5 +1,5 @@
 <div class="ordenador">
-    <h3>Ordenar por:</h3>
+    <h3><img src="../../media/sort.png" alt="Ordenador"> Ordenar por:</h3>
     <div class="ordenador2">
         <div class="filter-order filter">
             <label class="container2">
