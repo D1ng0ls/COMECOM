@@ -29,6 +29,13 @@
         if($url == $home) return "home";
         if($url == $GLOBALS['abt']) return "comunidade";
     }
+
+    function nome($url) : string {
+        if($url == $GLOBALS['elt']) return "Eletrônicos";
+        if($url == $GLOBALS['mrc']) return "Mercado";
+        if($url == $GLOBALS['mec']) return "Moda & Casa";
+        if($url == $GLOBALS['pet']) return "Petshop";
+    }
 ?>
 
 <link rel="shortcut icon" type="x-icon" href="<?php echo url($url, $com, $home) ?>media/shortcut.png">

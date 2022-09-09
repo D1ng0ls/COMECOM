@@ -6,73 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../../style/style_navegador.css">
+    <link rel="stylesheet" href="../../style/style_categorias.css">
     <?php include('../../includes/settings.php'); ?>
-    <title>COMECOM | Mercado</title>
+    <title>COMECOM | <?php echo nome($url); ?></title>
 </head>
 
 <body>
 <?php include('../../includes/navigator.php'); ?>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
+    <div class="cabecao">
+        <h1><?php echo nome($url); ?></h1>
+    </div>
+    <div class="container-anuncios">
+        <div class="container-left">
+            <?php include '../../includes/filters.php' ?>
+        </div>
+        <div class="container-right">
+                <?php include '../../includes/sort.php' ?>
+                <?php include '../../includes/posts.php' ?>
+            <div class="pages">
+                <a class="selected" href="">1</a>
+                <a href="?number_page=2">2</a>
+            </div>
+        </div>
+    </div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
-    
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quo molestiae cupiditate asperiores. Cum, repudiandae dolor, expedita distinctio, consequuntur atque deleniti quasi libero similique suscipit aspernatur molestiae. Ex, eius illo.</p>
 <?php include('../../includes/footer.php'); ?>
 </body>
 </html>
