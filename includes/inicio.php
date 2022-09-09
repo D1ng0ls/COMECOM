@@ -17,12 +17,10 @@
         <!-- Dentro das divs ficarão os carroséis-->
         <div>
             <?php include 'includes/carousel.html'?>
-        <hr class="separador">
         </div>
 
         <div>
             <?php include 'includes/carousel2.html'?>
-        <hr class="separador">
         </div>
 
         <div>
