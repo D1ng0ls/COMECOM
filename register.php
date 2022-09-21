@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Register</title>
     </head>
-    <script>
+    <!-- <script>
         function habilitar() {
         var tipoPessoa = document.querySelector('#tipo').selectedIndex;
         var juridica = document.querySelector('.juridica');
@@ -22,7 +22,7 @@
             juridica.style.display = "none";
         }
     }
-    </script>
+    </script> -->
     <body>
         <section>
             <div class="register-content">
@@ -47,7 +47,7 @@
                             <span>Senha</span>
                             <input type="password" name="senha">
                         </div>
-                        <div class="input-content">
+                        <!-- <div class="input-content">
                             <span>Endereço</span>
                             <input type="text" name="endereco">
                         </div>
@@ -82,7 +82,7 @@
                             <label>
                                 <input type="checkbox"> Lembre-me
                             </label>
-                        </div>
+                        </div> -->
                         <div class="input-content">
                             <input type="submit" value="Sign up">
                         </div>

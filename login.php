@@ -21,10 +21,6 @@
                     </div>
                     <form>
                         <div class="input-content">
-                            <span>Nome</span>
-                            <input type="text" name="nome">
-                        </div>
-                        <div class="input-content">
                             <span>Email</span>
                             <input type="email" name="email">
                         </div>

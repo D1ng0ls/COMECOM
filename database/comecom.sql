@@ -1,10 +1,10 @@
-create database cuprom;
+create database comecom;
 
-use cuprom;
+use comecom;
 
 create table pessoa (
 	id_pessoa int not null auto_increment,
-    tipo varchar(10) not null,
+    tipoPessoa varchar(10) not null,
     nome varchar(100) not null,
     email varchar(100) not null,
     senha varchar(20) not null,
@@ -12,6 +12,7 @@ create table pessoa (
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
     qnt_lojas int,
+    adm tinyint not null default '0',
     foto_blob_pessoa blob,
     foto_nome_pessoa varchar(100),
     primary key (id_pessoa)
@@ -68,3 +69,5 @@ create table produto_categoria (
         on delete cascade on update cascade,
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );
+
+select * from pessoa;
