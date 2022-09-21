@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt_BR">
     <head>
         <title>Usuários | Projeto para Web com PHP</title>
@@ -99,4 +99,4 @@
         </div>
         <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
     </body>
-</html>
+</html> -->
