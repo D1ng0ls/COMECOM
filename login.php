@@ -20,6 +20,7 @@
                         <i style="font-size:30px; color:#773d94" class="fa fa-facebook"></i>
                     </div>
                     <form method="post" action="core/usuario_repositorio.php">
+                        <input type="hidden" name="acao" value="login">
                         <div class="input-content">
                             <span>E-mail</span>
                             <input  type="text" require="required" 

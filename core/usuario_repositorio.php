@@ -21,7 +21,7 @@
                 'email' => $email,
                 'senha' => crypt($senha, $salt)
             ];
-            print_r(($dados));
+
             insere (
                 'pessoa',
                 $dados
@@ -36,7 +36,7 @@
             ];
 
             $criterio = [
-                ['id_pessoa', '=', $id]
+                ['id', '=', $id]
             ];
 
             atualiza (
@@ -48,7 +48,8 @@
             break;
         case 'login':
             $criterio = [
-                ['email', '=', $email]
+                ['email', '=', $email],
+                ['AND', 'ativo', '=', 1]
             ];
 
             $retorno = buscar (
@@ -56,6 +57,7 @@
                 ['id_pessoa', 'nome', 'email', 'senha', 'adm'],
                 $criterio
             );
+            print_r($criterio);
 
             if(count($retorno) > 0) {
                 if(crypt($senha, $salt) == $retorno[0]['senha']) {
@@ -81,7 +83,7 @@
                 ];
 
                 $criterio = [
-                    ['id_pessoa', '=', $id]
+                    ['id', '=', $id]
                 ];
 
                 atualiza (
@@ -102,7 +104,7 @@
                 ];
 
                 $criterio = [
-                    ['id_pessoa', '=', $id]
+                    ['id', '=', $id]
                 ];
 
                 atualiza (  

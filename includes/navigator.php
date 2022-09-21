@@ -1,5 +1,9 @@
+<?php
+    session_start();
+?>
+
 <header class="cabecalho" id="nav-top">
-    <form action="<?php echo url($url, $com, $home) ?>busca" method="GET">
+    <form action="<?php echo url($url, $com, $home) ?>busca" method="post">
         <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com, $home) ?> ">
             <div class="logo">
                 <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho.png" alt="Logo Cuprom"></a>
@@ -21,10 +25,9 @@
                         </a>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['login'])) : ?>
-                        <div class="card-body text-right">
-                            Olá, <?php echo $_SESSION['login']['pessoa']['nome']?>!
-                            <a href="../core/usuario_repositorio.php?acao=logout" role="button">Sair</a>
-                        </div>
+                        Olá, <?php echo $_SESSION['login']['pessoa']['nome']?>!
+                        <a href="core/usuario_repositorio.php?acao=logout" role="button">Sair</a>
+                    </div>
                     <?php endif ?>
                 </div>
             </div>
