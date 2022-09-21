@@ -13,7 +13,7 @@
             <a href="<?php echo url($url, $com, $home) ?>categoria/petshop/" class="nav-link active">Petshop</a>
         </li>
         <li class="nav-item last-item">
-            <a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav-link active">Comunidade</a>
+            <a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav-link active">Comunidaade</a>
         </li>
     </ul>
 </div>

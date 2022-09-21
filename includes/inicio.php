@@ -15,18 +15,18 @@
     </head>
     <body>
         <!-- Dentro das divs ficarão os carroséis-->
-        <!-- <div class="container-carousel">
+        <div class="container-carousel">
             <div>
-                <?php include 'includes/carousel.php'?>
+                <?php include 'carrossel.php'?>
             </div>
 
             <div>
-                <?php include 'includes/carousel.php'?>
+                <?php include 'carrossel.php'?>
             </div>
 
             <div>
-                <?php include 'includes/carousel.php'?>
+                <?php include 'carrossel.php'?>
             </div>
-        </div> -->
+        </div>
     </body>
 </html>

@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <?php include 'includes/navigator.php' ?>
-    <?php include 'includes/inicio.php' ?>
-    <?php include 'includes/footer.php' ?>
+    <?php include 'includes/navigator.php'  ?>
+    <?php include 'includes/inicio.php'     ?>
+    <?php include 'includes/footer.php'     ?>
 </body>
 
 
