@@ -19,14 +19,16 @@
                         <i style="font-size:30px; color:#773d94" class="fa fa-google"></i>
                         <i style="font-size:30px; color:#773d94" class="fa fa-facebook"></i>
                     </div>
-                    <form>
+                    <form method="post" action="core/usuario_repositorio.php">
                         <div class="input-content">
-                            <span>Email</span>
-                            <input type="email" name="email">
+                            <span>E-mail</span>
+                            <input  type="text" require="required" 
+                                    id="email" name="email">
                         </div>
                         <div class="input-content">
                             <span>Senha</span>
-                            <input type="password" name="senha">
+                            <input  type="password" require="required" 
+                                    id="senha" name="senha">
                         </div>
                         <div class="remember">
                             <label>
@@ -34,7 +36,7 @@
                             </label>
                         </div>
                         <div class="input-content">
-                            <input type="submit" value="Sign in">
+                            <button type="submit">Sign in</button>
                         </div>
                         <div class="input-content">
                             <p>Não tem uma conta? <a href="register.php">Se inscreva!</a></p>

@@ -21,7 +21,7 @@
                 'email' => $email,
                 'senha' => crypt($senha, $salt)
             ];
-
+            print_r(($dados));
             insere (
                 'pessoa',
                 $dados
@@ -36,7 +36,7 @@
             ];
 
             $criterio = [
-                ['id', '=', $id]
+                ['id_pessoa', '=', $id]
             ];
 
             atualiza (
@@ -53,7 +53,7 @@
 
             $retorno = buscar (
                 'pessoa',
-                ['id', 'nome', 'email', 'senha', 'adm'],
+                ['id_pessoa', 'nome', 'email', 'senha', 'adm'],
                 $criterio
             );
 
@@ -81,7 +81,7 @@
                 ];
 
                 $criterio = [
-                    ['id', '=', $id]
+                    ['id_pessoa', '=', $id]
                 ];
 
                 atualiza (
@@ -102,11 +102,11 @@
                 ];
 
                 $criterio = [
-                    ['id', '=', $id]
+                    ['id_pessoa', '=', $id]
                 ];
 
                 atualiza (  
-                    'pessoas',
+                    'pessoa',
                     $dados,
                     $criterio
                 );
@@ -115,5 +115,5 @@
                 exit;
                 break;
     }
-    header('Location: ../index.php');
+    header('Location: ../');
 ?>

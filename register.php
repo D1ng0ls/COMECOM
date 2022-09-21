@@ -27,6 +27,28 @@
         <section>
             <div class="register-content">
                 <div class="form-content">
+                    <?php
+                        require_once 'includes/funcoes.php';
+                        require_once 'core/conexao_mysql.php';
+                        require_once 'core/sql.php';
+                        require_once 'core/mysql.php';
+
+                        if(isset($_SESSION['login'])) {
+                            $id = (int) $_SESSION['login']['usuario']['id'];
+
+                            $criterio = [
+                                ['id', '=', $id]
+                            ];
+
+                            $retorno = buscar(
+                                'usuario',
+                                ['id','nome','email'],
+                                $criterio
+                            );
+
+                            $entidade = $retorno[0];
+                        }
+                    ?>
                     <div class="form-content-text">
                         <h2>Register</h2>
                     </div>
@@ -34,19 +56,30 @@
                         <i style="font-size:30px; color:#773d94" class="fa fa-google"></i>
                         <i style="font-size:30px; color:#773d94" class="fa fa-facebook"></i>
                     </div>
-                    <form>
+                    <form method="post" action="core/usuario_repositorio.php">
+                        <input type="hidden" name="acao"
+                                value="<?php echo empty($id) ? 'insert' : 'update' ?>">
+                        <input type="hidden" name="id"
+                                value="<?php echo $entidade['id'] ?? '' ?>">
                         <div class="input-content">
                             <span>Nome</span>
-                            <input type="text" name="nome">
+                            <input  type="text" 
+                                    require="required" id="nome" name="nome"
+                                    value="<?php echo $entidade['nome'] ?? '' ?>">
                         </div>
                         <div class="input-content">
-                            <span>Email</span>
-                            <input type="email" name="email">
+                            <span>E-mail</span>
+                            <input  type="text"
+                                    require="required" id="email" name="email"
+                                    value="<?php echo $entidade['email'] ?? '' ?>">
                         </div>
-                        <div class="input-content">
-                            <span>Senha</span>
-                            <input type="password" name="senha">
-                        </div>
+                        <?php if(!isset($_SESSION['login'])): ?>
+                            <div class="input-content">
+                                <span>Senha</span>
+                                <input type="password"
+                                        require="required" id="senha" name="senha">
+                            </div>
+                        <?php endif; ?>
                         <!-- <div class="input-content">
                             <span>Endereço</span>
                             <input type="text" name="endereco">

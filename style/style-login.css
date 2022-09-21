@@ -88,7 +88,21 @@ section .login-content .form-content .input-content input
     border-radius: 30px;
 }
 
-section .login-content .form-content .input-content input[type="submit"] 
+section .login-content .form-content .input-content button 
+{
+    width: 100%;
+    padding: 5px 17px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid black;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: black;
+    background: transparent;
+    border-radius: 30px;
+}
+
+section .login-content .form-content .input-content button
 {
     background-color: #773d94;
     color: #fff;
@@ -98,7 +112,7 @@ section .login-content .form-content .input-content input[type="submit"]
     cursor: pointer;
 }
 
-section .login-content .form-content .input-content input[type="submit"]:hover
+section .login-content .form-content .input-content button:hover
 {
     background-color: #773d94f5;
 }

@@ -4,17 +4,18 @@ use comecom;
 
 create table pessoa (
 	id_pessoa int not null auto_increment,
-    tipoPessoa varchar(10) not null,
+    /*tipoPessoa varchar(10) not null,*/
     nome varchar(100) not null,
     email varchar(100) not null,
     senha varchar(20) not null,
-	endereco varchar(100) not null,
+	/*endereco varchar(100) not null,
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
-    qnt_lojas int,
+    qnt_lojas int,*/
+    ativo tinyint not null default '0',
     adm tinyint not null default '0',
-    foto_blob_pessoa blob,
-    foto_nome_pessoa varchar(100),
+    /*foto_blob_pessoa blob,
+    foto_nome_pessoa varchar(100),*/
     primary key (id_pessoa)
 );
 

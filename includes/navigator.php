@@ -1,3 +1,4 @@
+
 <header class="cabecalho" id="nav-top">
     <form action="<?php echo url($url, $com, $home) ?>busca" method="GET">
     <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com, $home) ?> ">
@@ -20,6 +21,12 @@
                         <span class="user-text">Login</span>
                     </a>
                 <?php endif; ?>
+                <?php if(isset($_SESSION['login'])) : ?>
+                    <div class="card-body text-right">
+                        Olá, <?php echo $_SESSION['login']['pessoa']['nome']?>!
+                        <a href="../core/usuario_repositorio.php?acao=logout" role="button">Sair</a>
+                    </div>
+                <?php endif ?>
             </div>
         </div>
     </div>
