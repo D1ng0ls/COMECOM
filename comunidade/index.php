@@ -20,7 +20,7 @@
         <img src="comunidade-img\comecom-comunidade-logo2.png" id="comecom-logo">
     </div>
 
-    <div class="container1">
+    <div class="container1">  <!-- BOAS VINDAS -->
         <div class="container1-1">
             <p>Bem vindo ao fórum de conversas da COMECOM!</p>
         </div>
@@ -32,6 +32,10 @@
             <p>Acesse as <a href="rules.html">regras</a> do fórum e evite probelmas. Saiba mais sobre a gente no <a href="/">FAQ</a> caso você desejar! :)</p>
         </div>
     </div>
+
+<hr>
+
+    <?php include '../testepost.php' ?>
     <?php include('../includes/footer.php'); ?>
 </body>
 
