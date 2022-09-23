@@ -36,7 +36,7 @@
             ];
 
             $criterio = [
-                ['id', '=', $id]
+                ['id_pessoa', '=', $id]
             ];
 
             atualiza (
@@ -44,6 +44,10 @@
                 $dados,
                 $criterio
             );
+
+            break;
+        
+        
 
             break;
         case 'login':
@@ -83,7 +87,7 @@
                 ];
 
                 $criterio = [
-                    ['id', '=', $id]
+                    ['id_pessoa', '=', $id]
                 ];
 
                 atualiza (
@@ -104,7 +108,7 @@
                 ];
 
                 $criterio = [
-                    ['id', '=', $id]
+                    ['id_pessoa', '=', $id]
                 ];
 
                 atualiza (  

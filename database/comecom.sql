@@ -12,7 +12,7 @@ create table pessoa (
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
     qnt_lojas int,*/
-    ativo tinyint not null default '0',
+    ativo tinyint not null default '1',
     adm tinyint not null default '0',
     /*foto_blob_pessoa blob,
     foto_nome_pessoa varchar(100),*/
@@ -70,5 +70,3 @@ create table produto_categoria (
         on delete cascade on update cascade,
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );
-
-select * from pessoa;
