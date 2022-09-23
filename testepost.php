@@ -16,7 +16,7 @@
         <div class="container1-2">
             <div class="postcomu">
                 <p><h3>Acesse as <a href="rules.html">regras</a> do fórum e evite probelmas. Saiba mais sobre a gente no <a href="/">FAQ</a> caso você desejar! :)</h3></p>
-                <img id="teste" src="media/slider.png" alt="">
+                <img id="teste" src="../media/slider.png" alt="">
             </div>
             <h4>data e autor</h4>
         </div>
