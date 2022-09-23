@@ -36,6 +36,12 @@
         if($url == $GLOBALS['mec']) return "Moda & Casa";
         if($url == $GLOBALS['pet']) return "Petshop";
     }
+
+    function ofertas($tipo) : string {
+        if ($tipo == 1) return "Melhores Ofertas:";
+        if ($tipo == 2) return "Nas Proximidades:";
+        if ($tipo == 3) return "Tempo Limitado:";
+    }
 ?>
 
 <link rel="shortcut icon" type="x-icon" href="<?php echo url($url, $com, $home) ?>media/shortcut.png">

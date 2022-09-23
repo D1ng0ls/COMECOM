@@ -16,8 +16,6 @@
     background: #555; 
 } 
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');
-
 *
 {
     margin: 0;
@@ -26,11 +24,17 @@
     -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-body
-{
-    font-weight: 400;
-    color: #000000;
+
+.owl-carousel a {
+    text-decoration: none;
+    color: var(--color-dark) !important;
 }
+
+.owl-carousel a:hover {
+    text-decoration: underline;
+    color: var(--color-purple) !important;
+}
+
 div
 {
     display: block;
@@ -46,7 +50,6 @@ ul
 }
 p
 {
-    font-family: 'Rubik', sans-serif;
     font-size: 14px;
     line-height: 1.7;
     font-weight: 400;
@@ -88,14 +91,7 @@ p a:hover::after
 {
     opacity: 0.2;
 }
-::selection
-{
     
-}
-p::selection
-{
-    
-}
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
@@ -103,21 +99,12 @@ h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-    font-family: 'Rubik', sans-serif;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-    
-}
+
 .form-control
 {
     color: #db5246;
