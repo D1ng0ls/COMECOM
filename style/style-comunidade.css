@@ -11,30 +11,17 @@
     height: 250px;
 }
 
-.postcomu{
-    text-align: justify;
-}
-
-.postcomu p {
-}
-
-.postcomu img {
-    width: 100%;
-}
-
-h4 {
-    margin-left: 5%;
-}
-
 .container1 {
     width: 750px;
     min-height: 100px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: #773d94;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 20px;
-    border: none;
 }
 .container1-1 {
     height: 33px;

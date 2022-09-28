@@ -1,10 +1,6 @@
-<?php
-    session_start();
-?>
-
 <header class="cabecalho" id="nav-top">
     <form action="<?php echo url($url, $com, $home) ?>busca" method="post">
-        <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com, $home) ?> ">
+        <div class="menu">
             <div class="logo">
                 <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho.png" alt="Logo Cuprom"></a>
             </div>
