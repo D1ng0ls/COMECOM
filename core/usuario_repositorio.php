@@ -27,6 +27,28 @@
                 $dados
             );
 
+            $criterio = [
+                ['email', '=', $email],
+                ['AND', 'ativo', '=', 1]
+            ];
+
+            $retorno = buscar (
+                'pessoa',
+                ['id_pessoa', 'nome', 'email', 'senha', 'adm'],
+                $criterio
+            );
+
+            if(count($retorno) > 0) {
+                if(crypt($senha, $salt) == $retorno[0]['senha']) {
+                    $_SESSION['login']['pessoa'] = $retorno[0];
+                    if(!empty($_SESSION['url_retorno'])) {
+                        header('Location: ' . $_SESSION['url_retorno']);
+                        $_SESSION['url_retorno'] = '';
+                        exit;
+                    }
+                }
+            }
+
             break;
         case 'update':
             $id = (int)$id;
@@ -46,8 +68,6 @@
             );
 
             break;
-        
-        
 
             break;
         case 'login':
@@ -61,7 +81,6 @@
                 ['id_pessoa', 'nome', 'email', 'senha', 'adm'],
                 $criterio
             );
-            print_r($criterio);
 
             if(count($retorno) > 0) {
                 if(crypt($senha, $salt) == $retorno[0]['senha']) {

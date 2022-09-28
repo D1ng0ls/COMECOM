@@ -25,7 +25,7 @@
                         </a>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['login'])) : ?>
-                        Olá, <?php echo $_SESSION['login']['pessoa']['nome']?>!
+                            <?php echo $_SESSION['login']['pessoa']['nome']?>!
                         <a href="<?php echo url($url, $com, $home)?>core/usuario_repositorio.php?acao=logout" role="button">Sair</a>
                     </div>
                     <?php endif; ?>

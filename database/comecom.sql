@@ -70,3 +70,5 @@ create table produto_categoria (
         on delete cascade on update cascade,
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );
+
+select * from pessoa;
