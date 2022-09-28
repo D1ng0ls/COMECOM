@@ -25,8 +25,10 @@
                         </a>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['login'])) : ?>
-                            <span class="user-text"><?php echo $_SESSION['login']['pessoa']['nome']?>!
-                        <a href="<?php echo url($url, $com, $home)?>core/usuario_repositorio.php?acao=logout" role="button">Sair</a>
+                            <span class="user-text">
+                                <?php echo $_SESSION['login']['pessoa']['nome']?>!
+                                <a href="<?php echo url($url, $com, $home)?>core/usuario_repositorio.php?acao=logout" role="button">Sair</a>
+                            </span>
                     </div>
                     <?php endif; ?>
                 </div>
