@@ -63,13 +63,15 @@
 }
 
 .user-text:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .user-img {
-    width: 28px;
+    max-width: 28px;
+    max-height: 28px;
     filter: invert(100);
     float: left;
+    border-radius: 20px;
 }
 
 .inputs {
