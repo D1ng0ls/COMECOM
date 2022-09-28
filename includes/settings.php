@@ -11,14 +11,16 @@
     $pet = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/petshop/";
     $com = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/";
     $abt = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/aboutus.php";
-    $usr = $_SERVER['HTTP_HOST'] . "/COMECOM/usuario.php?id_pessoa=" . $_SESSION['login']['pessoa']['id_pessoa'];
+    if(isset($_SESSION['login'])) {$usr = $_SERVER['HTTP_HOST'] . "/COMECOM/usuario.php?id_pessoa=" . $_SESSION['login']['pessoa']['id_pessoa'];} else {$usr = "";};
 
     function url($url, $com, $home) : string {
         if($url == $GLOBALS['abt']){
             return "../";
         } else if($url == $com) {
             return "../";
-        } else if($url == $GLOBALS['usr'] || $url == $home){
+        } else if($url == $GLOBALS['usr']){
+            return "";
+        } else if( $url == $home){
             return "";
         } else if($url != $home) {
             return "../../";
