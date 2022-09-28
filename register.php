@@ -8,21 +8,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Register</title>
     </head>
-    <!-- <script>
-        function habilitar() {
-        var tipoPessoa = document.querySelector('#tipo').selectedIndex;
-        var juridica = document.querySelector('.juridica');
-        var fisica = document.querySelector('.fisica');
-
-        if (tipoPessoa == 1) {
-            juridica.style.display = "block";
-            fisica.style.display = "none";
-        } else {
-            fisica.style.display = "block";
-            juridica.style.display = "none";
-        }
-    }
-    </script> -->
     <body>
         <section>
             <div class="register-content">
@@ -69,49 +54,59 @@
                         </div>
                         <div class="input-content">
                             <span>E-mail</span>
-                            <input  type="text"
-                                    require="required" id="email" name="email"
+                            <input  type="text" require="required" 
+                                    id="email" name="email"
                                     value="<?php echo $entidade['email'] ?? '' ?>">
                         </div>
                         <?php if(!isset($_SESSION['login'])): ?>
                             <div class="input-content">
                                 <span>Senha</span>
-                                <input type="password"
-                                        require="required" id="senha" name="senha">
+                                <input type="password" require="required" 
+                                id="senha" name="senha" 
+                                value="<?php echo $entidade['senha'] ?? '' ?>">
                             </div>
                         <?php endif; ?>
                         <div class="input-content">
                             <span>Endereço</span>
-                            <input type="text" name="endereco">
+                            <input  type="text" require="required" 
+                                    id="endereco" name="endereco"
+                                    value="<?php echo $entidade['endereco'] ?? '' ?>">
                         </div>
                         <div class="input-content">
                             <span>Telefone</span>
-                            <input type="text" name="telefone"> 
+                            <input  type="text" require="required"
+                                    id="telefone" name="telefone"
+                                    value="<?php echo $entidade['telefone'] ?? '' ?>"> 
                         </div>
-                        <!-- <div class="input-content">
+                        <div class="input-content">
                             <span>Tipo</span><br>
-                            <select id="tipo" name="tipo" onchange="habilitar()">
-                                <option><p>Pessoa Física</p></option>
-                                <option><p>Pessoa Jurídica</p></option>
+                            <select id="tipo_pessoa" name="tipo_pessoa" onchange="habilitar()"
+                                    require="required">
+                                <option value="fisica"><p>Pessoa Física</p></option>
+                                <option value="juridica"><p>Pessoa Jurídica</p></option>
                             </select>
                         </div>
                         <div class="fisica">
                             <div class="input-content">
                                 <span>CPF</span>
-                                <input type="text" name="cpf">
+                                <input  type="text" require="required" 
+                                        id="cpf" name="cpf"
+                                        value="<?php echo $entidade['cpf'] ?? '' ?>">
                             </div>
                         </div>
                         <div class="juridica" style="display: none;">
                             <div class="input-content">
                                 <span>CNPJ</span>
-                                <input type="text" name="cpf">
+                                <input  type="text" require="required" 
+                                        id="cnpj" name="cnpj"
+                                        value="<?php echo $entidade['cnpj'] ?? '' ?>">
                             </div>
                             <div class="input-content">
                                 <span>Quantidade de lojas</span>
                                 <input type="number" name="qnt_lojas">
-                            </div>
+                            </div> 
                         </div>
-                        <div class="remember">
+                        <!-- <div class="remember">
                             <label>
                                 <input type="checkbox"> Lembre-me
                             </label>
@@ -126,5 +121,20 @@
                 </div>
             </div>
         </section>
+        <script>
+            function habilitar() {
+            var tipoPessoa = document.querySelector('#tipo_pessoa').selectedIndex;
+            var juridica = document.querySelector('.juridica');
+            var fisica = document.querySelector('.fisica');
+
+            if (tipoPessoa == 1) {
+                juridica.style.display = "block";
+                fisica.style.display = "none";
+            } else {
+                fisica.style.display = "block";
+                juridica.style.display = "none";
+            }
+        }
+        </script> 
     </body>
 </html>

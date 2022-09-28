@@ -16,13 +16,31 @@
 
     switch($acao) {
         case 'insert':
-            $dados = [
-                'nome' => $nome,
-                'email' => $email,
-                'senha' => crypt($senha, $salt),
-                'endereco' => $endereco,
-                'telefone' => $telefone
-            ];
+            if ($tipo_pessoa == 'fisica') {
+                $dados = [
+                    'tipo_pessoa' => $tipo_pessoa,
+                    'nome' => $nome,
+                    'email' => $email,
+                    'senha' => crypt($senha, $salt),
+                    'endereco' => $endereco,
+                    'telefone' => $telefone,
+                    'documento' => $cpf
+                ];
+            }
+            else {
+                if($tipo_pessoa == 'juridica') {
+                    $dados = [
+                        'tipo_pessoa' => $tipo_pessoa,
+                        'nome' => $nome,
+                        'email' => $email,
+                        'senha' => crypt($senha, $salt),
+                        'endereco' => $endereco,
+                        'telefone' => $telefone,
+                        'documento' => $cnpj,
+                        'qnt_lojas' => $qnt_lojas
+                    ];
+                }
+            }
 
             insere (
                 'pessoa',
@@ -36,7 +54,7 @@
 
             $retorno = buscar (
                 'pessoa',
-                ['id_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'adm'],
+                ['id_pessoa', 'tipo_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'documento', 'qnt_lojas', 'adm'],
                 $criterio
             );
 
@@ -55,8 +73,13 @@
         case 'update':
             $id = (int)$id;
             $dados = [
+                'tipo_pessoa' => $tipo_pessoa,
                 'nome' => $nome,
-                'email' => $email
+                'email' => $email,
+                'endereco' => $endereco,
+                'telefone' => $telefone,
+                'documento' => $documento,
+                'qnt_lojas' => $qnt_lojas
             ];
 
             $criterio = [
@@ -80,7 +103,7 @@
 
             $retorno = buscar (
                 'pessoa',
-                ['id_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'adm'],
+                ['id_pessoa', 'tipo_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'documento', 'qnt_lojas', 'adm'],
                 $criterio
             );
 
