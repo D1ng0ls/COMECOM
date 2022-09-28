@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+a{
+    text-decoration: none !important;
+}
+
 :root {
     --color-purple: #773d94;
     --color-dark: #111111;

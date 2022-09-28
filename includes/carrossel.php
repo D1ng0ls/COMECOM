@@ -9,20 +9,20 @@
                     <div class='bbb_viewed_slider_container'>                         
                         <div class='owl-carousel owl-theme bbb_viewed_slider'>";
                                 $i=1; while($i<=5){ echo"
-                            <a href='#'>
+                            
                                 <div class='owl-item'>
                                     <div class='bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center'>
                                         <div class='bbb_viewed_image'><img src='media/oferta5.jpg' alt=''></div>
                                         <div class='bbb_viewed_content text-center'>
                                             <div class='bbb_viewed_price'>R$".$i."00,00<span>R$".$i."000,00</span></div>
-                                            <div class='bbb_viewed_name'>Samsung Mobile</div>
+                                            <a href='#'><div class='bbb_viewed_name'>Samsung Mobile</div></a>
                                         </div>
                                         <ul class='item_marks'>
                                             <li class='item_mark item_discount'>-90%</li>
                                         </ul>
                                     </div>
                                 </div>
-                            </a>
+                            
                             "; $i++;}; 
                         echo "</div>
                     </div>
