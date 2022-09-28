@@ -1,4 +1,8 @@
 <?php
+    session_start();
+?>
+
+<?php
     $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $home = $_SERVER['HTTP_HOST'] . "/COMECOM/";
     $elt = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/eletronicos/";
@@ -7,27 +11,18 @@
     $pet = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/petshop/";
     $com = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/";
     $abt = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/aboutus.php";
+    $usr = $_SERVER['HTTP_HOST'] . "/COMECOM/usuario.php?id_pessoa=" . $_SESSION['login']['pessoa']['id_pessoa'];
 
     function url($url, $com, $home) : string {
         if($url == $GLOBALS['abt']){
             return "../";
         } else if($url == $com) {
             return "../";
+        } else if($url == $GLOBALS['usr'] || $url == $home){
+            return "";
         } else if($url != $home) {
             return "../../";
-        } else {
-            return "";
-        }
-    }
-
-    function cor($url, $elt, $mrc, $mec, $pet, $com, $home) : string {
-        if($url == $elt) return "eletronicos";
-        if($url == $mrc) return "mercado";
-        if($url == $mec) return "modaecasa";
-        if($url == $pet) return "petshop";
-        if($url == $com) return "comunidade";
-        if($url == $home) return "home";
-        if($url == $GLOBALS['abt']) return "comunidade";
+        } 
     }
 
     function nome($url) : string {

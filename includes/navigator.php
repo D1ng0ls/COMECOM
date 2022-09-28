@@ -1,10 +1,6 @@
-<?php
-    session_start();
-?>
-
 <header class="cabecalho" id="nav-top">
     <form action="<?php echo url($url, $com, $home) ?>busca" method="post">
-        <div class="menu <?php echo cor($url, $elt, $mrc, $mec, $pet, $com, $home) ?> ">
+        <div class="menu">
             <div class="logo">
                 <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho.png" alt="Logo Cuprom"></a>
             </div>
@@ -25,8 +21,17 @@
                         </a>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['login'])) : ?>
-                            <?php echo $_SESSION['login']['pessoa']['nome']?>!
-                        <a href="<?php echo url($url, $com, $home)?>core/usuario_repositorio.php?acao=logout" role="button">Sair</a>
+                        <a href="<?php echo url($url, $com, $home) ?>usuario.php?id_pessoa=<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
+                            <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/login.png" alt="login">
+                            <?php endif; ?>
+                            <?php if (isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/foto_nome_pessoa" alt="login">
+                            <?php endif; ?>
+                            <span class="user-text">
+                                Você!
+                            </span>
+                        </a>
                     </div>
                     <?php endif; ?>
                 </div>
