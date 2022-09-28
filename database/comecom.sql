@@ -4,14 +4,14 @@ use comecom;
 
 create table pessoa (
 	id_pessoa int not null auto_increment,
-    /*tipoPessoa varchar(10) not null,*/
+    tipo_pessoa varchar(10) not null,
     nome varchar(100) not null,
     email varchar(100) not null unique,
     senha varchar(20) not null,
 	endereco varchar(100) not null,
 	telefone varchar(30) not null,
-    /*documento varchar(14) not null unique,
-    qnt_lojas int,*/
+    documento varchar(14) not null unique,
+    qnt_lojas int,
     ativo tinyint not null default '1',
     adm tinyint not null default '0',
     /*foto_blob_pessoa blob,
