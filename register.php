@@ -41,7 +41,8 @@
                         <i style="font-size:30px; color:#773d94" class="fa fa-google"></i>
                         <i style="font-size:30px; color:#773d94" class="fa fa-facebook"></i>
                     </div>
-                    <form method="post" action="core/usuario_repositorio.php">
+                    <span id="msgAlerta"></span>
+                    <form method="post" action="core/usuario_repositorio.php" id="verification">
                         <input type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                         <input type="hidden" name="id"
@@ -103,7 +104,9 @@
                             </div>
                             <div class="input-content">
                                 <span>Quantidade de lojas</span>
-                                <input type="number" name="qnt_lojas">
+                                <input  type="number" require="required"
+                                        id="qnt_lojas" name="qnt_lojas"
+                                        value="<?php echo $entidade['qnt_lojas'] ?? '' ?>">
                             </div> 
                         </div>
                         <!-- <div class="remember">
@@ -112,7 +115,7 @@
                             </label>
                         </div> -->
                         <div class="input-content">
-                            <input type="submit" value="Sign up">
+                            <button type="submit">Sign up</button>
                         </div>
                         <div class="input-content">
                             <p>Já possui uma conta? <a href="login.php">Entre!</a></p>
@@ -123,18 +126,32 @@
         </section>
         <script>
             function habilitar() {
-            var tipoPessoa = document.querySelector('#tipo_pessoa').selectedIndex;
-            var juridica = document.querySelector('.juridica');
-            var fisica = document.querySelector('.fisica');
+                var tipoPessoa = document.querySelector('#tipo_pessoa').selectedIndex;
+                var juridica = document.querySelector('.juridica');
+                var fisica = document.querySelector('.fisica');
 
-            if (tipoPessoa == 1) {
-                juridica.style.display = "block";
-                fisica.style.display = "none";
-            } else {
-                fisica.style.display = "block";
-                juridica.style.display = "none";
+                if (tipoPessoa == 1) {
+                    juridica.style.display = "block";
+                    fisica.style.display = "none";
+                } else {
+                    fisica.style.display = "block";
+                    juridica.style.display = "none";
+                }
             }
-        }
+            
+            const formulario =  document.querySelector("#verification");
+
+            formulario.onsubmit = evento => {
+                //Receber o valor do campo
+                var nome = document.querySelector("#nome").value;
+                console.log(nome);
+
+                //Verificar se o campo está vazio
+                if (nome === "") {
+                    document.getElementById("msgAlerta").innerHTML = "<p>Erro: Necessário preencher campos</p>";    
+                    return;
+                }
+            }
         </script> 
     </body>
 </html>
