@@ -25,7 +25,7 @@
                         </a>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['login'])) : ?>
-                        <a href="<?php echo url($url, $com, $home) ?>login.php">
+                        <a href="<?php echo url($url, $com, $home) ?>usuario.php?id_pessoa=<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                             <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
                                 <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/login.png" alt="login">
                             <?php endif; ?>
