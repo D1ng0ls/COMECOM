@@ -19,7 +19,9 @@
             $dados = [
                 'nome' => $nome,
                 'email' => $email,
-                'senha' => crypt($senha, $salt)
+                'senha' => crypt($senha, $salt),
+                'endereco' => $endereco,
+                'telefone' => $telefone
             ];
 
             insere (
@@ -34,7 +36,7 @@
 
             $retorno = buscar (
                 'pessoa',
-                ['id_pessoa', 'nome', 'email', 'senha', 'adm'],
+                ['id_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'adm'],
                 $criterio
             );
 
@@ -78,7 +80,7 @@
 
             $retorno = buscar (
                 'pessoa',
-                ['id_pessoa', 'nome', 'email', 'senha', 'adm'],
+                ['id_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'adm'],
                 $criterio
             );
 

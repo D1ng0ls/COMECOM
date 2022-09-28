@@ -80,15 +80,15 @@
                                         require="required" id="senha" name="senha">
                             </div>
                         <?php endif; ?>
-                        <!-- <div class="input-content">
+                        <div class="input-content">
                             <span>Endereço</span>
                             <input type="text" name="endereco">
                         </div>
                         <div class="input-content">
                             <span>Telefone</span>
-                            <input type="text" name="telefone">
+                            <input type="text" name="telefone"> 
                         </div>
-                        <div class="input-content">
+                        <!-- <div class="input-content">
                             <span>Tipo</span><br>
                             <select id="tipo" name="tipo" onchange="habilitar()">
                                 <option><p>Pessoa Física</p></option>
