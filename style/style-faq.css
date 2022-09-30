@@ -75,19 +75,20 @@
 
 .img1, .img2, .img30 {
     display: inline-block;
-    width: 45%;
-    height: 500px;
+    width: 30%;
+    height: 300px;
 }
 
 .img1 {
     margin-right: 5%;
     background: url(../media/team.png) center no-repeat;
-    background-size: 90%;
+    background-size: 80%;
 }
 
 .img2 {
     margin: auto;
-    width: 40%;
+    width: 30%;
+    height: 300px;
     margin-left: 5%;
     background: url(../media/nossamissao.png) center no-repeat;
     background-size: 100%;
@@ -110,7 +111,7 @@
 }
 
 .textos {
-    width: 40%;
+    width: 60%;
     line-height: 1.5;
     display: inline-block;
 }

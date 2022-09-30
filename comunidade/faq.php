@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/style-navegador.css">
     <link rel="stylesheet" href="../style/style-faq.css">
-    <title>COMECOM | Comunidade</title>
+    <title>COMECOM | FAQ</title>
 </head>
 
 <script src="../scripts/githubapi.js"></script>
@@ -25,7 +25,7 @@
                 <h1>FAQ - Frequently Asked Questions</h1>
             </div>
         </div>
-        <div class="introducao-abt container-abt">                    
+        <div class="introducao-abt">                    
             <div class="texto1 textos">
                 <h2 class="title1">Posso fazer compras na COMECOM?</h2>
                 <h3>Não, nosso objetivo é apenas a divulgação de promoções ativas por parte das vendedoras destes produtos, incentivando o cliente a comprá-los
@@ -63,6 +63,7 @@
             </div>
             <div class="img1"></div>
         </div>
+    </div>
     <?php include('../includes/footer.php'); ?>
 </body>
 
