@@ -28,8 +28,8 @@
                             <?php if (isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
                                 <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/foto_nome_pessoa" alt="login">
                             <?php endif; ?>
-                            <span class="user-text">
-                                Você!
+                            <span class="user-text" style="font-weight: 500;">
+                                Olá, <span style="font-weight: 350;"><?php echo $_SESSION['login']['pessoa']['nome']?></span> 
                             </span>
                         </a>
                     </div>
