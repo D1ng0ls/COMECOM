@@ -1,4 +1,4 @@
-<!DOCTYPE html><!-- teste -->
+<!DOCTYPE html>
 <html lang="pt_BR">
     <head>
         <meta charset="UTF-8">
@@ -58,13 +58,15 @@
                             <input  type="text" require="required" 
                                     id="email" name="email"
                                     value="<?php echo $entidade['email'] ?? '' ?>">
+                            <small id="textEmail"></small>
                         </div>
                         <?php if(!isset($_SESSION['login'])): ?>
                             <div class="input-content">
                                 <span>Senha</span>
                                 <input type="password" require="required" 
-                                id="senha" name="senha" 
-                                value="<?php echo $entidade['senha'] ?? '' ?>">
+                                    id="senha" name="senha" 
+                                    value="<?php echo $entidade['senha'] ?? '' ?>">
+                                <small id="textSenha"></small>
                             </div>
                         <?php endif; ?>
                         <div class="input-content">
@@ -116,6 +118,7 @@
                         </div> -->
                         <div class="input-content">
                             <button type="submit">Sign up</button>
+                            <small id="textForm"></small>
                         </div>
                         <div class="input-content">
                             <p>Já possui uma conta? <a href="login.php">Entre!</a></p>
@@ -139,19 +142,20 @@
                 }
             }
             
-            const formulario =  document.querySelector("#verification");
+            // const formulario =  document.querySelector("#verification");
 
-            formulario.onsubmit = evento => {
-                //Receber o valor do campo
-                var nome = document.querySelector("#nome").value;
-                console.log(nome);
+            // formulario.onsubmit = evento => {
+            //     //Receber o valor do campo
+            //     var nome = document.querySelector("#nome").value;
+            //     console.log(nome);
 
-                //Verificar se o campo está vazio
-                if (nome === "") {
-                    document.getElementById("msgAlerta").innerHTML = "<p>Erro: Necessário preencher campos</p>";    
-                    return;
-                }
-            }
+            //     //Verificar se o campo está vazio
+            //     if (nome === "") {
+            //         document.getElementById("msgAlerta").innerHTML = "<p>Erro: Necessário preencher campos</p>";    
+            //         return;
+            //     }
+            // }
         </script> 
+        <script src="scripts/register.js"></script>
     </body>
 </html>
