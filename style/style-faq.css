@@ -1,0 +1,217 @@
+#comecom-logo{
+    height: 335px;
+}
+
+#semi-menu{
+    word-spacing: 20px;
+    color: #773d94;
+}
+
+.comecom-logo-rules-and-faq{
+    height: 250px;
+}
+
+.container1 {
+    width: 750px;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: #773d94;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+}
+.container1-1 {
+    height: 33px;
+    border: 1px;
+    color: white;
+    font-size: 16px;
+    font-family: helvetica;
+    border-style: solid;
+    background-color: #773d94;
+    border-color: #773d94;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container1-1 p {
+    margin-top: 5px;
+    font-weight: bold;
+    padding: 0.5vh 0.5vw;
+}
+
+.container1-2 p{
+    font-size: 13px;
+    font-family: helvetica;
+    margin-top: 13px;
+    line-height: 1.5;
+    padding: 0.5vh 0.5vw;
+    text-align: justify;
+}
+
+.container1-2 p a {
+    color: #773d94;
+}
+
+.li-rules {
+    font-size: 13px;
+}
+
+.color{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: #773d94;
+}
+
+
+
+/* sobre nozes */
+.title-logo-abt {
+    text-align: center;
+    margin: 50px;
+}
+
+.img1, .img2, .img30 {
+    display: inline-block;
+    width: 45%;
+    height: 500px;
+}
+
+.img1 {
+    margin-right: 5%;
+    background: url(../media/team.png) center no-repeat;
+    background-size: 90%;
+}
+
+.img2 {
+    margin: auto;
+    width: 40%;
+    margin-left: 5%;
+    background: url(../media/nossamissao.png) center no-repeat;
+    background-size: 100%;
+}
+
+.img30 {
+    background: url(../media/programmer.png) center no-repeat;
+    background-size: 75%;
+}
+
+.title1, .title2, .title3{
+    font-weight: 500;
+    font-size: 28px;
+    margin: 0px;
+}
+
+.texto1 h3, .texto2 h3, .texto3 h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.textos {
+    width: 40%;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.texto1, .texto3{
+    margin: auto;
+    margin-left: 5%;
+}
+
+.texto2 {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.texto3 {
+    display: flex;
+    width: 90%;
+}
+
+.title3 {
+    margin: auto;
+    width: 85%;
+    text-align: center;
+}
+
+.texto2 ul li.jose {
+    margin-bottom: 10px;
+}
+
+.texto30 {
+    width: 50%;
+    display: inline-block;
+}
+
+.img30 {
+    margin: auto;
+    display: inline-block;
+}
+
+.title1, .title3 {
+    border-bottom: 1px solid black;
+}
+
+.title2 {
+    border-bottom: 1px solid white;
+}
+
+.introducao-abt {
+    display: flex;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+.objetivos-abt {
+    display: flex;
+    color: white;
+    background-color: var(--color-purple);
+    padding: 50px 0 50px 0;
+}
+
+.programadores-abt {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 50px 0 50px 0;
+}
+
+.programmer {
+    display: flex;
+    margin:50px;
+}
+
+.programmer1 {
+    margin-top: 50px;
+}
+
+.programmer-images {
+    display: inline-block;
+}
+
+.programmer-text {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.programmer-text h2{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.programmer-text p{
+    min-height: 24px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.programmer-images img{
+    width: 128px;
+    border-radius: 50%;
+}
+
+.social-media img {
+    width: 32px;
+}
