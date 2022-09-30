@@ -20,11 +20,11 @@
             return "../";
         } else if($url == $GLOBALS['pgu']){
             return "";
-        } else if( $url == $home){
-            return "";
         } else if($url != $home) {
             return "../../";
-        } 
+        } else {
+            return "";
+        }
     }
 
     function nome($url) : string {
