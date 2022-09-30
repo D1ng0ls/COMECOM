@@ -73,10 +73,10 @@
     margin: 50px;
 }
 
-.img1, .img2, .img30 {
+.img1, .img2, .img3, .img4, .img5, .img30 {
     display: inline-block;
-    width: 30%;
-    height: 300px;
+    width: 40%;
+    height: 500px;
 }
 
 .img1 {
@@ -92,6 +92,26 @@
     margin-left: 5%;
     background: url(../media/nossamissao.png) center no-repeat;
     background-size: 100%;
+}
+.img3 {
+    margin-right: 5%;
+    background: url(../media/faq1.png) center no-repeat;
+    background-size: 80%;
+}
+
+.img4 {
+    margin: auto;
+    width: 30%;
+    height: 300px;
+    margin-left: 5%;
+    background: url(../media/faq2.png) center no-repeat;
+    background-size: 100%;
+}
+
+.img5 {
+    margin-right: 5%;
+    background: url(../media/faq3.png) center no-repeat;
+    background-size: 80%;
 }
 
 .img30 {

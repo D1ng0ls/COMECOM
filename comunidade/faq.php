@@ -22,7 +22,7 @@
     <div class="conteudo">
         <div class="logo-abt">
             <div class="title-logo-abt">
-                <h1>FAQ - Frequently Asked Questions</h1>
+                <h1>FAQ - Frequently Asked Questions (Ajeitar o tamanho das imagens e divs)</h1>
             </div>
         </div>
         <div class="introducao-abt">                    
@@ -46,10 +46,10 @@
                 <h3>Sim, no entanto, anúncios realizados por pessoas físicas são destinados à aba da comunidade e os realizados por pessoas jurídicas/empresas são divulgados
             em suas respectivas categorias. Isso para a maior segurança possível da veracidade dos anúncios exibidos na página.</h3>
             </div>
-            <div class="img1"></div>
+            <div class="img3"></div>
         </div>
         <div class="objetivos-abt container-abt">
-            <div class="img2"></div>
+            <div class="img4"></div>
             <div class="texto1 textos">
                 <h2 class="title1"  style="border-bottom: 1px solid white;">Preciso estar cadastrado para anunciar na COMECOM?</h2>
                 <h3>Sim. Para a melhor veracidade das promoções apresentadas, solicitamos os dados específicos do usuário para distinguir usuários comuns de empresas e,
@@ -61,7 +61,7 @@
                 <h2 class="title1">Preciso estar cadastrado para navegar na COMECOM?</h2>
                 <h3>Não. Qualquer visitante da página pode visualizar as promoções ativas, apenas será restrito da publicação destas por questões de segurança e controle da veracidade de informações anteriormente citadas.</h3>
             </div>
-            <div class="img1"></div>
+            <div class="img5"></div>
         </div>
     </div>
     <?php include('../includes/footer.php'); ?>
