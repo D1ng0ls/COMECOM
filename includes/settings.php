@@ -11,6 +11,7 @@
     $pet = $_SERVER['HTTP_HOST'] . "/COMECOM/categoria/petshop/";
     $com = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/";
     $abt = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/aboutus.php";
+    $pgu = $_SERVER['HTTP_HOST'] . "/COMECOM/usuario.php";
     if(isset($_SESSION['login'])) {$usr = $_SERVER['HTTP_HOST'] . "/COMECOM/usuario.php?id_pessoa=" . $_SESSION['login']['pessoa']['id_pessoa'];} else {$usr = "";};
 
     function url($url, $com, $home) : string {
@@ -18,7 +19,7 @@
             return "../";
         } else if($url == $com) {
             return "../";
-        } else if($url == $GLOBALS['usr']){
+        } else if($url == $GLOBALS['pgu']){
             return "";
         } else if( $url == $home){
             return "";

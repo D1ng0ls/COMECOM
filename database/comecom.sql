@@ -14,8 +14,8 @@ create table pessoa (
     qnt_lojas int,
     ativo tinyint not null default '1',
     adm tinyint not null default '0',
-    /*foto_blob_pessoa blob,
-    foto_nome_pessoa varchar(100),*/
+    foto_blob_pessoa blob,
+    foto_nome_pessoa varchar(100),
     primary key (id_pessoa)
 );
 
