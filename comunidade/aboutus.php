@@ -16,9 +16,8 @@
 <script>github();github2();github3();github4();github5();</script>
 
 <body>
-    <div class="comunidade">
-        <?php include('../includes/navigator.php'); ?>
-    </div>
+    <?php include('../includes/navigator.php'); ?>
+    
     <div class="conteudo">
         <div class="logo-abt">
             <div class="title-logo-abt">

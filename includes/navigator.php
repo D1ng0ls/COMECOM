@@ -5,7 +5,7 @@
                 <a href="<?php echo url($url, $com, $home) ?>"><img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho.png" alt="Logo Cuprom"></a>
             </div>
 
-            <div class="container_search justify-content-end">
+            <div class="container_search justify-content-end <?php if($url == $abt) { echo "comunidade";} else { echo "";};?>">
                 <div class="inputs">
                     <div class="input-search"><input type="text" placeholder="Pesquisar..." name="query"></div>
                     <div class="submit-search"><img src="<?php echo url($url, $com, $home) ?>media/search_icon.png" alt="Pesquisar"></div>
@@ -21,7 +21,7 @@
                         </a>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['login'])) : ?>
-                        <a href="<?php echo url($url, $com, $home) ?>usuario.php?id_pessoa=<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
+                        <a href="<?php echo url($url, $com, $home) ?>usuario.php">
                             <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
                                 <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/login.png" alt="login">
                             <?php endif; ?>
