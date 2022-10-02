@@ -8,7 +8,7 @@ create table pessoa (
     nome varchar(100) not null,
     email varchar(100) not null unique,
     senha varchar(20) not null,
-	endereco varchar(100) not null,
+	cidade varchar(100) not null,
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
     qnt_lojas int,

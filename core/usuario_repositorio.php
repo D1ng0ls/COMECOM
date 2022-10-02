@@ -22,7 +22,7 @@
                     'nome' => $nome,
                     'email' => $email,
                     'senha' => crypt($senha, $salt),
-                    'endereco' => $endereco,
+                    'cidade' => $cidade,
                     'telefone' => $telefone,
                     'documento' => $cpf
                 ];
@@ -34,7 +34,7 @@
                         'nome' => $nome,
                         'email' => $email,
                         'senha' => crypt($senha, $salt),
-                        'endereco' => $endereco,
+                        'cidade' => $cidade,
                         'telefone' => $telefone,
                         'documento' => $cnpj,
                         'qnt_lojas' => $qnt_lojas
@@ -54,7 +54,7 @@
 
             $retorno = buscar (
                 'pessoa',
-                ['id_pessoa', 'tipo_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'documento', 'qnt_lojas', 'adm'],
+                ['id_pessoa', 'tipo_pessoa', 'nome', 'email', 'senha', 'cidade', 'telefone', 'documento', 'qnt_lojas', 'adm'],
                 $criterio
             );
 
@@ -76,7 +76,7 @@
                 'tipo_pessoa' => $tipo_pessoa,
                 'nome' => $nome,
                 'email' => $email,
-                'endereco' => $endereco,
+                'cidade' => $cidade,
                 'telefone' => $telefone,
                 'documento' => $documento,
                 'qnt_lojas' => $qnt_lojas
@@ -103,7 +103,7 @@
 
             $retorno = buscar (
                 'pessoa',
-                ['id_pessoa', 'tipo_pessoa', 'nome', 'email', 'senha', 'endereco', 'telefone', 'documento', 'qnt_lojas', 'adm'],
+                ['id_pessoa', 'tipo_pessoa', 'nome', 'email', 'senha', 'cidade', 'telefone', 'documento', 'qnt_lojas', 'adm'],
                 $criterio
             );
 

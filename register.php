@@ -69,10 +69,10 @@
                             </div>
                         <?php endif; ?>
                         <div class="input-content">
-                            <span>Endereço</span>
+                            <span>Cidade</span>
                             <input  type="text" require="required" 
-                                    id="endereco" name="endereco"
-                                    value="<?php echo $entidade['endereco'] ?? '' ?>">
+                                    id="cidade" name="cidade"
+                                    value="<?php echo $entidade['cidade'] ?? '' ?>">
                         </div>
                         <div class="input-content">
                             <span>Telefone</span>
