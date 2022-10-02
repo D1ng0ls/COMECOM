@@ -41,7 +41,7 @@
                         <i style="font-size:30px; color:#773d94" class="fa fa-google"></i>
                     </div>
                     <span id="msgAlerta"></span>
-                    <form method="post" action="core/usuario_repositorio.php" id="verification">
+                    <form method="post" action="core/usuario_repositorio.php">
                         <input type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                         <input type="hidden" name="id"

@@ -39,6 +39,7 @@
                         </div> -->
                         <div class="input-content">
                             <button type="submit">Sign in</button>
+                            <small id="textForm"></small>
                         </div>
                         <div class="input-content">
                             <p>Não tem uma conta? <a href="register.php">Se inscreva!</a></p>
