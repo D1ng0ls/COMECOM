@@ -114,6 +114,9 @@
                         header('Location: ' . $_SESSION['url_retorno']);
                         $_SESSION['url_retorno'] = '';
                         exit;
+                    }else
+                    {
+                        print_r("Olá");
                     }
                 }
             }

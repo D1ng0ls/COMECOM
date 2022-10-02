@@ -17,7 +17,6 @@
                     </div>
                     <div class= "login-redes-socias">
                         <i style="font-size:30px; color:#773d94" class="fa fa-google"></i>
-                        <i style="font-size:30px; color:#773d94" class="fa fa-facebook"></i>
                     </div>
                     <form method="post" action="core/usuario_repositorio.php">
                         <input type="hidden" name="acao" value="login">
@@ -25,17 +24,19 @@
                             <span>E-mail</span>
                             <input  type="text" require="required" 
                                     id="email" name="email">
+                            <small id="textEmail"></small>
                         </div>
                         <div class="input-content">
                             <span>Senha</span>
                             <input  type="password" require="required" 
                                     id="senha" name="senha">
+                            <small id="textSenha"></small>
                         </div>
-                        <div class="remember">
+                        <!-- <div class="remember">
                             <label>
                                 <input type="checkbox"> Lembre-me
                             </label>
-                        </div>
+                        </div> -->
                         <div class="input-content">
                             <button type="submit">Sign in</button>
                         </div>
@@ -46,5 +47,6 @@
                 </div>
             </div>
         </section>
+        <script src="scripts/login.js"></script>
     </body>
 </html>
