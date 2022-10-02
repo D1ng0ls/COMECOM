@@ -39,7 +39,6 @@
                     </div>
                     <div class= "register-redes-socias">
                         <i style="font-size:30px; color:#773d94" class="fa fa-google"></i>
-                        <i style="font-size:30px; color:#773d94" class="fa fa-facebook"></i>
                     </div>
                     <span id="msgAlerta"></span>
                     <form method="post" action="core/usuario_repositorio.php" id="verification">
@@ -141,20 +140,6 @@
                     juridica.style.display = "none";
                 }
             }
-            
-            // const formulario =  document.querySelector("#verification");
-
-            // formulario.onsubmit = evento => {
-            //     //Receber o valor do campo
-            //     var nome = document.querySelector("#nome").value;
-            //     console.log(nome);
-
-            //     //Verificar se o campo está vazio
-            //     if (nome === "") {
-            //         document.getElementById("msgAlerta").innerHTML = "<p>Erro: Necessário preencher campos</p>";    
-            //         return;
-            //     }
-            // }
         </script> 
         <script src="scripts/register.js"></script>
     </body>
