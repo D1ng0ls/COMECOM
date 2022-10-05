@@ -15,7 +15,7 @@
         <li class="nav-item last-item">
             <a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav-link active">Comunidade</a>
         </li>
-        <li>
+        <li><!-- ALTERAÇÃO - 04/10/2022 - LINHA 18 ATÉ 25 - ASS:BONINI-->
             <?php if ((isset($_SESSION['login']))
                     && ($_SESSION['login']['pessoa']['adm'] === 1)) : ?>
                 <li class="nav-item">

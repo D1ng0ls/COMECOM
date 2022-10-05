@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- ALTERAÇÃO - 04/10/2022 -RETIREI ALGUMAS COIAS DE DATA E MUDEI ALGUNS NOMES PARA DEIXAR DE ACORDO - ASS:BONINI-->
 <html lang="pt_BR">
     <head>
         <meta charset="UTF-8">
