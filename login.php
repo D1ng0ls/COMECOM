@@ -9,6 +9,11 @@
         <title>Login</title>
     </head>
     <body>
+        <?php            
+            if(isset($_SESSION['msg'])){
+                $login_msg=$_SESSION['msg']['login'];
+            }
+        ?>
         <section>
             <div class="login-content">
                 <div class="form-content">
@@ -25,6 +30,7 @@
                             <input  type="text" require="required" 
                                     id="email" name="email">
                             <small id="textEmail"></small>
+                            <small style="color:red"><?php echo isset($login_msg) ? $login_msg: '' ?></small>                                    
                         </div>
                         <div class="input-content">
                             <span>Senha</span>

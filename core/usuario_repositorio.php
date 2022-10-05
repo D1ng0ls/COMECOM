@@ -16,6 +16,22 @@
 
     switch($acao) {
         case 'insert':
+
+            $criterio = [
+                ['email', '=', $email]                
+            ];
+
+            $retorno = buscar (
+                'pessoa',
+                ['id_pessoa'],
+                $criterio
+            );
+            
+            if(count($retorno) > 0) {
+                $_SESSION['msg']['email']="E-mail já cadastrado!";
+                header('Location: ../register.php');              
+            }
+
             if ($tipo_pessoa == 'fisica') {
                 $dados = [
                     'tipo_pessoa' => $tipo_pessoa,
@@ -116,6 +132,10 @@
                         exit;
                     }
                 }
+            }else{
+                $_SESSION['msg']['login']="E-mail ou senha inválido(s)!";
+                header('Location: ../login.php');
+                exit;         
             }
 
             break;

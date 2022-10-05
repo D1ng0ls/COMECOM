@@ -13,6 +13,10 @@
             <div class="register-content">
                 <div class="form-content">
                     <?php
+                        if(isset($_SESSION['msg'])){
+                            $email_msg=$_SESSION['msg']['email'];
+                        }
+
                         require_once 'includes/funcoes.php';
                         require_once 'core/conexao_mysql.php';
                         require_once 'core/sql.php';
@@ -45,7 +49,7 @@
                         <input type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                         <input type="hidden" name="id"
-                                value="<?php echo $entidade['id'] ?? '' ?>">
+                                value="<?php echo $entidade['id_pessoa'] ?? '' ?>">
                         <div class="input-content">
                             <span>Nome</span>
                             <input  type="text" 
@@ -57,6 +61,7 @@
                             <input  type="text" require="required" 
                                     id="email" name="email"
                                     value="<?php echo $entidade['email'] ?? '' ?>">
+                            <small style="color:red"><?php echo isset($email_msg) ? $email_msg: '' ?></small>                                    
                             <small id="textEmail"></small>
                         </div>
                         <?php if(!isset($_SESSION['login'])): ?>
