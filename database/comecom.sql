@@ -12,6 +12,7 @@ create table pessoa (
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
     qnt_lojas int,
+    data_criacao datetime not null default current_timestamp,
     ativo tinyint not null default '1',
     adm tinyint not null default '0',
     foto_blob_pessoa blob,

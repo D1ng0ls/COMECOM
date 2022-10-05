@@ -1,10 +1,10 @@
-<!DOCTYPE html><!-- ALTERAÇÃO - 04/10/2022 -RETIREI ALGUMAS COIAS DE DATA E MUDEI ALGUNS NOMES PARA DEIXAR DE ACORDO - ASS:BONINI-->
+<!DOCTYPE html>
 <html lang="pt_BR">
     <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/style-usuarios.css">
         <title>COMECOM | ADM</title>
     </head>
     <body>
@@ -12,18 +12,18 @@
             session_start();
         ?>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            <div>
+                <div>
                     <?php
                         include 'includes/valida_login.php';
-                        if($_SESSION['login']['pessoa']['adm'] !==1) {
+                        if($_SESSION['login']['pessoa']['adm'] !== 1) {
                             header('Location: home.php');
                         }
                     ?>
                 </div>
             </div>
-            <div class="row" style="min-height: 500px;">
-                <div class="col-md-12" style="padding-top: 50px;">
+            <div>
+                <div>
                     <h2>Usuário</h2>
                     <?php
                         require_once 'includes/funcoes.php';
@@ -66,7 +66,7 @@
                         <tbody>
                             <?php
                                 foreach($result as $entidade):
-                            ?>                            
+                            ?>
                             <tr>
                                 <td><?php echo $entidade['nome'] ?></td>
                                 <td><?php echo $entidade['email'] ?></td>
@@ -81,6 +81,5 @@
                 </div>
             </div>
         </div>
-        <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
     </body>
 </html>

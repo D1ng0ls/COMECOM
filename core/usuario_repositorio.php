@@ -31,20 +31,8 @@
                 $_SESSION['msg']['email']="E-mail já cadastrado!";
                 header('Location: ../register.php');              
             }
-
-            if ($tipo_pessoa == 'fisica') {
-                $dados = [
-                    'tipo_pessoa' => $tipo_pessoa,
-                    'nome' => $nome,
-                    'email' => $email,
-                    'senha' => crypt($senha, $salt),
-                    'cidade' => $cidade,
-                    'telefone' => $telefone,
-                    'documento' => $cpf
-                ];
-            }
             else {
-                if($tipo_pessoa == 'juridica') {
+                if ($tipo_pessoa == 'fisica') {
                     $dados = [
                         'tipo_pessoa' => $tipo_pessoa,
                         'nome' => $nome,
@@ -52,16 +40,30 @@
                         'senha' => crypt($senha, $salt),
                         'cidade' => $cidade,
                         'telefone' => $telefone,
-                        'documento' => $cnpj,
-                        'qnt_lojas' => $qnt_lojas
+                        'documento' => $cpf
                     ];
                 }
+                else {
+                    if($tipo_pessoa == 'juridica') {
+                        $dados = [
+                            'tipo_pessoa' => $tipo_pessoa,
+                            'nome' => $nome,
+                            'email' => $email,
+                            'senha' => crypt($senha, $salt),
+                            'cidade' => $cidade,
+                            'telefone' => $telefone,
+                            'documento' => $cnpj,
+                            'qnt_lojas' => $qnt_lojas
+                        ];
+                    }
+                }
+                header('Location: ../');
             }
 
             insere (
                 'pessoa',
                 $dados
-            );
+            );  
 
             $criterio = [
                 ['email', '=', $email],
@@ -186,4 +188,4 @@
                 break;
     }
     header('Location: ../');
-?><!-- ALTERAÇÃO - 04/10/2022 - NÃO LEMBRO DE TER MEXIDO EM NADA - ASS:BONINI-->
+?>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/style-register.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Register</title>
+        <title>COMECOM | Register</title>
     </head>
     <body>
         <section>
@@ -23,15 +23,15 @@
                         require_once 'core/mysql.php';
 
                         if(isset($_SESSION['login'])) {
-                            $id = (int) $_SESSION['login']['usuario']['id'];
+                            $id = (int) $_SESSION['login']['pessoa']['id_pessoa'];
 
                             $criterio = [
-                                ['id', '=', $id]
+                                ['id_pessoa', '=', $id]
                             ];
 
                             $retorno = buscar(
-                                'usuario',
-                                ['id','nome','email'],
+                                'pessoa',
+                                ['id_pessoa','nome','email'],
                                 $criterio
                             );
 
@@ -54,7 +54,7 @@
                             <span>Nome</span>
                             <input  type="text" 
                                     require="required" id="nome" name="nome"
-                                    value="<?php echo $entidade['nome'] ?? '' ?>">
+                                    value="<?php echo $entidade['nome'] ?? '' ?>">  
                             <small id="textNome"></small>
                         </div>
                         <div class="input-content">
