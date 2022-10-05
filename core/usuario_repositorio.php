@@ -134,8 +134,8 @@
                         exit;
                     }
                 }
-            }else{
-                $_SESSION['msg']['login']="E-mail ou senha inválido(s)!";
+            }else {
+                $_SESSION['msg']['login'] = "E-mail ou senha inválido(s)!";
                 header('Location: ../login.php');
                 exit;         
             }

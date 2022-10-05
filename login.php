@@ -11,7 +11,7 @@
     <body>
         <?php            
             if(isset($_SESSION['msg'])){
-                $login_msg=$_SESSION['msg']['login'];
+                $login_msg = $_SESSION['msg']['login'];
             }
         ?>
         <section>
