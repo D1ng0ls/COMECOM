@@ -1,7 +1,7 @@
 let email = document.getElementById('email');
 let senha = document.getElementById('senha');
 let nome = document.getElementById('nome');
-let endereco = document.getElementById('endereco');
+let cidade = document.getElementById('cidade');
 let telefone = document.getElementById('telefone');
 let tipo_pessoa = document.getElementById('tipo_pessoa');
 let cpf = document.getElementById('cpf');
@@ -14,7 +14,7 @@ let textSenha = document.getElementById('textSenha');
 
 form.addEventListener('submit', (event) => {
     if (tipo_pessoa.value == 'fisica') {
-        if(email.value == '' || senha.value == '' || nome.value == '' || endereco.value == '' || telefone.value == '' || cpf.value == '') {
+        if(email.value == '' || senha.value == '' || nome.value == '' || cidade.value == '' || telefone.value == '' || cpf.value == '') {
             textForm.textContent = 'Há campos a cima que precisam ser preenchidos!';
         }
         else
@@ -31,7 +31,7 @@ form.addEventListener('submit', (event) => {
     else
     {
         if (tipo_pessoa.value == 'juridica') {
-            if(email.value == '' || senha.value == '' || nome.value == '' || endereco.value == '' || telefone.value == '' || cnpj == '' || qnt_lojas == '') {
+            if(email.value == '' || senha.value == '' || nome.value == '' || cidade.value == '' || telefone.value == '' || cnpj == '' || qnt_lojas == '') {
                 textForm.textContent = 'Há campos a cima que precisam ser preenchidos!';
             }
             else
