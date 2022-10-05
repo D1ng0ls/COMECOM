@@ -4,7 +4,7 @@
     require_once 'conexao_mysql.php';
     require_once 'sql.php';
     require_once 'mysql.php';
-    $salt = 'ifsp';
+    $salt = 'ifsp'; //Teste
 
     foreach($_POST as $indice => $dado) {
         $$indice = limparDados($dado);
