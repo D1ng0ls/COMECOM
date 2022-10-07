@@ -73,3 +73,5 @@ create table produto_categoria (
 );
 
 select * from pessoa;
+
+ah

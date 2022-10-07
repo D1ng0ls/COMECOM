@@ -67,8 +67,8 @@
 }
 
 .user-img {
-    max-width: 28px;
-    max-height: 28px;
+    max-width: 26px;
+    max-height: 26px;
     filter: invert(100);
     float: left;
     border-radius: 20px;
@@ -96,10 +96,8 @@
     color: white;
 }
 
-.inputs img {
-    display: inline-block;
+.inputs svg {
     vertical-align: middle;
-    filter: invert(100);
 }
 
 .comunidade .inputs img {

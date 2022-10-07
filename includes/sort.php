@@ -1,6 +1,6 @@
 <div class="ordenador">
     <h3>
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <svg style="color: var(--color-purple);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
             <path d="m17 20-4-4m-6 0V4v12ZM7 4 3 8l4-4Zm0 0 4 4-4-4Zm10 4v12V8Zm0 12 4-4-4 4Z"/>
         </svg>
          Ordenar por:
