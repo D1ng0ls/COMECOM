@@ -1,5 +1,10 @@
 <div class="ordenador">
-    <h3><img src="../../media/sort.png" alt="Ordenador"> Ordenar por:</h3>
+    <h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="m17 20-4-4m-6 0V4v12ZM7 4 3 8l4-4Zm0 0 4 4-4-4Zm10 4v12V8Zm0 12 4-4-4 4Z"/>
+        </svg>
+         Ordenar por:
+    </h3>
     <div class="ordenador2">
         <div class="filter-order filter">
             <label class="container2">

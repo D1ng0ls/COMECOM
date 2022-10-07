@@ -88,10 +88,10 @@
     border: 1px;
     border-style: solid;
     border-color: var(--color-purple);
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .container2-1 {

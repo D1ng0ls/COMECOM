@@ -1,5 +1,5 @@
 <div class="filtros">
-    <h3><img src="../../media/filter.png" alt="Filtro">Filtrar por:</h3>
+    <h3><img src="../../media/icons/solid/filter.svg" alt="Filtro">Filtrar por:</h3>
     <div class="filter-price filter">
         <h4>Preço</h4>
         <label class="containerPrice">R$
