@@ -31,10 +31,10 @@
                 <h3>Não, nosso objetivo é apenas a divulgação de promoções ativas por parte das vendedoras destes produtos, incentivando o cliente a comprá-los
             em suas respectivas lojas físicas ou virtuais.</h3>
             </div>
-            <div class="img1"></div>
+            <div class="img1" ></div>
         </div>
         <div class="objetivos-abt container-abt">
-            <div class="img2"></div>
+            <div class="img2" ></div>
             <div class="texto1 textos">
                 <h2 class="title1" style="border-bottom: 1px solid white;">Posso vender um produto na COMECOM?</h2>
                 <h3>Não. A página é voltada apenas para a divulgação de promoções ativas e não na venda dos produtos anunciados. </h3>
@@ -46,7 +46,7 @@
                 <h3>Sim, no entanto, anúncios realizados por pessoas físicas são destinados à aba da comunidade e os realizados por pessoas jurídicas/empresas são divulgados
             em suas respectivas categorias. Isso para a maior segurança possível da veracidade dos anúncios exibidos na página.</h3>
             </div>
-            <div class="img3"></div>
+            <div class="img3" ></div>
         </div>
         <div class="objetivos-abt container-abt">
             <div class="img4"></div>

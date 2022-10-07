@@ -75,9 +75,10 @@
 
 .img1, .img2, .img3, .img4, .img5, .img30 {
     display: inline-block;
-    width: 40%;
-    height: 500px;
-}
+    width: 30%;
+    height: 600px;
+    max-height: inherit;
+}   
 
 .img1 {
     margin-right: 5%;
@@ -102,7 +103,7 @@
 .img4 {
     margin: auto;
     width: 30%;
-    height: 300px;
+    max-height: inherit;
     margin-left: 5%;
     background: url(../media/faq2.png) center no-repeat;
     background-size: 100%;
