@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- Teste -->
 <html lang="pt_BR">
     <head>
     <meta charset="UTF-8">
