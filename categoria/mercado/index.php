@@ -22,7 +22,7 @@
         </div>
         <div class="container-right">
                 <?php include '../../includes/sort.php' ?>
-                <?php include '../../includes/posts.php' ?>
+                <?php include '../../includes/oferta.php' ?>
             <div class="pages">
                 <a class="selected" href="">1</a>
                 <a href="?number_page=2">2</a>
