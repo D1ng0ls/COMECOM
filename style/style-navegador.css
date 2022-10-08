@@ -100,11 +100,10 @@
     vertical-align: middle;
 }
 
-.comunidade .inputs img {
+.comunidade .inputs svg {
     display: inline-block;
     vertical-align: middle;
-    filter: invert(100);
-    transform: translateY(7px);
+    transform: translateY(5px);
 }
 
 .input-search {
