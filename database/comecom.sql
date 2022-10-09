@@ -7,12 +7,12 @@ create table pessoa (
     tipo_pessoa varchar(10) not null,
     nome varchar(100) not null,
     email varchar(100) not null unique,
+    data_criacao datetime not null default current_timestamp,
     senha varchar(20) not null,
 	cidade varchar(100) not null,
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
     qnt_lojas int,
-    data_criacao datetime not null default current_timestamp,
     ativo tinyint not null default '1',
     adm tinyint not null default '0',
     foto_blob_pessoa blob,
@@ -30,6 +30,8 @@ create table produto (
 
 create table publicacao (
 	id_publicacao int not null auto_increment,
+    titulo varchar (255) not null,
+    texto text not null,
     data_publicacao date not null,
     termino_promocao date,
     incio_promocao date,
@@ -72,6 +74,4 @@ create table produto_categoria (
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );
 
-select * from pessoa;
-
-ah
+select * from publicacao;

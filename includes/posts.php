@@ -4,7 +4,7 @@
         <div class="container2-1">
             <div class="comecom-avatar">
                 <img src="comunidade-avatares/avatarTeste.png">
-                <p><a href="/"><?php echo $_SESSION['login']['pessoa']['nome'];?></a></p>
+                <!-- <p><a href="/"><?php echo $_SESSION['login']['pessoa']['nome'];?></a></p> -->
                 <h4>• Postado em: <?php echo date("d/m/Y")." às ".date("H:m")?></h4>
             </div>
         </div>

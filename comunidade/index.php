@@ -29,6 +29,9 @@
             <p>Acesse as <a href="rules.html">regras</a> do fórum e evite probelmas. Saiba mais sobre a gente no <a href="faq.php">FAQ</a> caso você desejar! :)</p>
         </div>
     </div>
+    <div class="post-button-div">
+        <ul><li><a href="../post_formulario.php">Halo</a></li></ul>
+    </div>
 
     <?php if(isset($_SESSION['login'])) :?>
         <?php include("../includes/posts.php") ?>
