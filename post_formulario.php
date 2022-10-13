@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
     <head>
-        <title>Post | Projeto para Web com PHP</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste</title>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+        <div>
+            <div>
+                <div>
                     <?php
                         include 'includes/valida_login.php';
                     ?>
-
                 </div>
             </div>
-            <div class="row" style="min-height: 500px;">
-                <div class="col-md-12">
-                </div>
-                <div class="col-md-12" style="padding-top: 50px;">
+            <div>
+                <div>
                     <?php
                         require_once 'includes/funcoes.php';
                         require_once 'core/conexao_mysql.php';
@@ -46,24 +46,24 @@
                     ?>
                     <h2>Post</h2>
                     <form method="post" action="core/post_repositorio.php">
-                        <input type="hidden" name="acao"
+                        <input  type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
-                        <input type="hidden" name="id_publicacao"
+                        <input  type="hidden" name="id_publicacao"
                                 value="<?php echo $entidade['id_publicacao'] ?? '' ?>">
-                        <div class="form-group">
-                            <label for="titulo">Título</label>
-                            <input class="form-control" type="text"
+                        <div>
+                            <label  for="titulo">Título</label>
+                            <input  type="text"
                                     require="required" id="titulo" name="titulo"
                                     value="<?php echo $entidade['titulo'] ?? ''?>">
                         </div>
-                        <div class="form-group">
+                        <div>
                             <label for="texto">Texto</label>
-<textarea class="form-control" type="text"
-        require="required" id="texto" name="texto" rows="5">
-<?php echo $entidade['texto'] ?? ''?>
-</textarea>
+                            <textarea   type="text"
+                                        require="required" id="texto" name="texto" rows="5">
+                                <?php echo $entidade['texto'] ?? ''?>
+                            </textarea>
                         </div>
-                        <div class="form-group">
+                        <div>
                             <label for="texto">Postar em</label>
                             <?php
                                 $data = (!empty($entidade['data_publicacao']))?
@@ -72,35 +72,29 @@
                                     explode(' ', $entidade['data_publicacao'])[1] : '';
 
                             ?>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <input class="form-control" type="date"
-                                        require="required"
-                                        id="data_publicacao"
-                                        name="data_publicacao"
-                                        value="<?php echo $data ?>">
+                            <div>
+                                <div>
+                                    <input  type="date"
+                                            require="required"
+                                            id="data_publicacao"
+                                            name="data_publicacao"
+                                            value="<?php echo $data ?>">
                                 </div>
-                                <div class="col-md-3">
-                                    <input class="form-control" type="time"
-                                        require="required"
-                                        id="hora_postagem"
-                                        name="hora_postagem"
-                                        value="<?php echo $hora ?>">
+                                <div>
+                                    <input  type="time"
+                                            require="required"
+                                            id="hora_postagem"
+                                            name="hora_postagem"
+                                            value="<?php echo $hora ?>">
                                 </div>
                             </div>
                         </div>
-                        <div class="text-">
-                            <button class="btn btn-success"
-                                    type="submit">Salvar</button>
+                        <div>
+                            <button type="submit">Salvar</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                </div>
-            </div>
         </div>
-        <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
     </body>
 </html>

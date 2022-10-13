@@ -32,7 +32,7 @@ create table publicacao (
 	id_publicacao int not null auto_increment,
     titulo varchar (255) not null,
     texto text not null,
-    data_publicacao date not null,
+    data_publicacao datetime not null default current_timestamp,
     termino_promocao date,
     incio_promocao date,
     preco_desconto double,
@@ -41,17 +41,17 @@ create table publicacao (
     preco_atual double,
     foto_blob_publi blob,
     foto_nome_publi varchar(100),
-    fk_pessoa_id_pessoa int,
+    primary key (id_publicacao),
+    id_pessoa int,
     fk_produto_id_produto int,
-	constraint fk_publicacao_pessoa
-		foreign key (fk_pessoa_id_pessoa) 
-        references pessoa (id_pessoa)
-        on delete cascade on update cascade,
+    key fk_publicacao_pessoa_idx (id_pessoa),
+	constraint fk_publicacao_pessoa 
+        foreign key (id_pessoa) 
+        references pessoa (id_pessoa),
 	constraint 	fk_publicacao_produto 
 		foreign key (fk_produto_id_produto)
         references produto (id_produto)
-        on delete cascade on update cascade,
-	primary key (id_publicacao)
+        on delete cascade on update cascade
 );
 
 create table categoria (
@@ -74,4 +74,6 @@ create table produto_categoria (
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );
 
-select * from publicacao;
+select * from pessoa;
+
+insert into publicacao (titulo, texto, id_pessoa) values ("maconha", "Curinga, ganhar, tatu, bola", 1);
