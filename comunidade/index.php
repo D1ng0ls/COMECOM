@@ -29,14 +29,16 @@
             <p>Acesse as <a href="rules.html">regras</a> do fórum e evite probelmas. Saiba mais sobre a gente no <a href="faq.php">FAQ</a> caso você desejar! :)</p>
         </div>
     </div>
-    <div class="post-button-div">
-        <a href="../post_formulario.php">Alla is big</a>
-    </div>
 
     <?php if(isset($_SESSION['login'])) :?>
+     
+        <h2 align="center" style="color: #34345c;">[<a href="/" class="botaoTOP">Adicionar um Novo Post</a>]</h2>
+        <hr style="width: 25%; margin-bottom: 20px;">
         <?php include("../includes/posts.php") ?>
     <?php else : ?>
-        <h1>FAÇA O LOGIN!!!!</h1>
+        <hr style="width: 30%; margin-top: 60px;">
+        <h2 align="center" style="color: #34345c;">[<a href="../login.php" class="botaoTOP">Faça Login para Visualizar a Comunidade</a>]</h2>
+        <hr style="width: 30%;">
     <?php endif; ?>
 
     <?php include('../includes/footer.php'); ?>

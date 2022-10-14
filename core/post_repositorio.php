@@ -21,8 +21,7 @@
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
-                'data_publicacao' => "$data_postagem $hora_postagem",
-                // 'id_pesssoa' => $_SESSION['login']['pessoa']['id_pessoa']
+                'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
             insere (
@@ -35,8 +34,7 @@
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
-                'data_publicacao' => "$data_postagem $hora_postagem",
-                // 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
+                'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
             $criterio = [
@@ -63,6 +61,6 @@
             break;
     }
 
-    header('Location: ../home.php');
+    header('Location: ../');
     
 ?>

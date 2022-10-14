@@ -1,4 +1,4 @@
 <?php
-    header("Location: ../../cuprom/");
+    header("Location: ../../COMECOM/");
     exit();
-?> <!-- QUE PORRA É ESSA -->
+?> 

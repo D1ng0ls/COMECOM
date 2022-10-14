@@ -12,6 +12,7 @@
             <div>
                 <div>
                     <?php
+                        session_start();
                         include 'includes/valida_login.php';
                     ?>
                 </div>
@@ -58,36 +59,10 @@
                         </div>
                         <div>
                             <label for="texto">Texto</label>
-                            <textarea   type="text"
-                                        require="required" id="texto" name="texto" rows="5">
-                                <?php echo $entidade['texto'] ?? ''?>
-                            </textarea>
-                        </div>
-                        <div>
-                            <label for="texto">Postar em</label>
-                            <?php
-                                $data = (!empty($entidade['data_publicacao']))?
-                                    explode(' ', $entidade['data_publicacao'])[0] : '';
-                                $hora = (!empty($entidade['data_publicacao']))?
-                                    explode(' ', $entidade['data_publicacao'])[1] : '';
-
-                            ?>
-                            <div>
-                                <div>
-                                    <input  type="date"
-                                            require="required"
-                                            id="data_publicacao"
-                                            name="data_publicacao"
-                                            value="<?php echo $data ?>">
-                                </div>
-                                <div>
-                                    <input  type="time"
-                                            require="required"
-                                            id="hora_postagem"
-                                            name="hora_postagem"
-                                            value="<?php echo $hora ?>">
-                                </div>
-                            </div>
+<textarea type="text"
+require="required" id="texto" name="texto" rows="5">
+<?php echo $entidade['texto'] ?? ''?>
+</textarea>
                         </div>
                         <div>
                             <button type="submit">Salvar</button>
