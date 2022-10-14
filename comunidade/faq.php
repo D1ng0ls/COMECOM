@@ -22,7 +22,7 @@
     <div class="conteudo">
         <div class="logo-abt">
             <div class="title-logo-abt">
-                <h1>FAQ - Frequently Asked Questions (Ajeitar o tamanho das imagens e divs)</h1>
+                <h1>FAQ - Frequently Asked Questions</h1>
             </div>
         </div>
         <div class="introducao-abt">                    
