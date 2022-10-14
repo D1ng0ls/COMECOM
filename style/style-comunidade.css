@@ -7,6 +7,10 @@
     color: var(--color-purple);
 }
 
+.botaoTOP:hover {
+    color: var(--color-purple);
+}
+
 .comecom-logo-rules-and-faq{
     height: 250px;
 }
@@ -46,7 +50,7 @@
     border-color: var(--color-purple);
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 200px;
+    margin-bottom: 25px;
 }
 .container1-1 {
     height: 33px;
