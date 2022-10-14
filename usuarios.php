@@ -12,7 +12,7 @@
             session_start();
             include 'includes/valida_login.php';
             if($_SESSION['login']['pessoa']['adm'] !== 1) {
-                header('Location: home.php');
+                header('Location: ../COMECOM');
             }
         ?>
         <h2>Usuário</h2>
