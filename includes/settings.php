@@ -27,6 +27,10 @@
         }
     }
 
+    function url2() : string {
+        return "/COMECOM/";
+    }
+
     function nome($url) : string {
         if($url == $GLOBALS['elt']) return "Eletrônicos";
         if($url == $GLOBALS['mrc']) return "Mercado";
