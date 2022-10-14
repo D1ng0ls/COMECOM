@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-navegador.css">
-    <link rel="stylesheet" href="style/style-comunidade.css">
+    <link rel="stylesheet" href="style/style-usuario.css">
     <title>COMECOM | <?php echo $_SESSION['login']['pessoa']['nome'] ?></title>
 </head>
 
@@ -26,17 +26,17 @@
 
     <div class="container-user">
         <div class="navigator-user">
-            <div class="logo">
+            <div class="logo-user">
                 <img src="media/shortcut.png" alt="Logo COMECOM">
             </div>
-            <div class="buttom-div">
-                <p>Dados Pessoais</p>
+            <div class="buttom-div btn1">
+                <a href="">Dados Pessoais</a>
             </div>
-            <div class="buttom-div">
-                <a href="core/usuario_repositorio.php?acao=logout"><p>Sair</p></a>
+            <div class="buttom-div btn2">
+                <a href="core/usuario_repositorio.php?acao=logout">Sair</a>
             </div>
-            <div class="buttom-div">
-                <p>Excluir Conta</p>
+            <div class="buttom-div btn3">
+                <a href="">Excluir Conta</a>
             </div>
         </div>
         <div class="info-user">

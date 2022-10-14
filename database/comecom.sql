@@ -7,12 +7,12 @@ create table pessoa (
     tipo_pessoa varchar(10) not null,
     nome varchar(100) not null,
     email varchar(100) not null unique,
+    data_criacao datetime not null default current_timestamp,
     senha varchar(20) not null,
 	cidade varchar(100) not null,
 	telefone varchar(30) not null,
     documento varchar(14) not null unique,
     qnt_lojas int,
-    data_criacao datetime not null default current_timestamp,
     ativo tinyint not null default '1',
     adm tinyint not null default '0',
     foto_blob_pessoa blob,
@@ -30,26 +30,28 @@ create table produto (
 
 create table publicacao (
 	id_publicacao int not null auto_increment,
-    data_publicacao date not null,
-    termino_promocao date,
-    incio_promocao date,
-    preco_desconto double,
-    desconto double,
-    preco_original double,
-    preco_atual double,
+    titulo varchar (255) not null,
+    texto text not null,
+    data_publicacao datetime not null default current_timestamp,
+    id_pessoa int,
+    key fk_publicacao_pessoa_idx (id_pessoa),
+	constraint fk_publicacao_pessoa 
+        foreign key (id_pessoa) 
+        references pessoa (id_pessoa)
+    /*termino_promocao date null,
+    incio_promocao date null,
+    preco_desconto double null,
+    desconto double null,
+    preco_original double null,
+    preco_atual double null,
     foto_blob_publi blob,
     foto_nome_publi varchar(100),
-    fk_pessoa_id_pessoa int,
-    fk_produto_id_produto int,
-	constraint fk_publicacao_pessoa
-		foreign key (fk_pessoa_id_pessoa) 
-        references pessoa (id_pessoa)
-        on delete cascade on update cascade,
+    primary key (id_publicacao),
+	fk_produto_id_produto int
 	constraint 	fk_publicacao_produto 
 		foreign key (fk_produto_id_produto)
         references produto (id_produto)
-        on delete cascade on update cascade,
-	primary key (id_publicacao)
+        on delete cascade on update cascade*/
 );
 
 create table categoria (
@@ -72,6 +74,6 @@ create table produto_categoria (
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );
 
-select * from pessoa;
+select * from publicacao;
 
-ah
+/*insert into publicacao (titulo, texto, id_pessoa) values ("maconha", "Curinga, ganhar, tatu, bola", 1);

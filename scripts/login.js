@@ -11,7 +11,7 @@ form.addEventListener('submit', (event) => {
         }
         else
         {
-            if(validatorEmail(email.value) === true && validatorSenha(senha.value) === true) {
+            if(validatorEmail(email.value) === true) {
                 textForm.textContent = '';
                 textEmail.textContent = '';
                 textSenha.textContent = '';
@@ -27,11 +27,6 @@ function validatorEmail(email) {
     return emailVar.test(email);
 }
 
-function validatorSenha(senha) {
-    let senhaVar = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    return senhaVar.test(senha);
-}
-
 email.addEventListener("keyup", () => {
     if(validatorEmail(email.value) !== true) {
         textEmail.textContent = "O formato do email deve ser: name@abc.com";
@@ -39,15 +34,5 @@ email.addEventListener("keyup", () => {
     else
     {
         textEmail.textContent = '';
-    }
-})
-
-senha.addEventListener("keyup", () => {
-    if(validatorSenha(senha.value) !== true) {
-        textSenha.textContent = "Sua senha deve conter: no mínimo 6 caracteres, letra(s), número(s) e no mínimo 1 caracter especial.";
-    }
-    else
-    {
-        textSenha.textContent = '';
     }
 })
