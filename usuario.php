@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- i got black i got white -->
 <html lang="pt-BR">
 <head>
     <?php include('includes/settings.php'); ?>
