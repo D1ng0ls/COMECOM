@@ -19,7 +19,7 @@
 .buttom-div {
     width: 100%;
     height: 50px;
-    margin: 10px 0px 10px 0px;
+    margin: 15px 0px 15px 0px;
     border: 1px solid #bbb;
     border-radius: 4px;
     color: var(--color-purple);
@@ -33,4 +33,18 @@
 
 .btn3 {
     color:#ef4130;
+}
+
+.buttom-div:hover {
+    background-color: var(--color-purple);
+    transition: all 0.3s;
+}
+
+.buttom-div:hover a {
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn3:hover {
+    background-color: #ef4130;
 }
