@@ -75,6 +75,7 @@
                 </tr>
                 <?php endforeach; ?>
             </tbody>
-        </table>    
+        </table>  
+        <a href="../COMECOM">Vortar</a>  
     </body>
 </html>

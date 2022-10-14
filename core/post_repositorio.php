@@ -22,7 +22,7 @@
                 'titulo' => $titulo,
                 'texto' => $texto,
                 'data_publicacao' => "$data_postagem $hora_postagem",
-                'id_pesssoa' => $_SESSION['login']['pessoa']['id_pessoa']
+                // 'id_pesssoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
             insere (
@@ -36,7 +36,7 @@
                 'titulo' => $titulo,
                 'texto' => $texto,
                 'data_publicacao' => "$data_postagem $hora_postagem",
-                'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
+                // 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
             $criterio = [

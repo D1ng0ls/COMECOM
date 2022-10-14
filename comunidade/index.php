@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="post-button-div">
-        <ul><li><a href="../post_formulario.php">Halo</a></li></ul>
+        <a href="../post_formulario.php">Alla is big</a>
     </div>
 
     <?php if(isset($_SESSION['login'])) :?>
