@@ -18,9 +18,6 @@
 
 <body>
     <?php include 'includes/navigator.php' ?>
-    <div class="teste">
-        <a href="teste.php">Caguei nas carça</a>
-    </div>
     <?php include 'includes/carrossel.php' ?>
     <?php include 'includes/footer.php' ?>
 </body>

@@ -33,17 +33,24 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="style/style-comunidade.css"> -->
         <title><?php echo $post['titulo']?></title>
     </head>
     <body>
         <div>
             <div>
                 <div>
-                    <div>
-                        <h5><?php echo $post['titulo']?></h5>
-                        <h5>
-                            <?php echo $data_post?> Por <?php echo $post['nome']?>
-                        </h5>
+                    <div class="container2">
+                        <div class="container2-1">
+                            <div class="comecom-avatar">
+                                <img src="comunidade/comunidade-avatares/avatarTeste.png" alt="">
+                                <h4><span>• Postado em: <?php echo $data_post?> Por <?php echo $post['nome'] ?></span></h4>
+                            </div>
+                        </div>
+                        <div class="post-title"><h3><?php echo $post['titulo']?></h3></div>
+                        <div class="post-img" align="center">
+                            <!-- <img src="comunidade/comunidade-post-img/maxresdefault.jpg" style="height: 380px;"> -->
+                        </div>
                         <div>
                             <?php echo html_entity_decode($post['texto']) ?>
                         </div>
@@ -52,7 +59,7 @@
             </div>
             <div>
                 <button type="submit">
-                    <a href="teste.php" style="color: white; text-decoration: none;">Voltar</a>
+                    <a href="comunidade/" style="color: white; text-decoration: none;">Voltar</a>
                 </button>
             </div>
         </div>

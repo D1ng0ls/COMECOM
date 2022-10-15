@@ -32,7 +32,7 @@
 
     <?php if(isset($_SESSION['login'])) :?>
      
-        <h2 align="center" style="color: #34345c;">[<a href="/" class="botaoTOP">Adicionar um Novo Post</a>]</h2>
+        <h2 align="center" style="color: #34345c;">[<a href="../post_formulario.php" class="botaoTOP">Adicionar um Novo Post</a>]</h2>
         <hr style="width: 25%; margin-bottom: 20px;">
         <?php include("../includes/posts.php") ?>
     <?php else : ?>
