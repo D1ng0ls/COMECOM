@@ -1,3 +1,18 @@
+h5 {
+    color: #999;
+    font-size: 10px;
+    padding: 0 5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+hr {
+    border-top: #bbb solid 1px;
+    border-bottom: none;
+    height: 0;
+    margin: 5px 0 10px;
+}
+
 .container-user {
     display: flex;
     width: 75%;
@@ -11,18 +26,26 @@
     text-align: center;
 }
 
+.logo-user {
+    width: 100%;
+    height: auto;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+}
+
 .logo-user img {
     vertical-align: middle;
-    width: 64px;
+    width: 92px;
+    margin: 20px;
 }
 
 .buttom-div {
     width: 100%;
-    height: 50px;
+    height: auto;
     margin: 15px 0px 15px 0px;
     border: 1px solid #bbb;
-    border-radius: 4px;
-    color: var(--color-purple);
+    border-radius: 3px;
+    color:#ef4130;
     font-weight: 500;
 }
 
@@ -31,12 +54,8 @@
     padding: 13px 0 13px 0px;;
 }
 
-.btn3 {
-    color:#ef4130;
-}
-
 .buttom-div:hover {
-    background-color: var(--color-purple);
+    background-color: #ef4130;
     transition: all 0.3s;
 }
 
@@ -45,6 +64,145 @@
     transition: all 0.3s;
 }
 
-.btn3:hover {
-    background-color: #ef4130;
+.info-user {
+    margin-left: 3%;
+    width: 55%;
+}
+
+.title-page {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.title-page h1 {
+    color: var(--color-purple);
+    font-size: 22px;
+    font-weight: 700;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-page p {
+    margin: 0px;
+    background: #f3f3f3;
+    border-radius: 0 0 5px 5px;
+    border-top: #bbb solid 1px;
+    font-size: 10px;
+    padding: 7px 10px;
+    text-transform: uppercase
+}
+
+.input-user {
+    width: 100%;
+    display: inline-block;
+}
+
+.input-user input, .input-password {
+    color: #333;
+    /* background: #fff; */
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 8%);
+    box-sizing: border-box;
+    margin: 0 0 15px;
+    min-height: 34px;
+    padding: 7px 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.input-user input[readonly=readonly] {
+    background-color: #f3f3f3!important;
+}
+
+.input-user label {
+    color: #454545;
+    display: block;
+    font-size: 12px;
+    margin: 0 0 5px;
+    text-indent: 5px;
+    text-transform: uppercase;
+}
+
+.input-password {
+    font-weight: 500;
+    color: #ef4130;
+    text-align: center;
+    margin-top: 21px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.input-password:hover {
+    background: #ef4130;
+    color: white;
+}
+
+.senha {
+    width: 100%;
+}
+
+.input-left {
+    float: left;
+}
+
+.input-right {
+    float: right;
+}
+
+.foto-user {
+    width: 15.75% !important;
+    margin: 0;
+    margin-left: auto;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    background: url("../media/icons/solid/user.svg") no-repeat center;
+    background-size: 75%;
+}
+
+.juridico {
+    background: url("../media/icons/solid/office-building.svg") no-repeat center;
+    background-size: 75%;
+}
+
+.doc-user input {
+    cursor: pointer;
+}
+
+.small {
+    width: 38.75%;
+}
+
+.medium {
+    width: 48%;
+}
+
+.salvar-user {
+    margin-top: 14px;
+}
+
+.salvar-user input {
+    cursor: pointer;
+}
+
+.salvar-user input{
+    height: 50px;
+    background-color: white;
+    color: var(--color-purple);
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.salvar-user:hover input {
+    background-color: var(--color-purple);
+    color: white;
+    transition: all 0.3s;
 }

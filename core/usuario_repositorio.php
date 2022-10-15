@@ -89,7 +89,7 @@
 
             break;
         case 'update':
-            $id = (int)$id;
+            $id_pessoa = (int)$id_pessoa;
             $dados = [
                 'tipo_pessoa' => $tipo_pessoa,
                 'nome' => $nome,
@@ -101,7 +101,7 @@
             ];
 
             $criterio = [
-                ['id_pessoa', '=', $id]
+                ['id_pessoa', '=', $id_pessoa]
             ];
 
             atualiza (
@@ -110,8 +110,9 @@
                 $criterio
             );
 
-            break;
-
+            session_destroy();
+            header('Location: ../login.php');
+            exit;
             break;
         case 'login':
             $criterio = [
