@@ -61,6 +61,6 @@
             break;
     }
 
-    header('Location: ../');
+    header('Location: ../comunidade/');
     
 ?>

@@ -52,7 +52,7 @@
             </div>
             <div>
                 <button type="submit">
-                    <a href="teste.php" style="color: white; text-decoration: none;">Voltar</a>
+                    <a href="comunidade/" style="color: white; text-decoration: none;">Voltar</a>
                 </button>
             </div>
         </div>

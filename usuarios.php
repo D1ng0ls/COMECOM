@@ -1,4 +1,4 @@
-<!DOCTYPE html><!-- macoinha -->
+<!DOCTYPE html>
 <html lang="pt_BR">
     <head>
     <meta charset="UTF-8">
