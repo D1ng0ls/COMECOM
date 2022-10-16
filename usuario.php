@@ -40,7 +40,7 @@
         </div>
         <div class="info-user">
             <div class="title-page">
-                <h1>Dados</h1>
+                <h1>Informações pessoais</h1>
                 <p>Gerencie seus dados no site</p>
             </div>
             <form action="core/usuario_repositorio.php">
@@ -88,7 +88,7 @@
                     <label for="data">Ativo desde:</label>
                     <input type="text" name="data" id="data" value="16/09/2018" readonly="readonly">
                 </div>
-                <a href="" class="senha"><div class="input-user input-password input-right medium">
+                <a href="security.php" class="senha"><div class="input-user input-password input-right medium">
                     Mudar senha
                 </div></a>
                 <div class="input-user salvar-user">

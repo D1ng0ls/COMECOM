@@ -12,13 +12,13 @@
     $com = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/";
     $abt = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/aboutus.php";
     $pgu = $_SERVER['HTTP_HOST'] . "/COMECOM/usuario.php";
+    $sct = $_SERVER['HTTP_HOST'] . "/COMECOM/security.php";
+    $faq = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/faq.php";
 
     function url($url, $com, $home) : string {
-        if($url == $GLOBALS['abt']){
+        if($url == $GLOBALS['abt'] || $url == $com || $url == $GLOBALS['faq']){
             return "../";
-        } else if($url == $com) {
-            return "../";
-        } else if($url == $GLOBALS['pgu']){
+        } else if($url == $GLOBALS['pgu'] || $url == $GLOBALS['sct']){
             return "";
         } else if($url != $home) {
             return "../../";

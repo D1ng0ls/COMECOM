@@ -21,7 +21,7 @@
                 <ul>
                     <li class="nav-first"><a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav_a">Entrar</a></li>
                     <li><a href="<?php echo url($url, $com, $home) ?>comunidade/rules.html" class="nav_a">Regras</a></li>
-                    <li><a href="<?php echo url($url, $com, $home) ?>" class="nav_a">FAQ</a></li>
+                    <li><a href="<?php echo url($url, $com, $home) ?>comunidade/faq.php" class="nav_a">FAQ</a></li>
                 </ul>
             </div>
             <div class="footerSpaceCol"></div>
@@ -39,7 +39,7 @@
 
     <div class="footerCopyrightLine">
         <div class="footerLogoLine">
-            <a href="<?php echo url($url, $com, $home) ?>">
+            <a href="<?php if($url == $pgu || $url == $sct) { echo url2(); } else { echo url($url, $com, $home);} ?> ">
                 <div class="logoSprite"></div>
             </a>
         </div>

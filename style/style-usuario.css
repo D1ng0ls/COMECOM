@@ -206,3 +206,82 @@ hr {
     color: white;
     transition: all 0.3s;
 }
+
+/* security */
+
+.container-page {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 #808080;
+    width: 550px;
+    margin: 50px auto;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.container-name {
+    background-repeat: no-repeat;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.container-name h1{
+    color: var(--color-purple);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container-tricks, .container-form {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.container-tricks h3, .container-form h3 {
+    background: #f3f3f3;
+    border-bottom: #bbb solid 1px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 7px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container-tricks p {
+    color: #454545;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+.container-name p {
+    background: #f3f3f3;
+    border-radius: 0 0 5px 5px;
+    border-top: #bbb solid 1px;
+    font-size: 10px;
+    padding: 7px 10px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.input-user2 {
+    width: auto;
+    display: block;
+    margin: 5px 20px;
+}
+
+.salvar-user2 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+}
+
+.salvar-user2 input {
+    margin: 0;
+}
