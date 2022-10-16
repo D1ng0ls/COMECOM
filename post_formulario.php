@@ -52,7 +52,7 @@
                         <input  type="hidden" name="id_publicacao"
                                 value="<?php echo $entidade['id_publicacao'] ?? '' ?>">
                         <div class="container1">
-                            <div class="post-postar"><h2>Postar</h2></div>
+                            <div class="post-post"><h2>Post</h2></div>
                             <div class="post-titulo">
                                 <input  type="text"
                                         require="required" id="titulo" name="titulo" placeholder="Título"
@@ -64,9 +64,20 @@ require="required" id="texto" name="texto" rows="5" placeholder="Texto (opcional
 <?php echo $entidade['texto'] ?? ''?>
 </textarea>
                             </div>
+                            <div class="post-desconto">
+                                <input  type="number" placeholder="Valor do desconto - Ex: 00" require="required" 
+                                        id="desconto" name="desconto"
+                                        value="<?php echo $entidade['desconto'] ?? ''?>">
+                            </div>
+                            <div class="post-termino-promocao">
+                                <label for="termino_promocao">Término da promoção</label><br>
+                                <input  type="date" require="required" 
+                                        id="termino_promocao" name="termino_promocao"
+                                        value="<?php echo $entidade['termino_promocao'] ?? ''?>">
+                            </div>
                         </div>
-                        <div>
-                            <button type="submit">Salvar</button>
+                        <div class="post-button">
+                            <button type="submit">Postar</button>
                         </div>
                     </form>
                 </div>

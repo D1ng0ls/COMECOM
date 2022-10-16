@@ -21,6 +21,8 @@
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
+                'desconto' => $desconto,
+                'termino_promocao' => $termino_promocao,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 

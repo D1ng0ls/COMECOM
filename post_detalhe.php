@@ -15,6 +15,8 @@
             'titulo',
             'data_publicacao',
             'texto',
+            'desconto',
+            'termino_promocao',
             '(select nome
                 from pessoa
                 where pessoa.id_pessoa = publicacao.id_pessoa) as nome'
@@ -25,7 +27,11 @@
     );
     $post = $posts[0];
     $data_post = date_create($post['data_publicacao']);
-    $data_post = date_format($data_post, 'd/m/Y H:i:s');
+    $data_post = date_format($data_post, 'd/m/Y');
+    $hora_post = date_create($post['data_publicacao']);
+    $hora_post = date_format($hora_post, 'H:i:s');
+    $data_termino = date_create($post['termino_promocao']);
+    $data_termino = date_format($data_termino, 'd/m/Y');
 
 ?>
 <html>
@@ -44,16 +50,16 @@
                         <div class="container2-1">
                             <div class="comecom-avatar">
                                 <img src="comunidade/comunidade-avatares/avatarTeste.png" alt="">
-                                <h4><span>• Postado em: <?php echo $data_post?> Por <?php echo $post['nome'] ?></span></h4>
+                                <h4><span>• Postado em: <?php echo $data_post . ' às ' . $hora_post?> Por <?php echo $post['nome'] ?></span></h4>
                             </div>
                         </div>
-                        <div class="post-title"><h3><?php echo $post['titulo']?></h3></div>
+                        <div class="post-title"><h3><strong><?php echo $post['titulo']?></strong></h3></div>
+                        <div class="post-texto"><h4><?php echo html_entity_decode($post['texto']) ?>    </h4></div>
                         <div class="post-img" align="center">
-                            <!-- <img src="comunidade/comunidade-post-img/maxresdefault.jpg" style="height: 380px;"> -->
+                            <!-- <img src="comunidade/comunidade-post-img/maxresdefault.jpg" style="height: 380px;">  -->
                         </div>
-                        <div class="post-texto">
-                            <h4><?php echo html_entity_decode($post['texto']) ?></h4>
-                        </div>
+                        <div class="post-desconto">         <h4><?php echo 'Valor do desconto: R$' . $post['desconto'] . ',00'?>                      </h4></div>
+                        <div class="post-termino-promocao"> <h4><?php echo 'Término da promoçao: ' . $data_termino?>              </h4></div>
                     </div>
                 </div>
             </div>
