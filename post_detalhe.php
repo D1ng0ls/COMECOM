@@ -33,7 +33,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="style/style-comunidade.css"> -->
+        <link rel="stylesheet" href="style/style-post-detalhe.css">
         <title><?php echo $post['titulo']?></title>
     </head>
     <body>
@@ -51,15 +51,15 @@
                         <div class="post-img" align="center">
                             <!-- <img src="comunidade/comunidade-post-img/maxresdefault.jpg" style="height: 380px;"> -->
                         </div>
-                        <div>
-                            <?php echo html_entity_decode($post['texto']) ?>
+                        <div class="post-texto">
+                            <h4><?php echo html_entity_decode($post['texto']) ?></h4>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
                 <button type="submit">
-                    <a href="comunidade/" style="color: white; text-decoration: none;">Voltar</a>
+                    <a href="comunidade/" style="color: red; text-decoration: none;">Voltar</a>
                 </button>
             </div>
         </div>

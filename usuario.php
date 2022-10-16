@@ -40,7 +40,7 @@
         </div>
         <div class="info-user">
             <div class="title-page">
-                <h1>Dados Básicos</h1>
+                <h1>Dados</h1>
                 <p>Gerencie seus dados no site</p>
             </div>
             <form action="core/usuario_repositorio.php">

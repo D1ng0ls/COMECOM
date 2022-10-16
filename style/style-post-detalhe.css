@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container2 {
+    border: 1px solid #773d94;
+    width: min(100% - 2rem, 750px);
+    margin-inline: auto;
+    min-height: 100px;
+    border-radius: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 40px; 
+}
+
+
+.comecom-avatar {
+    display: flex;
+}
+
+.comecom-avatar img {
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 0.5vw;   
+}
+
+.container2-1 {
+    height: 33px;
+    border: 1px;
+    color: white;
+    font-size: 12px;
+    font-family: helvetica;
+    border-style: solid;
+    background-color: #773d94;
+    border-color: #773d94;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container2-1 h4 {
+    margin-top: 5px;
+    font-weight: bold;
+    padding: 0.5vh 0.5vw;
+}
+
+.post-title {
+    margin: 10px 15px 10px 15px;
+}
+
+.post-title h3 {
+    margin: 0px;
+    font-weight: 400;
+}
+
+.post-texto {
+    margin: 10px 15px 10px 15px;
+}
+
+.post-texto h4 {
+    margin: 0px;
+    font-weight: 400;
+}
+
+.post-img img {
+    width: min(100% - 1.9rem, 100%);
+}

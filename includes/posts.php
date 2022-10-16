@@ -104,8 +104,5 @@
                 </div>
             </div>
         </div>
-        <div>
-            <a href="../comunidade/index.php">Vorta pra lá sô</a>
-        </div>
     </body>
 </html>
