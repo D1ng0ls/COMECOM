@@ -50,12 +50,14 @@
 }
 
 .post-title h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
     font-weight: 400;
 }
 
 .post-texto {
     margin: 10px 15px 10px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .post-texto h4 {
