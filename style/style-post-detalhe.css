@@ -68,3 +68,25 @@
 .post-img img {
     width: min(100% - 1.9rem, 100%);
 }
+
+.post-desconto {
+    border-top: 1px solid #773d94;
+    padding-top: 8px;
+    margin: 10px 15px 10px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.post-desconto h4 {
+    margin: 0px;
+    font-weight: 400;
+}
+
+.post-termino-promocao {
+margin: 10px 15px 10px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.post-termino-promocao h4 {
+    margin: 0px;
+    font-weight: 400;
+}

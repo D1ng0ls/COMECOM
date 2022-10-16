@@ -103,6 +103,7 @@
 
 .post-termino-promocao label[for='termino_promocao'] {
     color: #202124dd;
+    outline: none;
 }
 
 .post-termino-promocao input[type='date'] {
@@ -111,6 +112,7 @@
     border-radius: 4px;
     padding: 5px;
     color: #202124b4;
+    outline: none;
 }
 
 .post-desconto {

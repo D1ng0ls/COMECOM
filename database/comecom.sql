@@ -38,10 +38,10 @@ create table publicacao (
 	constraint fk_publicacao_pessoa 
         foreign key (id_pessoa) 
         references pessoa (id_pessoa),
+	desconto double null,
     termino_promocao date null,
     incio_promocao date null,
     preco_desconto double null,
-    desconto double null,
     preco_original double null,
     preco_atual double null,
     foto_blob_publi blob null,
@@ -75,4 +75,4 @@ create table produto_categoria (
 );
 
 select * from pessoa;
-select * from publicacao
+select * from publicacao;

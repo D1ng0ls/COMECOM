@@ -7,12 +7,12 @@
         <title>COMECOM</title>
     </head>
     <body>
-        <div class="teste">
+        <div>
             <div>
                 <div>
                     <div>
                         <h2 align="center" style="color: #34345c;"><div class=""><?php include 'busca.php'; ?></div></h2>
-                        <hr style="width: 25%; margin-bottom: 20px;">
+                        <hr style="width: 25%; margin: auto; margin-top: 20px; margin-bottom: 30px;">   
                         <?php
                             require_once 'funcoes.php';
                             require_once '../core/conexao_mysql.php';

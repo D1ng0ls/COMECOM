@@ -65,11 +65,15 @@ require="required" id="texto" name="texto" rows="5" placeholder="Texto (opcional
 </textarea>
                             </div>
                             <div class="post-desconto">
-                                <input type="number" placeholder="Valor do desconto">
+                                <input  type="number" placeholder="Valor do desconto - Ex: 00" require="required" 
+                                        id="desconto" name="desconto"
+                                        value="<?php echo $entidade['desconto'] ?? ''?>">
                             </div>
                             <div class="post-termino-promocao">
                                 <label for="termino_promocao">Término da promoção</label><br>
-                                <input type="date">
+                                <input  type="date" require="required" 
+                                        id="termino_promocao" name="termino_promocao"
+                                        value="<?php echo $entidade['termino_promocao'] ?? ''?>">
                             </div>
                         </div>
                         <div class="post-button">

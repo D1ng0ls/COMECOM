@@ -1,0 +1,31 @@
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type='search'] {
+    width: min(100% - 2rem, 280px);
+    height: 35px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 7px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    margin-right: 25px;
+}
+
+button {
+    width: 100px;
+    height: 34px;
+    padding: 6px;
+    border: 1px solid #773d94;
+    background-color: #773d94;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
