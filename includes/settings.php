@@ -20,8 +20,20 @@
             return "../";
         } else if($url == $GLOBALS['pgu'] || $url == $GLOBALS['sct']){
             return "";
-        } else if($url != $home) {
+        } else if($url == $GLOBALS['elt']) {
             return "../../";
+        } else if($url == $GLOBALS['mrc']) {
+            return "../../";
+        } else if($url == $GLOBALS['mec']) {
+            return "../../";
+        } else if($url == $GLOBALS['pet']) {
+            return "../../";
+        } else if($url == $GLOBALS['com']) {
+            return "../../";
+        } else if($url == $GLOBALS['abt']) {
+            return "../../";
+        } else if($url != $home ) {
+            return "../";
         } else {
             return "";
         }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/style-navegador.css">
     <link rel="stylesheet" href="../style/style-comunidade.css">
+    <link rel="stylesheet" href="../style/style-busca.css">
     <title>COMECOM | Comunidade</title>
     <?php include('../includes/settings.php'); ?>
 </head>
@@ -32,12 +33,16 @@
 
     <?php if(isset($_SESSION['login'])) :?>
      
-        <h2 align="center" style="color: #34345c;">[<a href="../post_formulario.php" class="botaoTOP">Adicionar um Novo Post</a>]</h2>
+        <h2 align="center" style="color: #34345c;">
+            [<a href="../post_formulario.php" class="botaoTOP">Adicionar um Novo Post</a>]
+        </h2>
         <hr style="width: 25%; margin: auto; margin-top: 30px; margin-bottom: 20px;">
         <?php include("../includes/posts.php") ?>
     <?php else : ?>
         <hr style="width: 30%; margin-top: 60px;">
-        <h2 align="center" style="color: #34345c;">[<a href="../login.php" class="botaoTOP">Faça Login para Visualizar a Comunidade</a>]</h2>
+        <h2 align="center" style="color: #34345c;">
+            [<a href="../login.php" class="botaoTOP">Faça Login para Visualizar a Comunidade</a>]
+        </h2>
         <hr style="width: 30%;">
     <?php endif; ?>
 

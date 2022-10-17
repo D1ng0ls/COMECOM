@@ -5,28 +5,27 @@
     align-items: center;
 }
 
-input[type='search'] {
-    width: min(100% - 2rem, 280px);
+input[type='search'], button {
     height: 35px;
     border: 1px solid #bbb;
-    border-radius: 4px;
+    border-radius: 3px;
     padding: 7px;
-    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+input[type='search'] {
+    width: min(100% - 2rem, 280px);
+    font-size: 15px;
     outline: none;
     margin-right: 25px;
 }
 
 button {
     width: 100px;
-    height: 34px;
-    padding: 6px;
-    border: 1px solid var(--color-purple);
-    background-color: #fff;
-    border-radius: 4px;
     color: var(--color-purple);
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
 }
 
