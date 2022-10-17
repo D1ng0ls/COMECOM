@@ -14,6 +14,27 @@
         $$indice = limparDados($dado);
     }
 
+    // //Upload da foto
+    // $foto_nome_publi = $_FILES['foto']['name'];
+    // $target_dir = "upload/";
+    // $target_file = $target_dir . basename($_FILES["foto"]["name"]);
+
+    // //Select file type
+    // $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+    // //Valid file extensions
+    // $extensions_arr = array("jpg", "jpeg", "png", "gif");
+
+
+    // //Check entension
+    // if(in_array($imageFileType, $extensions_arr))
+    // {
+    //     if(move_uploaded_file($_FILES['foto']['tmp_name'], $target_dir.$foto_nome_publi))
+    //     {
+    //         $foto_blob_publi = addslashes(file_get_contents($target_dir.$foto_nome_publi));
+    //     }
+    // }
+
     $id = (int)$id;
 
     switch($acao) {
@@ -23,6 +44,8 @@
                 'texto' => $texto,
                 'desconto' => $desconto,
                 'termino_promocao' => $termino_promocao,
+                // 'foto_blob_publi' => $foto_blob_publi,
+                // 'foto_nome_publi' => $foto_nome_publi,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
@@ -36,6 +59,10 @@
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
+                'desconto' => $desconto,
+                'termino_promocao' => $termino_promocao,
+                // 'foto_blob_publi' => $foto_blob_publi,
+                // 'foto_nome_publi' => $foto_nome_publi,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
@@ -46,7 +73,7 @@
             atualiza (
                 'publicaco',
                 $dados,
-                $criterio
+                $criterio       
             );
 
             break;

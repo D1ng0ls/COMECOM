@@ -79,6 +79,13 @@ require="required" id="texto" name="texto" rows="5" placeholder="Texto (opcional
                         <div class="post-button">
                             <button type="submit">Postar</button>
                         </div>
+                        <!-- <div class="">
+                            <input  type="file" 
+                                    id="foto" 
+                                    name="foto" 
+                                    accept="image/*"
+                                    value="<?php echo $entidade['foto_blob_publi'] ?? ''?>" />
+                        </div>  -->
                     </form>
                 </div>
             </div>

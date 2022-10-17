@@ -17,6 +17,8 @@
             'texto',
             'desconto',
             'termino_promocao',
+            // 'foto_blob_publi',
+            // 'foto_nome_publi',
             '(select nome
                 from pessoa
                 where pessoa.id_pessoa = publicacao.id_pessoa) as nome'
@@ -57,6 +59,7 @@
                         <div class="post-texto"><h4><?php echo html_entity_decode($post['texto']) ?>    </h4></div>
                         <div class="post-img" align="center">
                             <!-- <img src="comunidade/comunidade-post-img/maxresdefault.jpg" style="height: 380px;">  -->
+                            <!-- <?php echo $post['titulo']?> -->
                         </div>
                         <div class="post-desconto">         <h4><?php echo 'Valor do desconto: R$' . $post['desconto'] . ',00'?>                      </h4></div>
                         <div class="post-termino-promocao"> <h4><?php echo 'Término da promoçao: ' . $data_termino?>              </h4></div>
