@@ -58,14 +58,16 @@
                                 <?php
                                     foreach($posts as $post) :
                                         $data = date_create($post['data_publicacao']);
-                                        $data = date_format($data, 'd/m/Y H:i:s');
+                                        $data = date_format($data, 'd/m/Y');
+                                        $hora = date_create($post['data_publicacao']);
+                                        $hora = date_format($hora, 'H:i:s');
                                 ?>
                                 <div class="container2">
                                     <a href="../post_detalhe.php?post=<?php echo $post['id_publicacao']?>">
                                         <div class="container2-1">
-                                            <div class="comecom-avatar">
+                                            <div class="comecom-avatar">    
                                                 <img src="comunidade-avatares/avatarTeste.png" alt="sexo">
-                                                <h4><span>• Postado em: <?php echo $data?></span></h4>
+                                                <h4><span>• Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
                                             </div>
                                         </div>
                                         <div class="post-title"><h3><?php echo $post['titulo']?></h3></div>
