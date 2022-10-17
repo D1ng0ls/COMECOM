@@ -32,8 +32,6 @@
             return "../../";
         } else if($url == $GLOBALS['abt']) {
             return "../../";
-        } else if($url != $home ) {
-            return "../";
         } else {
             return "";
         }

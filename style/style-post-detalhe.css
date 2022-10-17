@@ -90,3 +90,9 @@ margin: 10px 15px 10px 15px;
     margin: 0px;
     font-weight: 400;
 }
+
+.container-all {
+    height: 50vh;
+    align-items: center;
+    display: flex;
+}

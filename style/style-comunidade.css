@@ -317,3 +317,26 @@
 .social-media img {
     width: 32px;
 }
+
+.container-post {
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+}
+
+.aberto {
+    animation: abre 1s;
+    height: 300px;
+    overflow: hidden;
+    display: block;
+}
+
+@keyframes abre {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 300px;
+    }
+}
