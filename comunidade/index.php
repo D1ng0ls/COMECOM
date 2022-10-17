@@ -34,8 +34,11 @@
     <?php if(isset($_SESSION['login'])) :?>
      
         <h2 align="center" style="color: #34345c;">
-            [<a href="../post_formulario.php" class="botaoTOP">Adicionar um Novo Post</a>]
+            [<span class="botaoTOP" onclick="aparece()" style="cursor: pointer;">Adicionar um Novo Post</span>]
         </h2>
+        <div class="container-post" id="post">
+            <?php include("../post_formulario.php") ?>
+        </div>
         <hr style="width: 25%; margin: auto; margin-top: 30px; margin-bottom: 20px;">
         <?php include("../includes/posts.php") ?>
     <?php else : ?>
@@ -47,6 +50,12 @@
     <?php endif; ?>
 
     <?php include('../includes/footer.php'); ?>
+
+    <script>
+        function aparece() {
+            document.getElementById("post").classList.toggle("aberto");
+        }
+    </script>
 </body>
 
 </html>
