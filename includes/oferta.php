@@ -16,7 +16,7 @@
                         </div>
                     </a>
                     <div class='item-expire'>
-                        <span>02:08:40:33</span>
+                        <span>2d 12h 13min</span>
                     </div>
                 </div>
                 ";

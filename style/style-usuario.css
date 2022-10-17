@@ -86,10 +86,11 @@ hr {
     text-transform: uppercase;
 }
 
-.title-page p {
+.title-page p, .container-name p {
     margin: 0px;
-    background: #f3f3f3;
-    border-radius: 0 0 5px 5px;
+    background: var(--color-purple);
+    color: white;
+    border-radius: 0 0 3px 3px;
     border-top: #bbb solid 1px;
     font-size: 10px;
     padding: 7px 10px;
@@ -244,7 +245,8 @@ hr {
 }
 
 .container-tricks h3, .container-form h3 {
-    background: #f3f3f3;
+    background: var(--color-purple);
+    color: white;
     border-bottom: #bbb solid 1px;
     font-size: 14px;
     font-weight: 700;
@@ -259,16 +261,6 @@ hr {
     font-size: 14px;
     line-height: 1.5;
     padding: 0 20px;
-}
-
-.container-name p {
-    background: #f3f3f3;
-    border-radius: 0 0 5px 5px;
-    border-top: #bbb solid 1px;
-    font-size: 10px;
-    padding: 7px 10px;
-    text-transform: uppercase;
-    margin: 0;
 }
 
 .input-user2 {

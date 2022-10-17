@@ -52,7 +52,7 @@
                         <input  type="hidden" name="id_publicacao"
                                 value="<?php echo $entidade['id_publicacao'] ?? '' ?>">
                         <div class="container1">
-                            <div class="post-post"><h2>Post</h2></div>
+                            <div class="post-post"><h2>Postagem</h2></div>
                             <div class="post-titulo">
                                 <input  type="text"
                                         require="required" id="titulo" name="titulo" placeholder="Título"
