@@ -43,7 +43,7 @@
                         'id_publicacao',
                         '(select nome
                             from pessoa
-                            where pessoa.id_pessoa = publicacao.id_pessoa) as nome'
+                            where id_pessoa = publicacao.id_pessoa) as nome'
                     ],
                     $criterio,
                     'data_publicacao DESC'
@@ -64,7 +64,7 @@
                             <div class="container2-1">
                                 <div class="comecom-avatar">    
                                     <img src="comunidade-avatares/avatarTeste.png" alt="sexo">
-                                    <h4><span>• Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
+                                    <h4><span><?php echo $post['nome']?> • Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
                                 </div>
                             </div>
                             <div class="post-title"><h3><?php echo $post['titulo']?></h3></div>
