@@ -18,6 +18,8 @@
 
 <body>
     <?php include 'includes/navigator.php' ?>
+    <hr>
+    <div align="center"><img src="media/home/home-imagem.png"></div>
     <?php include 'includes/carrossel.php' ?>
     <?php include 'includes/footer.php' ?>
 </body>
