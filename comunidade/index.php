@@ -46,8 +46,6 @@
         <hr style="width: 30%;">
     <?php endif; ?>
 
-    <?php include('../includes/post_modelo.php'); ?>
-
     <?php include('../includes/footer.php'); ?>
 </body>
 
