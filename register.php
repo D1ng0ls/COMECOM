@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
     <head>
+        <?php include('includes/settings.php'); ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,12 @@
             <div class="register-content">
                 <div class="form-content">
                     <?php
-                        session_start();
                         if(isset($_SESSION['msg']['email'])){
                             $email_msg = $_SESSION['msg']['email'];
+                        }
+
+                        if(isset($_SESSION['msg_doc']['documento'])){
+                            $doc_msg = $_SESSION['msg_doc']['documento'];
                         }
 
                         require_once 'includes/funcoes.php';
@@ -103,6 +107,8 @@
                                 <input  type="text" require="required" 
                                         id="cpf" name="cpf"
                                         value="<?php echo $entidade['cpf'] ?? '' ?>">
+                                        
+                                <!-- <small style="color:red"><?php echo isset($doc_msg) ? $doc_msg: '' ?></small>   -->
                                 <small id="textCpf"></small>
                             </div>
                         </div>
@@ -112,6 +118,7 @@
                                 <input  type="text" require="required" 
                                         id="cnpj" name="cnpj"
                                         value="<?php echo $entidade['cnpj'] ?? '' ?>">
+                                <!-- <small style="color:red"><?php echo isset($doc_msg) ? $doc_msg: '' ?></small>   -->
                                 <small id="textCnpj"></small>
                             </div>
                             <div class="input-content">

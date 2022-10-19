@@ -17,6 +17,8 @@
     switch($acao) {
         case 'insert':
             unset($_SESSION['msg']['email']);
+            // unset($_SESSION['msg_doc']['documento']);
+            
             $criterio = [
                 ['email', '=', $email]                
             ];
@@ -28,7 +30,11 @@
             );
             
             if(count($retorno) > 0) {
-                $_SESSION['msg']['email']="E-mail já cadastrado!";
+                $_SESSION['msg']['email'] = "E-mail já cadastrado!";
+                // if(count($retorno) > 0)
+                // {
+                //     $_SESSION['msg_doc']['documento'] = "Documento duplicado!";
+                // }         
                 header('Location: ../register.php');              
             }
             else {
