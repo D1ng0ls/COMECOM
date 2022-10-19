@@ -13,8 +13,9 @@
             <div class="register-content">
                 <div class="form-content">
                     <?php
-                        if(isset($_SESSION['msg'])){
-                            $email_msg=$_SESSION['msg']['email'];
+                        session_start();
+                        if(isset($_SESSION['msg']['email'])){
+                            $email_msg = $_SESSION['msg']['email'];
                         }
 
                         require_once 'includes/funcoes.php';

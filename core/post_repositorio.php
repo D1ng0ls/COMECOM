@@ -13,39 +13,39 @@
     foreach($_GET as $indice => $dado) {
         $$indice = limparDados($dado);
     }
-
-    // //Upload da foto
-    // $foto_nome_publi = $_FILES['foto']['name'];
-    // $target_dir = "upload/";
-    // $target_file = $target_dir . basename($_FILES["foto"]["name"]);
-
-    // //Select file type
-    // $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-    // //Valid file extensions
-    // $extensions_arr = array("jpg", "jpeg", "png", "gif");
-
-
-    // //Check entension
-    // if(in_array($imageFileType, $extensions_arr))
-    // {
-    //     if(move_uploaded_file($_FILES['foto']['tmp_name'], $target_dir.$foto_nome_publi))
-    //     {
-    //         $foto_blob_publi = addslashes(file_get_contents($target_dir.$foto_nome_publi));
-    //     }
-    // }
-
-    $id = (int)$id;
+    $fotos_name = array();
+    $fotos = array_filter($_FILES['foto']['name']); 
+    // Count the number of uploaded files in array
+    $total_count = count($_FILES['foto']['name']);
+    // Loop through every file
+    for( $i=0 ; $i < $total_count ; $i++ ) {
+        //The temp file path is obtained
+        $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
+        //A file path needs to be present
+        if ($tmpFilePath != ""){
+            //Setup our new file path
+            $foto_name = $_FILES['foto']['name'][$i];
+            $path_parts = pathinfo($foto_name);
+            $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
+            $foto_name = $path_parts['filename'].time().".".$imageFileType ;
+            $newFilePath = "../upload/" . $foto_name;
+            
+            //File is uploaded to temp dir
+            if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+                $fotos_name[] = $foto_name;
+            }
+        }
+    }
+    
+    $id_publicacao = (int)$id_publicacao;
 
     switch($acao) {
         case 'insert':
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
-                'desconto' => $desconto,
-                'termino_promocao' => $termino_promocao,
                 // 'foto_blob_publi' => $foto_blob_publi,
-                // 'foto_nome_publi' => $foto_nome_publi,
+                'foto_nome_publi' => implode(";", $fotos_name),//$foto_nome_publi,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
@@ -59,8 +59,6 @@
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
-                'desconto' => $desconto,
-                'termino_promocao' => $termino_promocao,
                 // 'foto_blob_publi' => $foto_blob_publi,
                 // 'foto_nome_publi' => $foto_nome_publi,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']

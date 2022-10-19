@@ -16,7 +16,7 @@
 
     switch($acao) {
         case 'insert':
-
+            unset($_SESSION['msg']['email']);
             $criterio = [
                 ['email', '=', $email]                
             ];
@@ -115,6 +115,7 @@
             exit;
             break;
         case 'login':
+            unset($_SESSION['msg']['email']);
             $criterio = [
                 ['email', '=', $email],
                 ['AND', 'ativo', '=', 1]
@@ -134,19 +135,19 @@
                         $_SESSION['url_retorno'] = '';
                         exit;
                     }
-                }
-            }else {
-                $_SESSION['msg']['login'] = "E-mail ou senha inválido(s)!";
-                header('Location: ../login.php');
-                exit;         
-            }
+                    break;
+                } 
+            }        
+            $_SESSION['msg']['login'] = "E-mail ou senha inválido(s)!";
+            header('Location: ../login.php');
+            exit;            
 
             break;
             case 'logout':
                 session_destroy();
                 break;
             case 'status':
-                $id = (int)$id;
+                $id_pessoa = (int)$id_pessoa;
                 $valor = (int)$valor;
 
                 $dados = [
@@ -154,7 +155,7 @@
                 ];
 
                 $criterio = [
-                    ['id_pessoa', '=', $id]
+                    ['id_pessoa', '=', $id_pessoa]
                 ];
 
                 atualiza (
@@ -167,7 +168,7 @@
                 exit;
                 break;
             case 'adm':
-                $id = (int)$id;
+                $id_pessoa = (int)$id_pessoa;
                 $valor = (int)$valor;
 
                 $dados = [
@@ -175,7 +176,7 @@
                 ];
 
                 $criterio = [
-                    ['id_pessoa', '=', $id]
+                    ['id_pessoa', '=', $id_pessoa]
                 ];
 
                 atualiza (  

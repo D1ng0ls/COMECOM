@@ -28,7 +28,7 @@
                             $entidade = $retorno[0];
                         }
                     ?>
-                    <form method="post" action="../core/post_repositorio.php">
+                    <form method="post" action="../core/post_repositorio.php"  enctype="multipart/form-data">
                         <input  type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                         <input  type="hidden" name="id_publicacao"
@@ -48,13 +48,13 @@
                         <div class="post-button">
                             <button type="submit">Postar</button>
                         </div>
-                        <!-- <div class="">
+                        <div class="">
                             <input  type="file" 
                                     id="foto" 
-                                    name="foto" 
-                                    accept="image/*"
-                                    value="<?php echo $entidade['foto_blob_publi'] ?? ''?>" />
-                        </div>  -->
+                                    name="foto[]" 
+                                    accept="image/*" multiple="multiple" 
+                                    />
+                        </div>  
                     </form>
                 </div>
             </div>

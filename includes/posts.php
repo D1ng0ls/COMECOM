@@ -41,6 +41,7 @@
                         'titulo',
                         'data_publicacao',
                         'id_publicacao',
+                        'foto_nome_publi',
                         '(select nome
                             from pessoa
                             where id_pessoa = publicacao.id_pessoa) as nome'
@@ -57,7 +58,13 @@
                             $data = date_create($post['data_publicacao']);
                             $data = date_format($data, 'd/m/Y');
                             $hora = date_create($post['data_publicacao']);
-                            $hora = date_format($hora, 'H:i:s');
+                            $hora = date_format($hora, 'H:i:s');                            
+                            $fotos = explode(';',$post['foto_nome_publi']);                                
+                            foreach($fotos as $foto){
+                                if($foto != '')
+                                    echo "../upload/".$foto."<br>";
+                            }
+                            
                     ?>
                     <div class="container2">
                         <a href="../post_detalhe.php?post=<?php echo $post['id_publicacao']?>">

@@ -9,8 +9,9 @@
         <title>COMECOM | Login</title>
     </head>
     <body>
-        <?php            
-            if(isset($_SESSION['msg'])){
+        <?php   
+            session_start();                 
+            if(isset($_SESSION['msg']['login'])){
                 $login_msg = $_SESSION['msg']['login'];
             }
         ?>

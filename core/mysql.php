@@ -62,7 +62,7 @@
         }
 
         $instrucao = update($entidade, $coringa_dados, $coringa_criterio);
-
+        
         $conexao = conecta();
 
         $stmt = mysqli_prepare($conexao, $instrucao);
