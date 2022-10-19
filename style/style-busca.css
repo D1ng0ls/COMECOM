@@ -23,13 +23,16 @@ input[type='search'] {
 
 button {
     width: 100px;
+    background-color: #fff;
     color: var(--color-purple);
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 button:hover {
     color: #fff;
     background-color: var(--color-purple);
+    transition: all 0.3s;
 }
