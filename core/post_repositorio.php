@@ -15,22 +15,16 @@
     }
     $fotos_name = array();
     $fotos = array_filter($_FILES['foto']['name']); 
-    // Count the number of uploaded files in array
     $total_count = count($_FILES['foto']['name']);
-    // Loop through every file
-    for( $i=0 ; $i < $total_count ; $i++ ) {
-        //The temp file path is obtained
+
+    for( $i=0 ; $i < $total_count ; $i++ ) {      
         $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
-        //A file path needs to be present
         if ($tmpFilePath != ""){
-            //Setup our new file path
             $foto_name = $_FILES['foto']['name'][$i];
             $path_parts = pathinfo($foto_name);
             $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
             $foto_name = $path_parts['filename'].time().".".$imageFileType ;
             $newFilePath = "../upload/" . $foto_name;
-            
-            //File is uploaded to temp dir
             if(move_uploaded_file($tmpFilePath, $newFilePath)) {
                 $fotos_name[] = $foto_name;
             }
