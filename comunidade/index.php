@@ -23,9 +23,9 @@
             <p>Bem vindo ao fórum de conversas da COMECOM!</p>
         </div>
         <div class="container1-2">
-            <p>Olá cidadão, seja bem vindo ao fórum da COMECOM; com uma simples conta em nosso website, você poderá postar/discutir com
-                    outras pessoas do fórum sobre promoções que você viu ou sobre algum outro assunto relacionado a isso. Logo abaixo, você 
-                    pode acessar as regras do site. Caso você queira saber mais sobre a gente, considere acessar o FAQ também!  
+            <p> Olá cidadão, seja bem vindo ao fórum da COMECOM; com uma simples conta em nosso website, você poderá fazerr publicaçõoes
+                no fórum, sobre promoções que você viu ou sobre algum outro assunto relacionado a isso. Logo abaixo, você 
+                pode acessar as regras do site. Caso você queira saber mais sobre a gente, considere acessar o FAQ também!  
             </p>
             <p>Acesse as <a href="rules.html">regras</a> do fórum e evite probelmas. Saiba mais sobre a gente no <a href="faq.php">FAQ</a> caso você desejar! :)</p>
         </div>

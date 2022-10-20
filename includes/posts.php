@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/style-comunidade.css">
         <title>COMECOM</title>
     </head>
     <body>
@@ -58,7 +59,7 @@
                             $data = date_create($post['data_publicacao']);
                             $data = date_format($data, 'd/m/Y');
                             $hora = date_create($post['data_publicacao']);
-                            $hora = date_format($hora, 'H:i:s');                            
+                            $hora = date_format($hora, 'H:i');                            
                             $fotos = explode(';',$post['foto_nome_publi']);                                 
                     ?>
                     <div class="container2">
