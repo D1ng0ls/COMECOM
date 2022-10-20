@@ -322,14 +322,12 @@
     position: relative;
     height: 0px;
     overflow: hidden;
-    display: none;
+    transition: all 1s ease-in;    
 }
 
 .aberto {
-    animation: abre 1s;
-    height: 300px;
-    overflow: hidden;
-    display: block;
+    height: 200px;
+    transition: all 1s ease-out;
 }
 
 @keyframes abre {

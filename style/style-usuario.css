@@ -256,17 +256,26 @@ hr {
     text-transform: uppercase;
 }
 
-.container-tricks p {
+.container-tricks p, .container-form p, .container-form ul li{
     color: #454545;
     font-size: 14px;
     line-height: 1.5;
     padding: 0 20px;
 }
 
+.container-form ul li{
+    list-style-type: square;
+    padding: 0;
+}
+
 .input-user2 {
     width: auto;
     display: block;
     margin: 5px 20px;
+}
+
+.input-user3 {
+    margin: 0px 20px;
 }
 
 .salvar-user2 {
