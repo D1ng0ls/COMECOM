@@ -37,7 +37,7 @@
 
     <div id="semi-menu" align="center">
         <p style="margin: 0; margin-bottom: 25px;">
-            <a href="../home.php">Home</a>
+            <a href="../">Home</a>
             <a href="../categoria/mercado/">Mercado</a>
             <a href="../comunidade/">Comunidade</a>
         </p>
@@ -82,7 +82,7 @@
         
                 <p id="1"><span style="color: #006; font-weight: bold;"> O que é a COMECOM? </span>
                     <br><br>
-                    O COMECOM é um site de "avisos" simples baseado em imagense textos onde qualquer pessoa ou loja pode postar e compartilhar promoções. 
+                    O COMECOM é um site de "promoções" simples baseado em imagens e textos onde qualquer pessoa ou loja pode postar e compartilhar promoções. 
                     Diferentes páginas são dedicadas a diferentes tópicos, desde eletrônicos até utensílios de petshop. 
                 </p>
 
@@ -183,7 +183,7 @@
     <hr style="width: 50%;">
     <div id="semi-menu" align="center">
         <p style="margin: 0; margin-bottom: 25px;">
-            <a href="../home.php">Home</a>
+            <a href="../">Home</a>
             <a href="../categoria/mercado/">Mercado</a>
             <a href="../comunidade/">Comunidade</a>
         </p>
