@@ -35,7 +35,7 @@
                 <li></li>
             </ul>
             <p>Para confirmar sua decisão, digite no campo abaixo <b>desativar</b></p>
-            <form action="core/usuario_repositorio.php">
+            <form action="core/usuario_repositorio.php" method="POST">
                 <input type="hidden" name="acao" value="apagar">
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                 <div class="input-user input-user2 nome-user" style="margin-top: 20px;">

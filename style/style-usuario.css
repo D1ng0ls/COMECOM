@@ -208,6 +208,11 @@ hr {
     transition: all 0.3s;
 }
 
+.salvar-user input:disabled {
+    background-color: #00000025;
+    color: var(--color-purple);
+}
+
 /* security */
 
 .container-page {

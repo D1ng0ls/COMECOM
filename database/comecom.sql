@@ -76,3 +76,5 @@ create table produto_categoria (
 
 select * from pessoa;
 select * from publicacao;
+
+delete from publicacao where id_pessoa=1;

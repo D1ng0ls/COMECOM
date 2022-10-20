@@ -149,61 +149,68 @@
             exit;            
 
             break;
-            case 'logout':
-                session_destroy();
-                break;
-            case 'status':
-                $id_pessoa = (int)$id_pessoa;
-                $valor = (int)$valor;
+        case 'logout':
+            session_destroy();
+            break;
+        case 'status':
+            $id_pessoa = (int)$id_pessoa;
+            $valor = (int)$valor;
 
-                $dados = [
-                    'ativo' => $valor
-                ];
+            $dados = [
+                'ativo' => $valor
+            ];
 
-                $criterio = [
-                    ['id_pessoa', '=', $id_pessoa]
-                ];
+            $criterio = [
+                ['id_pessoa', '=', $id_pessoa]
+            ];
 
-                atualiza (
-                    'pessoa',
-                    $dados,
-                    $criterio
-                );
+            atualiza (
+                'pessoa',
+                $dados,
+                $criterio
+            );
 
-                header('Location: ../usuarios.php');
-                exit;
-                break;
-            case 'adm':
-                $id_pessoa = (int)$id_pessoa;
-                $valor = (int)$valor;
+            header('Location: ../usuarios.php');
+            exit;
+            break;
+        case 'adm':
+            $id_pessoa = (int)$id_pessoa;
+            $valor = (int)$valor;
 
-                $dados = [
-                    'adm' => $valor
-                ];
+            $dados = [
+                'adm' => $valor
+            ];
 
-                $criterio = [
-                    ['id_pessoa', '=', $id_pessoa]
-                ];
+            $criterio = [
+                ['id_pessoa', '=', $id_pessoa]
+            ];
 
-                atualiza (  
-                    'pessoa',
-                    $dados,
-                    $criterio
-                );
+            atualiza (  
+                'pessoa',
+                $dados,
+                $criterio
+            );
 
-                header('Location: ../usuarios.php');
-                exit;
-                break;
-            case 'apagar': 
-                $criterio = [
-                    ['id_pessoa', '=', $id_pessoa]
-                ];
-    
-                deleta (
-                    'pessoa',
-                    $criterio
-                );
-                break;
+            header('Location: ../usuarios.php');
+            exit;
+            break;
+        case 'apagar': 
+            $criterio = [
+                ['id_pessoa', '=', $id_pessoa]
+            ];
+
+            deleta (
+                'publicacao',
+                $criterio
+            );
+
+            deleta (
+                'pessoa',
+                $criterio
+            );
+            session_destroy();
+            
+            break;
     }
     header('Location: ../');
 ?>
