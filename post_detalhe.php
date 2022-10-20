@@ -15,8 +15,7 @@
             'titulo',
             'data_publicacao',
             'texto',
-            // 'foto_blob_publi',
-            // 'foto_nome_publi',
+            'foto_nome_publi',
             '(select nome
                 from pessoa
                 where pessoa.id_pessoa = publicacao.id_pessoa) as nome'
@@ -29,8 +28,8 @@
     $data_post = date_create($post['data_publicacao']);
     $data_post = date_format($data_post, 'd/m/Y');
     $hora_post = date_create($post['data_publicacao']);
-    $hora_post = date_format($hora_post, 'H:i:s');
-
+    $hora_post = date_format($hora_post, 'H:i');
+    $fotos = explode(';',$post['foto_nome_publi']);
 ?>
 <html>
     <head>
@@ -47,27 +46,24 @@
         <?php include 'includes/navigator.php' ?>
         <div>
             <div>
-                <div class="container-all">
+                <div>
                     <div class="container2">
                         <div class="container2-1">
                             <div class="comecom-avatar">
                                 <img src="comunidade/comunidade-avatares/avatarTeste.png" alt="">
-                                <h4><span>• Postado em: <?php echo $data_post . ' às ' . $hora_post?> Por <?php echo $post['nome'] ?></span></h4>
+                                <h4><span><?php echo $post['nome'] ?> • Postado em: <?php echo $data_post . ' às ' . $hora_post?></span></h4>
                             </div>
                         </div>
                         <div class="post-title"><h3><strong><?php echo $post['titulo']?></strong></h3></div>
                         <div class="post-texto"><h4><?php echo html_entity_decode($post['texto']) ?>    </h4></div>
                         <div class="post-img" align="center">
-                            <!-- <img src="comunidade/comunidade-post-img/maxresdefault.jpg" style="height: 380px;">  -->
-                            <!-- <?php echo $post['titulo']?> -->
+                            <img src='<?php foreach($fotos as $foto){
+                                if($foto != '')
+                                    echo "upload/".$foto;
+                            }  ?>' style="width: 45%;">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <button type="submit">
-                    <a href="comunidade/" style="color: red; text-decoration: none;">Voltar</a>
-                </button>
             </div>
         </div>
         <?php include 'includes/footer.php' ?>
