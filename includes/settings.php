@@ -13,6 +13,7 @@
     $abt = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/aboutus.php";
     $pgu = $_SERVER['HTTP_HOST'] . "/COMECOM/usuario.php";
     $sct = $_SERVER['HTTP_HOST'] . "/COMECOM/security.php";
+    $dct = $_SERVER['HTTP_HOST'] . "/COMECOM/deactivate.php";
     $faq = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/faq.php";
 
     function url($url, $com, $home) : string {
@@ -20,7 +21,7 @@
             return "";
         }else if($url == $GLOBALS['abt'] || $url == $com || $url == $GLOBALS['faq']){
             return "../";
-        } else if($url == $GLOBALS['pgu'] || $url == $GLOBALS['sct']){
+        } else if($url == $GLOBALS['pgu'] || $url == $GLOBALS['sct'] || $url == $GLOBALS['dct']){
             return "";
         } else if($url == $GLOBALS['elt']) {
             return "../../";

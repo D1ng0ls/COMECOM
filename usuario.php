@@ -14,6 +14,11 @@
 <body>
     <?php include('includes/navigator.php'); ?>
     <?php
+        require_once 'includes/funcoes.php';
+        require_once 'core/conexao_mysql.php';
+        require_once 'core/sql.php';
+        require_once 'core/mysql.php';
+
         if(!isset($_SESSION['login'])){
             header("Location: login.php");
             exit();
@@ -21,6 +26,26 @@
             header("Location: usuario.php");
             exit();
         };
+
+        $data_atual = date('Y-m-d H:i:s');
+
+        $criterio = [
+            ['data_criacao', '<=', $data_atual]
+        ];
+
+        $pessoas = buscar (
+            'pessoa',
+            [
+                'data_criacao'
+            ],
+            $criterio,
+            'data_criacao DESC'
+        );
+
+
+        foreach($pessoas as $pessoa) :
+            $data = date_create($pessoa['data_criacao']);
+            $data = date_format($data, 'd/m/Y');
     ?>
     
 
@@ -35,7 +60,7 @@
                 <a href="core/usuario_repositorio.php?acao=logout">Sair</a>
             </div>
             <div class="buttom-div btn2">
-                <a href="">Excluir Conta</a>
+                <a href="deactivate.php" type="submit">Excluir Conta</a>
             </div>
         </div>
         <div class="info-user">
@@ -86,7 +111,7 @@
                 <?php endif; ?>
                 <div class="input-user data-user input-left medium">
                     <label for="data">Ativo desde:</label>
-                    <input type="text" name="data" id="data" value="16/09/2018" readonly="readonly">
+                    <input type="text" name="data" id="data" value="<?php echo $data?>" readonly="readonly">
                 </div>
                 <a href="security.php" class="senha"><div class="input-user input-password input-right medium">
                     Mudar senha
@@ -96,6 +121,7 @@
                 </div>
             </form>
         </div>
+        <?php endforeach; ?>
     </div>
 
     <?php include('includes/footer.php'); ?>
@@ -112,7 +138,7 @@
                 i=0;
             }
         }
-    </script>
+    </script>    
 </body>
 
 </html>

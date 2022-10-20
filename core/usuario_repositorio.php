@@ -194,6 +194,16 @@
                 header('Location: ../usuarios.php');
                 exit;
                 break;
+            case 'apagar': 
+                $criterio = [
+                    ['id_pessoa', '=', $id_pessoa]
+                ];
+    
+                deleta (
+                    'pessoa',
+                    $criterio
+                );
+                break;
     }
     header('Location: ../');
 ?>
