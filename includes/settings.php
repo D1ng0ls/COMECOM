@@ -15,6 +15,7 @@
     $sct = $_SERVER['HTTP_HOST'] . "/COMECOM/security.php";
     $dct = $_SERVER['HTTP_HOST'] . "/COMECOM/deactivate.php";
     $faq = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/faq.php";
+    $users = $_SERVER['HTTP_HOST'] . "/COMECOM/usuarios.php";
 
     function url($url, $com, $home) : string {
         if($url == $home) {
