@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- bruh -->
 <html lang="pt-BR">
 <head>
     <?php include('includes/settings.php'); ?>
