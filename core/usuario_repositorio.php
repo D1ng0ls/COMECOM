@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once '../includes/funcoes.php';
     require_once 'conexao_mysql.php';
     require_once 'sql.php';
@@ -115,7 +116,7 @@
                 $criterio
             );
 
-            session_destroy();
+            session_reset();
             header('Location: ../login.php');
             exit;
             break;
