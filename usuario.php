@@ -46,6 +46,7 @@
         foreach($pessoas as $pessoa) :
             $data = date_create($pessoa['data_criacao']);
             $data = date_format($data, 'd/m/Y');
+        endforeach;
     ?>
     
 
@@ -121,7 +122,6 @@
                 </div>
             </form>
         </div>
-        <?php endforeach; ?>
     </div>
 
     <?php include('includes/footer.php'); ?>

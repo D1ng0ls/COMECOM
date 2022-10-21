@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
     <head>
         <?php include('includes/settings.php'); ?>
         <meta charset="UTF-8">

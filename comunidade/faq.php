@@ -172,7 +172,7 @@
 
                 <hr style="width: 95%;">
 
-                <p id="12"><span style="color: #006; font-weight: bold;"> Como eu posso saber se eu fui banido do site? </span>
+                <p id="13"><span style="color: #006; font-weight: bold;"> Como eu posso saber se eu fui banido do site? </span>
                     <br><br>
                     Você não irá mais conseguir realizar o seu login no COMECOM.
                 </p>
