@@ -36,7 +36,7 @@
         } else if($url == $GLOBALS['abt']) {
             return "../../";
         } else {
-            return "../";
+            return "";
         }
     }
 
@@ -60,6 +60,10 @@
         if ($tipo == 1) return "Melhores Ofertas:";
         if ($tipo == 2) return "Nas Proximidades:";
         if ($tipo == 3) return "Tempo Limitado:";
+    }
+
+    if($url == $pgu) {
+        session_reset();
     }
 ?>
 
