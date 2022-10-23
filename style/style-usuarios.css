@@ -9,7 +9,7 @@
 }
 
 .title-page {
-    width: min(100% - 2rem, 780px);
+    width: min(100% - 2rem, 1000px);
     margin-inline: auto;
     text-transform: uppercase;
     margin-top: 100px;
@@ -37,4 +37,67 @@
     color: white;
     font-size: 10px;
     padding-left: 10px;
+}
+
+.users-busca {
+    width: min(100% - 2rem, 1000px);
+    margin: auto;
+}
+
+.table-users {
+    display: flex;
+    margin: auto;
+}
+
+.rTable {
+    border-collapse: collapse;
+    width: min(100% - 2rem, 1000px);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.rTable tbody tr:nth-child(2n) {
+    background-color: rgba(187, 187, 187, 0.297);
+}
+
+table, tr, th, td {
+    border: 1px solid #bbb;
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+tr td {
+    padding: 8px;
+}
+
+@media screen and (max-width: 700px) {
+    .table-users {
+        width: min(100% - 0rem, 100%);
+    }
+    
+    .rTable thead {
+        display: none;
+    }
+
+    .rTable tbody td {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .table-users {
+        width: min(100% - 0rem, 1200px);
+    }
+
+    .rTable tbody tr td:nth-child(1){width: 8%;}
+    .rTable tbody tr td:nth-child(2){width: 25%;}
+    .rTable tbody tr td:nth-child(3){width: 28%;}
+    .rTable tbody tr td:nth-child(4){width: 19%;}
+    .rTable tbody tr td:nth-child(5){width: 10%;}
+    .rTable tbody tr td:nth-child(6){width: 10%;} 
 }
