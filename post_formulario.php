@@ -40,7 +40,7 @@
                                 value="<?php echo $entidade['titulo'] ?? ''?>">
                     </div>
                     <div class="post-textarea">
-<textarea type="text" require="required" id="texto" name="texto" rows="4" placeholder="Texto (opcional)" style="max-height: 200px; max-width: 100%;">
+<textarea type="text" require="required" id="texto" name="texto" rows="3" placeholder="Descrição" style="resize: none">
 <?php echo $entidade['texto'] ?? ''?>
 </textarea>
                     </div>
@@ -49,7 +49,6 @@
                                 id="foto" 
                                 name="foto[]" 
                                 accept="image/*" 
-                                multiple="multiple" s
                                 />
                     </div>  
                 </div>

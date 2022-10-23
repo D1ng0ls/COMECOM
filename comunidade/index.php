@@ -23,7 +23,7 @@
             <p>Bem vindo ao fórum de conversas da COMECOM!</p>
         </div>
         <div class="container1-2">
-            <p> Olá cidadão, seja bem vindo ao fórum da COMECOM; com uma simples conta em nosso website, você poderá fazerr publicaçõoes
+            <p> Olá cidadão, seja bem vindo ao fórum da COMECOM; com uma simples conta em nosso website, você poderá fazer publicaçõoes
                 no fórum, sobre promoções que você viu ou sobre algum outro assunto relacionado a isso. Logo abaixo, você 
                 pode acessar as regras do site. Caso você queira saber mais sobre a gente, considere acessar o FAQ também!  
             </p>
@@ -33,13 +33,13 @@
 
     <?php if(isset($_SESSION['login'])) :?>
      
-        <h2 align="center" style="color: #34345c;">
+        <h2 align="center" style="color: #34345c; margin-top: 40px;">
             [<span class="botaoTOP" onclick="aparece()" style="cursor: pointer;">Adicionar um Novo Post</span>]
         </h2>
         <div class="container-post" id="post">
             <?php include("../post_formulario.php") ?>
         </div>
-        <hr style="width: 25%; margin: auto; margin-top: 30px; margin-bottom: 20px;">
+        <hr style="width: 25%; margin: auto; margin-top: 20px; margin-bottom: 20px;">
         <?php include("../includes/posts.php") ?>
     <?php else : ?>
         <hr style="width: 30%; margin-top: 60px;">

@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-input[type='search'], button {
+input[type='search'], .button button{
     height: 35px;
     border: 1px solid #bbb;
     border-radius: 3px;
@@ -21,7 +21,7 @@ input[type='search'] {
     margin-right: 25px;
 }
 
-button {
+.button  button {
     width: 100px;
     background-color: #fff;
     color: var(--color-purple);
@@ -31,7 +31,7 @@ button {
     transition: all 0.3s;
 }
 
-button:hover {
+.button  button:hover {
     color: #fff;
     background-color: var(--color-purple);
     transition: all 0.3s;

@@ -63,3 +63,7 @@ textarea:focus, input:focus, select:focus {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+.img-home-propaganda img {
+    width: min(100% - 1rem, 1800px);
+}
