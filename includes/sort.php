@@ -31,4 +31,9 @@
             </label>
         </div>
     </div>
+    <?php if ($_SESSION['login']['pessoa']['tipo_pessoa'] == 'juridica') : ?>
+        Bruh
+    <?php else : ?>
+        Bruh 2
+    <?php endif ?>
 </div>
