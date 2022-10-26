@@ -37,7 +37,7 @@
             [<span class="botaoTOP" onclick="aparece()" style="cursor: pointer;">Adicionar um Novo Post</span>]
         </h2>
         <div class="container-post" id="post">
-            <?php include("../post_formulario.php") ?>
+            <?php include("../includes/post_formulario.php") ?>
         </div>
         <hr style="width: 25%; margin: auto; margin-top: 20px; margin-bottom: 20px;">
         <?php include("../includes/posts.php") ?>
