@@ -31,10 +31,12 @@
         </div>
     </div>
 
-    <?php if(isset($_SESSION['login'])) :?>
+    <?php if(isset($_SESSION['login'])) : ?>
      
         <h2 align="center" style="color: #34345c; margin-top: 40px;">
-            [<span class="botaoTOP" onclick="aparece()" style="cursor: pointer;">Adicionar um Novo Post</span>]
+            <?php if(isset($_SESSION['login']) && $_SESSION['login']['pessoa']['tipo_pessoa'] != 'juridica') : ?>
+                [<span class="botaoTOP" onclick="aparece()" style="cursor: pointer;">Adicionar um Novo Post</span>]</a>
+            <?php endif; ?>
         </h2>
         <div class="container-post" id="post">
             <?php include("../includes/post_formulario.php") ?>

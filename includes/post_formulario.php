@@ -47,6 +47,7 @@
                         id="foto" 
                         name="foto[]" 
                         accept="image/*" 
+                        multiple="multiple"
                         />
             </div>  
         </div>
