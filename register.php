@@ -10,6 +10,12 @@
         <title>COMECOM | Register</title>
     </head>
     <body>
+        <?php 
+            if(isset($_SESSION['login']) && $url != $pgu) {
+                header("Location: usuario.php");
+                exit();
+            };
+        ?>
         <section>
             <div class="register-content">
                 <div class="form-content">

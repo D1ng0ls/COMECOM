@@ -67,7 +67,7 @@
                         </div>
                         <div class="oft-prec-orig">
                             <input  type="number" placeholder="Preço original em R$"
-                                    require="required" id="prec-orig" name="prec-orig"
+                                    require="required" id="prec-orig" name="preco_original"
                                     value="<?php echo $entidade['preco_original'] ?? ''?>">
                         </div>
                         <div class="oft-desconto">
@@ -77,27 +77,26 @@
                         </div>
                         <div class="oft-prec-atual">
                             <input  type="number" placeholder="Preço atual em R$"
-                                    require="required" id="prec-atual" name="prec-atual"
+                                    require="required" id="prec-atual" name="preco_atual"
                                     value="<?php echo $entidade['preco_atual'] ?? ''?>">
                         </div>
                         <label for="data-publi">Início da promoção</label><br>
                         <div class="oft-data">
                             <input  type="date"
-                                    require="required" id="data" name="data"
+                                    require="required" id="data" name="inicio_promocao"
                                     value="<?php echo $entidade['inicio_promocao'] ?? ''?>">
                         </div>
                         <label for="data-publi">Término da promoção</label><br>
                         <div class="oft-data">
                             <input  type="date"
-                                    require="required" id="data" name="data"
+                                    require="required" id="data" name="termino_promocao"
                                     value="<?php echo $entidade['termino_promocao'] ?? ''?>">
-                        </div>
+                        </div> 
                         <div class="oft-choose-container">
                             <input  type="file" 
                                     id="foto" 
                                     name="foto[]" 
                                     accept="image/*" 
-                                    multiple="multiple"
                                     />
                         </div>  
                     </div>

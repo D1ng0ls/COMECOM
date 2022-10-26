@@ -59,7 +59,7 @@
                         <div class="post-img" align="center">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
-                                    <img src='<?php echo"upload/".$foto; ?>' style="width: 45%">
+                                    <img src='<?php echo"upload/post/".$foto; ?>' style="width: 45%">
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>

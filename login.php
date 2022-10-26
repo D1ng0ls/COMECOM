@@ -11,6 +11,11 @@
     </head>
     <body>
         <?php                   
+            if(isset($_SESSION['login']) && $url != $pgu) {
+                header("Location: usuario.php");
+                exit();
+            };
+
             if(isset($_SESSION['msg']['login'])){
                 $login_msg = $_SESSION['msg']['login'];
             }

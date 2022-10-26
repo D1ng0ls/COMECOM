@@ -22,7 +22,15 @@
         </div>
         <div class="container-right">
                 <?php include '../../includes/sort.php' ?>
-                <?php include '../../includes/oferta.php' ?>
+                <?php 
+                    require_once '../../includes/funcoes.php';
+                    require_once '../../core/conexao_mysql.php';
+                    require_once '../../core/sql.php';
+                    require_once '../../core/mysql.php';
+                ?>
+                <?php
+                    include '../../includes/oferta.php' 
+                ?>
             <div class="pages">
                 <a class="selected" href="">1</a>
                 <a href="?number_page=2">2</a>

@@ -176,7 +176,7 @@ label[for='data-publi'] {
     margin-inline: auto;
     text-transform: uppercase;
     margin-top: 45px;
-    border: 1px solid #bbb;
+    border: 1px solid var(--color-purple);
     border-radius: 4px 4px 0px 0px;
     height: 80px;
     display: flex;
@@ -198,4 +198,4 @@ label[for='data-publi'] {
     color: white;
     font-size: 10px;
     padding-left: 10px;
-}/*burh*/
+}

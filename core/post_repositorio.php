@@ -24,7 +24,7 @@
             $path_parts = pathinfo($foto_name);
             $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
             $foto_name = $path_parts['filename'].time().".".$imageFileType ;
-            $newFilePath = "../upload/" . $foto_name;
+            $newFilePath = "../upload/post/" . $foto_name;
             if(move_uploaded_file($tmpFilePath, $newFilePath)) {
                 $fotos_name[] = $foto_name;
             }
