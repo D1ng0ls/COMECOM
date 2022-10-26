@@ -71,10 +71,11 @@
                         </div>
                         <div class="post-title"><h3><?php echo $post['titulo']?></h3></div>
                         <div class="post-img" align="center">
-                            <img src='<?php foreach($fotos as $foto){
-                                if($foto != '')
-                                    echo "../upload/".$foto;
-                            }  ?>' style="width: 45%;">
+                            <?php foreach($fotos as $foto) : ?>
+                                <?php if ($foto != '') : ?>
+                                    <img src='<?php echo"../upload/".$foto; ?>' style="width: 45%">
+                                <?php endif; ?>
+                            <?php endforeach ?>
                         </div>
                         <div class="container2-3">
                             <div class="comecom-denunciar">

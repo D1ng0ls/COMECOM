@@ -45,7 +45,7 @@ create table publicacao (
     preco_original double null,
     preco_atual double null,
     foto_blob_publi blob null,
-    foto_nome_publi varchar(100) null,
+    foto_nome_publi varchar(1000) null,
     primary key (id_publicacao),
 	fk_produto_id_produto int null,
 	constraint 	fk_publicacao_produto 
