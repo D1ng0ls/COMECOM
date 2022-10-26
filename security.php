@@ -18,6 +18,10 @@
             header("Location: login.php");
             exit();
         }
+
+        if(isset($_SESSION['msg']['user'])){
+            $login_msg = $_SESSION['msg']['user'];
+        }
     ?>
 
     <div class="container-page">
@@ -32,24 +36,27 @@
         <div class="container-form">
             <h3>Nova senha</h3>
             <form action="core/usuario_repositorio.php">
-                <input type="hidden" name="acao" value="update">
+                <input type="hidden" name="acao" value="trocasenha">
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                 <div class="input-user input-user2 nome-user" style="margin-top: 20px;">
                     <label for="senha">Senha atual:</label>
-                    <input type="password" name="senha" id="senha" required="required">
+                    <input type="password" name="senha" id="senha" required="required" oninput="verifica()">
+                    <label style="color: red; margin-bottom: 18px;transform: translateY(-12px);"><?php echo isset($login_msg) ? $login_msg: '' ?></label>
                 </div>
                 <div class="input-user input-user2 senha-user">
-                    <label for="senha">Nova senha:</label>
-                    <input type="password" name="senha" id="senha" required="required">
+                    <label for="novasenha">Nova senha:</label>
+                    <input type="password" name="novasenha" id="novasenha" required="required">
+                    <label style="color: red; margin-bottom: 0;transform: translateY(-12px);" id="textSenhaNova" oninput="pode()"></label>
                 </div>
                 <div class="input-user input-user2 salvar-user salvar-user2">
-                    <input type="submit" value="Salvar">
+                    <input type="submit" value="Salvar" id='botao' disabled>
                 </div>
             </form>
         </div>
     </div>
 
     <?php include('includes/footer.php'); ?>
+    <script src="scripts/updatePass.js"></script>
 </body>
 
 </html>
