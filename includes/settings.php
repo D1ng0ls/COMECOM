@@ -16,6 +16,7 @@
     $dct = $_SERVER['HTTP_HOST'] . "/COMECOM/deactivate.php";
     $faq = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/faq.php";
     $users = $_SERVER['HTTP_HOST'] . "/COMECOM/usuarios.php";
+    $oft = $_SERVER['HTTP_HOST'] . "/COMECOM/includes/oferta_formulario.php";
 
     function url($url, $com, $home) : string {
         if($url == $home) {
@@ -36,7 +37,9 @@
             return "../../";
         } else if($url == $GLOBALS['abt']) {
             return "../../";
-        } else {
+        } else if($url == $GLOBALS['oft']) {
+            return "../";
+        } {
             return "";
         }
     }

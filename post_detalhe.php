@@ -55,11 +55,11 @@
                             </div>
                         </div>
                         <div class="post-title"><h3><strong><?php echo $post['titulo']?></strong></h3></div>
-                        <div class="post-texto"><h4><?php echo html_entity_decode($post['texto']) ?>    </h4></div>
+                        <div class="post-texto"><h4><?php echo html_entity_decode($post['texto']) ?></h4></div>
                         <div class="post-img" align="center">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
-                                    <img src='<?php echo"../upload/".$foto; ?>' style="width: 45%">
+                                    <img src='<?php echo"upload/".$foto; ?>' style="width: 45%">
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>
