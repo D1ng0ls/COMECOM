@@ -128,6 +128,35 @@
             header('Location: ../usuario.php#info');
             exit;
             break;
+
+        case 'trocasenha':
+            unset($_SESSION['msg']['user']);
+            if(crypt($senha, $salt) == $_SESSION['login']['pessoa']['senha']) {
+
+            $id_pessoa = (int)$id_pessoa;
+            $dados = [
+                'senha' => crypt($novasenha, $salt)
+            ];
+
+            $criterio = [
+                ['id_pessoa', '=', $id_pessoa]
+            ];
+
+            atualiza (
+                'pessoa',
+                $dados,
+                $criterio
+            );
+
+            header('Location: ../usuario.php#info');
+
+            } else {
+                $_SESSION['msg']['user'] = "Senhas não conferem!";
+                header('Location: ../security.php');
+            }
+            
+            exit;
+            break;
         case 'login':
             unset($_SESSION['msg']['email']);
             $criterio = [
