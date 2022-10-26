@@ -30,19 +30,18 @@ create table produto (
 
 create table publicacao (
 	id_publicacao int not null auto_increment,
-    titulo varchar (255) not null,
-    texto text not null,
-    data_publicacao datetime not null default current_timestamp,
     id_pessoa int,
     key fk_publicacao_pessoa_idx (id_pessoa),
 	constraint fk_publicacao_pessoa 
         foreign key (id_pessoa) 
         references pessoa (id_pessoa),
-	desconto double null,
+    data_publicacao datetime not null default current_timestamp,
+    titulo varchar (255) not null,
+    texto text not null,
+    inicio_promocao date null,
     termino_promocao date null,
-    incio_promocao date null,
-    preco_desconto double null,
-    preco_original double null,
+	preco_original double null,
+    desconto double null,
     preco_atual double null,
     foto_blob_publi blob null,
     foto_nome_publi varchar(1000) null,

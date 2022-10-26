@@ -54,16 +54,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 11.5px 11.5px 12px 11.5px;
+    padding: 0px 11.5px 12px 11.5px;
 }
 
-.oft-titulo input[type='text']{
+.oft-data input[type='date']{
     width: 100%;
     border: 1px solid #bbb;
     border-radius: 4px;
     outline: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 6px;
+    color: #757575;
 }
 
 .oft-choose-container {

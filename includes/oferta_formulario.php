@@ -57,10 +57,35 @@
 <?php echo $entidade['texto'] ?? ''?>
 </textarea>
                         </div>
-                        <div class="oft-titulo">
-                            <input  type="text"
-                                    require="required" id="titulo" name="titulo" placeholder="Título"
-                                    value="<?php echo $entidade['titulo'] ?? ''?>">
+                        <div class="oft-prec-orig">
+                            <label for="desconto">Preço original</label>
+                            <input  type="number"
+                                    require="required" id="desconto" name="desconto"
+                                    value="<?php echo $entidade['desconto'] ?? ''?>">
+                        </div>
+                        <div class="oft-desconto">
+                            <label for="desconto">Desconto</label>
+                            <input  type="number"
+                                    require="required" id="desconto" name="desconto"
+                                    value="<?php echo $entidade['desconto'] ?? ''?>">
+                        </div>
+                        <div class="oft-prec-atual">
+                            <label for="desconto">Preço atual</label>
+                            <input  type="number"
+                                    require="required" id="desconto" name="desconto"
+                                    value="<?php echo $entidade['desconto'] ?? ''?>">
+                        </div>
+                        <div class="oft-data">
+                            <label for="msg_data">Início publicação</label>
+                            <input  type="date"
+                                    require="required" id="data" name="data"
+                                    value="<?php echo $entidade['inicio_promocao'] ?? ''?>">
+                        </div>
+                        <div class="oft-data">
+                            <label for="msg_data">Término publicação</label>
+                            <input  type="date"
+                                    require="required" id="data" name="data"
+                                    value="<?php echo $entidade['termino_promocao'] ?? ''?>">
                         </div>
                         <div class="oft-choose-container">
                             <input  type="file" 
