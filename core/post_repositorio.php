@@ -38,7 +38,6 @@
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
-                // 'foto_blob_publi' => $foto_blob_publi,
                 'foto_nome_publi' => implode(";", $fotos_name),//$foto_nome_publi,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
@@ -53,8 +52,7 @@
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
-                // 'foto_blob_publi' => $foto_blob_publi,
-                // 'foto_nome_publi' => $foto_nome_publi,
+                'foto_nome_publi' => implode(";", $fotos_name),
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 

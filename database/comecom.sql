@@ -4,10 +4,10 @@ use comecom;
 
 create table pessoa (
 	id_pessoa int not null auto_increment,
+    data_criacao datetime not null default current_timestamp,
     tipo_pessoa varchar(10) not null,
     nome varchar(100) not null,
     email varchar(100) not null unique,
-    data_criacao datetime not null default current_timestamp,
     senha varchar(20) not null,
 	cidade varchar(100) not null,
 	telefone varchar(30) not null,
@@ -15,16 +15,14 @@ create table pessoa (
     qnt_lojas int,
     ativo tinyint not null default '1',
     adm tinyint not null default '0',
-    foto_blob_pessoa blob,
-    foto_nome_pessoa varchar(100),
+    foto_nome_pessoa varchar(1000),
     primary key (id_pessoa)
 );
 
 create table produto (
 	id_produto int not null auto_increment,
     nome varchar(100),
-    foto_blob_prod blob,
-    foto_nome_prod varchar(100),
+    foto_nome_prod varchar(1000),
     primary key (id_produto)
 );
 
@@ -43,7 +41,6 @@ create table publicacao (
 	preco_original double null,
     desconto double null,
     preco_atual double null,
-    foto_blob_publi blob null,
     foto_nome_publi varchar(1000) null,
     primary key (id_publicacao),
 	fk_produto_id_produto int null,
