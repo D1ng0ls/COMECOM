@@ -66,7 +66,7 @@
         </div>
         <div class="info-user">
             <div class="title-page">
-                <h1>Informações pessoais</h1>
+                <h1 id="info">Informações pessoais</h1>
                 <p>Gerencie seus dados no site</p>
             </div>
             <form action="core/usuario_repositorio.php">

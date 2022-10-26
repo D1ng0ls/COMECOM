@@ -115,9 +115,17 @@
                 $dados,
                 $criterio
             );
+            $retorno = buscar (
+                'pessoa',
+                ['id_pessoa', 'tipo_pessoa', 'nome', 'email', 'senha', 'cidade', 'telefone', 'documento', 'qnt_lojas', 'adm'],
+                $criterio
+            );
 
-            session_destroy();            
-            header('Location: ../usuario.php');
+            if(count($retorno) > 0) {
+                    $_SESSION['login']['pessoa'] = $retorno[0];
+            }   
+
+            header('Location: ../usuario.php#info');
             exit;
             break;
         case 'login':
