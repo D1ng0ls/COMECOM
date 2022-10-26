@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/style-navegador.css">
-        <link rel="stylesheet" href="../style/oferta_formulario.css">
+        <link rel="stylesheet" href="../style/style-oferta-formulario.css">
         <title>COMECOM | Oferta formulário</title>
         <?php include('settings.php'); ?>
     </head>
@@ -46,10 +46,18 @@
                             value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                     <input  type="hidden" name="id_publicacao"
                             value="<?php echo $entidade['id_publicacao'] ?? '' ?>">
+                    <div class="title-page">
+                        <div class="container-title-page-1">
+                            Ofertas
+                        </div>
+                        <div class="container-title-page-2">
+                            Formulário de cadastramento de produtos
+                        </div>
+                    </div>        
                     <div class="container1-oft">
                         <div class="oft-titulo">
                             <input  type="text"
-                                    require="required" id="titulo" name="titulo" placeholder="Título"
+                                    require="required" id="titulo" name="titulo" placeholder="Nome do produto"
                                     value="<?php echo $entidade['titulo'] ?? ''?>">
                         </div>
                         <div class="oft-textarea">
@@ -58,31 +66,28 @@
 </textarea>
                         </div>
                         <div class="oft-prec-orig">
-                            <label for="desconto">Preço original</label>
-                            <input  type="number"
-                                    require="required" id="desconto" name="desconto"
-                                    value="<?php echo $entidade['desconto'] ?? ''?>">
+                            <input  type="number" placeholder="Preço original em R$"
+                                    require="required" id="prec-orig" name="prec-orig"
+                                    value="<?php echo $entidade['preco_original'] ?? ''?>">
                         </div>
                         <div class="oft-desconto">
-                            <label for="desconto">Desconto</label>
-                            <input  type="number"
+                            <input  type="number" placeholder="Desconto em R$"
                                     require="required" id="desconto" name="desconto"
                                     value="<?php echo $entidade['desconto'] ?? ''?>">
                         </div>
                         <div class="oft-prec-atual">
-                            <label for="desconto">Preço atual</label>
-                            <input  type="number"
-                                    require="required" id="desconto" name="desconto"
-                                    value="<?php echo $entidade['desconto'] ?? ''?>">
+                            <input  type="number" placeholder="Preço atual em R$"
+                                    require="required" id="prec-atual" name="prec-atual"
+                                    value="<?php echo $entidade['preco_atual'] ?? ''?>">
                         </div>
+                        <label for="data-publi">Início da promoção</label><br>
                         <div class="oft-data">
-                            <label for="msg_data">Início publicação</label>
                             <input  type="date"
                                     require="required" id="data" name="data"
                                     value="<?php echo $entidade['inicio_promocao'] ?? ''?>">
                         </div>
+                        <label for="data-publi">Término da promoção</label><br>
                         <div class="oft-data">
-                            <label for="msg_data">Término publicação</label>
                             <input  type="date"
                                     require="required" id="data" name="data"
                                     value="<?php echo $entidade['termino_promocao'] ?? ''?>">

@@ -31,9 +31,9 @@
                 </div>
             </div>
             <div class="users-busca">
-                <hr style="width: 25%; margin: auto; margin-top: 20px; margin-bottom: 20px;">
+                <hr style="width: 32%; margin: auto; margin-top: 20px; margin-bottom: 20px;">
                 <?php include 'includes/busca.php' ?>
-                <hr style="width: 25%; margin: auto; margin-top: 20px; margin-bottom: 20px;"> 
+                <hr style="width: 32%; margin: auto; margin-top: 20px; margin-bottom: 20px;"> 
             </div>
             <?php
                 require_once 'includes/funcoes.php';

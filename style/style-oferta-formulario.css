@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container1-oft {
+    width: min(100% - 2rem, 750px);
+    margin-inline: auto;
+    border: 1px solid var(--color-purple);
+    border-radius: 0px 0px 4px 4px;
+    transform: translateY(-1px);
+}
+
+.oft-titulo {
+    width: min(100% - 0rem, 750px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11.5px 11.5px 12px 11.5px;
+}
+
+.oft-titulo input[type='text']{
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6px;
+}
+
+.oft-textarea {
+    width: min(100% - 0rem, 750px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 11.5px 11.5px 11.5px;
+}
+
+.oft-textarea textarea{
+    width: 750px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 5px;
+    padding: 5px;
+}
+
+.oft-choose-container {
+    width: min(100% - 0rem, 750px);
+    margin-inline: auto;
+    margin-bottom: 20px;
+    padding: 0px 11.5px 0px 11.5px;
+}
+
+.oft-button {
+    width: min(100% - 0rem, 750px);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.oft-button button {
+    padding: 8px;
+    width: 100px;
+    border: 1px solid var(--color-purple);
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    background-color: var(--color-purple);
+    outline: none;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: -18.5px;
+}
+
+.oft-prec-orig {
+    width: min(100% - 0rem, 750px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 11.5px 12px 11.5px;
+}
+
+.oft-prec-orig input[type='number'] {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6px;
+}
+
+/*SEM FLEXINHA NO: Firefox*/
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+/*SEM FLEXINHA NO: Chrome, Safari, Edge, Opera:*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.oft-desconto {
+    width: min(100% - 0rem, 750px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 11.5px 12px 11.5px;
+}
+
+.oft-desconto input[type='number'] {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6px;
+}
+
+.oft-prec-atual {
+    width: min(100% - 0rem, 750px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 11.5px 12px 11.5px;
+}
+
+.oft-prec-atual input[type='number'] {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6px;
+}
+
+.oft-data {
+    width: min(100% - 0rem, 750px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 11.5px 12px 11.5px;
+}
+
+
+.oft-data input[type='date'] {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6px;
+    text-transform: uppercase;
+    color: #757575;
+}
+
+label[for='data-publi'] {
+    font-size: 15px;
+    margin-left: 1rem;
+}
+
+.container-title-page-1 {
+    width: min(100% - 2rem, 750px);
+    margin-inline: auto;
+    text-transform: uppercase;
+    margin-top: 45px;
+    border: 1px solid #bbb;
+    border-radius: 4px 4px 0px 0px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-purple);
+    font-size:26px;
+    font-weight: bold;
+}
+
+.container-title-page-2 {
+    width: min(100% - 2rem, 750px);
+    margin-inline: auto;
+    text-transform: uppercase;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-purple);
+    color: white;
+    font-size: 10px;
+    padding-left: 10px;
+}
