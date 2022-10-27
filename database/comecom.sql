@@ -36,18 +36,33 @@ create table publicacao (
     data_publicacao datetime not null default current_timestamp,
     titulo varchar (255) not null,
     texto text not null,
-    inicio_promocao date null,
-    termino_promocao date null,
+    foto_nome_publi varchar(1000) null,
+    primary key (id_publicacao)
+);
+
+create table oferta (
+	id_oferta int not null auto_increment,
+    id_pessoa int,
+    key fk_oferta_pessoa_idx (id_pessoa),
+	constraint fk_oferta_pessoa 
+        foreign key (id_pessoa) 
+        references pessoa (id_pessoa),
+    data_oferta datetime not null default current_timestamp,
+    titulo varchar (255) not null,
+    texto text not null,
+    inicio_oferta date null,
+    termino_oferta date null,
 	preco_original double null,
     desconto double null,
     preco_atual double null,
-    foto_nome_publi varchar(1000) null,
-    primary key (id_publicacao),
+    foto_nome_oferta varchar(1000) null,
+    primary key (id_oferta),
 	fk_produto_id_produto int null,
-	constraint 	fk_publicacao_produto 
+	constraint 	fk_oferta_produto 
 		foreign key (fk_produto_id_produto)
         references produto (id_produto)
-        on delete cascade on update cascade
+        on delete cascade on update cascade,
+	categoria varchar(20) null
 );
 
 create table categoria (
@@ -70,5 +85,6 @@ create table produto_categoria (
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );
 
+select * from oferta;
 select * from pessoa;
 select * from publicacao;

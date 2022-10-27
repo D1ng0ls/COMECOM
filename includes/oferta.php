@@ -7,7 +7,7 @@
         $data_atual = date('Y-m-d H:i:s');
 
         $criterio = [
-            ['data_publicacao', '<=', $data_atual]
+            ['data_oferta', '<=', $data_atual]
         ];
 
         if(!empty($busca)) {
@@ -20,36 +20,32 @@
         }
 
         $posts = buscar (
-            'publicacao',
+            'oferta',
             [
                 'titulo',
-                'data_publicacao',
-                'id_publicacao',
+                'data_oferta',
+                'id_oferta',
                 'preco_original',
                 'desconto',
                 'preco_atual',
-                'inicio_promocao',
-                'termino_promocao',
-                'foto_nome_publi',
+                'inicio_oferta',
+                'termino_oferta',
+                'foto_nome_oferta',
                 '(select nome
                     from pessoa
-                    where id_pessoa = publicacao.id_pessoa) as nome'
+                    where id_pessoa = oferta.id_pessoa) as nome'
             ],
             $criterio,
-            'data_publicacao DESC'
+            'data_oferta DESC'
         );
     ?>
     <div class="main">
         <?php
-            foreach($posts as $post) :
-                $data = date_create($post['data_publicacao']);
-                $data = date_format($data, 'd/m/Y');
-                $hora = date_create($post['data_publicacao']);
-                $hora = date_format($hora, 'H:i');                            
-                $fotos = explode(';',$post['foto_nome_publi']);                                 
+            foreach($posts as $post) :                  
+                $fotos = explode(';',$post['foto_nome_oferta']);                                 
         ?>
         <div class="item">
-            <a href='../oferta_detalhe.php'>
+            <a href='../../oferta_detalhe.php'>
                 <div class="img">
                     <?php foreach($fotos as $foto) : ?>
                         <?php if ($foto != '') : ?>

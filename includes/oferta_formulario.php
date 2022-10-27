@@ -28,11 +28,11 @@
                 $id = (int)$id;
 
                 $criterio = [
-                    ['id_publicacao', '=', $id]
+                    ['id_oferta', '=', $id]
                 ];
 
                 $retorno = buscar(
-                    'publicacacao',
+                    'oferta',
                     ['*'],
                     $criterio
                 );
@@ -44,8 +44,8 @@
                 <form method="post" action="../core/oferta_repositorio.php" enctype="multipart/form-data">
                     <input  type="hidden" name="acao"
                             value="<?php echo empty($id) ? 'insert' : 'update' ?>">
-                    <input  type="hidden" name="id_publicacao"
-                            value="<?php echo $entidade['id_publicacao'] ?? '' ?>">
+                    <input  type="hidden" name="id_oferta"
+                            value="<?php echo $entidade['id_oferta'] ?? '' ?>">
                     <div class="title-page">
                         <div class="container-title-page-1">
                             Ofertas
@@ -83,14 +83,14 @@
                         <label for="data-publi">Início da promoção</label><br>
                         <div class="oft-data">
                             <input  type="date"
-                                    require="required" id="data" name="inicio_promocao"
-                                    value="<?php echo $entidade['inicio_promocao'] ?? ''?>">
+                                    require="required" id="data" name="inicio_oferta"
+                                    value="<?php echo $entidade['inicio_oferta'] ?? ''?>">
                         </div>
                         <label for="data-publi">Término da promoção</label><br>
                         <div class="oft-data">
                             <input  type="date"
-                                    require="required" id="data" name="termino_promocao"
-                                    value="<?php echo $entidade['termino_promocao'] ?? ''?>">
+                                    require="required" id="data" name="termino_oferta"
+                                    value="<?php echo $entidade['termino_oferta'] ?? ''?>">
                         </div> 
                         <div class="oft-choose-container">
                             <input  type="file" 

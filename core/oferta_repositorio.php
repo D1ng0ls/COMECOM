@@ -31,7 +31,7 @@
         }
     }
     
-    $id_publicacao = (int)$id_publicacao;
+    $id_oferta = (int)$id_oferta;
 
     switch($acao) {
         case 'insert':
@@ -41,14 +41,14 @@
                 'preco_original' => $preco_original,
                 'desconto' => $desconto,
                 'preco_atual' => $preco_atual,
-                'inicio_promocao' => $inicio_promocao,
-                'termino_promocao' => $termino_promocao,
-                'foto_nome_publi' => implode(";", $fotos_name),//$foto_nome_publi,
+                'inicio_oferta' => $inicio_oferta,
+                'termino_oferta' => $termino_oferta,
+                'foto_nome_oferta' => implode(";", $fotos_name),
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
             insere (
-                'publicacao',
+                'oferta',
                 $dados
             );
 
@@ -60,18 +60,18 @@
                 'preco_original' => $preco_original,
                 'desconto' => $desconto,
                 'preco_atual' => $preco_atual,
-                'inicio_promocao' => $inicio_promocao,
-                'termino_promocao' => $termino_promocao,
-                'foto_nome_publi' => implode(";", $fotos_name),
+                'inicio_oferta' => $inicio_oferta,
+                'termino_oferta' => $termino_oferta,
+                'foto_nome_oferta' => implode(";", $fotos_name),
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
             $criterio = [
-                ['id_publicaco', '=', $id]
+                ['id_oferta', '=', $id]
             ];
 
             atualiza (
-                'publicaco',
+                'oferta',
                 $dados,
                 $criterio       
             );
@@ -79,11 +79,11 @@
             break;
         case 'delete':
             $criterio = [
-                ['id_publicaco', '=', $id]
+                ['id_oferta', '=', $id]
             ];
 
             deleta (
-                'publicacao',
+                'oferta',
                 $criterio
             );
 
