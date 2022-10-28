@@ -40,14 +40,18 @@
             'data_oferta DESC'
         );
     ?>
-    <?php 
-        if($url == "/COMECOM/categoria/eletronicos/")
-    ?>
     <div class="main">
         <?php
             foreach($posts as $post) :                  
                 $fotos = explode(';',$post['foto_nome_oferta']);                               
         ?>
+        <?php url($url, $elt, $mrc, $mec, $pet); ?>
+        <?php if($url == $elt) : ?>
+            <div>Criando um lugar de post - Eletrônicos</div>
+            <?php if($post['categoria'] == 'eletronicos') : ?>
+                <div>Ola</div>
+            <?php endif; ?>
+        <?php endif; ?>
         <div class="item">
             <a href='../../oferta_detalhe.php'>
                 <div class="img">
