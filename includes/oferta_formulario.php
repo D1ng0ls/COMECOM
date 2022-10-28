@@ -13,33 +13,33 @@
     <body>
         <?php include('../includes/navigator.php'); ?>
         <div class="content-oferta">
-        <?php
-            include '../includes/valida_login.php';
-            require_once '../includes/funcoes.php';
-            require_once '../core/conexao_mysql.php';
-            require_once '../core/sql.php';
-            require_once '../core/mysql.php';
+            <?php
+                include '../includes/valida_login.php';
+                require_once '../includes/funcoes.php';
+                require_once '../core/conexao_mysql.php';
+                require_once '../core/sql.php';
+                require_once '../core/mysql.php';
 
-            foreach($_GET as $indice => $dado) {
-                $$indice = limparDados($dado);
-            }
+                foreach($_GET as $indice => $dado) {
+                    $$indice = limparDados($dado);
+                }
 
-            if(!empty($id)) {
-                $id = (int)$id;
+                if(!empty($id)) {
+                    $id = (int)$id;
 
-                $criterio = [
-                    ['id_oferta', '=', $id]
-                ];
+                    $criterio = [
+                        ['id_oferta', '=', $id]
+                    ];
 
-                $retorno = buscar(
-                    'oferta',
-                    ['*'],
-                    $criterio
-                );
+                    $retorno = buscar(
+                        'oferta',
+                        ['*'],
+                        $criterio
+                    );
 
-                $entidade = $retorno[0];
-            }
-        ?>
+                    $entidade = $retorno[0];
+                }
+            ?>
             <div class="container-formulario">
                 <form method="post" action="../core/oferta_repositorio.php" enctype="multipart/form-data">
                     <input  type="hidden" name="acao"
@@ -91,7 +91,17 @@
                             <input  type="date"
                                     require="required" id="data" name="termino_oferta"
                                     value="<?php echo $entidade['termino_oferta'] ?? ''?>">
-                        </div> 
+                        </div>
+                        <label for="categoria">Categoria</label>
+                        <div class="oft-categoria">
+                            <select id="categoria" name="categoria"
+                                    require="required">
+                                <option value="eletronicos"><p>Eletrônicos</p></option>
+                                <option value="mercado"><p>Mercado</p></option>
+                                <option value="modaecasa"><p>Moda & Casa</p></option>
+                                <option value="petshop"><p>Petshop</p></option>
+                            </select>
+                        </div>
                         <div class="oft-choose-container">
                             <input  type="file" 
                                     id="foto" 

@@ -31,6 +31,7 @@
                 'inicio_oferta',
                 'termino_oferta',
                 'foto_nome_oferta',
+                'categoria',
                 '(select nome
                     from pessoa
                     where id_pessoa = oferta.id_pessoa) as nome'
@@ -39,10 +40,13 @@
             'data_oferta DESC'
         );
     ?>
+    <?php 
+        if($url == "/COMECOM/categoria/eletronicos/")
+    ?>
     <div class="main">
         <?php
             foreach($posts as $post) :                  
-                $fotos = explode(';',$post['foto_nome_oferta']);                                 
+                $fotos = explode(';',$post['foto_nome_oferta']);                               
         ?>
         <div class="item">
             <a href='../../oferta_detalhe.php'>
@@ -57,6 +61,13 @@
                 </div>
                 <div class='item-info'>
                     <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
+                    <div>
+                        <?php   if($post['categoria'] == 'eletronicos') {
+                                    echo 'bruh';    
+                                }       
+                        ?>
+                    </div>
+                    <div><h5 style="text-transform: uppercase;"><?php echo $post['categoria']?></h5></div>
                     <div class='item-price'>
                         <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
                         <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?></span>

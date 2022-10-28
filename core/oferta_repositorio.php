@@ -44,6 +44,7 @@
                 'inicio_oferta' => $inicio_oferta,
                 'termino_oferta' => $termino_oferta,
                 'foto_nome_oferta' => implode(";", $fotos_name),
+                'categoria' => $categoria,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
@@ -63,6 +64,7 @@
                 'inicio_oferta' => $inicio_oferta,
                 'termino_oferta' => $termino_oferta,
                 'foto_nome_oferta' => implode(";", $fotos_name),
+                'categoria' => $categoria,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
