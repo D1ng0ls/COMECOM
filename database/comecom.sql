@@ -19,12 +19,12 @@ create table pessoa (
     primary key (id_pessoa)
 );
 
-create table produto (
+/*create table produto (
 	id_produto int not null auto_increment,
     nome varchar(100),
     foto_nome_prod varchar(1000),
     primary key (id_produto)
-);
+);*/
 
 create table publicacao (
 	id_publicacao int not null auto_increment,
@@ -57,15 +57,15 @@ create table oferta (
     preco_atual double null,
     foto_nome_oferta varchar(1000) null,
     primary key (id_oferta),
-	fk_produto_id_produto int null,
+	/*fk_produto_id_produto int null,
 	constraint 	fk_oferta_produto 
 		foreign key (fk_produto_id_produto)
         references produto (id_produto)
-        on delete cascade on update cascade,
+        on delete cascade on update cascade,*/
 	categoria varchar(20) null
 );
 
-create table categoria (
+/*create table categoria (
 	id_categoria int not null auto_increment,
     nome varchar(100) not null,
     primary key (id_categoria)
@@ -83,8 +83,8 @@ create table produto_categoria (
         references produto (id_produto)
         on delete cascade on update cascade,
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
-);
+);*/
 
-select * from oferta;
+select * from oferta;	
 select * from pessoa;
 select * from publicacao;
