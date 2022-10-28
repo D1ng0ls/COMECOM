@@ -45,6 +45,7 @@
             foreach($posts as $post) :                  
                 $fotos = explode(';',$post['foto_nome_oferta']);                               
         ?>
+        <!-- Eletrônicos -->
         <?php url($url, $elt, $mrc, $mec, $pet); ?>
         <?php if($url == $elt) : ?>
             <div>Criando um lugar de post - Eletrônicos</div>
@@ -52,6 +53,28 @@
                 <div>Ola</div>
             <?php endif; ?>
         <?php endif; ?>
+        <!-- Mercado -->
+        <?php if($url == $mrc) : ?>
+            <div>Criando um lugar de post - Mercado</div>
+            <?php if($post['categoria'] == 'mercado') : ?>
+                <div>Ola</div>
+            <?php endif; ?>
+        <?php endif; ?>
+        <!-- Moda & Casa -->
+        <?php if($url == $mec) : ?>
+            <div>Criando um lugar de post - Moda & Casa</div>
+            <?php if($post['categoria'] == 'modaecasa') : ?>
+                <div>Ola</div>
+            <?php endif; ?>
+        <?php endif; ?>
+        <!-- Petshop -->
+        <?php if($url == $pet) : ?>
+            <div>Criando um lugar de post - Petshop</div>
+            <?php if($post['categoria'] == 'petshop') : ?>
+                <div>Ola</div>
+            <?php endif; ?>
+        <?php endif; ?>
+        <!-- termina aquiii -->
         <div class="item">
             <a href='../../oferta_detalhe.php'>
                 <div class="img">
