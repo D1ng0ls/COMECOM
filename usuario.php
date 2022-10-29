@@ -48,8 +48,8 @@
             $data = date_create($pessoa['data_criacao']);
             $data = date_format($data, 'd/m/Y');
         endforeach;                             
-        foreach($pessoas as $post) :                           
-            $fotos = explode(';',   $post['foto_nome_pessoa']);  
+        foreach($pessoas as $pessoa) :                           
+            $fotos = explode(';', $pessoa['foto_nome_pessoa']);  
         endforeach;   
     ?>
     
@@ -86,27 +86,25 @@
                             <label for="foto">
                                 <img src="media/icons/solid/user.svg" alt="Ícone referente à pessoa física" style="cursor: pointer;">
                             </label>
-                            <input  type="file" 
+                            <!-- <input  type="file" 
                                     id="foto" 
                                     name="foto[]" 
-                                    accept="image/*" 
-                                    required />
+                                    accept="image/*" />
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
                                     <img src='<?php echo"../upload/user/".$foto; ?>' style="cursor: pointer;">
                                 <?php endif; ?>
-                            <?php endforeach ?>
+                            <?php endforeach ?> -->
                         </div>
                     <?php endif; ?>
                     <?php if($_SESSION['login']['pessoa']['tipo_pessoa'] == 'juridica') : ?>
                         <div class="foto">
                             <label for="foto">Alterar Foto</label>
                             <img src="media/icons/solid/office-building.svg" alt="Ícone referente à pessoa jurídica">
-                            <input  type="file" 
+                            <!-- <input  type="file" 
                                     id="foto" 
                                     name="foto[]" 
-                                    accept="image/*" 
-                                    required />
+                                    accept="image/*" /> -->
                         </div>
                     <?php endif; ?> 
                     <!--<input type="file" name="foto" id="foto" alt="." value="" disabled> -->
