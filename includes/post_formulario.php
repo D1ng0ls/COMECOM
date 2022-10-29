@@ -34,11 +34,11 @@
         <div class="container1-post">
             <div class="post-titulo">
                 <input  type="text"
-                        require="required" id="titulo" name="titulo" placeholder="Título"
+                        required id="titulo" name="titulo" placeholder="Título"
                         value="<?php echo $entidade['titulo'] ?? ''?>">
             </div>
             <div class="post-textarea">
-<textarea type="text" require="required" id="texto" name="texto" rows="3" placeholder="Descrição" style="resize: none">
+<textarea type="text" required id="texto" name="texto" rows="3" placeholder="Descrição" style="resize: none">
 <?php echo $entidade['texto'] ?? ''?>
 </textarea>
             </div>
@@ -48,6 +48,7 @@
                         name="foto[]" 
                         accept="image/*" 
                         multiple="multiple"
+                        required
                         />
             </div>  
         </div>

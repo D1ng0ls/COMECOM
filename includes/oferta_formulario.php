@@ -56,46 +56,34 @@
                     </div>        
                     <div class="container1-oft">
                         <div class="oft-titulo">
-                            <input  type="text"
-                                    require="required" id="titulo" name="titulo" placeholder="Nome do produto"
+                            <input  type="text" required
+                                    id="titulo" name="titulo" placeholder="Nome do produto"
                                     value="<?php echo $entidade['titulo'] ?? ''?>">
                         </div>
                         <div class="oft-textarea">
-<textarea type="text" require="required" id="texto" name="texto" rows="3" placeholder="Descrição" style="resize: none">
+<textarea type="text" id="texto" name="texto" rows="3" placeholder="Descrição" style="resize: none" required>
 <?php echo $entidade['texto'] ?? ''?>
 </textarea>
                         </div>
                         <div class="oft-marca">
-                            <input  type="text"
-                                    require="required" id="marca" name="marca" placeholder="Marca"
+                            <input  type="text" required
+                                    id="marca" name="marca" placeholder="Marca"
                                     value="<?php echo $entidade['marca'] ?? ''?>">
                         </div>
                         <div class="oft-prec-orig">
                             <input  type="number" placeholder="Preço original em R$"
-                                    require="required" id="prec-orig" name="preco_original"
+                                    id="prec-orig" name="preco_original" required
                                     value="<?php echo $entidade['preco_original'] ?? ''?>">
                         </div>
                         <div class="oft-desconto">
-                            <input  type="number" placeholder="Desconto em R$"
+                            <input  type="number" placeholder="Desconto em R$" required
                                     require="required" id="desconto" name="desconto"
                                     value="<?php echo $entidade['desconto'] ?? ''?>">
                         </div>
                         <div class="oft-prec-atual">
-                            <input  type="number" placeholder="Preço atual em R$"
+                            <input  type="number" placeholder="Preço atual em R$" required
                                     require="required" id="prec-atual" name="preco_atual"
                                     value="<?php echo $entidade['preco_atual'] ?? ''?>">
-                        </div>
-                        <label for="data-publi">Início da promoção</label><br>
-                        <div class="oft-data">
-                            <input  type="date"
-                                    require="required" id="data" name="inicio_oferta"
-                                    value="<?php echo $entidade['inicio_oferta'] ?? ''?>">
-                        </div>
-                        <label for="data-publi">Término da promoção</label><br>
-                        <div class="oft-data">
-                            <input  type="date"
-                                    require="required" id="data" name="termino_oferta"
-                                    value="<?php echo $entidade['termino_oferta'] ?? ''?>">
                         </div>
                         <label for="categoria">Categoria</label>
                         <div class="oft-categoria">
@@ -107,11 +95,24 @@
                                 <option value="petshop"><p>Petshop</p></option>
                             </select>
                         </div>
+                        <label for="data-publi">Início da promoção</label><br>
+                        <div class="oft-data">
+                            <input  type="date" required
+                                    require="required" id="data" name="inicio_oferta"
+                                    value="<?php echo $entidade['inicio_oferta'] ?? ''?>">
+                        </div>
+                        <label for="data-publi">Término da promoção</label><br>
+                        <div class="oft-data">
+                            <input  type="date" required
+                                    require="required" id="data" name="termino_oferta"
+                                    value="<?php echo $entidade['termino_oferta'] ?? ''?>">
+                        </div>
                         <div class="oft-choose-container">
                             <input  type="file" 
                                     id="foto" 
                                     name="foto[]" 
                                     accept="image/*" 
+                                    required
                                     />
                         </div>  
                     </div>
@@ -122,5 +123,6 @@
             </div>
         </div>
         <?php include('../includes/footer.php'); ?>
+        <script src="../scripts/oferta_formulario.js"></script>
     </body>
 </html>
