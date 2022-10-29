@@ -13,6 +13,7 @@
     foreach($_GET as $indice => $dado) {
         $$indice = limparDados($dado);
     }
+    
     $fotos_name = array();
     $fotos = array_filter($_FILES['foto']['name']); 
     $total_count = count($_FILES['foto']['name']);

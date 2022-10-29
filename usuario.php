@@ -36,7 +36,8 @@
         $pessoas = buscar (
             'pessoa',
             [
-                'data_criacao'
+                'data_criacao',
+                'foto_nome_pessoa'
             ],
             $criterio,
             'data_criacao DESC'
@@ -46,7 +47,10 @@
         foreach($pessoas as $pessoa) :
             $data = date_create($pessoa['data_criacao']);
             $data = date_format($data, 'd/m/Y');
-        endforeach;
+        endforeach;                             
+        foreach($pessoas as $post) :                           
+            $fotos = explode(';',   $post['foto_nome_pessoa']);  
+        endforeach;   
     ?>
     
 
@@ -76,9 +80,35 @@
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                 <input type="hidden" name="tipo_pessoa" value="<?php echo $_SESSION['login']['pessoa']['tipo_pessoa'] ?>">
                 <div class="input-user foto-user input-left">
-                    <div class="foto <?php if($_SESSION['login']['pessoa']['tipo_pessoa'] == 'juridica'){echo "juridico";} else { echo "";} ?>">
-                        <label for="foto">Alterar Foto</label>
-                    </div>
+                    <?php if($_SESSION['login']['pessoa']['tipo_pessoa'] == 'fisica') : ?>
+                        <div class="foto">
+                            <label>Alterar Foto</label>
+                            <label for="foto">
+                                <img src="media/icons/solid/user.svg" alt="Ícone referente à pessoa física" style="cursor: pointer;">
+                            </label>
+                            <input  type="file" 
+                                    id="foto" 
+                                    name="foto[]" 
+                                    accept="image/*" 
+                                    required />
+                            <?php foreach($fotos as $foto) : ?>
+                                <?php if ($foto != '') : ?>
+                                    <img src='<?php echo"../upload/user/".$foto; ?>' style="cursor: pointer;">
+                                <?php endif; ?>
+                            <?php endforeach ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if($_SESSION['login']['pessoa']['tipo_pessoa'] == 'juridica') : ?>
+                        <div class="foto">
+                            <label for="foto">Alterar Foto</label>
+                            <img src="media/icons/solid/office-building.svg" alt="Ícone referente à pessoa jurídica">
+                            <input  type="file" 
+                                    id="foto" 
+                                    name="foto[]" 
+                                    accept="image/*" 
+                                    required />
+                        </div>
+                    <?php endif; ?> 
                     <!--<input type="file" name="foto" id="foto" alt="." value="" disabled> -->
                 </div>
                 <div class="input-user nome-user">
@@ -123,7 +153,6 @@
             </form>
         </div>
     </div>
-
     <?php include('includes/footer.php'); ?>
 
     <script>

@@ -160,16 +160,20 @@ hr {
     margin-left: auto;
 }
 
-.foto {
-    width: 150px;
+.foto{
+    width: 560px;
     height: 150px;
-    background: url("../media/icons/solid/user.svg") no-repeat center;
-    background-size: 75%;
+    margin-bottom: 20px;
 }
 
-.juridico {
-    background: url("../media/icons/solid/office-building.svg") no-repeat center;
-    background-size: 75%;
+.foto img{
+    width: 140px;
+    height: auto;
+}
+
+div.foto input[type='file'] {
+    
+    background-color: red;
 }
 
 .doc-user input {
