@@ -64,12 +64,12 @@
                         <div class="input-content">
                             <span>Nome</span>
                             <input  type="text" 
-                                    required id="nome" name="nome"
+                            require="required" id="nome" name="nome"
                                     value="<?php echo $entidade['nome'] ?? '' ?>">  
                         </div>
                         <div class="input-content">
                             <span>E-mail</span>
-                            <input  type="text" required 
+                            <input  type="text" require="required" 
                                     id="email" name="email"
                                     value="<?php echo $entidade['email'] ?? '' ?>">
                             <small style="color:red"><?php echo isset($email_msg) ? $email_msg: '' ?></small>                                    
@@ -78,7 +78,7 @@
                         <?php if(!isset($_SESSION['login'])): ?>
                             <div class="input-content">
                                 <span>Senha</span>
-                                <input type="password" required
+                                <input type="password" require="required"
                                     id="senha" name="senha" 
                                     value="<?php echo $entidade['senha'] ?? '' ?>">
                                 <small id="textSenha"></small>
@@ -86,19 +86,20 @@
                         <?php endif; ?>
                         <div class="input-content">
                             <span>Cidade</span>
-                            <input  type="text" required
+                            <input  type="text" require="required"
                                     id="cidade" name="cidade"
                                     value="<?php echo $entidade['cidade'] ?? '' ?>">
                         </div>
                         <div class="input-content">
                             <span>Telefone</span>
-                            <input  type="text" required
+                            <input  type="text" require="required"
                                     id="telefone" name="telefone"
                                     value="<?php echo $entidade['telefone'] ?? '' ?>"> 
                         </div>
                         <div class="input-content">
                             <span>Tipo</span><br>
-                            <select id="tipo_pessoa" name="tipo_pessoa" onchange="habilitar()">
+                            <select id="tipo_pessoa" name="tipo_pessoa" onchange="habilitar()"
+                            require="required">
                                 <option value="fisica"><p>Pessoa Física</p></option>
                                 <option value="juridica"><p>Pessoa Jurídica</p></option>
                             </select>
@@ -106,7 +107,7 @@
                         <div class="fisica">
                             <div class="input-content">
                                 <span>CPF</span>
-                                <input  type="text" required
+                                <input  type="text" require="required"
                                         id="cpf" name="cpf"
                                         value="<?php echo $entidade['cpf'] ?? '' ?>">
                             </div>
@@ -114,13 +115,13 @@
                         <div class="juridica" style="display: none;">
                             <div class="input-content">
                                 <span>CNPJ</span>
-                                <input  type="text" required 
+                                <input  type="text" require="required" 
                                         id="cnpj" name="cnpj"
                                         value="<?php echo $entidade['cnpj'] ?? '' ?>">
                             </div>
                             <div class="input-content">
                                 <span>Quantidade de lojas</span>
-                                <input  type="number" required
+                                <input  type="number" require="required"
                                         id="qnt_lojas" name="qnt_lojas"
                                         value="<?php echo $entidade['qnt_lojas'] ?? '' ?>">
                             </div> 
