@@ -62,7 +62,8 @@ create table oferta (
 		foreign key (fk_produto_id_produto)
         references produto (id_produto)
         on delete cascade on update cascade,*/
-	categoria varchar(20) null
+	categoria varchar(20) null,
+    marca varchar(20) null
 );
 
 /*create table categoria (

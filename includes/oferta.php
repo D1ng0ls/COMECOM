@@ -32,6 +32,7 @@
                 'termino_oferta',
                 'foto_nome_oferta',
                 'categoria',
+                'marca',
                 '(select nome
                     from pessoa
                     where id_pessoa = oferta.id_pessoa) as nome'
@@ -45,7 +46,6 @@
             foreach($posts as $post) :                  
                 $fotos = explode(';',$post['foto_nome_oferta']);                               
         ?>
-        <!-- Eletrônicos -->
         <?php url($url, $elt, $mrc, $mec, $pet); ?>
         <?php if($url == $elt) : ?>
             <?php if($post['categoria'] == 'eletronicos') : ?>
@@ -62,12 +62,9 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <div>
-                                <?php   if($post['categoria'] == 'eletronicos') {
-                                            echo 'bruh';    
-                                        }       
-                                ?>
-                            </div>
+                            <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruh'; } ?></div> -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['nome']?></h5></div><!-- nome de quem postou  -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['marca']?></h5></div>
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['categoria']?></h5></div>
                             <div class='item-price'>
                                 <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
@@ -97,12 +94,9 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <div>
-                                <?php   if($post['categoria'] == 'eletronicos') {
-                                            echo 'bruh';    
-                                        }       
-                                ?>
-                            </div>
+                            <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruh'; } ?></div> -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['nome']?></h5></div><!-- nome de quem postou  -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['marca']?></h5></div>
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['categoria']?></h5></div>
                             <div class='item-price'>
                                 <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
@@ -132,12 +126,9 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <div>
-                                <?php   if($post['categoria'] == 'eletronicos') {
-                                            echo 'bruh';    
-                                        }       
-                                ?>
-                            </div>
+                            <!-- <?php if($post['categoria'] == 'modaecasa') { echo 'bruh'; } ?></div> -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['nome']?></h5></div><!-- nome de quem postou  -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['marca']?></h5></div>
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['categoria']?></h5></div>
                             <div class='item-price'>
                                 <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
@@ -167,12 +158,9 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <div>
-                                <?php   if($post['categoria'] == 'eletronicos') {
-                                            echo 'bruh';    
-                                        }       
-                                ?>
-                            </div>
+                            <!-- <?php if($post['categoria'] == 'petshop') { echo 'bruh'; } ?></div> -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['nome']?></h5></div><!-- nome de quem postou  -->
+                            <div><h5 style="text-transform: uppercase;"><?php echo $post['marca']?></h5></div>
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['categoria']?></h5></div>
                             <div class='item-price'>
                                 <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
@@ -186,7 +174,6 @@
                 </div>
             <?php endif; ?>
         <?php endif; ?>
-        <!-- termina aquiii -->
         <?php endforeach; ?>
     </div>
 </div>        

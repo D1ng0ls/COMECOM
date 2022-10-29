@@ -65,6 +65,11 @@
 <?php echo $entidade['texto'] ?? ''?>
 </textarea>
                         </div>
+                        <div class="oft-marca">
+                            <input  type="text"
+                                    require="required" id="marca" name="marca" placeholder="Marca"
+                                    value="<?php echo $entidade['marca'] ?? ''?>">
+                        </div>
                         <div class="oft-prec-orig">
                             <input  type="number" placeholder="Preço original em R$"
                                     require="required" id="prec-orig" name="preco_original"
