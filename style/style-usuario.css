@@ -163,17 +163,17 @@ hr {
 .foto{
     width: 560px;
     height: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .foto img{
     width: 140px;
     height: auto;
+    margin-top: 10px;
 }
 
 div.foto input[type='file'] {
-    
-    background-color: red;
+    display: none;
 }
 
 .doc-user input {

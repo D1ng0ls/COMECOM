@@ -28,7 +28,7 @@
             $newFilePath = "../upload/user/" . $foto_name;
             if(move_uploaded_file($tmpFilePath, $newFilePath)) {
                 $fotos_name[] = $foto_name;
-            }
+            }   
         }
     }
 
