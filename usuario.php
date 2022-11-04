@@ -81,7 +81,11 @@
                             <label>Alterar Foto</label>
                             <input type="file" id="foto" name="foto[]" accept="image/*" >
                             <label for="foto">
-                                <img src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
+                                <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
+                                    <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
+                                <?php else : ?>
+                                    <img src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
+                                <?php endif; ?>
                             </label>
                         </div>
                 </div>
