@@ -77,54 +77,13 @@
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                 <input type="hidden" name="tipo_pessoa" value="<?php echo $_SESSION['login']['pessoa']['tipo_pessoa'] ?>">
                 <div class="input-user foto-user input-left">
-                    <?php if($_SESSION['login']['pessoa']['tipo_pessoa'] == 'fisica') : ?>
                         <div class="foto">
                             <label>Alterar Foto</label>
-                            <input  type="file" 
-                                    id="foto" 
-                                    name="foto[]" 
-                                    accept="image/*" />
-                            <div class="foto">
-                                <?php foreach($pessoas as $pessoa) :                           
-                                    $fotos = explode(';', $pessoa['foto_nome_pessoa']);  
-                                ?>
-                                <?php foreach($fotos as $foto) : ?>
-                                    <?php if ($foto != '') : ?>
-                                        <label for="foto">
-                                            <img src='<?php echo"upload/user/".$foto; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
-                                        </label>
-                                    <?php else : ?>
-                                        tô loco, n tá pegando
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                                <?php endforeach; ?>
-                            </div>
+                            <input type="file" id="foto" name="foto[]" accept="image/*" >
+                            <label for="foto">
+                                <img src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
+                            </label>
                         </div>
-                    <?php endif; ?>
-                    <?php if($_SESSION['login']['pessoa']['tipo_pessoa'] == 'juridica') : ?>
-                        <div class="foto">
-                            <label>Alterar Foto</label>
-                            <input  type="file" 
-                                    id="foto" 
-                                    name="foto[]" 
-                                    accept="image/*" />
-                            <div class="foto">
-                                <?php foreach($pessoas as $pessoa) :                           
-                                    $fotos = explode(';', $pessoa['foto_nome_pessoa']);  
-                                ?>
-                                <?php foreach($fotos as $foto) : ?>
-                                    <?php if ($foto != '') : ?>
-                                        <label for="foto">
-                                            <img src='<?php echo"upload/user/".$foto; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
-                                        </label>
-                                    <?php else : ?>
-                                        tô loco, n tá pegando
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    <?php endif; ?> 
                 </div>
                 <div class="input-user nome-user">
                     <label for="nome">Nome:</label>

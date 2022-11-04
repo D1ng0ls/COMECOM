@@ -57,6 +57,7 @@
                     </div>
                     <span id="msgAlerta"></span>
                     <form method="post" action="core/usuario_repositorio.php">
+                        <input type="text" id="foto_nome_pessoa" name="foto_nome_pessoa" value="user.svg" hidden>
                         <input type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                         <input type="hidden" name="id"
@@ -126,6 +127,7 @@
                                         value="<?php echo $entidade['qnt_lojas'] ?? '' ?>">
                             </div> 
                         </div>
+                    
                         <!-- <div class="remember">
                             <label>
                                 <input type="checkbox"> Lembre-me
