@@ -10,7 +10,7 @@
         <title>COMECOM | Login</title>
     </head>
     <body>
-        <?php                   
+        <?php
             if(isset($_SESSION['login']) && $url != $pgu) {
                 header("Location: usuario.php");
                 exit();

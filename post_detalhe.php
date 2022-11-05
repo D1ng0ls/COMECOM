@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <?php
+    if(!isset($_SESSION['login'])){
+        header("Location: login.php");
+        exit();
+    }
     require_once 'includes/funcoes.php';
     require_once 'core/conexao_mysql.php';
     require_once 'core/sql.php';

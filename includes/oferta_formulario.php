@@ -14,6 +14,10 @@
         <?php include('../includes/navigator.php'); ?>
         <div class="content-oferta">
             <?php
+                if(!isset($_SESSION['login']) || $_SESSION['login']['pessoa']['tipo_pessoa'] == 'fisica'){
+                    header("Location: ../login.php");
+                    exit();
+                }
                 include '../includes/valida_login.php';
                 require_once '../includes/funcoes.php';
                 require_once '../core/conexao_mysql.php';
