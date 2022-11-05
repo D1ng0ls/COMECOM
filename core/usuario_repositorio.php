@@ -14,24 +14,6 @@
         $$indice = limparDados($dado);
     }
 
-    $fotos_name = array();
-    $fotos = array_filter($_FILES['foto']['name']); 
-    $total_count = count($_FILES['foto']['name']);
-
-    for( $i=0 ; $i < $total_count ; $i++ ) {      
-        $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
-        if ($tmpFilePath != ""){
-            $foto_name = $_FILES['foto']['name'][$i];
-            $path_parts = pathinfo($foto_name);
-            $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
-            $foto_name = $path_parts['filename'].time().".".$imageFileType;
-            $newFilePath = "../upload/user/" . $foto_name;
-            if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-                $fotos_name[] = $foto_name;
-            }
-        }
-    }
-
     switch($acao) {
         case 'insert':
             unset($_SESSION['msg']['email']);
@@ -64,7 +46,8 @@
                         'senha' => crypt($senha, $salt),
                         'cidade' => $cidade,
                         'telefone' => $telefone,
-                        'documento' => $cpf
+                        'documento' => $cpf,
+                        'foto_nome_pessoa' => $foto_nome_pessoa
                     ];
                 }
                 else {
@@ -77,7 +60,8 @@
                             'cidade' => $cidade,
                             'telefone' => $telefone,
                             'documento' => $cnpj,
-                            'qnt_lojas' => $qnt_lojas
+                            'qnt_lojas' => $qnt_lojas,
+                            'foto_nome_pessoa' => $foto_nome_pessoa
                         ];
                     }
                 }
@@ -113,6 +97,24 @@
 
             break;
         case 'update':
+            $fotos_name = array();
+            $fotos = array_filter($_FILES['foto']['name']); 
+            $total_count = count($_FILES['foto']['name']);
+
+            for( $i=0 ; $i < $total_count ; $i++ ) {      
+                $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
+                if ($tmpFilePath != ""){
+                    $foto_name = $_FILES['foto']['name'][$i];
+                    $path_parts = pathinfo($foto_name);
+                    $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
+                    $foto_name = $path_parts['filename'].time().".".$imageFileType;
+                    $newFilePath = "../upload/user/" . $foto_name;
+                    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+                        $fotos_name[] = $foto_name;
+                    }
+                }
+            }
+
             $id_pessoa = (int)$id_pessoa;
             $dados = [
                 'tipo_pessoa' => $tipo_pessoa,

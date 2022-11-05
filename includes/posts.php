@@ -35,7 +35,10 @@
                 'foto_nome_publi',
                 '(select nome
                     from pessoa
-                    where id_pessoa = publicacao.id_pessoa) as nome'
+                    where id_pessoa = publicacao.id_pessoa) as nome',
+                '(select foto_nome_pessoa
+                    from pessoa
+                    where id_pessoa = publicacao.id_pessoa) as foto_nome_pessoa'
             ],
             $criterio,
             'data_publicacao DESC'
@@ -55,7 +58,7 @@
             <div class="container2">
                 <div class="container2-1">
                     <div class="comecom-avatar">    
-                        <img src="comunidade-avatares/avatarTeste.png" alt="sexo">
+                        <img src="../upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>">
                         <h4><span><?php echo $post['nome']?> • Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
                     </div>
                 </div>

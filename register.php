@@ -126,6 +126,7 @@
                                         value="<?php echo $entidade['qnt_lojas'] ?? '' ?>">
                             </div> 
                         </div>
+                    
                         <!-- <div class="remember">
                             <label>
                                 <input type="checkbox"> Lembre-me

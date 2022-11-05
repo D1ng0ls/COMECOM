@@ -67,9 +67,8 @@
 }
 
 .user-img {
-    max-width: 26px;
-    max-height: 26px;
-    filter: invert(100);
+    width: 26px;
+    height: 26px;
     float: left;
     border-radius: 20px;
 }

@@ -20,17 +20,17 @@
                 <div class="user">
                     <?php if(!isset($_SESSION['login'])) : ?>
                         <a href="<?php echo url($url, $com, $home) ?>login.php">
-                            <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
+                            <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
                             <span class="user-text">Login</span>
                         </a>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['login'])) : ?>
                         <a href="<?php echo url($url, $com, $home) ?>usuario.php">
                             <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
                             <?php endif; ?>
                             <?php if (isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/foto_nome_pessoa" alt="usuário">
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']?>" alt="usuário">
                             <?php endif; ?>
                             <span class="user-text" style="font-weight: 500;">
                                 Olá, <span style="font-weight: 500;"><?php echo $_SESSION['login']['pessoa']['nome']?></span> 
