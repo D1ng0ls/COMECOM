@@ -207,6 +207,7 @@
             break;
         case 'logout':
             session_destroy();
+            header('Location: ../login.php');
             break;
         case 'status':
             $id_pessoa = (int)$id_pessoa;
