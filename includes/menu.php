@@ -15,13 +15,5 @@
         <li class="nav-item last-item">
             <a href="<?php echo url($url, $com, $home) ?>comunidade/" class="nav-link active">Comunidade</a>
         </li>
-        <li>
-            <?php if ((isset($_SESSION['login']))
-                    && ($_SESSION['login']['pessoa']['adm'] === 1)) : ?>
-                <li class="nav-item">
-                    <a class="#" href="<?php echo url($url, $com, $home) ?>usuarios.php">Usuários</a>
-                </li>
-            <?php endif; ?>
-        </li>
     </ul>
 </div>

@@ -55,10 +55,14 @@
                     $hora = date_format($hora, 'H:i');                            
                     $fotos = explode(';',$post['foto_nome_publi']);                                 
             ?>
-            <div class="container2">
+            <div class="container2" id="post<?php echo $post['id_publicacao']?>">
                 <div class="container2-1">
-                    <div class="comecom-avatar">    
-                        <img src="../upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>">
+                    <div class="comecom-avatar">
+                        <?php if ($post['foto_nome_pessoa'] == null) : ?>
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
+                            <?php else : ?>
+                                <img src="../upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>">
+                            <?php endif; ?>
                         <h4><span><?php echo $post['nome']?> • Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
                     </div>
                 </div>

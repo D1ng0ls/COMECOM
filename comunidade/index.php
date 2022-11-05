@@ -32,7 +32,6 @@
     </div>
 
     <?php if(isset($_SESSION['login'])) : ?>
-     
         <h2 align="center" style="color: #34345c; margin-top: 40px;">
             <?php if(isset($_SESSION['login']) && $_SESSION['login']['pessoa']['tipo_pessoa'] != 'juridica') : ?>
                 [<span class="botaoTOP" onclick="aparece()" style="cursor: pointer;">Adicionar um Novo Post</span>]</a>

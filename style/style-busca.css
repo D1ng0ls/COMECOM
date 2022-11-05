@@ -18,7 +18,7 @@ input[type='search'] {
     width: min(100% - 2rem, 280px);
     font-size: 14px;
     outline: none;
-    margin-right: 25px;
+    margin-right: 10px;
 }
 
 .button  button {

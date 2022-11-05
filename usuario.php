@@ -58,12 +58,20 @@
                     <img src="media/shortcut.png" alt="Logo COMECOM">
                 </div>
             </a>
+            <?php if ((isset($_SESSION['login'])) && ($_SESSION['login']['pessoa']['adm'] === 1)) : ?>
             <div class="buttom-div btn1">
+                <a class="#" href="usuarios.php">Usuários</a>
+            </div>
+            <?php endif; ?>
+            <div class="buttom-div btn2">
+                <a href="activity.php">Atividade</a>
+            </div>
+            <div class="buttom-div btn3">
                 <a href="core/usuario_repositorio.php?acao=logout">Sair</a>
             </div>
-            <div class="buttom-div btn2">
+            <div class="buttom-div btn4">
                 <a href="deactivate.php" type="submit">Excluir Conta</a>
-            </div>
+            </div>  
         </div>
         <div class="info-user">
             <div class="title-page">
@@ -77,17 +85,17 @@
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                 <input type="hidden" name="tipo_pessoa" value="<?php echo $_SESSION['login']['pessoa']['tipo_pessoa'] ?>">
                 <div class="input-user foto-user input-left">
-                        <div class="foto">
-                            <label>Alterar Foto</label>
-                            <input type="file" id="foto" name="foto[]" accept="image/*" >
-                            <label for="foto">
-                                <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                                    <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
-                                <?php else : ?>
-                                    <img src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
-                                <?php endif; ?>
-                            </label>
-                        </div>
+                    <div class="foto">
+                        <label>Alterar Foto</label>
+                        <input type="file" id="foto" name="foto[]" accept="image/*" >
+                        <label for="foto">
+                            <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
+                            <?php else : ?>
+                                <img src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
+                            <?php endif; ?>
+                        </label>
+                    </div>
                 </div>
                 <div class="input-user nome-user">
                     <label for="nome">Nome:</label>

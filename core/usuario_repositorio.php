@@ -47,7 +47,6 @@
                         'cidade' => $cidade,
                         'telefone' => $telefone,
                         'documento' => $cpf,
-                        'foto_nome_pessoa' => $foto_nome_pessoa
                     ];
                 }
                 else {
@@ -61,7 +60,6 @@
                             'telefone' => $telefone,
                             'documento' => $cnpj,
                             'qnt_lojas' => $qnt_lojas,
-                            'foto_nome_pessoa' => $foto_nome_pessoa
                         ];
                     }
                 }

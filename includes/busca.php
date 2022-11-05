@@ -4,5 +4,5 @@
         <div class="button">
             <button type="submit">Buscar</button>
         </div>
-        </div>
+    </div>
 </form>        
