@@ -90,6 +90,7 @@
     text-align: center;
     margin: 10px;
     padding: 5px;
+    cursor: default;
 }
 
 .item-info h4 {

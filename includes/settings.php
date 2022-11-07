@@ -52,18 +52,11 @@
         return "../";
     }
 
-
     function nome($url) : string {
         if($url == $GLOBALS['elt']) return "Eletrônicos";
         if($url == $GLOBALS['mrc']) return "Mercado";
         if($url == $GLOBALS['mec']) return "Moda & Casa";
         if($url == $GLOBALS['pet']) return "Petshop";
-    }
-
-    function ofertas($tipo) : string {
-        if ($tipo == 1) return "Melhores Ofertas:";
-        if ($tipo == 2) return "Nas Proximidades:";
-        if ($tipo == 3) return "Tempo Limitado:";
     }
 
     if($url == $pgu) {

@@ -302,6 +302,7 @@ section
 }
 .bbb_viewed_item.discount .bbb_viewed_price
 {
+    background-color: white;
     color: #df3b3b;
 }
 .bbb_viewed_price span

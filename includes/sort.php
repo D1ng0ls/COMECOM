@@ -33,7 +33,7 @@
         <div class="filter-order filter">
             <label class="container2">
                 <?php if (isset($_SESSION['login']) && $_SESSION['login']['pessoa']['tipo_pessoa'] == 'juridica') : ?>
-                    <a href="../../includes/oferta_formulario.php">
+                    <a href="../../includes/oferta_formulario.php" title="Adicionar Oferta">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" style="color: var(--color-purple);" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                         </svg>
