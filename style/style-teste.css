@@ -1,0 +1,102 @@
+/*Bruh*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 940px)
+{
+	/*Configurações do menu*/
+	ul
+	{
+		position: fixed;
+		top: 80px;
+		right: -100%;
+		background: var(--color-purple);
+		height: 100%;
+		width: 100%;
+		display: block;
+		text-align: center;
+		transition: 1s;
+        display: flex;
+        flex-direction: column;
+	}
+
+	div.container_categoria ul li
+	{
+		margin: 40px 0;
+	}
+
+	div.container_categoria ul li a
+	{
+		font-size: 20px;
+		display: block;
+        color: white;
+	}
+
+	/*Configuração dos itens do menu*/
+	ul li a.nav-item
+	{	
+		border: none;
+	}
+
+	ul li a.nav-item:hover
+	{
+		background-color: transparent;
+		border-color: none;
+        color: red;
+	}
+
+	/*Configuração dos botões*/
+	.menu_btn i
+	{
+		display: block;
+		position: absolute;
+		right: 5%;
+	}
+
+	label
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	#check:checked ~ ul
+	{
+		right: 0%;
+	}
+
+	#check:checked ~ .menu_btn i:before
+	{
+		content: "\f00d";
+	}
+
+	/*Configuração da margin do logo*/
+	/*div.logo
+	{
+		margin-left: 10px;
+	}
+
+	section.content_home
+	{
+		height: 800px;
+		display: flex;
+		align-items: center;
+	}*/
+
+	/*Configuração da imgem de dentro do conteúdo do HOME*/
+	/*img#img_home
+	{
+		width: 400px;
+		position: absolute;
+		right: 0;
+	}
+
+	/*Configuração dos textos de dentro do conteúdo do HOME*/
+	/*div.text_content
+	{
+		position: absolute;
+		top: -10px;
+	}*/
+}

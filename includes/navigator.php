@@ -1,3 +1,4 @@
+<!-- Bruh -->
 <header class="cabecalho" id="nav-top">
     <form action="<?php echo url($url, $com, $home) ?>busca" method="post">
         <div class="menu">

@@ -1,3 +1,4 @@
+<!-- Bruh -->
 <div>
     <?php
         foreach($_GET as $indice => $dado) {
@@ -55,13 +56,11 @@
         <?php if($url == $elt) : ?>
             <?php if($post['categoria'] == 'eletronicos') : ?>
                 <div class="item">
-                    <a href='../../oferta_detalhe.php'>
+                    <a href='<?php echo "../../oferta_detalhe.php?id_oferta=".$post['id_oferta']?>'>
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
                                     <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="width: 100%; height: 200px;">
-                                <?php else : ?>
-                                    <img src='../../media/oferta5.jpg' style="width: 100%; height: 200px;">
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>
@@ -84,7 +83,7 @@
         <?php if($url == $mrc) : ?>
             <?php if($post['categoria'] == 'mercado') : ?>
                 <div class="item">
-                    <a href='../../oferta_detalhe.php'>
+                    <a href='<?php echo "../../oferta_detalhe.php?id_oferta=".$post['id_oferta']?>'>
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
@@ -113,7 +112,7 @@
         <?php if($url == $mec) : ?>
             <?php if($post['categoria'] == 'modaecasa') : ?>
                 <div class="item">
-                    <a href='../../oferta_detalhe.php'>
+                    <a href='<?php echo "../../oferta_detalhe.php?id_oferta=".$post['id_oferta']?>'>
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
@@ -142,7 +141,7 @@
         <?php if($url == $pet) : ?>
             <?php if($post['categoria'] == 'petshop') : ?>
                 <div class="item">
-                    <a href='../../oferta_detalhe.php'>
+                    <a href='<?php echo "../../oferta_detalhe.php?id_oferta=".$post['id_oferta']?>'>
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>

@@ -1,4 +1,9 @@
+<!-- Bruh -->
 <div class="container_categoria">
+    <input type="checkbox" id="check">
+    <label for="check" class="menu_btn">
+        <i class="fas fa-bars"></i>
+    </label>
     <ul class="nav justify-content-center">
         <li class="nav-item first-item">
             <a href="<?php echo url($url, $com, $home) ?>categoria/eletronicos/" class="nav-link active">Eletrônicos</a>
