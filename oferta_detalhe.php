@@ -61,7 +61,7 @@
             </div>
             <div class='item-info'>
                 <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruh'; } ?></div> -->
+                <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruhh'; } ?></div> -->
                 <div class='item-price'>
                     <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
                     <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?></span>

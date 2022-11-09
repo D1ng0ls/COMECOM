@@ -1,3 +1,4 @@
+<!-- Bruh -->
 <div>
     <?php
         foreach($_GET as $indice => $dado) {
