@@ -40,7 +40,7 @@
         } else if($url == $GLOBALS['oft']) {
             return "../";
         } {
-            return "";
+            return "/COMECOM/";
         }
     }
 
@@ -65,3 +65,5 @@
 ?>
 
 <link rel="shortcut icon" type="x-icon" href="<?php echo url($url, $com, $home) ?>media/shortcut.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
