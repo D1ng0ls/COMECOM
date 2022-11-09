@@ -74,6 +74,34 @@ tr td {
     padding: 8px;
 }
 
+#down {
+    background-color: #ff4444;
+    padding: 5px 11.14px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#up {
+    background-color: #00c851;
+    padding: 5px 6.84px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#on {
+    background-color: #4285f4;
+    padding: 5px 23.275px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#off {
+    background-color: #33b5e5;
+    padding: 5px 11.07px;
+    border-radius: 4px;
+    color: #fff;
+}
+
 @media screen and (max-width: 700px) {
     .table-users {
         width: min(100% - 0rem, 100%);
