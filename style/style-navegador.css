@@ -20,6 +20,8 @@
 
 .logo img {
     height: 96px;
+    width: min(100% - 1rem, 100%);
+    margin-inline: auto;
     transform: translateY(-22.5px);
 }
 
@@ -37,6 +39,7 @@
 .container_search .inputs {
     float: right;
     margin: auto;
+    width: 100%;
 }
 
 .container_user {
@@ -81,7 +84,6 @@
 
 .inputs input {
     border-radius: 20px;
-    width: 500px;
     height: 32px;
     border: none;
     background-color: transparent;

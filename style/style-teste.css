@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+#check {
+	display: none;
+}
+
+div .menu_btn i
+{
+	color: #fff;
+	font-size: 25px;
+	cursor: pointer;
+	display: none;
+}
+
 @media screen and (max-width: 940px)
 {
 	/*Configurações do menu*/
@@ -19,7 +31,7 @@
 		display: block;
 		text-align: center;
 		transition: 1s;
-        display: flex;
+        display: flex;	
         flex-direction: column;
 	}
 
@@ -35,25 +47,13 @@
         color: white;
 	}
 
-	/*Configuração dos itens do menu*/
-	ul li a.nav-item
-	{	
-		border: none;
-	}
-
-	ul li a.nav-item:hover
-	{
-		background-color: transparent;
-		border-color: none;
-        color: red;
-	}
-
 	/*Configuração dos botões*/
-	.menu_btn i
+	label.menu_btn i
 	{
 		display: block;
 		position: absolute;
 		right: 5%;
+		color: var(--color-purple);
 	}
 
 	label
