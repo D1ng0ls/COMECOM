@@ -110,7 +110,7 @@ hr {
     display: inline-block;
 }
 
-.input-user input, .input-password {
+.input-user input, .input-user textarea, .input-password {
     color: #333;
     /* background: #fff; */
     border: 1px solid #bbb;
@@ -122,6 +122,19 @@ hr {
     padding: 7px 8px;
     vertical-align: middle;
     width: 100%;
+}
+
+.input-user textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    height: 150px;
+    margin-bottom: 0px;
+}
+
+#crt {
+    text-align: right;
+    margin-bottom: 20px;
 }
 
 .input-user input[readonly=readonly] {
