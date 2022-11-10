@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/style-navegador.css">
         <link rel="stylesheet" href="../style/style-oferta-formulario.css">
+        <link rel="stylesheet" href="../style/style-mq.css">
         <title>COMECOM | Oferta formulário</title>
         <?php include('settings.php'); ?>
     </head>

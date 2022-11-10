@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../../style/style-navegador.css">
     <link rel="stylesheet" href="../../style/style-categorias.css">
+    <link rel="stylesheet" href="../../style/style-mq.css">
     <?php include('../../includes/settings.php'); ?>
     <title>COMECOM | <?php echo nome($url); ?></title>
 </head>

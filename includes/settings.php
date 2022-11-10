@@ -1,4 +1,3 @@
-<!-- Bruh -->
 <?php
     session_start();
 ?>

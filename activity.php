@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-navegador.css">
     <link rel="stylesheet" href="style/style-busca.css">
+    <link rel="stylesheet" href="style/style-mq.css">
     <link rel="stylesheet" href="style/style-activity.css">
     <title>COMECOM | Atividade</title>
     <?php include('includes/settings.php'); ?>

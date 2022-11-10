@@ -39,6 +39,7 @@
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/style-navegador.css">
         <link rel="stylesheet" href="style/style-post-detalhe.css">
+        <link rel="stylesheet" href="style/style-mq.css">
         <?php
             include('includes/settings.php');
             if(!isset($_SESSION['login'])){

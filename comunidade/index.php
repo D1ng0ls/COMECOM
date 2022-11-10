@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style/style-navegador.css">
     <link rel="stylesheet" href="../style/style-comunidade.css">
     <link rel="stylesheet" href="../style/style-busca.css">
+    <link rel="stylesheet" href="../style/style-mq.css">
     <title>COMECOM | Comunidade</title>
     <?php include('../includes/settings.php'); ?>
 </head>

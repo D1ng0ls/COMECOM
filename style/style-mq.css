@@ -17,6 +17,10 @@ div .menu_btn i
 	display: none;
 }
 
+ul li.login_menu {
+	display: none;
+}
+
 @media screen and (max-width: 940px)
 {
 	/*Configurações do menu*/
@@ -70,6 +74,14 @@ div .menu_btn i
 	#check:checked ~ .menu_btn i:before
 	{
 		content: "\f00d";
+	}
+
+	ul li.login_menu {
+		display: block;
+	}
+
+	div .login_navigator {
+		display: none;
 	}
 
 	/*Configuração da margin do logo*/

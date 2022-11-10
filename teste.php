@@ -7,7 +7,7 @@
         <?php include('includes/settings.php'); ?>
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/style-navegador.css">
-        <link rel="stylesheet" href="style/style-teste.css">
+        <link rel="stylesheet" href="style/style-mq.css">
         <title>COMECOM</title>
     </head>
     <body>

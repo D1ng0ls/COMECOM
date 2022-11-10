@@ -1,4 +1,3 @@
-<!-- Bruh -->
 <header class="cabecalho" id="nav-top">
     <form action="<?php echo url($url, $com, $home) ?>busca" method="post">
         <div class="menu">
@@ -18,32 +17,31 @@
                     </div>
                 </div>
             </div>
-
+            
+            
             <div class="container_user justify-content-end">
                 <div class="user">
-                    <!-- <ul>
-                        <li> -->
-                            <?php if(!isset($_SESSION['login'])) : ?>
-                                <a href="<?php echo url($url, $com, $home) ?>login.php">
+                    <div class="login_navigator">
+                        <?php if(!isset($_SESSION['login'])) : ?>
+                            <a href="<?php echo url($url, $com, $home) ?>login.php">
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
+                                <span class="user-text">Login</span>
+                            </a>
+                        <?php endif; ?>
+                        <?php if(isset($_SESSION['login'])) : ?>
+                            <a href="<?php echo url($url, $com, $home) ?>usuario.php">
+                                <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
                                     <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
-                                    <span class="user-text">Login</span>
-                                </a>
-                            <?php endif; ?>
-                            <?php if(isset($_SESSION['login'])) : ?>
-                                <a href="<?php echo url($url, $com, $home) ?>usuario.php">
-                                    <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                                        <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
-                                    <?php endif; ?>
-                                    <?php if (isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                                        <img class="user-img" src="<?php echo url($url, $com, $home) ?>upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']?>" alt="usuário">
-                                    <?php endif; ?>
-                                    <span class="user-text" style="font-weight: 500;">
-                                        <span style="font-weight: 500;"><?php echo $_SESSION['login']['pessoa']['nome']?></span> 
-                                    </span>
-                                </a>
-                            <?php endif; ?>
-                        <!-- </li>
-                    </ul> -->
+                                <?php endif; ?>
+                                <?php if (isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
+                                    <img class="user-img" src="<?php echo url($url, $com, $home) ?>upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']?>" alt="usuário">
+                                <?php endif; ?>
+                                <span class="user-text" style="font-weight: 500;">
+                                    <span style="font-weight: 500;"><?php echo $_SESSION['login']['pessoa']['nome']?></span> 
+                                </span>
+                            </a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
