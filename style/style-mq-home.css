@@ -22,8 +22,8 @@ ul li.login_menu {
 }
 
 @media screen and (max-width: 940px)
-{
-	/*Configurações do menu*/
+{  
+    /*Configurações do menu*/
 	ul
 	{
 		position: fixed;
@@ -38,12 +38,6 @@ ul li.login_menu {
         display: flex;	
         flex-direction: column;
 		z-index: 5;
-	}
-
-	div.container_categoria ul li.first-item
-	{
-		position: relative;
-		margin: 70px 0px 35px 0px;
 	}
 
 	div.container_categoria ul li
@@ -65,8 +59,8 @@ ul li.login_menu {
 		display: block;
 		position: absolute;
 		right: 5%;
-		top: 13px;
-		color: #fff;/*Mudar*/
+		top: -35px;
+		color: #fff;
 	}
 
 	label
@@ -110,10 +104,11 @@ ul li.login_menu {
 
 	.user-text {
 		font-size: 19px;
+        margin-top: -22px;
 	}
 
 	.user-img {
-		margin-top: 2px;
+		margin-top: -20px;
 	}
 
 	div .login_navigator {
@@ -140,7 +135,7 @@ ul li.login_menu {
 		height: 40px;
 		position: absolute;
 		top: 4px;
-		left: 5%;
+		left: 15%;
 	}
 	
 	.container_search {

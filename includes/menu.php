@@ -4,7 +4,7 @@
         <i class="fas fa-bars"></i>
     </label>
     <ul class="nav justify-content-center">
-        <li class="nav-item login_menu first-item">
+        <li class="login_menu first-item">
             <div class="container_user1 justify-content-end">
                 <div class="user">
                     <?php if(!isset($_SESSION['login'])) : ?>
