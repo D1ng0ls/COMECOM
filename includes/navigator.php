@@ -2,7 +2,24 @@
     <form action="<?php echo url($url, $com, $home) ?>busca" method="post">
         <div class="menu">
             <div class="logo">
-                <a href="<?php if($url == $pgu || $url == $sct || $url == $users) { echo url2(); } else { echo url($url, $com, $home);} ?>"><img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho.png" alt="Logo Cuprom"></a>
+                <a href="
+                    <?php 
+                        if($url == $pgu || $url == $sct || $url == $users) { 
+                            echo url2(); 
+                        } else { 
+                            echo url($url, $com, $home);} 
+                    ?>">
+                    <img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho.png" alt="Logo Cuprom" class="img1-navigator">
+                </a>
+                <a href="
+                    <?php 
+                        if($url == $pgu || $url == $sct || $url == $users) { 
+                            echo url2(); 
+                        } else { 
+                            echo url($url, $com, $home);} 
+                    ?>">
+                    <img src="<?php echo url($url, $com, $home) ?>media/COMECOM-cabecalho-2.png" alt="Bruh" class="img2-navigator">
+                </a>
             </div>
 
             <div class="container_search justify-content-end <?php if($url == $abt) { echo "comunidade";} else { echo "";};?>">

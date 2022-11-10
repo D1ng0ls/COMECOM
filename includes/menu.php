@@ -4,8 +4,8 @@
         <i class="fas fa-bars"></i>
     </label>
     <ul class="nav justify-content-center">
-        <li class="nav-item login_menu">
-            <div class="container_user justify-content-end">
+        <li class="nav-item login_menu first-item">
+            <div class="container_user1 justify-content-end">
                 <div class="user">
                     <?php if(!isset($_SESSION['login'])) : ?>
                         <a href="<?php echo url($url, $com, $home) ?>login.php">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </li>
-        <li class="nav-item first-item">
+        <li class="nav-item">
             <a href="<?php echo url($url, $com, $home) ?>categoria/eletronicos/" class="nav-link active">Eletrônicos</a>
         </li>
         <li class="nav-item">

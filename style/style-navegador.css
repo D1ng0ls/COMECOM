@@ -18,11 +18,15 @@
     margin: auto;
 }
 
-.logo img {
+.logo img.img1-navigator {
     height: 96px;
-    width: min(100% - 1rem, 100%);
+    width: min(600px - 1rem, 100%);
     margin-inline: auto;
     transform: translateY(-22.5px);
+}
+
+img.img2-navigator {
+    display: none;
 }
 
 .container_categoria {
