@@ -21,10 +21,35 @@
     <?php include 'includes/navigator.php' ?>
     <hr>
     <div class="img-home-propaganda" align="center">
-        <img src="media/home/home-imagem.png">
+        <img src="media/home-img1.png" id="img1" class="on">
+        <img src="media/home-img2.png" id="img2" class="off">
+        <img src="media/home-img3.png" id="img3" class="off">
     </div>
     <?php include 'includes/carrossel.php' ?>
     <?php include 'includes/footer.php' ?>
+
+    <script>
+        var img1 = document.getElementById('img1');
+        var img2 = document.getElementById('img2');
+        var img3 = document.getElementById('img3');
+        setInterval(function () {
+            if(img1.className == 'on') {
+                img1.className = 'off';
+                img2.className = 'on';
+                img3.className = 'off';
+            } else if(img2.className == 'on') {
+                img1.className = 'off';
+                img2.className = 'off';
+                img3.className = 'on';
+            } else if(img3.className == 'on') {
+                img1.className = 'on';
+                img2.className = 'off';
+                img3.className = 'off';
+            }
+        }, 15000);
+
+        
+    </script>
 </body>
 
 </html>

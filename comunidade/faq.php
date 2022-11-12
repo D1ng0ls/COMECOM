@@ -11,12 +11,6 @@
     <link rel="shortcut icon" type="x-icon" href="../media/shortcut.png">
 </head>
 <body>
-    <?php 
-        $rand = (string) rand(1,7);
-
-        $sorteador = "faq-especial/faq%20($rand).png";
-    ?>
-
     <div align="center">
         <a href="../"><img src="comunidade-img\comecom-logo-rules-and-faq.png" class="comecom-logo-rules-and-faq"></a>
     </div>
@@ -38,7 +32,6 @@
     <div id="semi-menu" align="center">
         <p style="margin: 0; margin-bottom: 25px;">
             <a href="../">Home</a>
-            <a href="../categoria/mercado/">Mercado</a>
             <a href="../comunidade/">Comunidade</a>
         </p>
     </div>
@@ -70,7 +63,7 @@
                     </ol>
 
                     <div align="center" style="padding-bottom: 10px;">
-                        <img src="<?php echo $sorteador ?>" style="border: 1px solid var(--color-purple);">
+                        <img src="faq-especial/faq%20(1).png" style="border: 1px solid var(--color-purple);">
                     </div>
                 </div>
             </div>
@@ -184,7 +177,6 @@
     <div id="semi-menu" align="center">
         <p style="margin: 0; margin-bottom: 25px;">
             <a href="../">Home</a>
-            <a href="../categoria/mercado/">Mercado</a>
             <a href="../comunidade/">Comunidade</a>
         </p>
     </div>
