@@ -62,7 +62,7 @@ $posts = buscar (
                                 <?php endforeach; ?>
                                 <div class='bbb_viewed_content text-center'>
                                     <div class='bbb_viewed_price'>R$<?php echo number_format($post['preco_atual'], 2, ',', '')?><span>R$<?php echo number_format($post['preco_original'], 2, ',', '');?></span></div>
-                                    <a href='oferta_detalhe.php'><div class='bbb_viewed_name'><?php echo $post['titulo']?></div></a>
+                                    <a href='oferta_detalhe.php?id_oferta=<?php echo $post['id_oferta']?>'><div class='bbb_viewed_name'><?php echo $post['titulo']?></div></a>
                                 </div>
                                 <ul class='item_marks'>
                                     <li class='item_mark item_discount'>-<?php echo $post['desconto']?>%</li>
@@ -101,7 +101,7 @@ $posts = buscar (
                                 <?php endforeach; ?>
                                 <div class='bbb_viewed_content text-center'>
                                     <div class='bbb_viewed_price'>R$<?php echo number_format($post['preco_atual'], 2, ',', '')?><span>R$<?php echo number_format($post['preco_original'], 2, ',', '');?></span></div>
-                                    <a href='oferta_detalhe.php'><div class='bbb_viewed_name'><?php echo $post['titulo']?></div></a>
+                                    <a href='oferta_detalhe.php?id_oferta=<?php echo $post['id_oferta']?>'><div class='bbb_viewed_name'><?php echo $post['titulo']?></div></a>
                                 </div>
                                 <ul class='item_marks'>
                                     <li class='item_mark item_discount'>-<?php echo $post['desconto']?>%</li>
@@ -139,7 +139,7 @@ $posts = buscar (
                                 <?php endforeach; ?>
                                 <div class='bbb_viewed_content text-center'>
                                     <div class='bbb_viewed_price'>R$<?php echo number_format($post['preco_atual'], 2, ',', '')?><span>R$<?php echo number_format($post['preco_original'], 2, ',', '');?></span></div>
-                                    <a href='oferta_detalhe.php'><div class='bbb_viewed_name'><?php echo $post['titulo']?></div></a>
+                                    <a href='oferta_detalhe.php?id_oferta=<?php echo $post['id_oferta']?>'><div class='bbb_viewed_name'><?php echo $post['titulo']?></div></a>
                                 </div>
                                 <ul class='item_marks'>
                                     <li class='item_mark item_discount'>-<?php echo $post['desconto']?>%</li>

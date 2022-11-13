@@ -76,7 +76,7 @@
                                     value="<?php echo $entidade['marca'] ?? ''?>">
                         </div>
                         <div class="oft-prec-orig">
-                            <input  type="number" placeholder="Preço original em R$"
+                            <input  type="number" placeholder="Preço original em R$" step=".01"
                                     id="prec-orig" name="preco_original" required
                                     value="<?php echo $entidade['preco_original'] ?? ''?>" oninput="calcular()">
                         </div>
@@ -87,8 +87,8 @@
                         </div>
                         <div class="oft-prec-atual">
                             <input  type="number" placeholder="Preço atual em R$" required
-                                    require="required" id="prec-atual" name="preco_atual"
-                                    value="<?php echo $entidade['preco_atual'] ?? ''?>" disabled>
+                                    require="required" id="prec-atual" name="preco_atual" step=".01"
+                                    value="<?php echo $entidade['preco_atual'] ?? ''?>" oninput="calcular()">
                         </div>
                         <label for="categoria">Categoria</label>
                         <div class="oft-categoria">
@@ -130,6 +130,7 @@
         <script>
             function calcular() {
                 var preco = document.getElementById('prec-orig');
+                var preco2 = Number(document.getElementById('prec-orig').value);
                 var desconto = document.getElementById('desconto');
                 var novoPreco = document.getElementById('prec-atual');
 
@@ -139,7 +140,8 @@
                     desconto.value = 99;
                 }
 
-                novoPreco.value = (((100 - desconto.value) * preco.value)/100).toFixed(2).toLocaleString('pt-BR');
+                novoPreco.value = (((100 - desconto.value) * preco.value)/100).toFixed(2);
+                preco.value = preco2.toFixed(2);
             }
         </script>
     </body>
