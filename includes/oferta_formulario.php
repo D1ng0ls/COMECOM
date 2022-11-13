@@ -117,8 +117,7 @@
                                     id="foto" 
                                     name="foto[]" 
                                     accept="image/*" 
-                                    required
-                                    />
+                                    required>
                         </div>  
                     </div>
                     <div class="oft-button">
