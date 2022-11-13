@@ -78,17 +78,17 @@
                         <div class="oft-prec-orig">
                             <input  type="number" placeholder="Preço original em R$"
                                     id="prec-orig" name="preco_original" required
-                                    value="<?php echo $entidade['preco_original'] ?? ''?>">
+                                    value="<?php echo $entidade['preco_original'] ?? ''?>" oninput="calcular()">
                         </div>
                         <div class="oft-desconto">
-                            <input  type="number" placeholder="Desconto em R$" required
-                                    require="required" id="desconto" name="desconto"
-                                    value="<?php echo $entidade['desconto'] ?? ''?>">
+                            <input  type="number" placeholder="Desconto em %" required
+                                    require="required" id="desconto" name="desconto" min = "1" max="99"
+                                    value="<?php echo $entidade['desconto'] ?? ''?>" oninput="calcular()">
                         </div>
                         <div class="oft-prec-atual">
                             <input  type="number" placeholder="Preço atual em R$" required
                                     require="required" id="prec-atual" name="preco_atual"
-                                    value="<?php echo $entidade['preco_atual'] ?? ''?>">
+                                    value="<?php echo $entidade['preco_atual'] ?? ''?>" disabled>
                         </div>
                         <label for="categoria">Categoria</label>
                         <div class="oft-categoria">
@@ -128,6 +128,20 @@
             </div>
         </div>
         <?php include('../includes/footer.php'); ?>
-        <script src="../scripts/oferta_formulario.js"></script>
+        <script>
+            function calcular() {
+                var preco = document.getElementById('prec-orig');
+                var desconto = document.getElementById('desconto');
+                var novoPreco = document.getElementById('prec-atual');
+
+                if(desconto.value<=0){
+                    desconto.value = 1;
+                } else if(desconto.value>=100) {
+                    desconto.value = 99;
+                }
+
+                novoPreco.value = (((100 - desconto.value) * preco.value)/100).toFixed(2).toLocaleString('pt-BR');
+            }
+        </script>
     </body>
 </html>
