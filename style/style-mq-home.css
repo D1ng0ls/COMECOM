@@ -142,4 +142,8 @@ ul li.login_menu {
 		width: 80%;
 		display: flex;
 	}
+
+	.container_categoria {
+		height: 0px;
+	}
 }
