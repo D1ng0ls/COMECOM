@@ -142,10 +142,9 @@
     border: 1px solid var(--color-purple);
 }
 
-.filter input[type=submit] {
-    width: 24px;
-    height: 24px;
+#sendPrice {
     margin-top: 5px;
+    padding: 7px 14px;
     background: transparent;
     color: var(--color-purple);
     border: 1px solid var(--color-purple);
@@ -155,7 +154,7 @@
     margin-left: 10px;
 }
 
-.filter input[type=submit]:hover {
+#sendPrice {
     background-color: var(--color-purple);
     border: none;
     color: #fff;

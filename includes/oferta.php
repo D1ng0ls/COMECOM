@@ -5,12 +5,30 @@
             $$indice = limparDados($dado);
         }
 
+        foreach($_POST as $indice => $dado) {
+            $$indice = limparDados($dado);
+        }
+
         $data_atual = date('Y-m-d H:i:s');
         $data = new \DateTime(date('Y-m-d H:i:s'));
 
         $criterio = [
             ['data_oferta', '<=', $data_atual]
         ];
+
+        
+        if(!empty($minPrice) && $minPrice >0){
+            $criterio[] = [
+                'AND', 'preco_atual', '>=', $minPrice
+            ];
+        }
+
+        if(!empty($maxPrice) && $maxPrice >0){
+            $criterio[] = [
+                'AND', 'preco_atual', '<=', $maxPrice
+            ];
+        }
+        
 
         if(!empty($busca)) {
             $criterio[] = [

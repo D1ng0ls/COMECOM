@@ -5,15 +5,31 @@
         </svg>
         Filtrar por:
     </h3>
+    <?php
+          if($url == $elt) {
+            $action = "../../categoria/eletronicos";
+        } else if($url == $mrc) {
+            $action = "../../categoria/mercado";
+        }
+    ?>
+    <form  method="post">
     <div class="filter-price filter">
         <h4>Preço</h4>
         <label class="containerPrice">R$
-            <input type="text" maxlength="9" name="minPrice" id="minPrice" class="text" placeholder="Min.">
+            <input type="text" maxlength="9" name="minPrice" id="minPrice" class="text" placeholder="Min." value="<?php echo $minPrice ?? "" ?>">
         </label>
         <label class="containerPrice">R$
-            <input type="text" maxlength="9" name="maxPrice" id="maxPrice" class="text" placeholder="Max.">
+            <input type="text" maxlength="9" name="maxPrice" id="maxPrice" class="text" placeholder="Max." value="<?php echo $maxPrice ?? "" ?>">
         </label>
-        <input type="submit" name="sendPrice" id="sendPrice" value="Ir">
+        <input type="hidden" name="categoria" id="categoria" value="
+        <?php 
+            if($url == $elt) {
+                echo "eletronicos";
+            } else if($url == $mrc) {
+                echo "mercado";
+            }
+        ?>
+        ">
     </div>
     <div class="filter-store filter">
         <h4>Lojas</h4>
@@ -49,4 +65,7 @@
             }
         ?>
     </div>
+    
+    <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
+    </form>
 </div>
