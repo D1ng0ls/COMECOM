@@ -163,7 +163,7 @@ img.img2-navigator {
     margin-top: 60px;
     padding-bottom: 0;
     position: relative;
-    min-width: 1000px;
+    width: 100%;
 }
 
 .footerBackToTop {
@@ -192,7 +192,7 @@ img.img2-navigator {
 .footerVerticalColumn {
     display: table;
     margin: 0 auto;
-    max-width: 1000px;
+    width: min(100% - 0rem, 1000px);
 }
 
 .footerSpaceCol {

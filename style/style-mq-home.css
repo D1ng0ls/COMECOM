@@ -24,6 +24,10 @@ ul li.login_menu {
 @media screen and (max-width: 940px)
 {  
     /*Configurações do menu*/
+	.menu {
+		background-color: red;
+	}
+
 	ul
 	{
 		position: fixed;

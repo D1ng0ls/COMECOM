@@ -24,6 +24,11 @@ ul li.login_menu {
 @media screen and (max-width: 940px)
 {
 	/*Configurações do menu*/
+	.menu {
+		position: fixed;	
+		z-index: 5;
+	}
+
 	ul
 	{
 		position: fixed;
@@ -67,6 +72,8 @@ ul li.login_menu {
 		right: 5%;
 		top: 13px;
 		color: #fff;/*Mudar*/
+		z-index: 5;
+		position: fixed;
 	}
 
 	label
@@ -146,5 +153,9 @@ ul li.login_menu {
 	.container_search {
 		width: 80%;
 		display: flex;
+	}
+
+	.footerSpaceCol {
+		display: none;
 	}
 }
