@@ -22,7 +22,9 @@
             <?php include '../../includes/filters.php' ?>
         </div>
         <div class="container-right">
-                <?php include '../../includes/sort.php' ?>
+                <?php 
+                    include '../../includes/sort.php' 
+                ?>
                 <?php 
                     require_once '../../includes/funcoes.php';
                     require_once '../../core/conexao_mysql.php';
