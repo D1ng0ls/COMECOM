@@ -105,7 +105,9 @@
                     $foto_name = $_FILES['foto']['name'][$i];
                     $path_parts = pathinfo($foto_name);
                     $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
-                    $foto_name = $path_parts['filename'].time().".".$imageFileType;
+                    // $foto_name = $path_parts['filename'].time().".".$imageFileType;
+                    // $newFilePath = "../upload/user/dilma.jpg"; 
+                    $foto_name = $id_pessoa . "_" . $nome . "." . $imageFileType;
                     $newFilePath = "../upload/user/" . $foto_name;
                     if(move_uploaded_file($tmpFilePath, $newFilePath)) {
                         $fotos_name[] = $foto_name;
