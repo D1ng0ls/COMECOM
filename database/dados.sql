@@ -20,7 +20,7 @@ insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento
 ('fisica', 'StKIgAcmua', '46123731.81756412@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '55457941163'),
 ('fisica', 'SOABcpaDqx', '67837933.20530683@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '19678678523'),
 ('fisica', 'FMeZkyWshM', '62990986.027727485@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '23273856477'),
-('fisica', 'vMTkvrmycA', '95940606.1902659@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '97991369349')
+('fisica', 'vMTkvrmycA', '95940606.1902659@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '97991369349');
 
 /*pessoa jurídica*/
 insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento, qnt_lojas) values
