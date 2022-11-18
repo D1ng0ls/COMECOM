@@ -69,4 +69,15 @@
 
         return $instrucao;
     }
+
+    function group(string $entidade, array $campos, string $ordem = null, string $grupo) : string {
+        $instrucao = "SELECT DISTINCT " . implode(', ' ,$campos);
+        $instrucao .= " FROM {$entidade}";
+
+        if(!empty($ordem)) {
+            $instrucao .= " ORDER BY $ordem ";
+        }
+
+        return $instrucao;
+    }
 ?>

@@ -1,3 +1,40 @@
+<?php
+    require_once '../../includes/funcoes.php';
+    require_once '../../core/conexao_mysql.php';
+    require_once '../../core/sql.php';
+    require_once '../../core/mysql.php';
+
+    foreach($_GET as $indice => $dado) {
+        $$indice = limparDados($dado);
+    }
+
+    $data_atual = date('Y-m-d H:i:s');
+    $data = new \DateTime(date('Y-m-d H:i:s'));
+
+    $criterio = [];
+    $criterio = [['tipo_pessoa', '=', 'juridica']];
+
+
+    $posts = agrupar(
+        'oferta',
+        [   
+            'marca',
+        ],
+       'marca ASC',
+       "marca"
+    );
+
+    $result = buscar(
+        'pessoa',
+        [
+            'nome',
+        ],
+        $criterio,
+        'nome ASC'
+    );
+
+?>
+
 <div class="filtros">
     <h3>
         <svg style="color: var(--color-purple);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
@@ -33,37 +70,27 @@
     </div>
     <div class="filter-store filter">
         <h4>Lojas</h4>
-        
         <?php
-            $i=0;
-            while($i<4) {
-               $i++;
-               echo "
-               <label class='container'>
-                    <input type='checkbox' name='store' id='store' class='check' value='magazine-luiza'>
-                    Magazine Luiza
-                    <span class='checkmark'></span>
-                </label>
-                ";
-            }
+            foreach($result as $entidade):
         ?>
-        
+        <label class='container'>
+            <input type='checkbox' name='store' id='store' class='check' value='<?php echo $entidade['nome'] ?>'>
+            <?php echo $entidade['nome'] ?>
+            <span class='checkmark'></span>
+        </label>
+        <?php endforeach; ?>
     </div>
     <div class="filter-brand filter">
         <h4>Marcas</h4>
         <?php
-            $i=0;
-            while($i<6) {
-               $i++;
-               echo "
-               <label class='container'>
-                    <input type='checkbox' name='brand' id='brand' class='check' value='samsung'>
-                    Samsung
-                    <span class='checkmark'></span>
-                </label>
-                ";
-            }
+            foreach($posts as $post) :
         ?>
+        <label class='container'>
+            <input type='checkbox' name='store' id='store' class='check' value='<?php echo $post['marca'] ?>'>
+            <?php echo $post['marca'] ?>
+            <span class='checkmark'></span>
+        </label>
+        <?php endforeach; ?>
     </div>
     
     <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">

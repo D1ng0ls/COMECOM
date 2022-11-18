@@ -86,6 +86,4 @@ create table produto_categoria (
 	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
 );*/
 
-select * from oferta;	
-select * from pessoa;
-select * from publicacao;
+SELECT * FROM pessoa

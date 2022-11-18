@@ -196,4 +196,32 @@
 
         return $retorno;
     }
+
+    function agrupar(string $entidade, array $campos =['*'], string $ordem = null, string $grupo = null)  : array {
+        $retorno = false;
+
+        $instrucao = group($entidade, $campos, $ordem, $grupo);
+
+        $conexao = conecta();
+
+        $stmt = mysqli_prepare($conexao, $instrucao);
+
+        mysqli_stmt_execute($stmt);
+
+        if($result = mysqli_stmt_get_result($stmt)) {
+            $retorno = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+            mysqli_free_result($result);
+        }
+
+        $_SESSION['errors'] = mysqli_stmt_error_list($stmt);
+
+        mysqli_stmt_close($stmt);
+
+        desconecta($conexao);
+
+        $retorno = $retorno;
+
+        return $retorno;
+    }
 ?>
