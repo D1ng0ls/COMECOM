@@ -144,7 +144,7 @@
 
 #sendPrice {
     margin-top: 5px;
-    padding: 7px 14px;
+    padding: 12px 18px;
     background: transparent;
     color: var(--color-purple);
     border: 1px solid var(--color-purple);
@@ -152,12 +152,20 @@
     cursor: pointer;
     transition: all 0.3s;
     margin-left: 10px;
+    font-weight: 700;
 }
 
 #sendPrice {
     background-color: var(--color-purple);
-    border: none;
+    border: 1px solid transparent;
     color: #fff;
+    transition: all 0.2s;
+}
+
+#sendPrice:hover {
+    background-color: #fff;
+    border: 1px solid var(--color-purple);
+    color: var(--color-purple);
     transition: all 0.2s;
 }
 
@@ -215,6 +223,11 @@
 
 .ordenador2 {
     display: flex;
+}
+
+.ordenador2 input {
+    padding: 6px 12px !important;
+    margin: 0 13px 0 0!important;
 }
 
 .containerPrice {

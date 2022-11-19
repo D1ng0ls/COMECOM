@@ -130,18 +130,10 @@
         <script>
             function calcular() {
                 var preco = document.getElementById('prec-orig');
-                var preco2 = Number(document.getElementById('prec-orig').value);
                 var desconto = document.getElementById('desconto');
                 var novoPreco = document.getElementById('prec-atual');
 
-                if(desconto.value<=0){
-                    desconto.value = 1;
-                } else if(desconto.value>=100) {
-                    desconto.value = 99;
-                }
-
                 novoPreco.value = (((100 - desconto.value) * preco.value)/100).toFixed(2);
-                preco.value = preco2.toFixed(2);
             }
         </script>
     </body>

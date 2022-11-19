@@ -28,6 +28,7 @@
         'pessoa',
         [
             'nome',
+            'id_pessoa',
         ],
         $criterio,
         'nome ASC'
@@ -49,7 +50,7 @@
             $action = "../../categoria/mercado";
         }
     ?>
-    <form  method="post">
+    <form method="post">
     <div class="filter-price filter">
         <h4>Preço</h4>
         <label class="containerPrice">R$
@@ -74,7 +75,7 @@
             foreach($result as $entidade):
         ?>
         <label class='container'>
-            <input type='checkbox' name='store' id='store' class='check' value='<?php echo $entidade['nome'] ?>'>
+            <input type='checkbox' name='store' id='store' class='check' value='<?php echo $entidade['id_pessoa'] ?>'>
             <?php echo $entidade['nome'] ?>
             <span class='checkmark'></span>
         </label>
@@ -86,7 +87,7 @@
             foreach($posts as $post) :
         ?>
         <label class='container'>
-            <input type='checkbox' name='store' id='store' class='check' value='<?php echo $post['marca'] ?>'>
+            <input type='checkbox' name='mark' id='mark' class='check' value='<?php echo $post['marca'] ?>'>
             <?php echo $post['marca'] ?>
             <span class='checkmark'></span>
         </label>

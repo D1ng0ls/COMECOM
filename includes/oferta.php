@@ -1,6 +1,8 @@
 <!-- Bruh -->
 <div>
     <?php
+        $order = null;
+    
         foreach($_GET as $indice => $dado) {
             $$indice = limparDados($dado);
         }
@@ -13,7 +15,11 @@
         $data = new \DateTime(date('Y-m-d H:i:s'));
 
         $criterio = [
-            ['data_oferta', '<=', $data_atual]
+            ['inicio_oferta', '<=', $data_atual]
+        ];
+
+        $criterio[] = [
+            'AND', 'termino_oferta', '>=', $data_atual
         ];
 
         
@@ -28,7 +34,18 @@
                 'AND', 'preco_atual', '<=', $maxPrice
             ];
         }
-        
+
+        if(!empty($store)){
+            $criterio[] = [
+                'AND', 'id_pessoa', '=', $store
+            ];
+        }
+
+        if(!empty($mark)){
+            $criterio[] = [
+                'AND', 'marca', '=', $mark
+            ];
+        }
 
         if(!empty($busca)) {
             $criterio[] = [
@@ -37,6 +54,18 @@
                 'like', 
                 "%{$busca}%"
             ];
+        }
+
+        if (!empty($order) && $order == "-new"){
+            $ordenar = "data_oferta DESC";
+        } else if ($order == "+new"){
+            $ordenar = "data_oferta ASC";
+        } else if ($order == "-price"){
+            $ordenar = "preco_atual DESC";
+        } else if ($order == "+price"){
+            $ordenar = "preco_atual ASC";
+        } else {
+            $ordenar = "data_oferta DESC";
         }
 
         $posts = buscar (
@@ -58,7 +87,7 @@
                     where id_pessoa = oferta.id_pessoa) as nome'
             ],
             $criterio,
-            'data_oferta DESC'
+            $ordenar
         );
     ?>
     <div class="main">
