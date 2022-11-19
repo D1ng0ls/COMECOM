@@ -293,9 +293,21 @@ div.foto input[type='file'] {
     padding: 0 20px;
 }
 
-.container-form ul li{
+.container-form ul {
+    margin: 0 40px;
+}
+
+.container-form ul>li{
     list-style-type: square;
     padding: 0;
+}
+
+.container-form ul>li ul{
+    margin: 0 20px 10px;
+}
+
+.container-form ul>li ul>li {
+    list-style-type: circle;
 }
 
 .input-user2 {

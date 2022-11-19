@@ -88,7 +88,7 @@
                 <div class="input-user foto-user input-left">
                     <div class="foto">
                         <label>Alterar Foto</label>
-                        <input type="file" id="foto" name="foto[]" accept="image/*" >
+                        <input type="file" id="foto" name="foto[]" accept="image/*" value="">
                         <label for="foto">
                             <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
                                 <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">

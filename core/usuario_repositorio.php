@@ -116,6 +116,8 @@
             }
 
             $id_pessoa = (int)$id_pessoa;
+
+            if(empty($fotos_name)) {
             $dados = [
                 'tipo_pessoa' => $tipo_pessoa,
                 'nome' => $nome,
@@ -123,9 +125,20 @@
                 'cidade' => $cidade,
                 'telefone' => $telefone,
                 'documento' => $documento,
-                'qnt_lojas' => $qnt_lojas,
-                'foto_nome_pessoa' => implode(";", $fotos_name)
+                'qnt_lojas' => $qnt_lojas
             ];
+            } else {
+                $dados = [
+                    'tipo_pessoa' => $tipo_pessoa,
+                    'nome' => $nome,
+                    'email' => $email,
+                    'cidade' => $cidade,
+                    'telefone' => $telefone,
+                    'documento' => $documento,
+                    'qnt_lojas' => $qnt_lojas,
+                    'foto_nome_pessoa' => implode(";", $fotos_name)
+                ];
+            }
 
             $criterio = [
                 ['id_pessoa', '=', $id_pessoa]
