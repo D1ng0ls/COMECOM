@@ -19,13 +19,6 @@ create table pessoa (
     primary key (id_pessoa)
 );
 
-/*create table produto (
-	id_produto int not null auto_increment,
-    nome varchar(100),
-    foto_nome_prod varchar(1000),
-    primary key (id_produto)
-);*/
-
 create table publicacao (
 	id_publicacao int not null auto_increment,
     id_pessoa int,
@@ -50,40 +43,17 @@ create table oferta (
     data_oferta datetime not null default current_timestamp,
     titulo varchar (255) not null,
     texto text not null,
-    inicio_oferta date null,
-    termino_oferta date null,
+    inicio_oferta date,
+    termino_oferta date,
 	preco_original double null,
     desconto double null,
     preco_atual double null,
     foto_nome_oferta varchar(1000) null,
     primary key (id_oferta),
-	/*fk_produto_id_produto int null,
-	constraint 	fk_oferta_produto 
-		foreign key (fk_produto_id_produto)
-        references produto (id_produto)
-        on delete cascade on update cascade,*/
 	categoria varchar(20) null,
     marca varchar(20) null
 );
 
-/*create table categoria (
-	id_categoria int not null auto_increment,
-    nome varchar(100) not null,
-    primary key (id_categoria)
-);
-
-create table produto_categoria (
-	fk_categoria_id_categoria int,
-    fk_produto_id_produto_categoria int,
-	constraint fk_produto_categoria
-		foreign key (fk_categoria_id_categoria) 
-        references categoria (id_categoria)
-        on delete cascade on update cascade,
-	constraint 	fk_categoria_produto
-		foreign key (fk_produto_id_produto_categoria)
-        references produto (id_produto)
-        on delete cascade on update cascade,
-	primary key (fk_categoria_id_categoria, fk_produto_id_produto_categoria)
-);*/
-
-SELECT * FROM pessoa
+SELECT * FROM pessoa;
+SELECT * FROM oferta;
+SELECT * FROM publicacao;
