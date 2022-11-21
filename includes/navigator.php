@@ -4,7 +4,7 @@
             <div class="logo">
                 <a href="
                     <?php 
-                        if($url == $pgu || $url == $sct || $url == $users) { 
+                        if($url == $pgu || $url == $sct || $url == $dct || $url == $users) { 
                             echo url2(); 
                         } else { 
                             echo url($url, $com, $home);} 
@@ -13,7 +13,7 @@
                 </a>
                 <a href="
                     <?php 
-                        if($url == $pgu || $url == $sct || $url == $users) { 
+                        if($url == $pgu || $url == $sct || $url == $dct || $url == $users) { 
                             echo url2(); 
                         } else { 
                             echo url($url, $com, $home);} 

@@ -328,3 +328,7 @@ div.foto input[type='file'] {
 .salvar-user2 input {
     margin: 0;
 }
+
+.cr-boundary {
+    margin-left: 0!important;
+}
