@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
     <head>
-        <?php include('includes/settings.php'); ?>
+        <?php
+            include('includes/settings.php');
+            if(!isset($_SESSION['login'])){
+                header("Location: login.php");
+                exit();
+            }
+        ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +27,7 @@
                 if($_SESSION['login']['pessoa']['adm'] !== 1) {
                     header('Location: ../COMECOM');
                 }
-                if(!isset($_SESSION['login'])){
-                    header("Location: login.php");
-                    exit();
-                } 
+                
             ?>
         </div>
         <div class="container-users">

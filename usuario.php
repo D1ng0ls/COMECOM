@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <?php include('includes/settings.php'); ?>
+    <?php
+        include('includes/settings.php');
+        if(!isset($_SESSION['login'])){
+            header("Location: login.php");
+            exit();
+        }
+    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +15,8 @@
     <link rel="stylesheet" href="style/style-navegador.css">
     <link rel="stylesheet" href="style/style-usuario.css">
     <link rel="stylesheet" href="style/style-mq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+    <script src="croppie.js"></script>
     <title>COMECOM | <?php echo $_SESSION['login']['pessoa']['nome'] ?></title>
 </head>
 
@@ -50,7 +58,6 @@
             $data = date_format($data, 'd/m/Y');
         endforeach;                               
     ?>
-    
 
     <div class="container-user">
         <div class="navigator-user">
@@ -88,12 +95,12 @@
                 <div class="input-user foto-user input-left">
                     <div class="foto">
                         <label>Alterar Foto</label>
-                        <input type="file" id="foto" name="foto[]" accept="image/*" value="">
+                        <input type="file" id="foto" name="foto[]" accept="image/*" value="<?php echo $imagem_nome ?>">
                         <label for="foto">
                             <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
                                 <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
                             <?php else : ?>
-                                <img src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
+                                <img id="preview" src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
                             <?php endif; ?>
                         </label>
                     </div>
@@ -154,7 +161,13 @@
                 i=0;
             }
         }
-    </script>    
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+
+    <script src="scripts/custom.js"></script>
+
 </body>
 
 </html>

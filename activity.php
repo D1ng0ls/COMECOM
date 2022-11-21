@@ -10,15 +10,14 @@
     <link rel="stylesheet" href="style/style-mq.css">
     <link rel="stylesheet" href="style/style-activity.css">
     <title>COMECOM | Atividade</title>
-    <?php include('includes/settings.php'); ?>
+    <?php
+        include('includes/settings.php');
+        if(!isset($_SESSION['login'])){
+            header("Location: login.php");
+            exit();
+        }
+    ?>
 </head>
-
-<?php
-    if(!isset($_SESSION['login'])){
-        header("Location: login.php");
-        exit();
-    }
-?>
 
 <?php
     require_once 'includes/funcoes.php';

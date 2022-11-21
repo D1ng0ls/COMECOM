@@ -39,7 +39,7 @@
             return "../../";
         } else if($url == $GLOBALS['oft']) {
             return "../";
-        } {
+        } else {
             return "/COMECOM/";
         }
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php 
+<?php
     require_once 'includes/funcoes.php';
     require_once 'core/conexao_mysql.php';
     require_once 'core/sql.php';
@@ -47,8 +47,14 @@
         <link rel="stylesheet" href="style/style-navegador.css">
         <link rel="stylesheet" href="style/style-categorias.css">
         <link rel="stylesheet" href="style/style-mq.css">
-        <?php include('includes/settings.php') ?>
-        <title>COMECOM | </title>
+        <?php
+            include('includes/settings.php'); 
+            if(!isset($_SESSION['login'])){
+                header("Location: login.php");
+                exit();
+            }
+        ?>
+        <title>COMECOM | <?php echo $post['titulo'] ?></title>
     </head>
     <body>
         <?php include 'includes/navigator.php'; ?>

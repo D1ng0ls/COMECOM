@@ -95,6 +95,21 @@
 
             break;
         case 'update':
+            $foto = filter_input(INPUT_POST, 'foto', FILTER_DEFAULT);
+            // //var_dump($imagem);
+    
+            // // Separa as informações da imagem base64 pelo ";"
+            // list($type, $foto) = explode(';', $foto);
+            // list(, $foto) = explode(',', $foto);
+    
+            // // Desconverter a imagem base64
+            // $foto = base64_decode($foto);
+    
+            // // Atribuir a extensão da imagem PNG
+            // $imagem_nome = time() . '.png';
+
+            // file_put_contents('../upload/user' . $imagem_nome, $imagem);
+
             $fotos_name = array();
             $fotos = array_filter($_FILES['foto']['name']); 
             $total_count = count($_FILES['foto']['name']);

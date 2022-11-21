@@ -74,6 +74,15 @@ tr td {
     padding: 8px;
 }
 
+tbody tr{
+    cursor: default;
+}
+
+tbody tr:hover{
+    background-color: #000000!important;
+    color: white;
+}
+
 #down {
     background-color: #ff4444;
     padding: 5px 11.14px;

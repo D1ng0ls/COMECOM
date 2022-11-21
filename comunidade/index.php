@@ -44,11 +44,11 @@
         <hr style="width: 25%; margin: auto; margin-top: 20px; margin-bottom: 20px;">
         <?php include("../includes/posts.php") ?>
     <?php else : ?>
-        <hr style="width: 30%; margin-top: 60px;">
+        <hr style="width: 30%; margin: auto; margin-top: 60px; margin-bottom: 20px;">
         <h2 align="center" style="color: #34345c;">
             [<a href="../login.php" class="botaoTOP">Faça Login para Visualizar a Comunidade</a>]
         </h2>
-        <hr style="width: 30%;">
+        <hr style="width: 30%; margin: auto; margin-top: 20px;">
     <?php endif; ?>
 
     <?php include('../includes/footer.php'); ?>
