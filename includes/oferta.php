@@ -18,34 +18,34 @@
             ['inicio_oferta', '<=', $data_atual]
         ];
 
-        // $criterio[] = [
-        //     'AND', 'termino_oferta', '>=', $data_atual
-        // ];
+        $criterio[] = [
+            'AND', 'termino_oferta', '>=', $data_atual
+        ];
 
         
-        // if(!empty($minPrice) && $minPrice >0){
-        //     $criterio[] = [
-        //         'AND', 'preco_atual', '>=', $minPrice
-        //     ];
-        // }
+        if(!empty($minPrice) && $minPrice >0){
+            $criterio[] = [
+                'AND', 'preco_atual', '>=', $minPrice
+            ];
+        }
 
-        // if(!empty($maxPrice) && $maxPrice >0){
-        //     $criterio[] = [
-        //         'AND', 'preco_atual', '<=', $maxPrice
-        //     ];
-        // }
+        if(!empty($maxPrice) && $maxPrice >0){
+            $criterio[] = [
+                'AND', 'preco_atual', '<=', $maxPrice
+            ];
+        }
 
-        // if(!empty($store)){
-        //     $criterio[] = [
-        //         'AND', 'id_pessoa', '=', $store
-        //     ];
-        // }
+        if(!empty($store)){
+            $criterio[] = [
+                'AND', 'id_pessoa', '=', $store
+            ];
+        }
 
-        // if(!empty($mark)){
-        //     $criterio[] = [
-        //         'AND', 'marca', '=', $mark
-        //     ];
-        // }
+        if(!empty($mark)){
+            $criterio[] = [
+                'AND', 'marca', '=', $mark
+            ];
+        }
 
         if(!empty($busca)) {
             $criterio[] = [
@@ -56,17 +56,17 @@
             ];
         }
 
-        // if (!empty($order) && $order == "-new"){
-        //     $ordenar = "data_oferta DESC";
-        // } else if ($order == "+new"){
-        //     $ordenar = "data_oferta ASC";
-        // } else if ($order == "-price"){
-        //     $ordenar = "preco_atual DESC";
-        // } else if ($order == "+price"){
-        //     $ordenar = "preco_atual ASC";
-        // } else {
-        //     $ordenar = "data_oferta DESC";
-        // }
+        if (!empty($order) && $order == "-new"){
+            $ordenar = "data_oferta DESC";
+        } else if ($order == "+new"){
+            $ordenar = "data_oferta ASC";
+        } else if ($order == "-price"){
+            $ordenar = "preco_atual DESC";
+        } else if ($order == "+price"){
+            $ordenar = "preco_atual ASC";
+        } else {
+            $ordenar = "data_oferta DESC";
+        }
 
         $posts = buscar (
             'oferta',
@@ -87,7 +87,7 @@
                     where id_pessoa = oferta.id_pessoa) as nome'
             ],
             $criterio,
-            // $ordenar
+            $ordenar
         );
     ?>
     <div class="main">
