@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="style/style-navegador.css">
     <link rel="stylesheet" href="style/style-usuario.css">
     <link rel="stylesheet" href="style/style-mq.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
-    <script src="croppie.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css"> -->
     <title>COMECOM | <?php echo $_SESSION['login']['pessoa']['nome'] ?></title>
 </head>
 
@@ -86,6 +85,7 @@
                 <h1 id="info">Informações pessoais</h1>
                 <p>Gerencie seus dados no site</p>
             </div>
+            
             <form action="core/usuario_repositorio.php" method="post" enctype="multipart/form-data">
                 <h5>Informação pessoal - Pessoa <?php echo $_SESSION['login']['pessoa']['tipo_pessoa'] ?></h5>
                 <hr>
@@ -93,18 +93,18 @@
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                 <input type="hidden" name="tipo_pessoa" value="<?php echo $_SESSION['login']['pessoa']['tipo_pessoa'] ?>">
                 <div class="input-user foto-user input-left">
-                    <div class="foto">
-                        <label>Alterar Foto</label>
-                        <input type="file" id="foto" name="foto[]" accept="image/*" value="<?php echo $imagem_nome ?>">
-                        <label for="foto">
-                            <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
-                            <?php else : ?>
-                                <img id="preview" src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
-                            <?php endif; ?>
-                        </label>
-                    </div>
+                <div class="foto">
+                    <label>Alterar Foto</label>
+                    <input type="file" id="foto" name="foto[]" accept="image/*" value="<?php echo $imagem_nome ?>">
+                    <label for="foto">
+                        <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
+                            <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
+                        <?php else : ?>
+                            <img id="preview" src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
+                        <?php endif; ?>
+                    </label>
                 </div>
+            </div>
                 <div class="input-user nome-user">
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" value="<?php echo $_SESSION['login']['pessoa']['nome'] ?>" required="required">
@@ -161,12 +161,19 @@
                 i=0;
             }
         }
+
+        foto.onchange = evt => {
+            const [file] = foto.files
+            if (file) {
+                preview.src = URL.createObjectURL(file)
+            }
+            }
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script> -->
 
-    <script src="scripts/custom.js"></script>
+    <!-- <script src="scripts/custom.js"></script> -->
 
 </body>
 

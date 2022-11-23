@@ -94,22 +94,25 @@
             }
 
             break;
-        case 'update':
-            $foto = filter_input(INPUT_POST, 'foto', FILTER_DEFAULT);
+        // case 'update_foto':
+            // //$foto = filter_input(INPUT_POST, 'imagem', FILTER_DEFAULT);
             // //var_dump($imagem);
-    
+
             // // Separa as informações da imagem base64 pelo ";"
-            // list($type, $foto) = explode(';', $foto);
-            // list(, $foto) = explode(',', $foto);
+            // list($type, $imagem) = explode(';', $imagem);
+            // list(, $imagem) = explode(',', $imagem);
     
             // // Desconverter a imagem base64
-            // $foto = base64_decode($foto);
+            // $imagem = base64_decode($imagem);
     
             // // Atribuir a extensão da imagem PNG
             // $imagem_nome = time() . '.png';
 
-            // file_put_contents('../upload/user' . $imagem_nome, $imagem);
+            // file_put_contents('../upload/user/' . $imagem_nome, $imagem);
 
+            // echo $imagem_nome;
+            // break;
+        case 'update':
             $fotos_name = array();
             $fotos = array_filter($_FILES['foto']['name']); 
             $total_count = count($_FILES['foto']['name']);
@@ -120,8 +123,6 @@
                     $foto_name = $_FILES['foto']['name'][$i];
                     $path_parts = pathinfo($foto_name);
                     $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
-                    // $foto_name = $path_parts['filename'].time().".".$imageFileType;
-                    // $newFilePath = "../upload/user/dilma.jpg"; 
                     $foto_name = $id_pessoa . "_" . $nome . "." . $imageFileType;
                     $newFilePath = "../upload/user/" . $foto_name;
                     if(move_uploaded_file($tmpFilePath, $newFilePath)) {
@@ -299,5 +300,5 @@
             
             break;
     }
-    header('Location: ../');
+  //  header('Location: ../');
 ?>

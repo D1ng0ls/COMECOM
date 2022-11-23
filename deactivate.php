@@ -49,7 +49,7 @@
             <form action="core/usuario_repositorio.php" method="POST">
                 <input type="hidden" name="acao" value="apagar">
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
-                <div class="input-user input-user2 nome-user" style="margin-top: 20px;">
+                <div class="input-user input-user2 nome-user" style="margin-top: 10px;">
                     <input type="text" id="desativar" required="required" placeholder="Desativar" oninput="abre()">
                 </div>
                 <div class="input-user input-user2 nome-user">

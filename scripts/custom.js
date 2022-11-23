@@ -40,9 +40,10 @@ $('.btn-upload-imagem').on('click', function () {
     }).then(function (img){
         // Enviar os dados para um arquivo PHP
         $.ajax({
-            url: "upload.php", // Enviar os dados para o arquivo upload.php
+            url: "core/usuario_repositorio.php", // Enviar os dados para o arquivo upload.php
             type: "POST", // Método utilizado para enviar os dados
             data: { // Dados que deve ser enviado
+                "acao": 'update',
                 "imagem": img
             },
             success: function(){
