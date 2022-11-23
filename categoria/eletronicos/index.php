@@ -22,7 +22,7 @@
             <?php include '../../includes/filters.php' ?>
         </div>
         <div class="container-right">
-                <?php 
+            <?php 
                     include '../../includes/sort.php' 
                 ?>
                 <?php 

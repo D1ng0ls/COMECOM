@@ -290,7 +290,15 @@ div.foto input[type='file'] {
     color: #454545;
     font-size: 14px;
     line-height: 1.5;
-    padding: 0 20px;
+    padding: 0px 20px 5px;
+}
+
+.container-tricks p {
+    padding: 10px 20px;
+}
+
+.container-form p {
+    padding: 10px 20px;
 }
 
 .container-form ul {

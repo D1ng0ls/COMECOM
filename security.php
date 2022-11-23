@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-navegador.css">
     <link rel="stylesheet" href="style/style-usuario.css">
+    <link rel="stylesheet" href="style/style-mq.css">
     <title>COMECOM | <?php echo $_SESSION['login']['pessoa']['nome'] ?></title>
 </head>
 
