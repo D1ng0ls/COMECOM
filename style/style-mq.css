@@ -158,4 +158,60 @@ ul li.login_menu {
 	.footerSpaceCol {
 		/* display: none; */
 	}
+
+	.ordenador2 {
+		background-color: red;
+	}
+
+	.ordenador {
+		background-color: yellow;
+	}
+
+	.filtros {
+		background-color: purple;
+	}
+
+	.container-left {
+		width: 25%;
+	}
+
+	.container-right {
+		width: 75%;
+	}
+
+	.btn_filtrar {
+		border: 1px solid black;
+		padding: 5px;
+		cursor: pointer;
+	}	
+
+	.topnav .icon {
+		display: none;
+	}
+
+	.topnav .filtros:not(:first-child) {
+		display: none;
+	}
+
+  	.topnav a.icon {
+    float: right;
+    display: block;
+  	}
+
+	.topnav.responsive {
+		position: relative;
+	}
+
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.topnav.responsive .filtros a.icon {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
 }
