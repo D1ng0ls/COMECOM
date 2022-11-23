@@ -168,7 +168,7 @@
         $conexao = conecta();
 
         $stmt = mysqli_prepare($conexao, $instrucao);
-
+        
         if(isset($tipo)) {
             $comando = 'mysqli_stmt_bind_param($stmt,';
             $comando .= "'" . implode('', $tipo). "'";

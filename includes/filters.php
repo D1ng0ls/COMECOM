@@ -72,10 +72,13 @@
     <div class="filter-store filter">
         <h4>Lojas</h4>
         <?php
+            $ctd = 0;
             foreach($result as $entidade):
+                $ctd++;
+                $chkid = "store".$ctd;
         ?>
         <label class='container'>
-            <input type='checkbox' name='store' id='store' class='check' value='<?php echo $entidade['id_pessoa'] ?>'>
+            <input type='checkbox' name="<?php echo $chkid?>" id="<?php echo $chkid?>" class='check' value='<?php echo $entidade['id_pessoa'] ?>'>
             <?php echo $entidade['nome'] ?>
             <span class='checkmark'></span>
         </label>
@@ -95,5 +98,4 @@
     </div>
     
     <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
-    </form>
 </div>

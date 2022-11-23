@@ -22,6 +22,8 @@ insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento
 ('fisica', 'FMeZkyWshM', '62990986.027727485@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '23273856477'),
 ('fisica', 'vMTkvrmycA', '95940606.1902659@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '97991369349');
 
+select*from pessoa where tipo_pessoa = 'juridica';
+
 /*pessoa jurídica*/
 insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento, qnt_lojas) values
 ('juridica', 'HVKCEkxIoj', '89973002.99630097@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '90489500040','13'),

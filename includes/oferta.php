@@ -35,17 +35,31 @@
             ];
         }
 
-        if(!empty($store)){
-            $criterio[] = [
-                'AND', 'id_pessoa', '=', $store
-            ];
+        $i=0;
+
+        for($ctd=1;$ctd<=20;$ctd++){
+            $store = 'store'.$ctd;
+            if(!empty($$store)){
+
+                if($i == 0) {
+                    $criterio[] = [
+                        'AND', 'id_pessoa', '=', $$store
+                    ];
+                    $i=1;
+                } else {
+                    $criterio[] = [
+                        'OR', 'id_pessoa', '=', $$store
+                    ];
+                }
+            }
         }
+
 
         if(!empty($mark)){
             $criterio[] = [
                 'AND', 'marca', '=', $mark
             ];
-        }
+        }        
 
         if(!empty($busca)) {
             $criterio[] = [
