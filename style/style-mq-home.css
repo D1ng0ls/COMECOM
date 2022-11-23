@@ -150,4 +150,8 @@ ul li.login_menu {
 	.container_categoria {
 		height: 0px;
 	}
+
+	.ordenador2 {
+		background-color: red;
+	}
 }
