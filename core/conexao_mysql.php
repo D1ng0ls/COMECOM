@@ -5,11 +5,7 @@
     {
         $servidor = 'localhost';
         $banco = 'comecom';
-<<<<<<< HEAD
         $port = 3307;// 3306
-=======
-        $port = 3307;// 3307
->>>>>>> e3859b7128a4c92607c07047bfaecc6cacf6db12
         $usuario = 'root';
         $senha = '';
         $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);
