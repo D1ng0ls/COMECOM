@@ -5,19 +5,6 @@
         </svg>
          Ordenar por:
     </h3>
-<<<<<<< HEAD
-    <div class="ordenador2">
-        <div class="filter-order filter">
-            <label class="container2">
-                Ordenar:
-                <select class="select" name="order" id="order">
-                    <option value="-new">Recentes</option>
-                    <option value="+new">Antigos</option>
-                    <option value="+price">Preço Crescente</option>
-                    <option value="-price">Preço Decrescente</option>
-                </select>
-            </label>
-=======
     <form method="post">
         <div class="ordenador2">
             <div class="filter-order filter">
@@ -57,7 +44,6 @@
                     <?php endif ?>
                 </label>
             </div>
->>>>>>> 512ec28047129e5555631156f5d18812009d5c08
         </div>
     </form>
 </div>

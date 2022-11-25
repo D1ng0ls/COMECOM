@@ -100,6 +100,7 @@
                 <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
         </form>
     </div>
+<<<<<<< HEAD
 
     <div class="filter-store filter">
         <h4>Lojas</h4>
@@ -131,3 +132,19 @@
     
     <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
 </div>
+=======
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+    }
+</script>
+>>>>>>> ecae642de232964f85e7652feb8031a7a2f757cb
