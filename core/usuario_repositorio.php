@@ -300,5 +300,5 @@
             
             break;
     }
-  //  header('Location: ../');
+   header('Location: ../');
 ?>

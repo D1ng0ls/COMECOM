@@ -28,7 +28,11 @@ insert into oferta (id_pessoa, data_oferta, titulo, texto, inicio_oferta, termin
 ('32', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '32_eletronicos.webp', 'eletronicos', 'SAMSUNG'),
 ('33', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+<<<<<<< HEAD
 						'80', '33_eletronicos.webp', 'eletronicos', 'SAMSUMG'),
+=======
+						'80', '33_eletronicos.webp', 'eletronicos', 'SAMSUNG'),
+>>>>>>> ab4402be15be41376c6de00f778c3b584fc5b78e
 ('34', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '34_eletronicos.webp', 'eletronicos', 'LG'),
 ('35', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
@@ -36,7 +40,11 @@ insert into oferta (id_pessoa, data_oferta, titulo, texto, inicio_oferta, termin
 ('36', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '36_eletronicos.webp', 'eletronicos', 'LG'),
 ('37', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+<<<<<<< HEAD
 						'80', '37_eletronicos.webp', 'eletronicos', 'SAMSUMG'),
+=======
+						'80', '37_eletronicos.webp', 'eletronicos', 'SAMSUNG'),
+>>>>>>> ab4402be15be41376c6de00f778c3b584fc5b78e
 ('38', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '38_eletronicos.png', 'eletronicos', 'SAMSUNG'),
 ('39', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',

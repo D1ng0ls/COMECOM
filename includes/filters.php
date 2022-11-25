@@ -54,52 +54,67 @@
             }
         ?>
         <form method="post">
-            <div class="teste">
-                <div class="filter-price filter">
-                    <h4>Preço</h4>
-                    <label class="containerPrice">R$
-                        <input type="text" maxlength="9" name="minPrice" id="minPrice" class="text" placeholder="Min." value="<?php echo $minPrice ?? "" ?>">
-                    </label>
-                    <label class="containerPrice">R$
-                        <input type="text" maxlength="9" name="maxPrice" id="maxPrice" class="text" placeholder="Max." value="<?php echo $maxPrice ?? "" ?>">
-                    </label>
-                    <input type="hidden" name="categoria" id="categoria" value="
-                    <?php 
-                        if($url == $elt) {
-                            echo "eletronicos";
-                        } else if($url == $mrc) {
-                            echo "mercado";
-                        }
-                    ?>
-                    ">
-                </div>
-                <div class="filter-store filter">
-                    <h4>Lojas</h4>
-                    <?php
-                        foreach($result as $entidade):
-                    ?>
-                    <label class='container'>
-                        <input type='checkbox' name='store' id='store' class='check' value='<?php echo $entidade['id_pessoa'] ?>'>
-                        <?php echo $entidade['nome'] ?>
-                        <span class='checkmark'></span>
-                    </label>
-                    <?php endforeach; ?>
-                </div>
-                <div class="filter-brand filter">
-                    <h4>Marcas</h4>
-                    <?php
-                        foreach($posts as $post) :
-                    ?>
-                    <label class='container'>
-                        <input type='checkbox' name='mark' id='mark' class='check' value='<?php echo $post['marca'] ?>'>
-                        <?php echo $post['marca'] ?>
-                        <span class='checkmark'></span>
-                    </label>
-                    <?php endforeach; ?>
-                </div>
-                
-                <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
-            </div>
+            <input type="checkbox2" id="check2">
+            <label for="check2" class="menu_btn2">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li>
+                    <div class="filter-price filter">
+                        <h4>Preço</h4>
+                        <label class="containerPrice">R$
+                            <input type="text" maxlength="9" name="minPrice" id="minPrice" class="text" placeholder="Min." value="<?php echo $minPrice ?? "" ?>">
+                        </label>
+                        <label class="containerPrice">R$
+                            <input type="text" maxlength="9" name="maxPrice" id="maxPrice" class="text" placeholder="Max." value="<?php echo $maxPrice ?? "" ?>">
+                        </label>
+                        <input type="hidden" name="categoria" id="categoria" value="
+                                                                                        <?php 
+                                                                                            if($url == $elt) {
+                                                                                                echo "eletronicos";
+                                                                                            } else if($url == $mrc) {
+                                                                                                echo "mercado";
+                                                                                            }
+                                                                                        ?>
+                                                                                    ">
+                    </div>
+                </li>   
+                <li>                                                                                     
+                    <div class="filter-store filter">
+                        <h4>Lojas</h4>
+                        <?php
+                            foreach($result as $entidade):
+                        ?>
+                        <label class='container'>
+                            <input type='checkbox' name='store' id='store' class='check' value='<?php echo $entidade['id_pessoa'] ?>'>
+                            <?php echo $entidade['nome'] ?>
+                            <span class='checkmark'></span>
+                        </label>
+                        <?php endforeach; ?>
+                    </div>
+                </li>
+                <li>
+                    <div class="filter-brand filter">
+                        <h4>Marcas</h4>
+                        <?php
+                            foreach($posts as $post) :
+                        ?>
+                        <label class='container'>
+                            <input type='checkbox' name='mark' id='mark' class='check' value='<?php echo $post['marca'] ?>'>
+                            <?php echo $post['marca'] ?>
+                            <span class='checkmark'></span>
+                        </label>
+                        <?php endforeach; ?>
+                    </div>
+                </li>
+                <li>
+                    <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
+                </li>
+            </ul>
         </form>
     </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> ab4402be15be41376c6de00f778c3b584fc5b78e
