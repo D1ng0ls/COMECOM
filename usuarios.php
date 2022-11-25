@@ -7,6 +7,9 @@
                 header("Location: login.php");
                 exit();
             }
+            if($_SESSION['login']['pessoa']['adm'] !== 1) {
+                header('Location: ../COMECOM');
+            }
         ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,16 +23,10 @@
     </head>
 
     <body>
-        <div>
-            <?php
-                include 'includes/navigator.php';
-                include 'includes/valida_login.php';
-                if($_SESSION['login']['pessoa']['adm'] !== 1) {
-                    header('Location: ../COMECOM');
-                }
-                
-            ?>
-        </div>
+        <?php
+            include 'includes/navigator.php';
+            include 'includes/valida_login.php';
+        ?>
         <div class="container-users">
             <div class="title-page">
                 <div class="container-title-page-1">
@@ -96,23 +93,23 @@
                                 $data_t = date_format($data, 'd/m/Y');
                                 $hora = date_format($data, 'H:i');
                         ?>
-                        <tr>
-                            <td><?php echo $entidade['id_pessoa']?></td>
-                            <td><?php echo $entidade['nome'] ?></td>
-                            <td><?php echo $entidade['email'] ?></td>
-                            <td><?php echo $data_t.' às '.$hora ?></td>
-                            <td><a href="core/usuario_repositorio.php?acao=status&id_pessoa=<?php echo $entidade['id_pessoa']?>&valor=<?php echo !$entidade['ativo']?>" id="<?php echo ($entidade['ativo']==1) ? 'off' : 'on'; ?>"><?php echo ($entidade['ativo']==1) ? 'Desativar' : 'Ativar'; ?></a></td>
-                            <td><a href="core/usuario_repositorio.php?acao=adm&id_pessoa=<?php echo $entidade['id_pessoa']?>&valor=<?php echo !$entidade['adm']?>" id="<?php echo ($entidade['adm']==1) ? 'down' : 'up'; ?>"><?php echo ($entidade['adm']==1) ? 'Rebaixar' : 'Promover'; ?></a></td>
-                        </tr>
+                        
+                            <tr>
+                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['id_pessoa']?></td>
+                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['nome'] ?></td>
+                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['email'] ?></td>
+                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $data_t.' às '.$hora ?></td>
+                                <td><a href="core/usuario_repositorio.php?acao=status&id_pessoa=<?php echo $entidade['id_pessoa']?>&valor=<?php echo !$entidade['ativo']?>" id="<?php echo ($entidade['ativo']==1) ? 'off' : 'on'; ?>"><?php echo ($entidade['ativo']==1) ? 'Desativar' : 'Ativar'; ?></a></td>
+                                <td><a href="core/usuario_repositorio.php?acao=adm&id_pessoa=<?php echo $entidade['id_pessoa']?>&valor=<?php echo !$entidade['adm']?>" id="<?php echo ($entidade['adm']==1) ? 'down' : 'up'; ?>"><?php echo ($entidade['adm']==1) ? 'Rebaixar' : 'Promover'; ?></a></td>
+                            </tr>
+                        
                         <?php endforeach; ?>
                     </tbody>
                 </table> 
             </div>
         </div>
-        <div>
-            <?php
-                include 'includes/footer.php';
-            ?>
-        </div>
+        <?php
+            include 'includes/footer.php';
+        ?>
     </body>
 </html>

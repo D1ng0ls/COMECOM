@@ -35,25 +35,29 @@
             ];
         }
 
-        $i=0;
+        if(!empty($store)){
+            $criterio[] = [
+                'AND', 'id_pessoa', '=', $store
+            ];
+        }  
 
-        for($ctd=1;$ctd<=20;$ctd++){
-            $store = 'store'.$ctd;
-            if(!empty($$store)){
+        // $i=0;
 
-                if($i == 0) {
-                    $criterio[] = [
-                        'AND', 'id_pessoa', '=', $$store
-                    ];
-                    $i=1;
-                } else {
-                    $criterio[] = [
-                        'OR', 'id_pessoa', '=', $$store
-                    ];
-                }
-            }
-        }
-
+        // for($ctd=1;$ctd<=20;$ctd++){
+        //     $store = 'store'.$ctd;
+        //     if(!empty($$store)){
+        //         if($i == 0) {
+        //             $criterio[] = [
+        //                 'AND', 'id_pessoa', '=', $store
+        //             ];
+        //             $i=1;
+        //         } else {
+        //             $criterio[] = [
+        //                 'OR', 'id_pessoa', '=', $store
+        //             ];
+        //         }
+        //     }
+        // }
 
         if(!empty($mark)){
             $criterio[] = [
