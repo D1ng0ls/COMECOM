@@ -78,8 +78,12 @@ tbody tr{
     cursor: default;
 }
 
+tbody tr>td:nth-of-type(1), tr>td:nth-of-type(2), tr>td:nth-of-type(3), tr>td:nth-of-type(4){
+    cursor: pointer;
+}
+
 tbody tr:hover{
-    background-color: #000000!important;
+    background-color: #3d3d3d!important;
     color: white;
 }
 

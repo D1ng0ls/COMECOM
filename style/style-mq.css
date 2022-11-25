@@ -9,6 +9,18 @@
 	display: none;
 }
 
+#check2 {
+	display: none;
+}
+
+.menu_btn2 i
+{	
+	color: #fff;
+	font-size: 25px;
+	cursor: pointer;
+	display: none;
+}
+
 div .menu_btn i
 {	
 	color: #fff;
@@ -160,58 +172,86 @@ ul li.login_menu {
 	}
 
 	.ordenador2 {
-		background-color: red;
 	}
 
 	.ordenador {
-		background-color: yellow;
+		position: absolute;
+		width: 90%;
+		left: 5%;
+		top: 460px;
 	}
 
 	.filtros {
-		background-color: purple;
+		position: absolute;
+		width: 90%;
+		top: 170px;
 	}
 
 	.container-left {
-		width: 25%;
+		width: 100%;
 	}
 
 	.container-right {
-		width: 75%;
+		width: 100%;
 	}
 
-	.btn_filtrar {
-		border: 1px solid black;
-		padding: 5px;
-		cursor: pointer;
-	}	
-
-	.topnav .icon {
-		display: none;
+	.cabecao {
+		margin-bottom: 2000px;/*400*/
 	}
 
-	.topnav .filtros:not(:first-child) {
-		display: none;
-	}
-
-  	.topnav a.icon {
-    float: right;
-    display: block;
-  	}
-
-	.topnav.responsive {
-		position: relative;
-	}
-
-	.topnav.responsive .icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-	.topnav.responsive .filtros a.icon {
-		float: none;
+	ul .filter-price ul .filter-store ul .filter-brand
+	{
+		top: 48px;
+		right: -100%;
+		background: var(--color-purple);
+		height: 100%;
+		width: 100%;
 		display: block;
-		text-align: left;
+		text-align: center;
+		transition: 1s;
+        display: flex;	
+        flex-direction: column;
+		z-index: 5;
 	}
 
+	form ul li
+	{
+		position: relative;
+		margin: 35px 0;
+		list-style: none;
+	}
+
+	form ul li div
+	{
+		display: block;
+        color: black;
+	}
+
+	/*Configuração dos botões*/
+	label.menu_btn2 i
+	{
+		display: block;
+		position: absolute;
+		left: 5%;
+		top: 100px;
+		color: rgb(255, 5, 5);/*Mudar*/
+		z-index: 5;
+		position: fixed;
+	}
+
+	label[for='check2']
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	#check2:checked ~ form ul
+	{
+		right: 0%;
+	}
+
+	#check2:checked ~ .menu_btn2 i:before
+	{
+		content: "\f00d";
+	}
 }

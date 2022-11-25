@@ -1,7 +1,6 @@
 /*Inserção de produtos nas categorias*/
 /*pessoa jurídica*/
-insert into oferta (id_pessoa, data_oferta, titulo, texto, inicio_oferta, termino_oferta, preco_original, desconto,
-					preco_atual, foto_nome_oferta, categoria, marca) values
+insert into oferta (id_pessoa, data_oferta, titulo, texto, inicio_oferta, termino_oferta, preco_original, desconto, preco_atual, foto_nome_oferta, categoria, marca) values
 ('21', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '21_eletronicos.webp', 'eletronicos', 'Xiaomi'),
 ('21', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
@@ -24,23 +23,31 @@ insert into oferta (id_pessoa, data_oferta, titulo, texto, inicio_oferta, termin
 						'80', '29_eletronicos.webp', 'eletronicos', 'Poco'),
 ('30', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '30_eletronicos.png', 'eletronicos', 'Poco'),
-('41', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('31', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '31_eletronicos.webp', 'eletronicos', 'SAMSUNG'),
-('42', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('32', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '32_eletronicos.webp', 'eletronicos', 'SAMSUNG'),
-('43', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('33', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+<<<<<<< HEAD
 						'80', '33_eletronicos.webp', 'eletronicos', 'SAMSUMG'),
-('44', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+=======
+						'80', '33_eletronicos.webp', 'eletronicos', 'SAMSUNG'),
+>>>>>>> ab4402be15be41376c6de00f778c3b584fc5b78e
+('34', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '34_eletronicos.webp', 'eletronicos', 'LG'),
-('45', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('35', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '35_eletronicos.webp', 'eletronicos', 'LG'),
-('46', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('36', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '36_eletronicos.webp', 'eletronicos', 'LG'),
-('47', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('37', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+<<<<<<< HEAD
 						'80', '37_eletronicos.webp', 'eletronicos', 'SAMSUMG'),
-('48', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+=======
+						'80', '37_eletronicos.webp', 'eletronicos', 'SAMSUNG'),
+>>>>>>> ab4402be15be41376c6de00f778c3b584fc5b78e
+('38', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '38_eletronicos.png', 'eletronicos', 'SAMSUNG'),
-('49', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('39', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '39_eletronicos.png', 'eletronicos', 'Lenovo'),
-('50', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
+('40', current_timestamp(), 'Teste', 'Teste teste teste', '2022-01-01', '2023-01-05', '90', '10',
 						'80', '40_eletronicos.webp', 'eletronicos', 'Lenovo')

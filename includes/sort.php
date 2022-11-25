@@ -5,6 +5,7 @@
         </svg>
          Ordenar por:
     </h3>
+    <form method="post">
         <div class="ordenador2">
             <div class="filter-order filter">
                 <label class="container2">

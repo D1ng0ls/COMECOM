@@ -59,6 +59,13 @@
         if($url == $GLOBALS['pet']) return "Petshop";
     }
 
+    function categoria($url) : string {
+        if($url == $GLOBALS['elt']) return "eletronicos";
+        if($url == $GLOBALS['mrc']) return "mercado";
+        if($url == $GLOBALS['mec']) return "modaecasa";
+        if($url == $GLOBALS['pet']) return "petshop";
+    }
+
     if($url == $pgu) {
         session_reset();
     }
