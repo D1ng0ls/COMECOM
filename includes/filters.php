@@ -97,55 +97,7 @@
                     </label>
                     <?php endforeach; ?>
                 </div>
-                
                 <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
             </div>
-        </form>
     </div>
-<<<<<<< HEAD
-    <div class="filter-store filter">
-        <h4>Lojas</h4>
-        <?php
-            $ctd = 0;
-            foreach($result as $entidade):
-                $ctd++;
-                $chkid = "store".$ctd;
-        ?>
-        <label class='container'>
-            <input type='checkbox' name="<?php echo $chkid?>" id="<?php echo $chkid?>" class='check' value='<?php echo $entidade['id_pessoa'] ?>'>
-            <?php echo $entidade['nome'] ?>
-            <span class='checkmark'></span>
-        </label>
-        <?php endforeach; ?>
-    </div>
-    <div class="filter-brand filter">
-        <h4>Marcas</h4>
-        <?php
-            foreach($posts as $post) :
-        ?>
-        <label class='container'>
-            <input type='checkbox' name='mark' id='mark' class='check' value='<?php echo $post['marca'] ?>'>
-            <?php echo $post['marca'] ?>
-            <span class='checkmark'></span>
-        </label>
-        <?php endforeach; ?>
-    </div>
-    
-    <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
 </div>
-=======
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
-<script>
-    function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-    }
-</script>
->>>>>>> 512ec28047129e5555631156f5d18812009d5c08
