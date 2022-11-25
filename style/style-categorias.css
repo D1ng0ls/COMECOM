@@ -294,3 +294,8 @@
 .container input:checked ~ .checkmark:after {
     display: block;
 }   
+
+form ul li
+{
+    list-style: none;
+}
