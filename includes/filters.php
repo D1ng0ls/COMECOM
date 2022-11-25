@@ -54,7 +54,6 @@
             }
         ?>
         <form method="post">
-            <div class="teste">
                 <div class="filter-price filter">
                     <h4>Preço</h4>
                     <label class="containerPrice">R$
@@ -99,10 +98,9 @@
                 </div>
                 
                 <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
-            </div>
         </form>
     </div>
-<<<<<<< HEAD
+
     <div class="filter-store filter">
         <h4>Lojas</h4>
         <?php
@@ -133,19 +131,3 @@
     
     <input type="submit" name="sendPrice" id="sendPrice" value="Enviar">
 </div>
-=======
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
-<script>
-    function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-    }
-</script>
->>>>>>> 512ec28047129e5555631156f5d18812009d5c08
