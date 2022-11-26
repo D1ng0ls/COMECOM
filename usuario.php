@@ -93,18 +93,18 @@
                 <input type="hidden" name="id_pessoa" value="<?php echo $_SESSION['login']['pessoa']['id_pessoa'] ?>">
                 <input type="hidden" name="tipo_pessoa" value="<?php echo $_SESSION['login']['pessoa']['tipo_pessoa'] ?>">
                 <div class="input-user foto-user input-left">
-                <div class="foto">
-                    <label>Alterar Foto</label>
-                    <input type="file" id="foto" name="foto[]" accept="image/*" value="<?php echo $imagem_nome ?>">
-                    <label for="foto">
-                        <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                            <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
-                        <?php else : ?>
-                            <img id="preview" src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
-                        <?php endif; ?>
-                    </label>
+                    <div class="foto">
+                        <label>Alterar Foto</label>
+                        <input type="file" id="foto" name="foto[]" accept="image/*" value="<?php echo $imagem_nome ?>">
+                        <label for="foto">
+                            <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
+                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
+                            <?php else : ?>
+                                <img id="preview" src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
+                            <?php endif; ?>
+                        </label>
+                    </div>
                 </div>
-            </div>
                 <div class="input-user nome-user">
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" value="<?php echo $_SESSION['login']['pessoa']['nome'] ?>" required="required">
@@ -145,8 +145,8 @@
                     <input type="submit" value="Salvar">
                 </div>
             </form>
+            </div>
         </div>
-    </div>
     <?php include('includes/footer.php'); ?>
 
     <script>

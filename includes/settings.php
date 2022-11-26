@@ -17,6 +17,7 @@
     $faq = $_SERVER['HTTP_HOST'] . "/COMECOM/comunidade/faq.php";
     $users = $_SERVER['HTTP_HOST'] . "/COMECOM/usuarios.php";
     $oft = $_SERVER['HTTP_HOST'] . "/COMECOM/includes/oferta_formulario.php";
+    $user = $_SERVER['HTTP_HOST'] . "/COMECOM/user.php";
 
     function url($url, $com, $home) : string {
         if($url == $home) {

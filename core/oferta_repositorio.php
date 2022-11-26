@@ -14,28 +14,28 @@
         $$indice = limparDados($dado);
     }
     
-    $fotos_name = array();
-    $fotos = array_filter($_FILES['foto']['name']); 
-    $total_count = count($_FILES['foto']['name']);
-
-    for( $i=0 ; $i < $total_count ; $i++ ) {      
-        $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
-        if ($tmpFilePath != ""){
-            $foto_name = $_FILES['foto']['name'][$i];
-            $path_parts = pathinfo($foto_name);
-            $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
-            $foto_name = $path_parts['filename'].time().".".$imageFileType;
-            $newFilePath = "../upload/oferta/" . $foto_name;
-            if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-                $fotos_name[] = $foto_name;
-            }
-        }
-    }
-    
     $id_oferta = (int)$id_oferta;
 
     switch($acao) {
         case 'insert':
+            $fotos_name = array();
+            $fotos = array_filter($_FILES['foto']['name']); 
+            $total_count = count($_FILES['foto']['name']);
+
+            for( $i=0 ; $i < $total_count ; $i++ ) {      
+                $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
+                if ($tmpFilePath != ""){
+                    $foto_name = $_FILES['foto']['name'][$i];
+                    $path_parts = pathinfo($foto_name);
+                    $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
+                    $foto_name = $path_parts['filename'].time().".".$imageFileType;
+                    $newFilePath = "../upload/oferta/" . $foto_name;
+                    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+                        $fotos_name[] = $foto_name;
+                    }
+                }
+            }
+
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
@@ -57,6 +57,24 @@
 
             break;
         case 'update':
+            $fotos_name = array();
+            $fotos = array_filter($_FILES['foto']['name']); 
+            $total_count = count($_FILES['foto']['name']);
+
+            for( $i=0 ; $i < $total_count ; $i++ ) {      
+                $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
+                if ($tmpFilePath != ""){
+                    $foto_name = $_FILES['foto']['name'][$i];
+                    $path_parts = pathinfo($foto_name);
+                    $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
+                    $foto_name = $path_parts['filename'].time().".".$imageFileType;
+                    $newFilePath = "../upload/oferta/" . $foto_name;
+                    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+                        $fotos_name[] = $foto_name;
+                    }
+                }
+            }
+
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
@@ -84,13 +102,15 @@
             break;
         case 'delete':
             $criterio = [
-                ['id_oferta', '=', $id]
+                ['id_oferta', '=', $id_oferta]
             ];
 
             deleta (    
                 'oferta',
                 $criterio
             );
+
+            header('Location: ../user.php?id_pessoa='.$id_pessoa);
 
             break;
     }    

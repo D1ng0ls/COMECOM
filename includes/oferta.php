@@ -229,7 +229,7 @@
                         </div>
                     </a>
                     <div class='item-expire'>
-                        <span>fazervnkfss</span>
+                        <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
             <?php endif; ?>

@@ -13,28 +13,29 @@
     foreach($_GET as $indice => $dado) {
         $$indice = limparDados($dado);
     }
-    $fotos_name = array();
-    $fotos = array_filter($_FILES['foto']['name']); 
-    $total_count = count($_FILES['foto']['name']);
-
-    for( $i=0 ; $i < $total_count ; $i++ ) {      
-        $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
-        if ($tmpFilePath != ""){
-            $foto_name = $_FILES['foto']['name'][$i];
-            $path_parts = pathinfo($foto_name);
-            $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
-            $foto_name = $path_parts['filename'].time().".".$imageFileType ;    
-            $newFilePath = "../upload/post/" . $foto_name;
-            if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-                $fotos_name[] = $foto_name;
-            }
-        }
-    }
     
     $id_publicacao = (int)$id_publicacao;
 
     switch($acao) {
         case 'insert':
+            $fotos_name = array();
+            $fotos = array_filter($_FILES['foto']['name']); 
+            $total_count = count($_FILES['foto']['name']);
+
+            for( $i=0 ; $i < $total_count ; $i++ ) {      
+                $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
+                if ($tmpFilePath != ""){
+                    $foto_name = $_FILES['foto']['name'][$i];
+                    $path_parts = pathinfo($foto_name);
+                    $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
+                    $foto_name = $path_parts['filename'].time().".".$imageFileType ;    
+                    $newFilePath = "../upload/post/" . $foto_name;
+                    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+                        $fotos_name[] = $foto_name;
+                    }
+                }
+            }
+
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
@@ -49,6 +50,24 @@
 
             break;
         case 'update':
+            $fotos_name = array();
+            $fotos = array_filter($_FILES['foto']['name']); 
+            $total_count = count($_FILES['foto']['name']);
+
+            for( $i=0 ; $i < $total_count ; $i++ ) {      
+                $tmpFilePath = $_FILES['foto']['tmp_name'][$i];
+                if ($tmpFilePath != ""){
+                    $foto_name = $_FILES['foto']['name'][$i];
+                    $path_parts = pathinfo($foto_name);
+                    $imageFileType = strtolower(pathinfo($foto_name, PATHINFO_EXTENSION));
+                    $foto_name = $path_parts['filename'].time().".".$imageFileType ;    
+                    $newFilePath = "../upload/post/" . $foto_name;
+                    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+                        $fotos_name[] = $foto_name;
+                    }
+                }
+            }
+
             $dados = [
                 'titulo' => $titulo,
                 'texto' => $texto,
@@ -57,7 +76,7 @@
             ];
 
             $criterio = [
-                ['id_publicaco', '=', $id]
+                ['id_publicacao', '=', $id_pessoa]
             ];
 
             atualiza (
@@ -69,7 +88,7 @@
             break;
         case 'delete':
             $criterio = [
-                ['id_publicaco', '=', $id]
+                ['id_publicacao', '=', $id_publicacao]
             ];
 
             deleta (
@@ -77,9 +96,10 @@
                 $criterio
             );
 
-            break;
+            header('Location: ../user.php?id_pessoa='.$id_pessoa);
+
+        break;
     }
 
     header('Location: ../comunidade/');
-    
 ?>
