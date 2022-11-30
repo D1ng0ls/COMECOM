@@ -196,36 +196,13 @@ ul li.login_menu {
 	}
 
 	.cabecao {
-		margin-bottom: 2000px;/*400*/
+		margin-bottom: 4000px;/*400*/
 	}
 
-	ul .filter-price ul .filter-store ul .filter-brand
-	{
-		top: 48px;
-		right: -100%;
-		background: var(--color-purple);
-		height: 100%;
-		width: 100%;
-		display: block;
-		text-align: center;
-		transition: 1s;
-        display: flex;	
-        flex-direction: column;
-		z-index: 5;
-	}
-
-	form ul li
-	{
-		position: relative;
-		margin: 35px 0;
-		list-style: none;
-	}
-
-	form ul li div
-	{
-		display: block;
-        color: black;
-	}
+	/* .main {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr)
+	} */
 
 	.item-info {
 		width: 400px; 

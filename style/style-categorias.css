@@ -301,3 +301,49 @@ form ul li
 {
     list-style: none;
 }
+/***************************************************************/
+nav
+{
+    background-color: red;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 940px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: yellow;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(110%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        /* opacity: 0;  */
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translate(0);
+}
