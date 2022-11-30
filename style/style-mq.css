@@ -227,31 +227,32 @@ ul li.login_menu {
         color: black;
 	}
 
-	/*Configuração dos botões*/
-	label.menu_btn2 i
-	{
-		display: block;
-		position: absolute;
-		left: 5%;
-		top: 100px;
-		color: rgb(255, 5, 5);/*Mudar*/
-		z-index: 5;
-		position: fixed;
+	.item-info {
+		width: 400px; 
+	}
+}
+
+@media screen and (max-width: 910px)
+{
+	.item {
+		margin-bottom: 520px;
+	}
+}
+
+@media screen and (max-width: 1100px)
+{
+	.item-info {
+		width: 30%;
 	}
 
-	label[for='check2']
-	{
-		display: flex;
-		align-items: center;
+	.item-info {
+		width: 50%;
 	}
+}
 
-	#check2:checked ~ form ul
-	{
-		right: 0%;
-	}
-
-	#check2:checked ~ .menu_btn2 i:before
-	{
-		content: "\f00d";
+@media screen and (max-width: 600px)
+{
+	.item-info {
+		width: 300px;
 	}
 }
