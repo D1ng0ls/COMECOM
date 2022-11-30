@@ -95,10 +95,10 @@
                         ?>
                         
                             <tr>
-                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['id_pessoa']?></td>
-                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['nome'] ?></td>
-                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['email'] ?></td>
-                                <td onclick="window.open('user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $data_t.' às '.$hora ?></td>
+                                <td onclick="window.open('adm_user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['id_pessoa']?></td>
+                                <td onclick="window.open('adm_user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['nome'] ?></td>
+                                <td onclick="window.open('adm_user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $entidade['email'] ?></td>
+                                <td onclick="window.open('adm_user.php?id_pessoa=<?php echo $entidade['id_pessoa']?>', '_self')"><?php echo $data_t.' às '.$hora ?></td>
                                 <td><a href="core/usuario_repositorio.php?acao=status&id_pessoa=<?php echo $entidade['id_pessoa']?>&valor=<?php echo !$entidade['ativo']?>" id="<?php echo ($entidade['ativo']==1) ? 'off' : 'on'; ?>"><?php echo ($entidade['ativo']==1) ? 'Desativar' : 'Ativar'; ?></a></td>
                                 <td><a href="core/usuario_repositorio.php?acao=adm&id_pessoa=<?php echo $entidade['id_pessoa']?>&valor=<?php echo !$entidade['adm']?>" id="<?php echo ($entidade['adm']==1) ? 'down' : 'up'; ?>"><?php echo ($entidade['adm']==1) ? 'Rebaixar' : 'Promover'; ?></a></td>
                             </tr>

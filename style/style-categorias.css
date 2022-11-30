@@ -46,14 +46,16 @@
     justify-content: center;
 }
 
-.pages a {
-    font-weight: 500;
-    margin: 10px;
-}
-
 .pages .selected {
     color: var(--color-purple);
-    text-decoration: underline;
+}
+
+.page-btn {
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .item {

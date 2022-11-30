@@ -34,9 +34,22 @@
                 <?php
                     include '../../includes/oferta.php' 
                 ?>
-            <div class="pages">
-                <a class="selected" href="">1</a>
-                <a href="?number_page=2">2</a>
+                <?php
+                  $pages = ceil($ofertas / $registros_pagina);
+                ?>
+             <div class="pages">
+                <?php           
+                   for($i=1;$i<=$pages;$i++):
+                ?>
+                <form method="post" action="" style="margin: 0;">
+                    <input type="hidden" name="pagina" id="pagina" value="<?php echo $i?>">
+                    <input type="hidden" name="view" id="view" value="<?php echo $view?>">
+                    <input type="submit" name='enviar' value="<?php echo $i?>" class="page-btn <?php if($i == $pagina_atual) {echo "selected";};?>">
+                </form>
+                <?php           
+                   endfor;
+                ?>
+                
             </div>
         </div>
     </div>

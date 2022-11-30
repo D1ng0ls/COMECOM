@@ -33,6 +33,9 @@
                 'data_publicacao',
                 'id_publicacao',
                 'foto_nome_publi',
+                '(select id_pessoa
+                    from pessoa
+                    where id_pessoa = publicacao.id_pessoa) as id_pessoa',
                 '(select nome
                     from pessoa
                     where id_pessoa = publicacao.id_pessoa) as nome',
@@ -59,11 +62,11 @@
                 <div class="container2-1">
                     <div class="comecom-avatar">
                         <?php if ($post['foto_nome_pessoa'] == null) : ?>
-                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
+                                <a href="../user.php?id_pessoa=<?php echo $post['id_pessoa']?>"><img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
                             <?php else : ?>
                                 <img src="../upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>">
                             <?php endif; ?>
-                        <h4><span><?php echo $post['nome']?> • Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
+                        <h4><span><?php echo $post['nome']?></a> • Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
                     </div>
                 </div>
                 <div class="post-title"><h3><?php echo $post['titulo']?></h3></div>
@@ -84,7 +87,7 @@
                                 Ver detalhes
                             </p>
                         </a>                
-                        <a href="#">
+                        <a href="#" onclick="denuncia()">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M13.2 3.6a1.2 1.2 0 1 0 0 2.4h3.103l-7.551 7.552a1.2 1.2 0 1 0 1.696 1.696L18 7.697V10.8a1.2 1.2 0 1 0 2.4 0v-6a1.2 1.2 0 0 0-1.2-1.2h-6Z"/>
@@ -99,4 +102,10 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <script>
+        function denuncia() {
+            var rand = Math.floor(Math.random() * 10000000) + 100000;
+            alert('Denuncia realizada com sucesso!\nNossa equipe agradece e ja está tomando as devidas providências.\n\nID da denúncia: #'+rand);
+        }
+    </script>
 </div>      

@@ -314,6 +314,16 @@ div.foto input[type='file'] {
     width: 48%;
 }
 
+.medium2 {
+    width: 39%;
+    margin-left: 3%;
+}
+
+.grande2 {
+    width: 81%;
+    margin-left: 3%;
+}
+
 .salvar-user {
     margin-top: 14px;
 }

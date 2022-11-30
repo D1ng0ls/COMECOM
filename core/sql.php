@@ -49,10 +49,12 @@
         return $instrucao;
     }
 
-    function select(string $entidade, array $campos, array $criterio = [], string $ordem = null) : string
+    function select(string $entidade, array $campos, array $criterio = [], string $ordem = null,  $inicio = null, $registros = null) : string
     {
         $instrucao = "SELECT " . implode(', ' ,$campos);
         $instrucao .= " FROM {$entidade}";
+
+       
 
         if(!empty($criterio)) {
             $instrucao .= ' WHERE ';
@@ -64,6 +66,10 @@
 
         if(!empty($ordem)) {
             $instrucao .= " ORDER BY $ordem ";
+        }
+
+        if(!empty($registros)){
+            $instrucao .= "LIMIT $inicio,$registros";
         }
         
         return $instrucao;
@@ -77,6 +83,24 @@
             $instrucao .= " ORDER BY $ordem ";
         }
 
+        return $instrucao;
+    }
+
+    function contarregistros(string $entidade, array $criterio = []) : string
+    {
+        $instrucao = "SELECT count(*) qtd";
+        $instrucao .= " FROM {$entidade}";
+
+       
+
+        if(!empty($criterio)) {
+            $instrucao .= ' WHERE ';
+
+            foreach($criterio as $expressao) {
+                $instrucao .= ' ' . implode(' ', $expressao);
+            }
+        }       
+        
         return $instrucao;
     }
 ?>

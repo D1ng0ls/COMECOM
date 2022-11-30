@@ -1,4 +1,3 @@
-<!-- Bruh -->
 <div class="teste">
     <?php
         $order = null;
@@ -86,6 +85,20 @@
             $ordenar = "data_oferta DESC";
         }
 
+        $registros_pagina = 20;
+
+        if(!empty($view)) {
+            $registros_pagina = $view;
+        }
+        
+        $pagina_atual = 1;
+        if(isset($pagina)){
+            $pagina_atual = $pagina;
+        }
+        
+        $inicio_registro = ($pagina_atual-1) * $registros_pagina;
+        $ofertas = contar('oferta');
+            
         $posts = buscar (
             'oferta',
             [
@@ -105,7 +118,9 @@
                     where id_pessoa = oferta.id_pessoa) as nome'
             ],
             $criterio,
-            $ordenar
+            $ordenar,
+            $inicio_registro,
+            $registros_pagina
         );
     ?>
     <div class="main">

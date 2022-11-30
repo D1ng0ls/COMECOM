@@ -58,8 +58,10 @@
                         <div class="container-title-page-2">
                             Formulário de cadastramento de produtos
                         </div>
-                    </div>        
+                    </div>
+                    <br>
                     <div class="container1-oft">
+                        <label for="titulo" id="lTitulo">Informações do produto</label>
                         <div class="oft-titulo">
                             <input  type="text" required
                                     id="titulo" name="titulo" placeholder="Nome do produto"
@@ -90,6 +92,18 @@
                                     require="required" id="prec-atual" name="preco_atual" step=".01"
                                     value="<?php echo $entidade['preco_atual'] ?? ''?>" oninput="calcular()">
                         </div>
+                        <div class="oft-endereco">
+                            <input  type="text" required
+                                    id="endereco" name="endereco" placeholder="Endereço (físico ou eletrônico)"
+                                    value="<?php echo $entidade['endereco'] ?? ''?>">
+                        </div>
+                        <div class="oft-choose-container" id="preview">
+                            <input  type="file" 
+                                    id="foto" 
+                                    name="foto[]" 
+                                    accept="image/*" 
+                                    required>
+                        </div>
                         <label for="categoria">Categoria</label>
                         <div class="oft-categoria">
                             <select id="categoria" name="categoria"
@@ -111,14 +125,7 @@
                             <input  type="date" required
                                     require="required" id="data" name="termino_oferta"
                                     value="<?php echo $entidade['termino_oferta'] ?? ''?>">
-                        </div>
-                        <div class="oft-choose-container">
-                            <input  type="file" 
-                                    id="foto" 
-                                    name="foto[]" 
-                                    accept="image/*" 
-                                    required>
-                        </div>  
+                        </div> 
                     </div>
                     <div class="oft-button">
                         <button type="submit">Postar</button>
@@ -134,6 +141,13 @@
                 var novoPreco = document.getElementById('prec-atual');
 
                 novoPreco.value = (((100 - desconto.value) * preco.value)/100).toFixed(2);
+            }
+
+            foto.onchange = evt => {
+                const [file] = foto.files
+                if (file) {
+                    preview.src = URL.createObjectURL(file)
+                }
             }
         </script>
     </body>

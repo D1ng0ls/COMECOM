@@ -98,7 +98,7 @@
                         <input type="file" id="foto" name="foto[]" accept="image/*" value="<?php echo $imagem_nome ?>">
                         <label for="foto">
                             <?php if (!isset($_SESSION['login']['pessoa']['foto_nome_pessoa'])) : ?>
-                                <img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
+                                <img class="user-img" id="preview" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user.svg" alt="login">
                             <?php else : ?>
                                 <img id="preview" src='upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']; ?>' style="width: 24%; height: 130px; border-radius: 50%;">
                             <?php endif; ?>
@@ -167,7 +167,7 @@
             if (file) {
                 preview.src = URL.createObjectURL(file)
             }
-            }
+        }
     </script>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

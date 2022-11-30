@@ -55,21 +55,6 @@
                 $criterio,
                 'data_publicacao DESC'
             );
-
-            $usuarios = buscar(
-                'pessoa',
-                [   
-                    'id_pessoa',
-                    'nome',
-                    'data_criacao',
-                    'foto_nome_pessoa',
-                    'qnt_lojas',
-                    'tipo_pessoa',
-                    'cidade',
-                ],
-                $criterio,
-                'data_criacao DESC'
-            );
         } else if($tipo['tipo_pessoa'] == 'juridica') {
             $posts = buscar (
                 'oferta',
@@ -89,23 +74,6 @@
                 $criterio,
                 'data_oferta DESC'
             );
-
-            $usuarios = buscar(
-                'pessoa',
-                [   
-                    'id_pessoa',
-                    'nome',
-                    'data_criacao',
-                    'foto_nome_pessoa',
-                    'qnt_lojas',
-                    'tipo_pessoa',
-                    'email',
-                    'telefone',
-                    'cidade',
-                ],
-                $criterio,
-                'data_criacao DESC'
-            );
         }
     }
 
@@ -114,6 +82,25 @@
         [
             'data_criacao',
             'foto_nome_pessoa'
+        ],
+        $criterio,
+        'data_criacao DESC'
+    );
+
+    $usuarios = buscar(
+        'pessoa',
+        [   
+            'id_pessoa',
+            'ativo',
+            'nome',
+            'email',
+            'documento',
+            'telefone',
+            'data_criacao',
+            'foto_nome_pessoa',
+            'qnt_lojas',
+            'tipo_pessoa',
+            'cidade',
         ],
         $criterio,
         'data_criacao DESC'
@@ -166,9 +153,11 @@
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" value="<?php echo $user['nome'] ?>" readonly="readonly">
                 </div>
-                
-                <?php if($user['tipo_pessoa'] == 'juridica') : ?>
-                    <div class="input-user email-user input-left medium">
+                <div class="input-user doc-user2">
+                    <label for="documento">Documento:</label>
+                    <input type="text" name="documento" id="documento" value="<?php echo $user['documento'] ?>" onclick="view()" readonly="readonly">
+                </div>
+                <div class="input-user email-user input-left medium">
                     <label for="email">Email:</label>
                     <input type="text" name="email" id="email" value="<?php echo $user['email'] ?>" readonly="readonly">
                 </div>
@@ -180,20 +169,23 @@
                     <label for="cidade">Cidade:</label>
                     <input type="text" name="cidade" id="cidade" value="<?php echo $user['cidade'] ?>" readonly="readonly">
                 </div>
-                <div class="input-user qnt-lojas input-right medium">
+                <?php if($user['tipo_pessoa'] == 'juridica') : ?>
+                <div class="input-user qnt-lojas medium input-right">
                     <label for="qnt_lojas">Quantidade de lojas:</label>
                     <input type="number" name="qnt_lojas" id="qnt_lojas" value="<?php echo $user['qnt_lojas'] ?>" readonly="readonly">
                 </div>
-                <?php else : ?>
-                <div class="input-user cidade-user medium input-left">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" name="cidade" id="cidade" value="<?php echo $user['cidade'] ?>" readonly="readonly">
-                </div>
                 <?php endif; ?>
-                <div class="input-user data-user <?php if($user['tipo_pessoa'] != 'juridica') { echo'input-right medium';};?>">
+                <div class="input-user data-user <?php if($user['tipo_pessoa'] == 'juridica'){echo "input-left";} else { echo "medium input-right";} ?>">
                     <label for="data">Ativo desde:</label>
                     <input type="text" name="data" id="data" value="<?php echo $data?>" readonly="readonly">
                 </div>
+                <div class="input-user excluir-user medium">
+                    <input type="submit" value="Excluir Conta">
+                </div>
+                <div class="input-user desativar-user input-right medium">
+                    <input type="submit" value="<?php echo ($user['ativo']==1) ? 'Desativar' : 'Ativar'; ?> Conta">
+                </div>
+            </div>
         </div>
         <div class="post-user">
             <div class="title-page">
@@ -233,6 +225,10 @@
                         <?php echo $data . ' às ' . $hora?>
                     </div>
                 </div>
+               
+            </div>
+            <div class="delete-post ">
+                <a href="core/post_repositorio.php?acao=delete&id_publicacao=<?php echo $post['id_publicacao']?>&id_pessoa=<?php echo $user['id_pessoa']?>"><input type="submit" value="Excluir Postagem"></a>
             </div>
             <?php endforeach; else: ?>
                 <?php
@@ -266,6 +262,9 @@
                         <?php echo $data . ' às ' . $hora?>
                     </div>
                 </div>
+            </div>
+            <div class="delete-post ">
+                <a href="core/oferta_repositorio.php?acao=delete&id_oferta=<?php echo $post['id_oferta']?>&id_pessoa=<?php echo $user['id_pessoa']?>"><input type="submit" value="Excluir Postagem"></a>
             </div>
             <?php endforeach; ?>
             <hr id="divider">
