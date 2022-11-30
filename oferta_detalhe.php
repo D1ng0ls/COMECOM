@@ -13,6 +13,7 @@
         'oferta',
             [
                 'titulo',
+                'texto',
                 'data_oferta',
                 'id_oferta',
                 'preco_original',
@@ -22,6 +23,7 @@
                 'termino_oferta',
                 'foto_nome_oferta',
                 'categoria',
+                'endereco',
                 'marca',
                 '(select nome
                     from pessoa
@@ -45,7 +47,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/style-navegador.css">
-        <link rel="stylesheet" href="style/style-categorias.css">
+        <link rel="stylesheet" href="style/style-oferta-detalhe.css">
         <link rel="stylesheet" href="style/style-mq.css">
         <?php
             include('includes/settings.php'); 
@@ -62,19 +64,51 @@
             <div class="img">
                 <?php foreach($fotos as $foto) : ?>
                     <?php if ($foto != '') : ?>
-                        <img src='<?php echo"upload/oferta/".$foto; ?>' style="width: 100%; height: 200px;">
+                        <img src='<?php echo"upload/oferta/".$foto; ?>'>
                     <?php endif; ?>
                 <?php endforeach ?>
             </div>
             <div class='item-info'>
-                <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruhh'; } ?></div> -->
-                <div class='item-price'>
-                    <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
-                    <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?></span>
+                <div class="new">
+                    <div class="loja">
+                        <span><?php echo $post['nome'] ?> | <?php echo $post['marca'] ?></span>
+                    </div>
+                </div>
+                <div class="teste">
+                    <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
+                    <div class="item-text"><p><?php echo $post['texto']?></p></div>
+                    <div class="endereco">
+                        <span>Local: <?php echo $post['endereco']?></span> 
+                    </div>
+                    <div class='item-price'>
+                        <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?>,00</span><br>
+                        <div class="newPrice">
+                            <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?>,00</span>
+                            <span class="desconto"><?php echo $post['desconto']?>% OFF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <div class="tag">
+                        <span>Melhores ofertas</span>
+                        <!-- <span>Novidades</span>
+                        <span>Tempo limitado</span> -->
+                    </div> 
+                    <?php if($post['categoria'] == 'eletronicos') : ?>
+                        <span><a href="categoria/eletronicos/"><?php echo $post['categoria']?></a></span>
+                    <?php endif; ?>
+                    <?php if($post['categoria'] == 'mercado') : ?>
+                        <span><a href="categoria/mercado/"><?php echo $post['categoria']?></a></span>
+                    <?php endif; ?>
+                    <?php if($post['categoria'] == 'modaecasa') : ?>
+                        <span><a href="categoria/modaecasa/"><?php echo $post['categoria']?></a></span>
+                    <?php endif; ?>
+                    <?php if($post['categoria'] == 'petshop') : ?>
+                        <span><a href="categoria/petshop/"><?php echo $post['categoria']?></a></span>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-        <?php include 'includes/footer.php'; ?>
+        <?php include 'includes/footer.php'; ?> 
     </body>
 </html>
