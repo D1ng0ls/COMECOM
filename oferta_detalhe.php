@@ -78,7 +78,7 @@
                     <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
                     <div class="item-text"><p><?php echo $post['texto']?></p></div>
                     <div class="endereco">
-                        <span>Local: <?php echo $post['endereco']?></span> 
+                        <span>Local: <span id="endereco"><?php echo $post['endereco']?></span></span>
                     </div>
                     <div class='item-price'>
                         <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?>,00</span><br>
@@ -111,4 +111,18 @@
         </div>
         <?php include 'includes/footer.php'; ?> 
     </body>
+
+    <script>
+        var URL = document.getElementById('endereco').innerHTML;
+        
+        if (URL.substring(0, 4).toUpperCase() == "WWW.") {
+            document.getElementById('endereco').innerHTML = URL.link(URL);
+        }
+        if (URL.substring(0, 8).toUpperCase() == "HTTPS://") {
+            document.getElementById('endereco').innerHTML = URL.link(URL);
+        }
+        if (URL.substring(0, 7).toUpperCase() == "HTTP://") {
+            document.getElementById('endereco').innerHTML = URL.link(URL);
+        }
+    </script>
 </html>

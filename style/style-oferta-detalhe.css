@@ -70,6 +70,15 @@
     font-weight: 500;
 }
 
+#endereco a {
+    text-overflow: ellipsis;
+    color: var(--color-purple);
+}
+
+#endereco:hover a {
+    text-decoration: underline !important;
+}
+
 .desconto {
     margin-left: 5px;
     font-size: 12px;

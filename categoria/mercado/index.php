@@ -43,7 +43,7 @@
                 ?>
                 <form method="post" action="" style="margin: 0;">
                     <input type="hidden" name="pagina" id="pagina" value="<?php echo $i?>">
-                    <input type="hidden" name="view" id="view" value="<?php echo $view?>">
+                    <input type="hidden" name="view" id="view" value="<?php if(!empty($view)){ echo $view;} else {echo "20";};?>">
                     <input type="submit" name='enviar' value="<?php echo $i?>" class="page-btn <?php if($i == $pagina_atual) {echo "selected";};?>">
                 </form>
                 <?php           
