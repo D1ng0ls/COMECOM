@@ -207,6 +207,26 @@ ul li.login_menu {
 	.item-info {
 		width: 400px; 
 	}
+
+	.ordenador2 {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.ordenador {
+		border: 0px;
+	}
+
+	.mobile-menu-teste {
+		position: absolute;
+		top: -290px;
+		left: 200px;
+	}
+
+	nav h3 {
+		border: 1px solid #bbbb;
+		padding: 1rem 2rem;
+	}
 }
 
 @media screen and (max-width: 910px)

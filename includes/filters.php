@@ -116,4 +116,4 @@
         </nav>
     </div>
 </div>
-<script src="../../scripts/mobile-navbar.js"></script>
+<script src="../../scripts/mobile-navbar-filters.js"></script>
