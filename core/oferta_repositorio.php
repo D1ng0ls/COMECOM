@@ -47,6 +47,7 @@
                 'foto_nome_oferta' => implode(";", $fotos_name),
                 'categoria' => $categoria,
                 'marca' => $marca,
+                'endereco' => $endereco,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 
@@ -86,6 +87,7 @@
                 'foto_nome_oferta' => implode(";", $fotos_name),
                 'categoria' => $categoria,
                 'marca' => $marca,
+                'endereco' => $endereco,
                 'id_pessoa' => $_SESSION['login']['pessoa']['id_pessoa']
             ];
 

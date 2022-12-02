@@ -199,11 +199,6 @@ ul li.login_menu {
 		margin-bottom: 4000px;/*400*/
 	}
 
-	/* .main {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr)
-	} */
-
 	.item-info {
 		width: 400px; 
 	}
@@ -220,12 +215,25 @@ ul li.login_menu {
 	.mobile-menu-teste {
 		position: absolute;
 		top: -290px;
-		left: 200px;
+		left: 52%;
+		width: 48%;
 	}
 
 	nav h3 {
+		width: 100%;
 		border: 1px solid #bbbb;
 		padding: 1rem 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav {	
+		width: 48%;
+	}
+
+	nav h3 svg {
+		margin-right: 10px;
 	}
 }
 
@@ -252,4 +260,11 @@ ul li.login_menu {
 	.item-info {
 		width: 300px;
 	}
+}
+
+@media screen and (max-width: 1300px) {
+	.main {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr)
+	} 
 }

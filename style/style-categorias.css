@@ -325,7 +325,6 @@ form ul li
         left: 50%;
         width: 50vw;
         height: 10vh;
-        background-color: yellow;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -364,16 +363,16 @@ form ul li
     }
     .nav-list-teste {
         position: absolute;
-        top: 8vh;
+        top: -231px;
         right: 0;
-        width: 50vw;
+        width: 25vw;
         height: 92vh;
-        background: #5555af;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        transform: translateX(110%);
+        transform: translateX(120%);
         transition: transform 0.3s ease-in;
+        margin-top: 5px;
     }
 
     .nav-list-teste li {
@@ -389,4 +388,4 @@ form ul li
     transform: translateX(0);
 }
 
- 
+    
