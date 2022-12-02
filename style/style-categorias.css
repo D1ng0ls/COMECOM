@@ -301,8 +301,8 @@ form ul li
 {
     list-style: none;
 }
-/***************************************************************/
 
+/***************************************************************/
 .nav-list {
     list-style: none;
 }
@@ -312,7 +312,7 @@ form ul li
     cursor: pointer;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1250px) {
     nav {
         width: fit-content;
     }
@@ -347,7 +347,6 @@ form ul li
 }
 
 /***********************************************/
-  
 .nav-list-teste {
     list-style: none;
 }
@@ -357,7 +356,7 @@ form ul li
     cursor: pointer;
 }
   
-@media (max-width: 940px) {
+@media (max-width: 1250px) {
     body {
       overflow-x: hidden;
     }

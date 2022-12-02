@@ -33,6 +33,20 @@ ul li.login_menu {
 	display: none;
 }
 
+@media screen and (max-width: 600px)
+{
+	.item-info {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 910px)
+{
+	.item {
+		margin-bottom: 520px;
+	}
+}
+
 @media screen and (max-width: 940px)
 {
 	/*Configurações do menu*/
@@ -167,12 +181,37 @@ ul li.login_menu {
 		display: flex;
 	}
 
-	.footerSpaceCol {
-		/* display: none; */
+	nav h3 {
+		margin-top: 0px;/*BRUUUUUUUU*/
 	}
 
-	.ordenador2 {
+	.nav-list-teste {
+		margin-top: 50px;
+		background-color: red;
 	}
+
+	.nav-list-teste.active {
+		margin-top: 50px;
+		background-color: blue;
+	}
+}
+
+@media screen and (max-width: 1100px)
+{
+	.item-info {
+		width: 30%;
+	}
+
+	.item-info {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr)
+	} 
 
 	.ordenador {
 		position: absolute;
@@ -206,6 +245,7 @@ ul li.login_menu {
 	.ordenador2 {
 		display: flex;
 		flex-direction: column;
+		margin-top: 50px;	
 	}
 
 	.ordenador {
@@ -226,6 +266,7 @@ ul li.login_menu {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-top: 50px;/*BRUUUUUUUU*/
 	}
 
 	nav {	
@@ -237,34 +278,9 @@ ul li.login_menu {
 	}
 }
 
-@media screen and (max-width: 910px)
-{
-	.item {
-		margin-bottom: 520px;
-	}
-}
-
-@media screen and (max-width: 1100px)
-{
-	.item-info {
-		width: 30%;
-	}
-
-	.item-info {
-		width: 50%;
-	}
-}
-
-@media screen and (max-width: 600px)
-{
-	.item-info {
-		width: 300px;
-	}
-}
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
 	.main {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr)
+		grid-template-columns: repeat(4, 1fr)
 	} 
 }
