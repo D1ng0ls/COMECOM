@@ -54,7 +54,7 @@
                                     <img class="user-img" src="<?php echo url($url, $com, $home) ?>upload/user/<?php echo $_SESSION['login']['pessoa']['foto_nome_pessoa']?>" alt="usuário">
                                 <?php endif; ?>
                                 <span class="user-text" style="font-weight: 500;">
-                                    <span style="font-weight: 500;"><?php echo $_SESSION['login']['pessoa']['nome']?></span> 
+                                    <span style="font-weight: 500; vertical-align: middle;"><?php echo $_SESSION['login']['pessoa']['nome']?></span> 
                                 </span>
                             </a>
                         <?php endif; ?>

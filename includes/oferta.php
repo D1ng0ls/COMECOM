@@ -97,7 +97,8 @@
         }
         
         $inicio_registro = ($pagina_atual-1) * $registros_pagina;
-        $ofertas = contar('oferta');
+        $criterio2 = [['categoria', '=', categoria($url)]];
+        $ofertas = contar('oferta', $criterio2);
             
         $posts = buscar (
             'oferta',
@@ -140,7 +141,7 @@
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
-                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="width: 100%; height: 200px;">
+                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="height: 250px;">
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>
@@ -167,9 +168,7 @@
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
-                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="width: 100%; height: 200px;">
-                                <?php else : ?>
-                                    <img src='../../media/oferta5.jpg' style="width: 100%; height: 200px;">
+                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="height: 250px;">
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>
@@ -196,9 +195,7 @@
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
-                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="width: 100%; height: 200px;">
-                                <?php else : ?>
-                                    <img src='../../media/oferta5.jpg' style="width: 100%; height: 200px;">
+                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="height: 250px;">
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>
@@ -225,9 +222,7 @@
                         <div class="img">
                             <?php foreach($fotos as $foto) : ?>
                                 <?php if ($foto != '') : ?>
-                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="width: 100%; height: 200px;">
-                                <?php else : ?>
-                                    <img src='../../media/oferta5.jpg' style="width: 100%; height: 200px;">
+                                    <img src='<?php echo"../../upload/oferta/".$foto; ?>' style="height: 250px;">
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>

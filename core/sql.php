@@ -75,6 +75,32 @@
         return $instrucao;
     }
 
+    function colect(string $entidade, array $campos, array $criterio = [], string $ordem = null,  $inicio = null, $registros = null) : string
+    {
+        $instrucao = "SELECT " . implode(', ' ,$campos);
+        $instrucao .= " FROM {$entidade}";
+
+       
+
+        if(!empty($criterio)) {
+            $instrucao .= ' WHERE ';
+
+            foreach($criterio as $expressao) {
+                $instrucao .= ' ' . implode(' ', $expressao);
+            }
+        }
+
+        if(!empty($ordem)) {
+            $instrucao .= " GROUP BY $ordem ";
+        }
+
+        if(!empty($registros)){
+            $instrucao .= "LIMIT $inicio,$registros";
+        }
+        
+        return $instrucao;
+    }
+
     function group(string $entidade, array $campos, string $ordem = null, string $grupo) : string {
         $instrucao = "SELECT DISTINCT " . implode(', ' ,$campos);
         $instrucao .= " FROM {$entidade}";

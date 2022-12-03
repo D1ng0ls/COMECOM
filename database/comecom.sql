@@ -58,3 +58,5 @@ create table oferta (
 SELECT * FROM pessoa;
 SELECT * FROM oferta;
 SELECT * FROM publicacao;
+
+SELECT categoria, (select nome from pessoa where id_pessoa = oferta.id_pessoa) as nome, (select id_pessoa from pessoa where id_pessoa = oferta.id_pessoa) as id_pessoa FROM oferta WHERE categoria = 'eletronicos' ORDER BY nome ASC

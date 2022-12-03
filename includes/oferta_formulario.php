@@ -118,13 +118,13 @@
                         <div class="oft-data">
                             <input  type="date" required
                                     require="required" id="data" name="inicio_oferta"
-                                    value="<?php echo $entidade['inicio_oferta'] ?? ''?>">
+                                    value="<?php echo $entidade['inicio_oferta'] ?? ''?>" max="<?php echo date('Y-m-d')?>">
                         </div>
                         <label for="data-publi">Término da promoção</label><br>
                         <div class="oft-data">
                             <input  type="date" required
                                     require="required" id="data" name="termino_oferta"
-                                    value="<?php echo $entidade['termino_oferta'] ?? ''?>">
+                                    value="<?php echo $entidade['termino_oferta'] ?? ''?>" min="<?php echo date('Y-m-d')?>">
                         </div> 
                     </div>
                     <div class="oft-button">

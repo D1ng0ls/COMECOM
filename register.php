@@ -110,7 +110,7 @@
                                 <span>CPF</span>
                                 <input  type="number" require="required"
                                         id="cpf" name="cpf"
-                                        value="<?php echo $entidade['cpf'] ?? '' ?>" maxlength="11" minlength="11">
+                                        value="<?php echo $entidade['cpf'] ?? '' ?>" max="99999999999">
                                         <label id="crt">Somente números exemplo: 12345678901</label>
                             </div>
                             
@@ -120,7 +120,7 @@
                                 <span>CNPJ</span>
                                 <input  type="number" require="required" 
                                         id="cnpj" name="cnpj"
-                                        value="<?php echo $entidade['cnpj'] ?? '' ?>" maxlength="14" minlength="14">
+                                        value="<?php echo $entidade['cnpj'] ?? '' ?>" max="99999999999999">
                             <label id="crt">Somente números exemplo: 12345678901234</label>       
                             </div>
                             <div class="input-content">

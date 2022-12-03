@@ -9,6 +9,7 @@
         $$indice = limparDados($dado);
     }
 
+    $data_atual = date('Y-m-d H:i:s');
     $data = new \DateTime(date('Y-m-d'));
 
     $posts = buscar(
@@ -41,8 +42,6 @@
     $hora_post = date_create($post['data_oferta']);
     $hora_post = date_format($hora_post, 'H:i');
     $fotos = explode(';',$post['foto_nome_oferta']);
-    $dateInterval = new \DateTime(date($post['data_oferta']));
-    $dateInterval = $dateInterval -> diff($data);
 ?>
 <html lang="pt_BR">
     <head>
@@ -85,17 +84,28 @@
                         <span>Local: <span id="endereco"><?php echo $post['endereco']?></span></span>
                     </div>
                     <div class='item-price'>
-                        <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?>,00</span><br>
+                        <span class='item-oldPrice' id="oldPrice"><?php echo $post['preco_original']?></span>
                         <div class="newPrice">
-                            <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?>,00</span>
+                            <span class='item-newPrice' id="newPrice"><?php echo $post['preco_atual']?></span>
                             <span class="desconto"><?php echo $post['desconto']?>% OFF</span>
                         </div>
                     </div>
                 </div>
                 <div class="tag">
-                    <span>Melhores ofertas</span>
+                    <?php if($post['desconto'] >= '60'): ?><span>Melhores ofertas</span><?php endif; ?>
+                    <?php
+                        $dateInterval = new \DateTime(date($post['data_oferta'])); 
+                        $dateInterval = $dateInterval -> diff($data);
+                        if(($dateInterval->days) <= 7) :
+                    ?>
                     <span>Novidades</span>
+                    <?php endif; ?>
+                    <?php 
+                        $dateInterval = new \DateTime(date($post['termino_oferta'])); 
+                        $dateInterval = $dateInterval -> diff($data);
+                        if(($dateInterval->days) > 7) :?>
                     <span>Tempo limitado</span>
+                    <?php endif; ?>
                 </div>
                 <div class="categoria">
                     <?php if($post['categoria'] == 'eletronicos') : ?>
@@ -128,5 +138,19 @@
         if (URL.substring(0, 7).toUpperCase() == "HTTP://") {
             document.getElementById('endereco').innerHTML = URL.link(URL);
         }
+
+        var precoAntigo = Number(document.getElementById('oldPrice').innerHTML);
+        document.getElementById('oldPrice').innerHTML = parseFloat(precoAntigo.toFixed(2)).toLocaleString('pt-BR', {
+            currency: 'BRL',
+            style: 'currency',
+            minimumFractionDigits: 2
+        });
+
+        var precoNovo = Number(document.getElementById('newPrice').innerHTML);
+        document.getElementById('newPrice').innerHTML = parseFloat(precoNovo.toFixed(2)).toLocaleString('pt-BR', {
+            currency: 'BRL',
+            style: 'currency',
+            minimumFractionDigits: 2
+        });
     </script>
 </html>

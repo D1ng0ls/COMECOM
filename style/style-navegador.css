@@ -7,6 +7,10 @@
     font-size: 18px;
 }
 
+.form {
+    margin: 0 !important;
+}
+
 .logo {
     width: 25%;
     display: flex;
@@ -68,7 +72,7 @@ img.img2-navigator {
     font-weight: 500;
 }
 
-.user-text:hover {
+.user-text:hover span {
     text-decoration: underline !important;
 }
 
@@ -86,6 +90,7 @@ img.img2-navigator {
 }
 
 .inputs input {
+    width: 500px;
     border-radius: 20px;
     height: 32px;
     border: none;

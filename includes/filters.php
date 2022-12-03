@@ -12,7 +12,7 @@
     $data = new \DateTime(date('Y-m-d H:i:s'));
 
     $criterio = [];
-    $criterio = [['tipo_pessoa', '=', 'juridica']];
+    $criterio = [['categoria', '=', categoria($url)]];
 
 
     $posts = agrupar(
@@ -24,11 +24,13 @@
        "marca"
     );
 
-    $result = buscar(
-        'pessoa',
-        [
-            'nome',
-            'id_pessoa',
+    $result = coletar(
+        'oferta',
+        [   
+            'categoria',
+            '(select nome from pessoa where id_pessoa = oferta.id_pessoa) as nome',
+            '(select id_pessoa from pessoa where id_pessoa = oferta.id_pessoa) as id_pessoa'
+            
         ],
         $criterio,
         'nome ASC'
@@ -46,17 +48,6 @@
                     </svg>    
                     Filtrar por:
                 </h3>
-                <?php
-                    if($url == $elt) {
-                        $action = "../../categoria/eletronicos";
-                    } else if($url == $mrc) {
-                        $action = "../../categoria/mercado";
-                    } /* else if($url == $mec) {
-                        $action = "../../categoria/moda_casa";
-                    } else if($url == $pet) {
-                        $action = "../../categoria/pet";
-                    } */
-                ?>
             </div>
             <ul class="nav-list">
                 <form method="post">
