@@ -54,6 +54,9 @@
                 '(select nome
                     from pessoa
                     where id_pessoa = publicacao.id_pessoa) as nome',
+                '(select id_pessoa
+                    from pessoa
+                    where id_pessoa = publicacao.id_pessoa) as id_pessoa',
                 '(select foto_nome_pessoa
                     from pessoa
                     where id_pessoa = publicacao.id_pessoa) as foto_nome_pessoa'
@@ -73,6 +76,9 @@
                 '(select nome
                     from pessoa
                     where id_pessoa = oferta.id_pessoa) as nome',
+                '(select id_pessoa
+                    from pessoa
+                    where id_pessoa = oferta.id_pessoa) as id_pessoa',
                 '(select foto_nome_pessoa
                     from pessoa
                     where id_pessoa = oferta.id_pessoa) as foto_nome_pessoa'
@@ -119,6 +125,9 @@
             <div class="date-post">
                 <?php echo $data . ' às ' . $hora?>
             </div>
+            <div class="delete-post" id="delete">
+                <a href="core/post_repositorio.php?acao=delete&id_publicacao=<?php echo $post['id_publicacao']?>&id_pessoa=<?php echo $post['id_pessoa']?>"><img src="media/icons/line/trash.svg" alt="excluir postagem"> Excluir</a>
+            </div>
         </div>
     </div>
     <?php endforeach; ?>
@@ -154,6 +163,9 @@
             <div class="date-post">
                 <?php echo $data . ' às ' . $hora?>
             </div>
+            <div class="delete-post" id="delete">
+                <a href="core/oferta_repositorio.php?acao=delete&id_oferta=<?php echo $post['id_oferta']?>&id_pessoa=<?php echo $post['id_pessoa']?>"><img src="media/icons/line/trash.svg" alt="excluir postagem"> Excluir</a>
+            </div>
         </div>
     </div>
 
@@ -162,5 +174,6 @@
     <?php endif; ?>
     <?php include('includes/footer.php'); ?>
 </body>
+
 
 </html>

@@ -71,24 +71,20 @@
     border-radius: 4px;
 }
 
-.post-desconto {
-    border-top: 1px solid #773d94;
-    padding-top: 8px;
-    margin: 10px 15px 10px 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.delete-post {
+    display: flex;
+    color: #ef4130;
+    margin:  0 15px 15px 0;
+    font-weight: 600;
 }
 
-.post-desconto h4 {
-    margin: 0px;
-    font-weight: 400;
+.delete {
+    margin: 0 0 0 auto;
 }
 
-.post-termino-promocao {
-margin: 10px 15px 10px 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.post-termino-promocao h4 {
-    margin: 0px;
-    font-weight: 400;
+.delete-post img{
+    width: 24px;
+    transition: 1s ease-in-out all;
+    cursor: pointer;
+    vertical-align:text-bottom;
 }

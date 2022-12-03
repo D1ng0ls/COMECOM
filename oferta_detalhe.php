@@ -30,7 +30,11 @@
                 'marca',
                 '(select nome
                     from pessoa
-                    where id_pessoa = oferta.id_pessoa) as nome'
+                    where id_pessoa = oferta.id_pessoa) as nome',
+                '(select id_pessoa
+                    from pessoa
+                    where id_pessoa = oferta.id_pessoa) as id_pessoa'
+                    
         ],
         [
          ['id_oferta', '=', $id_oferta]    
@@ -121,6 +125,11 @@
                         <span><a href="categoria/petshop/"><?php echo $post['categoria']?></a></span>
                     <?php endif; ?>
                 </div>
+                <?php if(($post['id_pessoa'] == $_SESSION['login']['pessoa']['id_pessoa']) || ($_SESSION['login']['pessoa']['adm'] == 1)) : ?>
+                <div class="delete-post" id="delete">
+                    <div class="delete"><a href="core/oferta_repositorio.php?acao=delete&id_oferta=<?php echo $post['id_oferta']?>&id_pessoa=<?php echo $post['id_pessoa']?>"><span>Excluir oferta</span><img src="media/icons/line/trash.svg" alt="excluir oferta"></a></div>
+                </div>
+                <?php endif;?>
             </div>
         </div>
         <?php include 'includes/footer.php'; ?> 

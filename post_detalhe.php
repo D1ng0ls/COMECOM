@@ -12,6 +12,7 @@
     $posts = buscar(
         'publicacao',
         [
+            'id_publicacao',
             'titulo',
             'data_publicacao',
             'texto',
@@ -19,12 +20,12 @@
             '(select nome
                 from pessoa
                 where pessoa.id_pessoa = publicacao.id_pessoa) as nome',
-                '(select id_pessoa
+            '(select id_pessoa
                 from pessoa
                 where pessoa.id_pessoa = publicacao.id_pessoa) as id_pessoa',
             '(select foto_nome_pessoa
-            from pessoa
-            where id_pessoa = publicacao.id_pessoa) as foto_nome_pessoa'
+                from pessoa
+                where id_pessoa = publicacao.id_pessoa) as foto_nome_pessoa'
         ],
         [
             ['id_publicacao', '=', $post]
@@ -80,7 +81,13 @@
                                 <?php endif; ?>
                             <?php endforeach ?>
                         </div>
+                        <?php if(($post['id_pessoa'] == $_SESSION['login']['pessoa']['id_pessoa']) || ($_SESSION['login']['pessoa']['adm'] == 1)) : ?>
+                        <div class="delete-post" id="delete">
+                            <div class="delete"><a href="core/post_repositorio.php?acao=delete&id_publicacao=<?php echo $post['id_publicacao']?>&id_pessoa=<?php echo $post['id_pessoa']?>"><span>Excluir postagem</span><img src="media/icons/line/trash.svg" alt="excluir postagem"></a></div>
+                        </div>
+                        <?php endif;?>
                     </div>
+                    
                 </div>
             </div>
         </div>

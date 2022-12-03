@@ -134,3 +134,21 @@
     position: relative;
     top: 65px;
 }
+
+.delete-post {
+    display: flex;
+    color: #ef4130;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.delete {
+    margin: 0 0 0 auto;
+}
+
+.delete-post img{
+    width: 24px;
+    transition: 1s ease-in-out all;
+    cursor: pointer;
+    vertical-align:text-bottom;
+}
