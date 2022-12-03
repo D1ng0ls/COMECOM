@@ -25,7 +25,7 @@
             <div class="container_search justify-content-end <?php if($url == $abt) { echo "comunidade";} else { echo "";};?>">
                 <div class="inputs">
                     <div class="input-search">
-                        <input type="text" placeholder="Pesquisar..." name="query">
+                        <?php include 'buscar.php' ?>
                     </div>
                     <div class="submit-search">
                         <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
