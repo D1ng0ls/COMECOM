@@ -48,9 +48,8 @@
                         name="foto[]" 
                         accept="image/*" 
                         multiple="multiple"
-                        required
                         />
-            </div>  
+            </div>
         </div>
         <div class="post-button">
             <button type="submit">Postar</button>

@@ -4,13 +4,13 @@ var pode1 = false;
 var pode2 = false;
 
 function validatorSenha2(senha2) {
-    let senhaNovaVar = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    let senhaNovaVar = /^(?=.*[0-9])(?=.*[!@#$%_&*])[a-zA-Z0-9!@#$%_&*]{8,16}$/;
     return senhaNovaVar.test(senha2);
 }
 
 senha2.addEventListener("keyup", () => {
     if(validatorSenha2(senha2.value) !== true) {
-        textSenhaNova.textContent = "Sua senha deve conter: no mínimo 6 caracteres, letra(s), número(s) e no mínimo 1 caracter especial.";
+        textSenhaNova.textContent = "Sua senha deve conter: no mínimo 8 caracteres, letra(s), número(s) e no mínimo 1 caracter especial (!@#$%_&*).";
         pode1 = false;
         pode();
     }

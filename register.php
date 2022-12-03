@@ -92,9 +92,10 @@
                         </div>
                         <div class="input-content">
                             <span>Telefone</span>
-                            <input  type="text" require="required"
+                            <input  type="number" require="required"
                                     id="telefone" name="telefone"
-                                    value="<?php echo $entidade['telefone'] ?? '' ?>"> 
+                                    value="<?php echo $entidade['telefone'] ?? '' ?>">
+                            <label id="crt">Somente números exemplo: 10123456789</label>
                         </div>
                         <div class="input-content">
                             <span>Tipo</span><br>
@@ -107,17 +108,20 @@
                         <div class="fisica">
                             <div class="input-content">
                                 <span>CPF</span>
-                                <input  type="text" require="required"
+                                <input  type="number" require="required"
                                         id="cpf" name="cpf"
-                                        value="<?php echo $entidade['cpf'] ?? '' ?>">
+                                        value="<?php echo $entidade['cpf'] ?? '' ?>" maxlength="11" minlength="11">
+                                        <label id="crt">Somente números exemplo: 12345678901</label>
                             </div>
+                            
                         </div>
                         <div class="juridica" style="display: none;">
                             <div class="input-content">
                                 <span>CNPJ</span>
-                                <input  type="text" require="required" 
+                                <input  type="number" require="required" 
                                         id="cnpj" name="cnpj"
-                                        value="<?php echo $entidade['cnpj'] ?? '' ?>">
+                                        value="<?php echo $entidade['cnpj'] ?? '' ?>" maxlength="14" minlength="14">
+                            <label id="crt">Somente números exemplo: 12345678901234</label>       
                             </div>
                             <div class="input-content">
                                 <span>Quantidade de lojas</span>

@@ -58,7 +58,7 @@ $posts = buscar (
                         <div class='owl-item'>
                             <div class='bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center'>
                                 <?php foreach($fotos as $foto) : ?>
-                                <div class='bbb_viewed_image'><img src='upload/oferta/<?php echo $foto?>' alt='<?php echo $foto?>'></div>
+                                    <a href='oferta_detalhe.php?id_oferta=<?php echo $post['id_oferta']?>'><div class='bbb_viewed_image'><img src='upload/oferta/<?php echo $foto?>' alt='<?php echo $foto?>'></div></a>
                                 <?php endforeach; ?>
                                 <div class='bbb_viewed_content text-center'>
                                     <div class='bbb_viewed_price'>R$<?php echo number_format($post['preco_atual'], 2, ',', '')?><span>R$<?php echo number_format($post['preco_original'], 2, ',', '');?></span></div>
@@ -97,7 +97,7 @@ $posts = buscar (
                         <div class='owl-item'>
                             <div class='bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center'>
                                 <?php foreach($fotos as $foto) : ?>
-                                <div class='bbb_viewed_image'><img src='upload/oferta/<?php echo $foto?>' alt='<?php echo $foto?>'></div>
+                                    <a href='oferta_detalhe.php?id_oferta=<?php echo $post['id_oferta']?>'><div class='bbb_viewed_image'><img src='upload/oferta/<?php echo $foto?>' alt='<?php echo $foto?>'></div></a>
                                 <?php endforeach; ?>
                                 <div class='bbb_viewed_content text-center'>
                                     <div class='bbb_viewed_price'>R$<?php echo number_format($post['preco_atual'], 2, ',', '')?><span>R$<?php echo number_format($post['preco_original'], 2, ',', '');?></span></div>
@@ -135,7 +135,7 @@ $posts = buscar (
                         <div class='owl-item'>
                             <div class='bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center'>
                                 <?php foreach($fotos as $foto) : ?>
-                                <div class='bbb_viewed_image'><img src='upload/oferta/<?php echo $foto?>' alt='<?php echo $foto?>'></div>
+                                    <a href='oferta_detalhe.php?id_oferta=<?php echo $post['id_oferta']?>'><div class='bbb_viewed_image'><img src='upload/oferta/<?php echo $foto?>' alt='<?php echo $foto?>'></div></a>
                                 <?php endforeach; ?>
                                 <div class='bbb_viewed_content text-center'>
                                     <div class='bbb_viewed_price'>R$<?php echo number_format($post['preco_atual'], 2, ',', '')?><span>R$<?php echo number_format($post['preco_original'], 2, ',', '');?></span></div>

@@ -54,7 +54,7 @@ function validatorEmail(email) {
 }
 
 function validatorSenha(senha) {
-    let senhaVar = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    let senhaVar = /^(?=.*[0-9])(?=.*[!@#$%_&*])[a-zA-Z0-9!@#$%_&*]{8,16}$/;
     return senhaVar.test(senha);
 }
 
@@ -70,7 +70,7 @@ email.addEventListener("keyup", () => {
 
 senha.addEventListener("keyup", () => {
     if(validatorSenha(senha.value) !== true) {
-        textSenha.textContent = "Sua senha deve conter: no mínimo 6 caracteres, letra(s), número(s) e no mínimo 1 caracter especial.";
+        textSenha.textContent = "Sua senha deve conter: no mínimo 8 caracteres, letra(s), número(s) e no mínimo 1 caracter especial (!@#$%_&*).";
     }
     else
     {

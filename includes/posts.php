@@ -62,10 +62,10 @@
                 <div class="container2-1">
                     <div class="comecom-avatar">
                         <?php if ($post['foto_nome_pessoa'] == null) : ?>
-                                <a href="../user.php?id_pessoa=<?php echo $post['id_pessoa']?>"><img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
-                            <?php else : ?>
-                                <img src="../upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>">
-                            <?php endif; ?>
+                            <a href="../user.php?id_pessoa=<?php echo $post['id_pessoa']?>"><img class="user-img" src="<?php echo url($url, $com, $home) ?>media/icons/solid/user2.svg" alt="login">
+                        <?php else : ?>
+                            <img src="../upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>">
+                        <?php endif; ?>
                         <h4><span><?php echo $post['nome']?></a> • Postado em: <?php echo $data . ' às ' . $hora?></span></h4>
                     </div>
                 </div>

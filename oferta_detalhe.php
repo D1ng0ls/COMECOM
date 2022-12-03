@@ -9,6 +9,8 @@
         $$indice = limparDados($dado);
     }
 
+    $data = new \DateTime(date('Y-m-d'));
+
     $posts = buscar(
         'oferta',
             [
@@ -39,6 +41,8 @@
     $hora_post = date_create($post['data_oferta']);
     $hora_post = date_format($hora_post, 'H:i');
     $fotos = explode(';',$post['foto_nome_oferta']);
+    $dateInterval = new \DateTime(date($post['data_oferta']));
+    $dateInterval = $dateInterval -> diff($data);
 ?>
 <html lang="pt_BR">
     <head>
@@ -88,12 +92,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="tag">
+                    <span>Melhores ofertas</span>
+                    <span>Novidades</span>
+                    <span>Tempo limitado</span>
+                </div>
                 <div class="categoria">
-                    <div class="tag">
-                        <span>Melhores ofertas</span>
-                        <!-- <span>Novidades</span>
-                        <span>Tempo limitado</span> -->
-                    </div> 
                     <?php if($post['categoria'] == 'eletronicos') : ?>
                         <span><a href="categoria/eletronicos/"><?php echo $post['categoria']?></a></span>
                     <?php endif; ?>

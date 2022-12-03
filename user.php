@@ -6,21 +6,22 @@
     require_once 'core/mysql.php';
 
     include('includes/settings.php');
+
+    foreach($_GET as $indice => $dado) {
+        $$indice = limparDados($dado);
+    }
+
     if(!isset($_SESSION['login'])){
         header("Location: login.php");
         exit();
     }
-    if($_SESSION['login']['pessoa']['adm'] !== 1) {
-        header('Location: /COMECOM/');
+    if($_SESSION['login']['pessoa']['id_pessoa'] == $id_pessoa) {
+        header('Location: usuario.php');
         exit();
     }
     if($url == $user) {
         header('Location: usuarios.php');
         exit();
-    }
-
-    foreach($_GET as $indice => $dado) {
-        $$indice = limparDados($dado);
     }
 
     $criterio = [

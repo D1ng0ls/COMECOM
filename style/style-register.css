@@ -148,6 +148,21 @@ section .register-content .form-content .input-content p a
    margin-left: 5px;
 }
 
+#crt {
+    font-size: 12px;
+    display: block;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
 @media (max-width: 900px)
 {
     section .register-content

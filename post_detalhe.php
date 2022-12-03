@@ -19,6 +19,9 @@
             '(select nome
                 from pessoa
                 where pessoa.id_pessoa = publicacao.id_pessoa) as nome',
+                '(select id_pessoa
+                from pessoa
+                where pessoa.id_pessoa = publicacao.id_pessoa) as id_pessoa',
             '(select foto_nome_pessoa
             from pessoa
             where id_pessoa = publicacao.id_pessoa) as foto_nome_pessoa'
@@ -60,8 +63,12 @@
                     <div class="container2">
                         <div class="container2-1">
                             <div class="comecom-avatar">
-                                <img src="upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>" style="border-radius: 50%;">
-                                <h4><span><?php echo $post['nome'] ?> • Postado em: <?php echo $data_post . ' às ' . $hora_post?></span></h4>
+                            <?php if ($post['foto_nome_pessoa'] == null) : ?>
+                                <a href="user.php?id_pessoa=<?php echo $post['id_pessoa']?>"><img class="user-img" src="media/icons/solid/user2.svg" alt="login">
+                            <?php else : ?>
+                                <a href="user.php?id_pessoa=<?php echo $post['id_pessoa']?>"><img src="upload/user/<?php echo $post['foto_nome_pessoa']?>" alt="<?php echo $post['foto_nome_pessoa']?>" style="border-radius: 50%;">
+                            <?php endif; ?>
+                                <h4><span><?php echo $post['nome'] ?></a> • Postado em: <?php echo $data_post . ' às ' . $hora_post?></span></h4>
                             </div>
                         </div>
                         <div class="post-title"><h3><strong><?php echo $post['titulo']?></strong></h3></div>
