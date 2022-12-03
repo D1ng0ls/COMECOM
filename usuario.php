@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="style/style-navegador.css">
     <link rel="stylesheet" href="style/style-usuario.css">
     <link rel="stylesheet" href="style/style-mq.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css"> -->
     <title>COMECOM | <?php echo $_SESSION['login']['pessoa']['nome'] ?></title>
 </head>
 
@@ -169,11 +168,6 @@
             }
         }
     </script>
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script> -->
-
-    <!-- <script src="scripts/custom.js"></script> -->
 
 </body>
 

@@ -18,6 +18,7 @@
     $users = $_SERVER['HTTP_HOST'] . "/COMECOM/usuarios.php";
     $oft = $_SERVER['HTTP_HOST'] . "/COMECOM/includes/oferta_formulario.php";
     $user = $_SERVER['HTTP_HOST'] . "/COMECOM/user.php";
+    $sea = $_SERVER['HTTP_HOST'] . "/COMECOM/search.php";
 
     function url($url, $com, $home) : string {
         if($url == $home) {
@@ -61,10 +62,23 @@
     }
 
     function categoria($url) : string {
-        if($url == $GLOBALS['elt']) return "eletronicos";
-        if($url == $GLOBALS['mrc']) return "mercado";
-        if($url == $GLOBALS['mec']) return "modaecasa";
-        if($url == $GLOBALS['pet']) return "petshop";
+        switch($url) {
+            case $GLOBALS['elt']:
+                return "eletronicos";
+                break;
+            case $GLOBALS['mrc']:
+                return "mercado";
+                break;
+            case $GLOBALS['mec']:
+                return "modaecasa";
+                break;
+            case $GLOBALS['pet']:
+                return "petshop";
+                break;
+            default :
+                return "";
+                break;
+        }
     }
 
     if($url == $pgu) {

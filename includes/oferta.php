@@ -149,15 +149,30 @@
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
                             <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruh'; } ?></div> -->
                             <div class='item-price'>
-                                <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
-                                <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?></span>
+                                <span class='item-oldPrice' id="oldPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_original']?></span>
+                                <span class='item-newPrice' id="newPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_atual']?></span>
                             </div>
                         </div>
                     </a>
                     <div class='item-expire'>
-                        <span><!--<?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?>-->59d 59h 59min</span>
+                        <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
+                <script>
+                    var precoAntigo = Number(document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoAntigo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+
+                    var precoNovo = Number(document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoNovo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+                </script>
             <?php endif; ?>
         <?php endif; ?>
         <!-- Mercado -->
@@ -176,8 +191,8 @@
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
                             <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruh'; } ?></div> -->
                             <div class='item-price'>
-                                <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
-                                <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?></span>
+                                <span class='item-oldPrice' id="oldPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_original']?></span>
+                                <span class='item-newPrice' id="newPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_atual']?></span>
                             </div>
                         </div>
                     </a>
@@ -185,6 +200,21 @@
                         <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
+                <script>
+                    var precoAntigo = Number(document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoAntigo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+
+                    var precoNovo = Number(document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoNovo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+                </script>
             <?php endif; ?>
         <?php endif; ?>
         <!-- Moda & Casa -->
@@ -203,8 +233,8 @@
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
                             <!-- <?php if($post['categoria'] == 'modaecasa') { echo 'bruh'; } ?></div> -->
                             <div class='item-price'>
-                                <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
-                                <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?></span>
+                                <span class='item-oldPrice' id="oldPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_original']?></span>
+                                <span class='item-newPrice' id="newPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_atual']?></span>
                             </div>
                         </div>
                     </a>
@@ -212,6 +242,21 @@
                         <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
+                <script>
+                    var precoAntigo = Number(document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoAntigo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+
+                    var precoNovo = Number(document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoNovo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+                </script>
             <?php endif; ?>
         <?php endif; ?>
         <!-- Petshop -->
@@ -233,8 +278,8 @@
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['marca']?></h5></div>
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['categoria']?></h5></div>
                             <div class='item-price'>
-                                <span class='item-oldPrice'>R$ <?php echo $post['preco_original']?></span>
-                                <span class='item-newPrice'>R$ <?php echo $post['preco_atual']?></span>
+                                <span class='item-oldPrice' id="oldPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_original']?></span>
+                                <span class='item-newPrice' id="newPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_atual']?></span>
                             </div>
                         </div>
                     </a>
@@ -242,8 +287,25 @@
                         <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
+                <script>
+                    var precoAntigo = Number(document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('oldPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoAntigo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+
+                    var precoNovo = Number(document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML);
+                    document.getElementById('newPrice<?php echo $post['id_oferta']?>').innerHTML = parseFloat(precoNovo.toFixed(2)).toLocaleString('pt-BR', {
+                        currency: 'BRL',
+                        style: 'currency',
+                        minimumFractionDigits: 2
+                    });
+                </script>
             <?php endif; ?>
         <?php endif; ?>
         <?php endforeach; ?>
     </div>
+
+    
 </div>

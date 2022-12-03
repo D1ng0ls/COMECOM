@@ -59,4 +59,4 @@ SELECT * FROM pessoa;
 SELECT * FROM oferta;
 SELECT * FROM publicacao;
 
-SELECT categoria, (select nome from pessoa where id_pessoa = oferta.id_pessoa) as nome, (select id_pessoa from pessoa where id_pessoa = oferta.id_pessoa) as id_pessoa FROM oferta WHERE categoria = 'eletronicos' ORDER BY nome ASC
+SELECT titulo, data_oferta, id_oferta, preco_original, desconto, preco_atual, inicio_oferta, termino_oferta, foto_nome_oferta, categoria, marca, (select nome from pessoa where id_pessoa = oferta.id_pessoa) as nome FROM oferta WHERE nome.pessoa like 'a' OR marca like 'a' OR desconto like 'a' ORDER BY data_oferta DESC
