@@ -131,7 +131,7 @@ $posts = buscar (
                             $dateInterval = new \DateTime(date($post['termino_oferta']));
                             $dateInterval = $dateInterval -> diff($data);                           
                     ?>
-                        <?php if(($dateInterval->days) > 7) :?>
+                        <?php if(($dateInterval->days) <= 7) :?>
                         <div class='owl-item'>
                             <div class='bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center'>
                                 <?php foreach($fotos as $foto) : ?>

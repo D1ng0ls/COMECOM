@@ -107,22 +107,22 @@
                     <?php 
                         $dateInterval = new \DateTime(date($post['termino_oferta'])); 
                         $dateInterval = $dateInterval -> diff($data);
-                        if(($dateInterval->days) > 7) :?>
+                        if(($dateInterval->days) <= 7) :?>
                     <span>Tempo limitado</span>
                     <?php endif; ?>
                 </div>
                 <div class="categoria">
                     <?php if($post['categoria'] == 'eletronicos') : ?>
-                        <span><a href="categoria/eletronicos/"><?php echo $post['categoria']?></a></span>
+                        <span><a href="categoria/eletronicos/">Eletrônicos</a></span>
                     <?php endif; ?>
                     <?php if($post['categoria'] == 'mercado') : ?>
-                        <span><a href="categoria/mercado/"><?php echo $post['categoria']?></a></span>
+                        <span><a href="categoria/mercado/">Mercado</a></span>
                     <?php endif; ?>
                     <?php if($post['categoria'] == 'modaecasa') : ?>
-                        <span><a href="categoria/modaecasa/"><?php echo $post['categoria']?></a></span>
+                        <span><a href="categoria/moda_casa/">Moda & Casa</a></span>
                     <?php endif; ?>
                     <?php if($post['categoria'] == 'petshop') : ?>
-                        <span><a href="categoria/petshop/"><?php echo $post['categoria']?></a></span>
+                        <span><a href="categoria/petshop/">Petshop</a></span>
                     <?php endif; ?>
                 </div>
                 <?php if(($post['id_pessoa'] == $_SESSION['login']['pessoa']['id_pessoa']) || ($_SESSION['login']['pessoa']['adm'] == 1)) : ?>
