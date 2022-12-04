@@ -61,12 +61,12 @@ insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento
 /* moda e casa */
 ('juridica', 'Igui Rações', '9186560.209593026@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '56531057230','4'),
 ('juridica', 'Cobasi', '95397066.38508032@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '17827899626','23'),
-('juridica', 'JhCdSyZjFL', '13386726.092538381@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '91308694911','6'),
-('juridica', 'XUmeiqRlNx', '86496226.10341184@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '75328961833','3'),
-('juridica', 'uQysuqYJSc', '25950771.376503833@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '23454608706','7'),
-('juridica', 'agUYhNivYQ', '87182690.93249579@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '61495481690','7'),
-('juridica', 'AitTNVIUnO', '85487294.27848978@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '06378417949','6'),
-('juridica', 'YGYEcdYvTm', '12798286.647793442@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '19280190650','27'),
-('juridica', 'EhNynCLlPI', '53339004.96999599@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '75966724699','7'),
-('juridica', 'PXklpKZInK', '2181932.2837892966@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '30610437340','1')
+('juridica', 'Pantal', '13386726.092538381@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '91308694911','6'),
+('juridica', 'Tutticão Pet Center', '86496226.10341184@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '75328961833','3'),
+('juridica', 'Cãolinas Pet Banho e Tosa', '25950771.376503833@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '23454608706','7'),
+('juridica', 'Faro Fino', '87182690.93249579@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '61495481690','7'),
+('juridica', 'Help dog', '85487294.27848978@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '06378417949','6'),
+('juridica', 'Medicina Animal', '12798286.647793442@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '19280190650','27'),
+('juridica', 'Cuidados Pet', '53339004.96999599@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '75966724699','7'),
+('juridica', 'Pet & Repet', '2181932.2837892966@mail.com', 'ifmfznzvE4ePM', 'birigui', '10987654321', '30610437340','1')
 /* petshop */
