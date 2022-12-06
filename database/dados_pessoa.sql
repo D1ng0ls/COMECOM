@@ -25,14 +25,14 @@ insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento
 select*from pessoa;
 
 /*pessoa jurídica*/
-insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento, qnt_lojas, foto_nome_pessoa) values
+insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento, qnt_lojas) values
 ('juridica', 'Magazine Luiza', '89973002.99630097@mail.com', 'ifmfznzvE4ePM', 'Birigui', '10987654321', '90489500040','13'),
 ('juridica', 'Golden Celulares', '26293829.636277888@mail.com', 'ifmfznzvE4ePM', 'Birigui', '10987654321', '36007579887','11'),
 ('juridica', 'Ponto Frio', '46396945.73158433@mail.com', 'ifmfznzvE4ePM', 'Araçatuba', '10987654321', '15102867802','23'),
 ('juridica', 'Birigames', '44040530.57227787@mail.com', 'ifmfznzvE4ePM', 'Birigui', '10987654321', '88806972999','23'),
 ('juridica', 'Kabum', '77326425.94404261@mail.com', 'ifmfznzvE4ePM', 'https://www.kabum.com.br/', '10987654321', '37953929356','2'),
 ('juridica', 'Pichau', '71075450.31490992@mail.com', 'ifmfznzvE4ePM', 'https://www.pichau.com.br/', '10987654321', '57338306529','17'),
-('juridica', 'Gigabyte', '90307702.62499015@mail.com', 'ifmfznzvE4ePM', 'https://www.gigabyte.com/br', '10987654321', '54066411677','13'),
+('juridica', 'Terabyte', '90307702.62499015@mail.com', 'ifmfznzvE4ePM', 'https://www.gigabyte.com/br', '10987654321', '54066411677','13'),
 ('juridica', 'Ricardo Eletro', '85193625.68332992@mail.com', 'ifmfznzvE4ePM', 'https://ricardoeletro.com.br/', '10987654321', '53349225262','24'),
 ('juridica', 'Ta em shock?', '80123922.12229627@mail.com', 'ifmfznzvE4ePM', 'Clementina', '10987654321', '79893565306','27'),
 ('juridica', 'Rogério Celulares', '70360413.79456052@mail.com', 'ifmfznzvE4ePM', 'Coroados', '10987654321', '75758498851','11'),

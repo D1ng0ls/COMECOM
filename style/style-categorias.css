@@ -99,6 +99,10 @@
     margin: 0;
     margin-top: 5px;
     height: 54px;
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .item-price {

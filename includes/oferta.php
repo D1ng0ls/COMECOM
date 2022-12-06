@@ -131,7 +131,7 @@
                 $fotos = explode(';',$post['foto_nome_oferta']);
                             $fotos = explode(';',$post['foto_nome_oferta']);
                             $dateInterval = new \DateTime(date($post['termino_oferta']));
-                            $dateInterval = $dateInterval -> diff($data);                             
+                            $dateInterval =  $data->diff($dateInterval) ;                             
         ?>
         <?php url($url, $elt, $mrc, $mec, $pet); ?>
         <?php if($url == $elt) : ?>
@@ -147,7 +147,6 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruh'; } ?></div> -->
                             <div class='item-price'>
                                 <span class='item-oldPrice' id="oldPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_original']?></span>
                                 <span class='item-newPrice' id="newPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_atual']?></span>
@@ -155,7 +154,7 @@
                         </div>
                     </a>
                     <div class='item-expire'>
-                        <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
+                        <span><?php if($dateInterval->m == 1){echo $dateInterval->m."mês ";} else if($dateInterval->m > 1){echo $dateInterval->m."meses ";}; echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
                 <script>
@@ -189,7 +188,6 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <!-- <?php if($post['categoria'] == 'mercado') { echo 'bruh'; } ?></div> -->
                             <div class='item-price'>
                                 <span class='item-oldPrice' id="oldPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_original']?></span>
                                 <span class='item-newPrice' id="newPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_atual']?></span>
@@ -197,7 +195,7 @@
                         </div>
                     </a>
                     <div class='item-expire'>
-                        <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
+                        <span><?php if($dateInterval->m == 1){echo $dateInterval->m."mês ";} else if($dateInterval->m > 1){echo $dateInterval->m."meses ";}; echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
                 <script>
@@ -231,7 +229,6 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <!-- <?php if($post['categoria'] == 'modaecasa') { echo 'bruh'; } ?></div> -->
                             <div class='item-price'>
                                 <span class='item-oldPrice' id="oldPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_original']?></span>
                                 <span class='item-newPrice' id="newPrice<?php echo $post['id_oferta']?>"><?php echo $post['preco_atual']?></span>
@@ -239,7 +236,7 @@
                         </div>
                     </a>
                     <div class='item-expire'>
-                        <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
+                        <span><?php if($dateInterval->m == 1){echo $dateInterval->m."mês ";} else if($dateInterval->m > 1){echo $dateInterval->m."meses ";}; echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
                 <script>
@@ -273,7 +270,6 @@
                         </div>
                         <div class='item-info'>
                             <div class='item-name'><h4><?php echo $post['titulo']?></h4></div>
-                            <!-- <?php if($post['categoria'] == 'petshop') { echo 'bruh'; } ?></div> -->
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['nome']?></h5></div><!-- nome de quem postou  -->
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['marca']?></h5></div>
                             <div><h5 style="text-transform: uppercase;"><?php echo $post['categoria']?></h5></div>
@@ -284,7 +280,7 @@
                         </div>
                     </a>
                     <div class='item-expire'>
-                        <span><?php echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
+                        <span><?php if($dateInterval->m == 1){echo $dateInterval->m."mês ";} else if($dateInterval->m > 1){echo $dateInterval->m."meses ";}; echo $dateInterval->d."d ".$dateInterval->h."h ".$dateInterval->i."min"?></span>
                     </div>
                 </div>
                 <script>
