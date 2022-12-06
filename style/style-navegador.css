@@ -90,7 +90,7 @@ img.img2-navigator {
 }
 
 .inputs input {
-    width: 500px;
+    width: 100%;
     border-radius: 20px;
     height: 32px;
     border: none;
@@ -118,6 +118,7 @@ img.img2-navigator {
 .input-search {
     display: block;
     float: left;
+    width: 90%;
 }
 
 .submit-search {

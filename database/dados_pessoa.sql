@@ -33,7 +33,7 @@ insert into pessoa (tipo_pessoa, nome, email, senha, cidade, telefone, documento
 ('juridica', 'Kabum', '77326425.94404261@mail.com', 'ifmfznzvE4ePM', 'https://www.kabum.com.br/', '10987654321', '37953929356','2'),
 ('juridica', 'Pichau', '71075450.31490992@mail.com', 'ifmfznzvE4ePM', 'https://www.pichau.com.br/', '10987654321', '57338306529','17'),
 ('juridica', 'Terabyte', '90307702.62499015@mail.com', 'ifmfznzvE4ePM', 'https://www.gigabyte.com/br', '10987654321', '54066411677','13'),
-('juridica', 'Ricardo Eletro', '85193625.68332992@mail.com', 'ifmfznzvE4ePM', 'https://ricardoeletro.com.br/', '10987654321', '53349225262','24'),
+('juridica', 'Americanas', '85193625.68332992@mail.com', 'ifmfznzvE4ePM', 'Birigui', '10987654321', '53349225262','24'),
 ('juridica', 'Ta em shock?', '80123922.12229627@mail.com', 'ifmfznzvE4ePM', 'Clementina', '10987654321', '79893565306','27'),
 ('juridica', 'Rogério Celulares', '70360413.79456052@mail.com', 'ifmfznzvE4ePM', 'Coroados', '10987654321', '75758498851','11'),
 /* eletronicos */
